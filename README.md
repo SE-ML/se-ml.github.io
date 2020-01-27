@@ -10,6 +10,8 @@ Install (jekyll and bundler)[https://jekyllrb.com/docs/].
 ```
 $ git clone https://github.com/SE-ML/se-ml.github.io
 $ cd se-ml.github.io
+$ git fetch --all
+$ git checkout -b source origin/source
 $ bundle install
 $ bundle exec jekyll serve
 ```
