@@ -4,7 +4,7 @@ Software Engineering for Machine Learning Homepage
 
 
 ### Prereq
-Install (jekyll and bundler)[https://jekyllrb.com/docs/].
+Install [jekyll](https://jekyllrb.com/docs/).
 
 ### Development:
 
