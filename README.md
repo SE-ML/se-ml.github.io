@@ -24,7 +24,7 @@ $ bundle exec jekyll serve
 
 ### Deploy to production:
 ```
-$ ./bin/deploy se-ml
+$ ./bin/deploy -u se-ml
 ```
 
 
