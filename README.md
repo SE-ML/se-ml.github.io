@@ -1,6 +1,6 @@
 # se-ml.github.io
 
-Software Engineering for Machine Learning Lab Homepage
+Software Engineering for Machine Learning Homepage
 
 
 ### Prereq

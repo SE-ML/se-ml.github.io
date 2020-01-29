@@ -1,7 +1,7 @@
 ---
 layout: about
 permalink: /
-title: Software Engineering for Machine Learning Lab
+title: Software Engineering for Machine Learning
 description: Leiden University. Niels Bohrweg 1, 2333 CA Leiden # <a href="" target="_blank"></a>
 
 profile:
