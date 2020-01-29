@@ -72,6 +72,8 @@ collections:
       layout: post
     output: true
     permalink: /news/:path/
+  staff:
+      people: true
 
 news_limit: 5
 

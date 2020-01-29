@@ -29,6 +29,10 @@
         <!-- Blog -->
         <a class="page-link" href="{{ '/blog/' | prepend: site.baseurl | prepend: site.url }}">blog</a>
 
+        <!-- Members -->
+        <a class="page-link" href="{{ '/members/' | prepend: site.baseurl | prepend: site.url }}">members</a>
+
+
         <!-- Pages -->
         {% for page in site.pages %}
           {% if page.title and page.url != "/" %}
