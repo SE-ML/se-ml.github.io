@@ -2,15 +2,12 @@
 layout: about
 permalink: /
 title: Software Engineering for Machine Learning
-description: LIACS, Leiden University. Niels Bohrweg 1, 2333 CA Leiden, The Netherlands # <a href="" target="_blank"></a>
+description: <a href="https://www.universiteitleiden.nl/en/science/computer-science">LIACS, Leiden University.</a> Niels Bohrweg 1, 2333 CA Leiden, The Netherlands # <a href="" target="_blank"></a>
 
 profile:
   align: right
-  image: #prof_pic.jpg
-  address: #>
-    # <p>555 your office number</p>
-    # <p>123 your address street</p>
-    # <p>Your City, State 12345</p>
+  image: #
+  address: #
 
 news: true
 social: true
