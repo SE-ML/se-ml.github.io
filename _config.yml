@@ -43,7 +43,7 @@ google_analytics: UA-XXXXXXXXX # out your google-analytics code
 # Blog
 # -----------------------------------------------------------------------------
 blog_name: #
-blog_description: Space for non-academic publications
+blog_description: Some blog description, a few lines about our intentions with this blog
 
 # Pagination
 paginate: 4
