@@ -5,7 +5,7 @@
     {% assign news = site.news | reverse %}
     {% for item in news limit: site.news_limit %}
       <tr>
-        <td class="date">{{ item.date | date: "%b %-d, %Y" }}</td>
+        {% comment %} <td class="date">{{ item.date | date: "%b %-d, %Y" }}</td> {% endcomment %}
         <td class="announcement">
           {% if item.inline %}
             {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
