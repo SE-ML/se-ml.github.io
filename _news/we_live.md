@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2020-01-25 15:59:00-0400
+date: 2020-01-29 14:50:00-0400
 meta: 1
 inline: true
 ---
 
-We are live.
+We created an **awesome** list of publications and tools on the topic of [Software Engineering for Machine Learning](https://github.com/SE-ML/awesome-seml) applications. Check it out! Maybe give it a star?
