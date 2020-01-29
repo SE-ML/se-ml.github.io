@@ -2,7 +2,7 @@
 layout: about
 permalink: /
 title: Software Engineering for Machine Learning
-description: Leiden University. Niels Bohrweg 1, 2333 CA Leiden # <a href="" target="_blank"></a>
+description: LIACS, Leiden University. Niels Bohrweg 1, 2333 CA Leiden # <a href="" target="_blank"></a>
 
 profile:
   align: right
@@ -16,7 +16,12 @@ news: true
 social: true
 ---
 
-Some introduction and about us.
+An ever-increasing number of organisations are involved in the development of applications that involve machine learning components. The complexity and diversity of these applications calls for software engineering techniques to ensure that they are built in a **robust** and **future-proof** manner.
+
+Do traditional software engineering practices apply equally to the development of ML applications, or do these practices need modification to cater particular ML characteristics?
+
+To investigate this question, we study the scientific and popular literature and engage with machine learning practitioners.
+
 
 <!--
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
