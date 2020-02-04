@@ -28,5 +28,8 @@ $ ./bin/deploy -u se-ml
 ```
 
 
-#### Thanks to:
+#### Kudos:
 - this webpage uses the [al-folio](https://alshedivat.github.io/al-folio/) theme.
+- some icons are downloaded from [Freepik](https://www.freepik.com/).
+
+Thank you!
