@@ -23,11 +23,18 @@
         </label>
 
       <div class="trigger">
+        <!-- Survey -->
+        <a class="page-link" href="{{ '/survey' | prepend: site.baseurl | prepend: site.url }}/" style="color: red;">take our survey!</a>
+
         <!-- About -->
         <a class="page-link" href="{{ site.baseurl | prepend: site.url }}/">about</a>
 
         <!-- Blog -->
         <a class="page-link" href="{{ '/blog/' | prepend: site.baseurl | prepend: site.url }}">blog</a>
+
+        <!-- Members -->
+        <a class="page-link" href="{{ '/members/' | prepend: site.baseurl | prepend: site.url }}">members</a>
+
 
         <!-- Pages -->
         {% for page in site.pages %}
