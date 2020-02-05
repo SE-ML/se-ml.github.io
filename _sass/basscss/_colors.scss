@@ -9,7 +9,11 @@
 }
 
 .blue {
-  color: $blue;
+  color: $blue !important;
+}
+
+.blue-1 {
+  color: $blue-1 !important;
 }
 
 .mid-gray {
