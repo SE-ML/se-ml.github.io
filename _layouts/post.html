@@ -8,6 +8,15 @@ layout: default
     <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
 
+  {% if page.image%}
+    <div class="image-container">
+      <img src="{{page.image}}" class="blog-image"></img>
+      {% if page.photocredit%}
+      <p>{{page.photocredit}}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+
   <article class="post-content">
     {{ content }}
   </article>
