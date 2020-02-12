@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<h2 style="color: black;">List of practices</h2>
+
+<ul>
+  {% for pr in site.categories.best_practices %}
+    <li>
+      <a href="{{pr.url}}">{{ pr.name }}</a>
+    </li>
+  {% endfor %}
+</ul>
