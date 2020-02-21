@@ -1,5 +1,6 @@
 ---
 layout: practice
+author: Alex Serban
 name: Continuously Measure Model Quality and Performance
 category: experiment_management
 index: 14

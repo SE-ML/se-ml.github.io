@@ -1,5 +1,6 @@
 ---
 layout: practice
+author: Alex Serban
 name: Peer Review Training Scripts
 category: experiment_management
 index: 11

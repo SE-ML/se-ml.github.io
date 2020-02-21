@@ -1,5 +1,6 @@
 ---
 layout: practice
+author: Alex Serban
 name: Automate Hyper-Parameter Optimization
 category: experiment_management
 index: 13

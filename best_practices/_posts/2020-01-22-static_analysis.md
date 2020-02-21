@@ -1,5 +1,6 @@
 ---
 layout: practice
+author: Alex Serban
 name: Use Static Analysis to Check Code Quality
 category: coding
 index: 21

@@ -1,5 +1,6 @@
 ---
 layout: practice
+author: Alex Serban
 name: Test all Feature Extraction Code
 category: experiment_management
 index: 8

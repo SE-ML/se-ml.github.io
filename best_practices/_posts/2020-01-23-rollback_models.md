@@ -1,5 +1,6 @@
 ---
 layout: practice
+author: Alex Serban
 name: Easily Roll Back Models
 category: deployment
 index: 25

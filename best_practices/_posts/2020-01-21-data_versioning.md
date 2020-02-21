@@ -1,5 +1,6 @@
 ---
 layout: practice
+author: Alex Serban
 name: Use Versioning for Data, Model, Configurations and Training Scripts
 category: experiment_management
 index: 16

@@ -1,5 +1,6 @@
 ---
 layout: practice
+author: Alex Serban
 name: Run Automated Regression Tests
 category: coding
 index: 18

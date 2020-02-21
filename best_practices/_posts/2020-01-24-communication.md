@@ -1,5 +1,6 @@
 ---
 layout: practice
+author: Alex Serban
 name: Facilitate Team Collaboration and Integration with Other Departments
 category: general
 index: 28

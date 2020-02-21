@@ -1,5 +1,6 @@
 ---
 layout: practice
+author: Alex Serban
 name: Enforce Fairness and Privacy
 category: experiment_management
 index: 15
