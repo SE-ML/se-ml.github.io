@@ -2,12 +2,93 @@
 layout: default
 ---
 
-<h2 style="color: black;">List of practices</h2>
+<h2 style="color: black;">List of practices:</h2>
+
+
+We classify the list of practices based on a modified version of  fancy red diagram:
+
+TODO: add diagram
+
+{% assign sorted_practices = site.categories.best_practices  | sort:"index" %}
+
+
+<h3> Data Management: </h3>
+
+Data, data, data, data!
 
 <ul>
-  {% for pr in site.categories.best_practices %}
-    <li>
-      <a href="{{pr.url}}">{{ pr.name }}</a>
-    </li>
+  {% for pr in sorted_practices %}
+     {% if pr.category == 'data_management' %}
+        <li>
+          <a href="{{pr.url}}">{{ pr.name }}</a>
+        </li>
+    {% endif %}
+
+  {% endfor %}
+</ul>
+
+
+
+<h3> Experiment Management: </h3>
+
+Experiments are at the core of ML.
+
+<ul>
+  {% for pr in sorted_practices %}
+     {% if pr.category == 'experiment_management' %}
+        <li>
+          <a href="{{pr.url}}">{{ pr.name }}</a>
+        </li>
+    {% endif %}
+
+  {% endfor %}
+</ul>
+
+
+
+<h3> Coding Practices: </h3>
+Nothing beats good code!
+
+<ul>
+  {% for pr in sorted_practices %}
+     {% if pr.category == 'coding' %}
+        <li>
+          <a href="{{pr.url}}">{{ pr.name }}</a>
+        </li>
+    {% endif %}
+
+  {% endfor %}
+</ul>
+
+
+
+<h3> Deployment Practices: </h3>
+
+Pipelines are gods!
+
+<ul>
+  {% for pr in sorted_practices %}
+     {% if pr.category == 'deployment' %}
+        <li>
+          <a href="{{pr.url}}">{{ pr.name }}</a>
+        </li>
+    {% endif %}
+
+  {% endfor %}
+</ul>
+
+
+<h3> Team Management: </h3>
+
+Tribes & squats ...
+
+<ul>
+  {% for pr in sorted_practices %}
+     {% if pr.category == 'general' %}
+        <li>
+          <a href="{{pr.url}}">{{ pr.name }}</a>
+        </li>
+    {% endif %}
+
   {% endfor %}
 </ul>
