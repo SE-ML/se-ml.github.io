@@ -12,9 +12,9 @@ layout: default
   {% assign next_pr = site.categories.best_practices  | where: 'index', next_pr_index %}
   {% assign last_pr = site.categories.best_practices  | where: 'index', back_pr_index %}
 
-  <a href="{{last_pr[0].url}}"><i class="fa fa-arrow-left" aria-hidden="true"></i> Previous Practice</a>
+  <a href="{{last_pr[0].url}}"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
 
-  <a href="{{next_pr[0].url}}" class="float-right"> Next Practice <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  <a href="{{next_pr[0].url}}" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
   <br><br>
 
@@ -28,8 +28,8 @@ layout: default
   {% endif %}
 
 
-Rationale:
-<br><br>
+{% comment %} Rationale: {% endcomment %}
+{% comment %} <br><br> {% endcomment %}
 
   <article class="post-content">
     {{ content }}
@@ -37,7 +37,7 @@ Rationale:
 
 <br>
 Read more at:
-<br><br>
+<br>
   <ul>
   {% for r in site.references %}
      {% if page.references contains r.acronym  %}
