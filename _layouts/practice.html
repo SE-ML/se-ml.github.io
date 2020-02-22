@@ -14,7 +14,7 @@ layout: default
 
   <a href="{{last_pr[0].url}}"><i class="fa fa-arrow-left" aria-hidden="true"></i> Previous Practice</a>
 
-  <a href="{{next_pr[0].url}}"> Next Practice<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  <a href="{{next_pr[0].url}}" class="float-right"> Next Practice <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
   <br><br>
 
@@ -27,12 +27,15 @@ layout: default
     </div>
   {% endif %}
 
+
+Rationale:
+
   <article class="post-content">
     {{ content }}
   </article>
 
+<br><br>
 Read more at:
-
   <ul>
   {% for r in site.references %}
      {% if page.references contains r.acronym  %}

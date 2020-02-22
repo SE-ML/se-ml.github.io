@@ -12,8 +12,3 @@ image: #
 photocredit: #
 ---
 
-
-Rationale:
-
-
-
