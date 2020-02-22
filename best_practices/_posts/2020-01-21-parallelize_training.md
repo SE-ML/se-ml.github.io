@@ -5,6 +5,7 @@ name: Parallelize Training Experiments
 category: experiment_management
 index: 12
 difficulty: #
+comments: True
 description:
 image: #
 photocredit: #

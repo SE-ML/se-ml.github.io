@@ -5,6 +5,7 @@ name: Easily Roll Back Models
 category: deployment
 index: 25
 difficulty: #
+comments: True
 description:
 image: #
 photocredit: #

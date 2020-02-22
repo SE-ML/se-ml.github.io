@@ -5,6 +5,7 @@ name: Continuously Measure Model Quality and Performance
 category: experiment_management
 index: 14
 difficulty: #
+comments: True
 description:
 image: #
 photocredit: #

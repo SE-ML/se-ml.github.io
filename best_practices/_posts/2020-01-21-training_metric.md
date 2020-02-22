@@ -5,6 +5,7 @@ name: Capture the Training Objective in a Metric that is Easy to Measure and Und
 category: experiment_management
 index: 7
 difficulty: #
+comments: True
 description:
 image: #
 photocredit: #

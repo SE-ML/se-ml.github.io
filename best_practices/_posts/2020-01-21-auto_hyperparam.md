@@ -5,6 +5,7 @@ name: Automate Hyper-Parameter Optimization
 category: experiment_management
 index: 13
 difficulty: #
+comments: True
 description:
 image: #
 photocredit: #

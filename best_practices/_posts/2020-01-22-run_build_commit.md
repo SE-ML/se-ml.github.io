@@ -5,6 +5,7 @@ name: Run Build at Each Commit
 category: coding
 index: 20
 difficulty: #
+comments: True
 description:
 image: #
 photocredit: #

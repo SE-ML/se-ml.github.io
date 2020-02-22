@@ -5,6 +5,7 @@ name: Test Models on Holdout Data from Production
 category: deployment
 index: 21
 difficulty: #
+comments: True
 description:
 image: #
 photocredit: #

@@ -5,6 +5,7 @@ name: Reusable Scripts for Data Cleaning and Merging
 category: data_management
 index: 3
 difficulty: #
+comments: True
 description:
 image: #
 photocredit: #

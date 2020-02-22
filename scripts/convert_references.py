@@ -27,7 +27,7 @@ def main():
             f.write("\n")
             f.write("type: {}".format(r['Type']))
             f.write("\n")
-            f.write("webpage: {}".format((r['URL'])))
+            f.write("webpage: \'{}\' ".format((r['URL'])))
             f.write("\n")
             f.write("---")
 

@@ -5,6 +5,7 @@ name: Facilitate Team Collaboration and Integration with Other Departments
 category: general
 index: 28
 difficulty: #
+comments: True
 description:
 image: #
 photocredit: #

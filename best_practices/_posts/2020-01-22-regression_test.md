@@ -5,6 +5,7 @@ name: Run Automated Regression Tests
 category: coding
 index: 18
 difficulty: #
+comments: True
 description:
 image: #
 photocredit: #

@@ -5,6 +5,7 @@ name: Test all Feature Extraction Code
 category: experiment_management
 index: 8
 difficulty: #
+comments: True
 description:
 image: #
 photocredit: #

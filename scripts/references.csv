@@ -32,18 +32,3 @@ MDLOPS,ModelOps: Cloud-based lifecycle management for reliable and trusted AI,IB
 PMLPP,Principled Machine Learning: Practices and Tools for Efficient Collaboration,David Herron,GL - TIer 3,+,,June 2019,https://dev.to/robogeek/principled-machine-learning-4eho
 TFX,TFX: A tensorflow-based Production-Scale ML Platform,Google,AL,+++,,17 August 2017,https://dl.acm.org/doi/pdf/10.1145/3097983.3098021?download=true
 ,,,,,,,
-Legend:,,,,,,,
-,Found through search,,,,,,
-,Inferred through references / other means,,,,,,
-,,,,,,,
-,,,,,,,
-no practices,What machine learning means for software development,Ben Lorica and Mike Loukides,GL - Tier 3,,,"July 11, 2018",https://www.oreilly.com/radar/what-machine-learning-means-for-software-development/
-,Lessons Learned from Building Scalable Machine Learning Pipelines,Taifi Moussa,GL - Tier 3,,,23 April 2018,https://techblog.appnexus.com/lessons-learned-from-building-scalable-machine-learning-pipelines-822acb3412ad
-,,,,,,,
-,,,,,,,
-not used,,,,,,,
-SEPAML,Software Engineering Practices Applied for ML,Pavlos Mitsoulis,GL - TIer 3,\+,,5 September 2018,https://medium.com/homeaway-tech-blog/software-engineering-practices-applied-to-machine-learning-e845722eaa82
-SEPML,Software Engneering Practices for ML,Peter Kriens,AL,,,25 June 2019,https://arxiv.org/abs/1906.10366
-,,,,,,,
-,,,,,,,
-, ,,,,,,

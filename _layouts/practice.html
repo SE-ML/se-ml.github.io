@@ -31,6 +31,19 @@ layout: default
     {{ content }}
   </article>
 
+Read more at:
+
+  <ul>
+  {% for r in site.references %}
+     {% if page.references contains r.acronym  %}
+        <li>
+          <a href="{{r.webpage}}" target="_blank">{{ r.title }}</a>
+        </li>
+    {% endif %}
+
+  {% endfor %}
+</ul>
+
   {% if site.disqus_shortname and page.comments %}
     <div id="disqus_thread"></div>
     <script type="text/javascript">

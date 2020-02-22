@@ -5,6 +5,7 @@ name: Use Collaborative Developments Platforrms Consistently
 category: general
 index: 26
 difficulty: #
+comments: True
 description:
 image: #
 photocredit: #

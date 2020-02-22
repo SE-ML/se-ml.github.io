@@ -5,6 +5,7 @@ name: Automate the Build Process
 category: coding
 index: 19
 difficulty: #
+comments: True
 description:
 image: #
 photocredit: #
