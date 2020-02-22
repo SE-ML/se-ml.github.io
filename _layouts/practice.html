@@ -29,13 +29,15 @@ layout: default
 
 
 Rationale:
+<br><br>
 
   <article class="post-content">
     {{ content }}
   </article>
 
-<br><br>
+<br>
 Read more at:
+<br><br>
   <ul>
   {% for r in site.references %}
      {% if page.references contains r.acronym  %}
@@ -47,6 +49,8 @@ Read more at:
   {% endfor %}
 </ul>
 
+
+<br><br><br><br>
   {% if site.disqus_shortname and page.comments %}
     <div id="disqus_thread"></div>
     <script type="text/javascript">
