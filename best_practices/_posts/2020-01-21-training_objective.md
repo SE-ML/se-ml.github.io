@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Joost Visser
 name: Share a Clearly Defined Training Objective within the Team
 category: Experiment
-id: exp_trainingobjective
+unique_id: exp_trainingobjective
 index: 6
 difficulty: #
 references: [Rs4ML, MMLP, MLTEAM]
@@ -16,7 +16,7 @@ intent: Avoid misunderstanding between multi-disciplinary team members. #
 motivation: In a multi-disciplinary team, members with different backgrounds can misinterpret objectives. #
 applicability: #
 related: #
-dependencies: #
+dependencies: [exp_trainingmetric] #
 survey_question: Q37
 ---
 

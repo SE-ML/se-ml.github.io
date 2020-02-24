@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Joost Visser
 name: Test all Feature Extraction Code
 category: Experiment
-id: exp_tstfeature
+unique_id: exp_tstfeature
 index: 8
 difficulty: #
 references: [CD4ML]
@@ -14,8 +14,8 @@ photocredit: #
 
 intent: Avoid bugs in the feature extraction code. #
 motivation: Many times a feature will merge two or more data attributes or use custom data transformations. Testing this custom feature extraction code ensures no errors or bugs are introduced in this process. #
-applicability: [custom-features] #
-related: #
+applicability: #
+related: [data_sanity] #
 dependencies: #
 survey_question: Q40
 ---

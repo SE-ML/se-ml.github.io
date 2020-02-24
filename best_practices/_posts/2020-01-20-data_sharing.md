@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Joost Visser
 name: Datasets are Available on Shared Infrastructure (private or public)
 category: Data
-id: data_share
+unique_id: data_share
 index: 5
 difficulty: #
 references: [SD4DL, MSCS, MMLP, PMLPP]

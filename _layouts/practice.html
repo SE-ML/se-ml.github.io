@@ -13,7 +13,7 @@ layout: default
   {% assign next_pr = site.categories.best_practices  | where: 'index', next_pr_index %}
   {% assign last_pr = site.categories.best_practices  | where: 'index', back_pr_index %}
   {% assign pr_num = site.categories.best_practices  | where: 'category', page.category %}
-
+  {% assign sorted_practices = site.categories.best_practices  | sort:"index" %}
 
   <div style="text-align:center;">
 
@@ -64,9 +64,22 @@ layout: default
 
   {% if page.related%}
     <h3 class="black bold">Related</h3>
-    <div>
+    {% comment %} <div>
       {{page.related}}
-    </div>
+    </div> {% endcomment %}
+
+    {% for r in page.related %}
+      {% comment %} {{r}} {% endcomment %}
+        {% for pr in sorted_practices %}
+            {% comment %} {{pr.unique_id}} {% endcomment %}
+            {% if r == pr.unique_id %}
+                <li>
+                  <a class="black" href="{{pr.url}}">{{ pr.name }}</a>
+                </li>
+            {% endif %}
+
+        {% endfor %}
+    {% endfor %}
   {% endif %}
 
 {% if page.references.size > 0%}

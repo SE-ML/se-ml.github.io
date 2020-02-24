@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Joost Visser
 name: Use Versioning for Data, Model, Configurations and Training Scripts
 category: Experiment
-id: exp_versioning
+unique_id: exp_versioning
 index: 16
 difficulty: #
 comments: True

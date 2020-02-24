@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Joost Visser
 name: Use Collaborative Developments Platforrms Consistently
 category: Team
-id: team_collab
+unique_id: team_collab
 index: 26
 difficulty: #
 comments: True

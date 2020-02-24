@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Joost Visser
 name: Check Input Data for Completeness and Well Distributed
 category: Data
-id: data_complete
+unique_id: data_complete
 index: 2
 difficulty: #
 references: [DMP, MLTD, CTPML, DQML, MMLP]
@@ -15,7 +15,7 @@ photocredit: #
 intent: Avoid invalid or incomplete data being processed. #
 motivation: The data generation processes are not static. Therefore, it is necessary to check that the data is still well distributed, complete and balanced. #
 applicability: #
-related: #
+related: [data_sanity] #
 dependencies: #
 survey_question: Q33
 ---
