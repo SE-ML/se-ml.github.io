@@ -64,9 +64,7 @@ layout: default
 
   {% if page.related%}
     <h3 class="black bold">Related</h3>
-    {% comment %} <div>
-      {{page.related}}
-    </div> {% endcomment %}
+    <ul>
 
     {% for r in page.related %}
       {% comment %} {{r}} {% endcomment %}
@@ -80,6 +78,7 @@ layout: default
 
         {% endfor %}
     {% endfor %}
+  </ul>
   {% endif %}
 
 {% if page.references.size > 0%}
