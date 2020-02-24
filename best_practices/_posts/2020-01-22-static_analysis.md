@@ -15,7 +15,7 @@ photocredit: #
 intent: Avoid the introduction of code that is difficult to test, maintain, or extend. #
 motivation: High-quality code is easier to understand, test, maintain, reuse, and extend. The most effective way of ensuring high code quality is to make use of static analysis tools. #
 applicability: Code quality control can be applied to any type of code. #
-related: Static code analysis can be combined with Continuous Integration / Run Build at Each Commit #
+related: [coding_build] # Static code analysis can be combined with Continuous Integration / Run Build at Each Commit #
 dependencies: #
 survey_question: 57 #
 ---
