@@ -2,7 +2,7 @@
 layout: practice
 author: Alex Serban
 name: Datasets are Available on Shared Infrastructure (private or public)
-category: data_management
+category: Data
 index: 5
 difficulty: #
 references: [SD4DL, MSCS, MMLP, PMLPP]
@@ -10,6 +10,13 @@ comments: True
 description:
 image: #
 photocredit: #
+
+intent: Avoid data duplication, data bottlenecks and heavy data transfer. #
+motivation: The amount of input data for ML models is higher than usual software systems, demanding special practices to ensure good management. #
+applicability: #
+related: #
+dependencies: #
+survey_question: Q36
 ---
 
 Good data management and sharing is important for several reasons:

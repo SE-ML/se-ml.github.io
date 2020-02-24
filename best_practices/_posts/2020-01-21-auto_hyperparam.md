@@ -2,7 +2,7 @@
 layout: practice
 author: Alex Serban
 name: Automate Hyper-Parameter Optimization
-category: experiment_management
+category: Experiment
 index: 13
 difficulty: #
 comments: True

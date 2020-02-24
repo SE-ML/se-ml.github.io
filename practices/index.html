@@ -26,7 +26,7 @@ Data, data, data, data!
 
 <ul>
   {% for pr in sorted_practices %}
-     {% if pr.category == 'data_management' %}
+     {% if pr.category == 'Data' %}
         <li>
           <a class="black" href="{{pr.url}}">{{ pr.name }}</a>
         </li>
@@ -43,7 +43,7 @@ Experiments are at the core of ML.
 
 <ul>
   {% for pr in sorted_practices %}
-     {% if pr.category == 'experiment_management' %}
+     {% if pr.category == 'Experiment' %}
         <li>
           <a  class="black" href="{{pr.url}}">{{ pr.name }}</a>
         </li>
@@ -59,7 +59,7 @@ Nothing beats good code!
 
 <ul>
   {% for pr in sorted_practices %}
-     {% if pr.category == 'coding' %}
+     {% if pr.category == 'Coding' %}
         <li>
           <a  class="black" href="{{pr.url}}">{{ pr.name }}</a>
         </li>
@@ -76,7 +76,7 @@ Pipelines are gods!
 
 <ul>
   {% for pr in sorted_practices %}
-     {% if pr.category == 'deployment' %}
+     {% if pr.category == 'Deployment' %}
         <li>
           <a class="black" href="{{pr.url}}">{{ pr.name }}</a>
         </li>
@@ -92,7 +92,7 @@ Tribes & squats ...
 
 <ul>
   {% for pr in sorted_practices %}
-     {% if pr.category == 'general' %}
+     {% if pr.category == 'Team' %}
         <li>
           <a class="black" href="{{pr.url}}">{{ pr.name }}</a>
         </li>

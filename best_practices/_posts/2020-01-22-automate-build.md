@@ -2,7 +2,7 @@
 layout: practice
 author: Alex Serban
 name: Automate the Build Process
-category: coding
+category: Coding
 index: 19
 difficulty: #
 comments: True

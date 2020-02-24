@@ -2,7 +2,7 @@
 layout: practice
 author: Alex Serban
 name: Use Sanity Checks for All External Data Sources
-category: data_management
+category: Data
 index: 1
 difficulty: #
 comments: True
@@ -11,18 +11,16 @@ description:
 image: #
 photocredit: #
 
-intent: #
-motivation: #
+intent: Avoid invalid or incomplete data being processed. #
+motivation: Data is at the heart of any machine learning model. Therefore, having the right data is crucial for model quality. #
 applicability: #
 related: #
 dependencies: #
-survey_question: #
+survey_question: Q32
 ---
 
-Data is at the heart of any machine learning model.
-Therefore, having the right data is crucial for model quality.
-
-Whenever using external data sources, or collect data that may be incomplete or ill formated, it is important to perform sanity checks before using it.
+Whenever using external data sources, or collecting data that may be incomplete or ill formated, it is important to perform sanity checks.
+<!-- before using it. -->
 Invalid or incomplete data may cause outages in production or lead to innacurate models.
 
 Start by checking simple data attributes, such as:

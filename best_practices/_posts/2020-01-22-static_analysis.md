@@ -2,7 +2,7 @@
 layout: practice
 author: Alex Serban
 name: Use Static Analysis to Check Code Quality
-category: coding
+category: Coding
 index: 21
 difficulty: #
 comments: True

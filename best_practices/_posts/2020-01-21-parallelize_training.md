@@ -2,7 +2,7 @@
 layout: practice
 author: Alex Serban
 name: Parallelize Training Experiments
-category: experiment_management
+category: Experiment
 index: 12
 difficulty: #
 comments: True

@@ -2,7 +2,7 @@
 layout: practice
 author: Alex Serban
 name: Easily Roll Back Models
-category: deployment
+category: Deployment
 index: 25
 difficulty: #
 comments: True

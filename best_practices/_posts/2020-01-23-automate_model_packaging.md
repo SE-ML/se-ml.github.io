@@ -2,7 +2,7 @@
 layout: practice
 author: Alex Serban
 name: Automate Model Deployment
-category: deployment
+category: Deployment
 index: 22
 difficulty: #
 comments: True

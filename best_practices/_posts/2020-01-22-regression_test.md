@@ -2,7 +2,7 @@
 layout: practice
 author: Alex Serban
 name: Run Automated Regression Tests
-category: coding
+category: Coding
 index: 18
 difficulty: #
 comments: True

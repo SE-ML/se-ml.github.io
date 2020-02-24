@@ -2,7 +2,7 @@
 layout: practice
 author: Alex Serban
 name: Enforce Fairness and Privacy
-category: experiment_management
+category: Experiment
 index: 15
 difficulty: #
 comments: True

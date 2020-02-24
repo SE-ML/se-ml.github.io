@@ -2,19 +2,25 @@
 layout: practice
 author: Alex Serban
 name: Check Input Data for Completeness and Well Distributed
-category: data_management
+category: Data
 index: 2
 difficulty: #
-referenes: [DMP, MLTD, CTPML, DQML, MMLP]
+references: [DMP, MLTD, CTPML, DQML, MMLP]
 comments: True
 description: #
 image: #
 photocredit: #
+
+intent: Avoid invalid or incomplete data being processed. #
+motivation: The data generation processes are not static. Therefore, it is necessary to check that the data is still well distributed, complete and balanced. #
+applicability: #
+related: #
+dependencies: #
+survey_question: Q33
 ---
 
-Besides performing <a href="/blog/2020/sanity_checks/">sanity checks</a> on the input data, it is recommended to constantly check its evolution.
-
-In an ever changing world, data will also evolve over time.
+Besides performing <a href="/blog/2020/sanity_checks/">sanity checks</a> on the input data, it is recommended to constantly check for its evolution. In a constantly evolving envrironment, data will also evolve over time.
+For example, your user distribution per geographical regions may change over time and may lead to futuer biases towards an over-representative region.
 
 Consider checking that:
 

@@ -2,7 +2,7 @@
 layout: practice
 author: Alex Serban
 name: Perform Checks to Detect Skews between Models
-category: deployment
+category: Deployment
 index: 24
 difficulty: #
 comments: True

@@ -2,7 +2,7 @@
 layout: practice
 author: Alex Serban
 name: Run Build at Each Commit
-category: coding
+category: Coding
 index: 20
 difficulty: #
 comments: True

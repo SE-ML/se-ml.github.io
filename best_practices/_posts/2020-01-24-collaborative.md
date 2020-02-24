@@ -2,7 +2,7 @@
 layout: practice
 author: Alex Serban
 name: Use Collaborative Developments Platforrms Consistently
-category: general
+category: Team
 index: 26
 difficulty: #
 comments: True
