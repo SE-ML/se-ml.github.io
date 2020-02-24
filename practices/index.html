@@ -2,17 +2,25 @@
 layout: default
 ---
 
-<h2 style="color: black;">List of practices:</h2>
 
+ <div class="image-container">
+      <img src="/assets/img/SE4ML-practices-diagram.png" class="blog-image"></img>
+</div>
 
-We classify the list of practices based on a modified version of  fancy red diagram:
-
-TODO: add diagram
+The list below catalogues a set of engineering best practices for
+developing software systems that include machine learning components.
+<br><br>
+These practices were identified by engaging with ML engineering teams and
+reviewing relevant literature. Also we are running a global survey
+among ML engineering teams to measure the adoption of these practices.
+<br><br>
+The various practices are grouped into categories that are also shown
+in the diagram above.
 
 {% assign sorted_practices = site.categories.best_practices  | sort:"index" %}
 
 
-<h3> Data Management: </h3>
+<h3 class="black bold"> Data </h3>
 
 Data, data, data, data!
 
@@ -20,7 +28,7 @@ Data, data, data, data!
   {% for pr in sorted_practices %}
      {% if pr.category == 'data_management' %}
         <li>
-          <a href="{{pr.url}}">{{ pr.name }}</a>
+          <a class="black" href="{{pr.url}}">{{ pr.name }}</a>
         </li>
     {% endif %}
 
@@ -29,7 +37,7 @@ Data, data, data, data!
 
 
 
-<h3> Experiment Management: </h3>
+<h3 class="black bold"> Experiment </h3>
 
 Experiments are at the core of ML.
 
@@ -37,7 +45,7 @@ Experiments are at the core of ML.
   {% for pr in sorted_practices %}
      {% if pr.category == 'experiment_management' %}
         <li>
-          <a href="{{pr.url}}">{{ pr.name }}</a>
+          <a  class="black" href="{{pr.url}}">{{ pr.name }}</a>
         </li>
     {% endif %}
 
@@ -46,14 +54,14 @@ Experiments are at the core of ML.
 
 
 
-<h3> Coding Practices: </h3>
+<h3  class="black bold"> Coding </h3>
 Nothing beats good code!
 
 <ul>
   {% for pr in sorted_practices %}
      {% if pr.category == 'coding' %}
         <li>
-          <a href="{{pr.url}}">{{ pr.name }}</a>
+          <a  class="black" href="{{pr.url}}">{{ pr.name }}</a>
         </li>
     {% endif %}
 
@@ -62,7 +70,7 @@ Nothing beats good code!
 
 
 
-<h3> Deployment Practices: </h3>
+<h3 class="black bold"> Deployment </h3>
 
 Pipelines are gods!
 
@@ -70,7 +78,7 @@ Pipelines are gods!
   {% for pr in sorted_practices %}
      {% if pr.category == 'deployment' %}
         <li>
-          <a href="{{pr.url}}">{{ pr.name }}</a>
+          <a class="black" href="{{pr.url}}">{{ pr.name }}</a>
         </li>
     {% endif %}
 
@@ -78,7 +86,7 @@ Pipelines are gods!
 </ul>
 
 
-<h3> Team Management: </h3>
+<h3 class="black bold"> Team </h3>
 
 Tribes & squats ...
 
@@ -86,7 +94,7 @@ Tribes & squats ...
   {% for pr in sorted_practices %}
      {% if pr.category == 'general' %}
         <li>
-          <a href="{{pr.url}}">{{ pr.name }}</a>
+          <a class="black" href="{{pr.url}}">{{ pr.name }}</a>
         </li>
     {% endif %}
 

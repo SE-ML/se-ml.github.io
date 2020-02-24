@@ -10,6 +10,13 @@ references: ["DMP","MLOps","DQML"]
 description:
 image: #
 photocredit: #
+
+intent: #
+motivation: #
+applicability: #
+related: #
+dependencies: #
+survey_question: #
 ---
 
 Data is at the heart of any machine learning model.

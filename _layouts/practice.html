@@ -28,16 +28,44 @@ layout: default
   {% endif %}
 
 
-{% comment %} Rationale: {% endcomment %}
-{% comment %} <br><br> {% endcomment %}
+  {% if page.intent%}
+    <h3 class="black">Intent</h3>
+    <div>
+      {{page.intent}}
+    </div>
+  {% endif %}
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+  {% if page.motivation%}
+    <h3 class="black">Motivation</h3>
+    <div>
+      {{page.motivation}}
+    </div>
+  {% endif %}
+
+  {% if page.applicability%}
+    <h3 class="black">Applicability</h3>
+    <div>
+      {{page.applicability}}
+    </div>
+  {% endif %}
+
+  {% if page.content%}
+    <h3 class="black">Description</h3>
+    <div>
+      {{page.content}}
+    </div>
+  {% endif %}
+
+  {% if page.related%}
+    <h3 class="black">Related</h3>
+    <div>
+      {{page.related}}
+    </div>
+  {% endif %}
+
 
 <br>
-Read more at:
-<br>
+<h3 class="black">Read more</h3>
   <ul>
   {% for r in site.references %}
      {% if page.references contains r.acronym  %}
