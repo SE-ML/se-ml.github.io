@@ -1,8 +1,9 @@
 ---
 layout: practice
-author: Alex Serban
+author: Alex Serban, Joost Visser
 name: Perform Checks to Detect Skews between Models
 category: Deployment
+id: deployment_distskew
 index: 24
 difficulty: #
 comments: True

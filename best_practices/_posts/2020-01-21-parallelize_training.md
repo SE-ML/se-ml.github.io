@@ -1,8 +1,9 @@
 ---
 layout: practice
-author: Alex Serban
+author: Alex Serban, Joost Visser
 name: Parallelize Training Experiments
 category: Experiment
+id: exp_parallel
 index: 12
 difficulty: #
 comments: True

@@ -1,8 +1,9 @@
 ---
 layout: practice
-author: Alex Serban
+author: Alex Serban, Joost Visser
 name: Enforce Fairness and Privacy
 category: Experiment
+id: exp_responsible
 index: 15
 difficulty: #
 comments: True

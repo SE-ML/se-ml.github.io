@@ -1,8 +1,9 @@
 ---
 layout: practice
-author: Alex Serban
+author: Alex Serban, Joost Visser
 name: Facilitate Team Collaboration and Integration with Other Departments
 category: Team
+id: team_communication
 index: 28
 difficulty: #
 comments: True

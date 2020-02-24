@@ -1,8 +1,9 @@
 ---
 layout: practice
-author: Alex Serban
+author: Alex Serban, Joost Visser
 name: Test all Feature Extraction Code
 category: Experiment
+id: exp_tstfeature
 index: 8
 difficulty: #
 references: [CD4ML]
@@ -23,4 +24,5 @@ Similar to <a href="/blog/2020/sanity_checks/" target="blank">applying sanity ch
 
 
 In many cases, one would write custom code to merge data attributes into new features.
-The code written for such operations needs to be unit-tested in order to ensure that it does not introduces funtional bugs, but also to ensure that the returned data will match the expected values needed to train a ML algorithm.
+The code written for such operations needs to be unit-tested in order to ensure that it does not introduces functional bugs, but also to ensure that the returned data will match the expected values needed to train a ML algorithm.
+

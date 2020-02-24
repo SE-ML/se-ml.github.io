@@ -1,8 +1,9 @@
 ---
 layout: practice
-author: Alex Serban
+author: Alex Serban, Joost Visser
 name: Easily Roll Back Models
 category: Deployment
+id: deployment_rollback
 index: 25
 difficulty: #
 comments: True

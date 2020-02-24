@@ -1,8 +1,9 @@
 ---
 layout: practice
-author: Alex Serban
+author: Alex Serban, Joost Visser
 name: Share Status and Outcomes of Experiments Withing the Team
 category: Experiment
+id: exp_status
 index: 17
 difficulty: #
 comments: True

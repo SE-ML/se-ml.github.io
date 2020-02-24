@@ -1,8 +1,9 @@
 ---
 layout: practice
-author: Alex Serban
+author: Alex Serban, Joost Visser
 name: Use Static Analysis to Check Code Quality
 category: Coding
+id: coding_static
 index: 21
 difficulty: #
 comments: True
