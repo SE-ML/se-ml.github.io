@@ -10,6 +10,13 @@ comments: True
 description:
 image: #
 photocredit: #
+
+intent:  #
+motivation: #
+applicability: #
+related: #
+dependencies: #
+survey_question: Q48
 ---
 
 - if data is versioned differently, make sure to include the data versioning link in the repo or vice-versa

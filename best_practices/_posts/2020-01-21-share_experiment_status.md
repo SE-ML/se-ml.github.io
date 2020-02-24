@@ -10,6 +10,13 @@ comments: True
 description:
 image: #
 photocredit: #
+
+intent:  #
+motivation: #
+applicability: #
+related: #
+dependencies: #
+survey_question: Q47
 ---
 
 
