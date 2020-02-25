@@ -1,23 +1,31 @@
 ---
 layout: practice
 author: Alex Serban, Joost Visser
-name: Share Status and Outcomes of Experiments Withing the Team
+name: Share Status and Outcomes of Experiments Within the Team
 category: Experiment
 unique_id: exp_status
 index: 17
 difficulty: #
+references: [BPDL, PMLPP]
 comments: True
 description:
 image: #
 photocredit: #
 
-intent:  #
-motivation: #
+intent: Facilitate knowledge transfer, peer review and models assessment. #
+motivation: Team members have different ways of managing and logging experiment related data. Adopting a common way to log experiment data and share it within the team enables members to collectively monitor and assess training outcomes. #
 applicability: #
-related: #
+related: [exp_quality] #
 dependencies: #
 survey_question: Q47
 ---
 
+Although different team members have their own style of managing experiments and tracing their outcomes, it is recommended to adopt a common way of logging data, that is understood and accessible to all team members.
 
-- use W&B or some collaborative platform
+
+Sharing the outcomes within the team has several benefits for peer review, knowledge transfer and assessment.
+
+
+Several <a href="https://github.com/SE-ML/awesome-seml#tooling" target="blank"> collaborative tools </a> enable central logging of experiment results.
+
+Whenever possible, it is recommended to use one of the tools available internally or externally (e.g. <a href="https://github.com/SE-ML/awesome-seml#tooling" target="blank">Sacred or W&B</a>).

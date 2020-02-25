@@ -13,9 +13,9 @@ image: #
 photocredit: #
 
 intent: Improve reproducibility, traceability and compliance. #
-motivation: In order to reproduce past machine learning experiments, we need more than just the executable code. Therefore, versioning the training and testing data, the final model and all configuration files concomitantly among the executable code is mandatory. #
+motivation: In order to reproduce past machine learning experiments, we need more than just the executable code. Versioning the training and testing data, the final model and all configuration files concomitantly is complimentary to versioning the executable code. #
 applicability: #
-related: #
+related: [exp_owner, exp_tstfeature] #
 dependencies: #
 survey_question: Q48
 ---
@@ -23,11 +23,14 @@ survey_question: Q48
 Versioning in machine learning learning involves more components than in traditional software: among the executable code we have to store the training and testing data sets, the configuration files and the final model artifacts.
 
 Storing all information allows past experiments to be reproduced and re-assessed.
-Moreover,
+Moreover, it helps auditing, compliance and backward traceability and compatibility.
 
-Since many of these artifacts have distinct sizes, different versioning systems can be used for
+However, many of these artifacts have distinct and large sizes, which makes versioning difficult.
+In most cases data and model artifacts  will be versioned in a different system than code and configuration files.
 
+In order to avoid versioning issues, make sure to:
+- include a link to the data version in the code / configuration artifacts and a time stamp,
+- add feature documentation for all data and link it to the code artifacts,
+- add tests for data processing and merging,
+- include scripts for running or deploying the experiment, e.g. bash scripts, infrastructure scripts, etc.
 
-- if data is versioned differently, make sure to include the data versioning link in the repo or vice-versa
-
-Versioning and storing the data sets is very important for reproducibility and compliance purposes.
