@@ -13,9 +13,9 @@ image: #
 photocredit: #
 
 intent: Avoid deadlocks during experimentation. #
-motivation: Machine learning relies heavily on empirical processes. In order to allow fast experimentation and avoid deadlocks, it is recommended to think upfront of parallelization. #
+motivation: Machine learning relies heavily on empirical processes. In order to allow fast experimentation and avoid deadlocks, it is recommended to think upfront of experiment parallelization. #
 applicability: #
-related: #
+related: [exp_status] #
 dependencies: #
 survey_question: Q43
 ---
@@ -26,9 +26,16 @@ Developing machine learning components is different than traditional software de
 This involves writing code that will be never used again, needless to say it will never reach production.
 
 
-However, in order to enable fast experimentation and parallel deployment, the code must still be developed wisely.
+However, in order to enable fast experimentation and parallel deployment, the code must still be developed and managed wisely.
 Not using proper encapsulation or dependency management can significantly impact experiment parallelization and slow down the overall development.
 
-% TODO: add more pointers?
+
+In order to ease parallelization, make sure to:
+- think of and prepare the infrastructure for parallel processing and deployment,
+- encapsulate code,
+- avoid hidden dependencies
+
+
+and use virtualization, e.g. Docker.
 
 
