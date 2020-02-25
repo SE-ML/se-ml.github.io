@@ -4,7 +4,7 @@ author: Alex Serban, Joost Visser
 name: Share Status and Outcomes of Experiments Within the Team
 category: Experiment
 unique_id: exp_status
-index: 17
+index: 15
 difficulty: #
 references: [BPDL, PMLPP]
 comments: True

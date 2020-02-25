@@ -4,7 +4,7 @@ author: Alex Serban, Joost Visser
 name: Automate Model Deployment
 category: Deployment
 unique_id: deployment_automate
-index: 22
+index: 20
 difficulty: #
 references: [VML, MLArch, MLLG, OPML]
 comments: True

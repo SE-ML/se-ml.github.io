@@ -4,7 +4,7 @@ author: Alex Serban, Joost Visser
 name: Perform Checks to Detect Skews between Models
 category: Deployment
 unique_id: deployment_distskew
-index: 24
+index: 23
 difficulty: #
 references: [Rs4ML, CD4ML, TDBML, TFX]
 comments: True

@@ -4,7 +4,7 @@ author: Alex Serban, Joost Visser
 name: Use Static Analysis to Check Code Quality
 category: Coding
 unique_id: coding_static
-index: 21
+index: 19
 difficulty: #
 references: [BMS]
 comments: True

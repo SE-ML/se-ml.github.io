@@ -4,7 +4,7 @@ author: Alex Serban, Joost Visser
 name: Enable Automatic Roll Backs for Production Models
 category: Deployment
 unique_id: deployment_rollback
-index: 25
+index: 24
 difficulty: #
 references: [MLLG, CD4ML]
 comments: True

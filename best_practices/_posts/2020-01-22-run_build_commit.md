@@ -5,7 +5,7 @@ name: Run Build and Test at Each Commit
 aka: Use Continuous Integration
 category: Coding
 unique_id: coding_build
-index: 20
+index: 18
 difficulty: #
 references: [CD4ML]
 comments: True

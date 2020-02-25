@@ -4,7 +4,7 @@ author: Alex Serban, Joost Visser
 name: Deploy Shadow Models
 category: Deployment
 unique_id: deployment_shadow
-index: 23
+index: 22
 difficulty: #
 references: [VML, MLLG, TFX]
 comments: True

@@ -4,7 +4,7 @@ author: Alex Serban, Joost Visser
 name: Continuously Monitor the Behavior of Deployed Models
 category: Deployment
 unique_id: deployment_monitor
-index: 23
+index: 21
 difficulty: #
 references: [CD4ML, MLPROD, MLLG, TFX, TDBML]
 comments: True

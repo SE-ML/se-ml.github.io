@@ -4,7 +4,7 @@ author: Alex Serban, Joost Visser
 name: Run Automated Regression Tests
 category: Coding
 unique_id: coding_regr
-index: 18
+index: 17
 difficulty: #
 references: [MLPROD]
 comments: True
@@ -15,7 +15,7 @@ photocredit: #
 intent: Avoid the introduction of bugs in code. #
 motivation: When making changes, new defects can easily be introduced in existing code. A suite of automated regression tests helps to spot such defects as early as possible. #
 applicability: Regression testing can be applied to any type of code. #
-related: [exp_tstfeature] # 
+related: [exp_tstfeature] #
 dependencies: [coding_build] #
 survey_question: 53 #
 
