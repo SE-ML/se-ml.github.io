@@ -8,18 +8,37 @@ layout: default
     <p class="post-meta">{{ page.date | date: "%B, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
 
-  {% assign next_pr_index = page.index | plus:1  %}
-  {% assign back_pr_index = page.index | minus:1  %}
+
+  {% assign sorted_practices = site.categories.best_practices  | sort:"index" %}
+  {% assign sorted_practices = site.categories.best_practices  | where_exp: "item", "item.index > 0" %}
+
+  {% if page.index == 1 %}
+
+    {% assign next_pr_index = page.index | plus:1  %}
+    {% assign back_pr_index = sorted_practices.size %}
+
+  {% else%}
+
+    {% if page.index == sorted_practices.size %}
+      {% assign next_pr_index = 1 %}
+      {% assign back_pr_index = page.index | minus:1  %}
+
+    {% else %}
+
+      {% assign next_pr_index = page.index | plus:1  %}
+      {% assign back_pr_index = page.index | minus:1  %}
+
+    {% endif %}
+  {% endif %}
+
   {% assign next_pr = site.categories.best_practices  | where: 'index', next_pr_index %}
   {% assign last_pr = site.categories.best_practices  | where: 'index', back_pr_index %}
   {% assign pr_num = site.categories.best_practices  | where: 'category', page.category %}
-  {% assign sorted_practices = site.categories.best_practices  | sort:"index" %}
 
   <div style="text-align:center;">
-
-  <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-  <span> {{page.index }} / 28 •  {{page.category}} </span>
-  <a href="{{next_pr[0].url}}" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+      <span> {{page.index }} / {{sorted_practices.size}} •  {{page.category}} </span>
+      <a href="{{next_pr[0].url}}" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
   </div>
 
   <br><br>
@@ -95,6 +114,12 @@ layout: default
 </ul>
 {% endif %}
 
+<br><br>
+<div style="text-align:center;">
+      <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+      <span> {{page.index }} / {{sorted_practices.size}} •  {{page.category}} </span>
+      <a href="{{next_pr[0].url}}" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+</div>
 <br><br>
   {% if site.disqus_shortname and page.comments %}
     <div id="disqus_thread"></div>

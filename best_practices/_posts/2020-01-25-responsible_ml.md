@@ -4,7 +4,7 @@ author: Alex Serban, Joost Visser
 name: Enforce Fairness and Privacy
 category: Governance
 unique_id: gov_responsible
-index: 50
+index: 29
 difficulty: #
 references: [DQML, MLFAIR, MLRES]
 comments: True

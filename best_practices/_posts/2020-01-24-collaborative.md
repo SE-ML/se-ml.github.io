@@ -1,7 +1,7 @@
 ---
 layout: practice
 author: Alex Serban, Joost Visser
-name: Use Collaborative Developments Platforrms Consistently
+name: Use Collaborative Developments Platforms Consistently
 category: Team
 unique_id: team_collab
 index: 26

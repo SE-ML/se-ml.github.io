@@ -34,7 +34,7 @@ in the diagram above.
   {% for pr in sorted_practices %}
      {% if pr.category == 'Data' %}
         <li>
-          <a class="black" href="{{pr.url}}">{{ pr.name }}</a>
+          <a  href="{{pr.url}}">{{ pr.name }}</a>
         </li>
     {% endif %}
 
@@ -45,13 +45,15 @@ in the diagram above.
 
 <h3 class="black bold"> Experiment </h3>
 
-Experiments are at the core of ML.
+"No amount of experimentation can ever prove me right; a single experiment can prove me wrong." -- Albert Einstein
+
+<br><br>
 
 <ul>
   {% for pr in sorted_practices %}
      {% if pr.category == 'Experiment' %}
         <li>
-          <a  class="black" href="{{pr.url}}">{{ pr.name }}</a>
+          <a  href="{{pr.url}}">{{ pr.name }}</a>
         </li>
     {% endif %}
 
@@ -71,7 +73,7 @@ Experiments are at the core of ML.
   {% for pr in sorted_practices %}
      {% if pr.category == 'Coding' %}
         <li>
-          <a  class="black" href="{{pr.url}}">{{ pr.name }}</a>
+          <a   href="{{pr.url}}">{{ pr.name }}</a>
         </li>
     {% endif %}
 
@@ -84,14 +86,14 @@ Experiments are at the core of ML.
 
 “If your model isn’t deployed into production, does it really exist?”
 -- <a href="https://twitter.com/code_star/status/1041913975154331648">Anonymous<a>
-	
+
 <br><br>
 
 <ul>
   {% for pr in sorted_practices %}
      {% if pr.category == 'Deployment' %}
         <li>
-          <a class="black" href="{{pr.url}}">{{ pr.name }}</a>
+          <a  href="{{pr.url}}">{{ pr.name }}</a>
         </li>
     {% endif %}
 
@@ -107,7 +109,7 @@ Tribes & squats ...
   {% for pr in sorted_practices %}
      {% if pr.category == 'Team' %}
         <li>
-          <a class="black" href="{{pr.url}}">{{ pr.name }}</a>
+          <a  href="{{pr.url}}">{{ pr.name }}</a>
         </li>
     {% endif %}
 
@@ -122,7 +124,7 @@ Tribes & squats ...
   {% for pr in sorted_practices %}
      {% if pr.category == 'Governance' %}
         <li>
-          <a class="black" href="{{pr.url}}">{{ pr.name }}</a>
+          <a  href="{{pr.url}}">{{ pr.name }}</a>
         </li>
     {% endif %}
 
