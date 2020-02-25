@@ -21,7 +21,7 @@ survey_question: Q61
 ---
 
 In a fast changing environment or if the training data does not reflect the production distribution, it is not uncommon to have models that perform well during training and initial testing, but not in production.
-In order to avoid deployment of under-performing models, it is recommended to check possible skews between models.
+In order to avoid deployment of under-performing or sub-optimal models, it is recommended to check possible skews between  the production and training environments.
 
 Make sure to:
 - check performance skews between training and hold-out data,

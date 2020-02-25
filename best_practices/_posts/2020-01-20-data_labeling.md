@@ -28,4 +28,4 @@ Secondly, choosing labels is a subjective activity and may introduce bias or noi
 
 Imposing a strictly controlled process for data labeling guarantees that your algorithm is served with the best data and helps to avoid later issues related to model debugging and error tracing.
 
-A good data labelling process includes peer-reviewing all labels by a second team member.
+A mature data labelling process includes peer-reviewing all labels by a second team member.

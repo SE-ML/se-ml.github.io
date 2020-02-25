@@ -22,7 +22,7 @@ survey_question: Q64
 
 Machine Learning is a data driven process and, in most cases, the algorithm's performance improves when using more data.
 This characteristic of ML algorithms is a central drive for collecting and processing more data.
-Although there are many benefits from processing personal and sensitive data, it is essential to consider and assess the potential privacy violations in using this data.
+Although there are many benefits that can be harvested from processing personal or sensitive data, it is essential to consider and assess the potential privacy violations in using this data.
 
 
 Moreover, if the ML model you are developing makes decisions about individuals that can have a negative impact on their life -- e.g. an automatic loan system that may automatically refuse loans -- it is crucial to assess the algorithm's fairness and inclusiveness for all members of the society.

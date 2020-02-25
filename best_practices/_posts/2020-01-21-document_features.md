@@ -13,14 +13,14 @@ image: #
 photocredit: #
 
 intent: Enhance feature development, understanding and maintenance. #
-motivation: In a larger data set, with multiple features that are composed from data attributes, it is hard to keep track and understand all features. By assigning an owner and documenting each feature, they become easier to maintain and understand. #
+motivation: In a large data set, with multiple features that are composed from various data attributes, it is hard to keep track and understand all features. By assigning an owner and documenting each feature, they become easier to maintain and comprehend. #
 applicability: #
-related: #
+related: [exp_archive] #
 dependencies: #
 survey_question: Q39
 ---
 
-Ensuring that someone in a team is in charge of the information regarding a feature facilitates feature maintainability and improves the overall understanding of the model.
+Ensuring that someone in a team is in charge of the information regarding a feature facilitates feature maintainability and improves the overall understanding of the data and models.
 
 
 Although feature names can be descriptive, it is important to also document their rationale in order to facilitate communication and share the knowledge among team members.

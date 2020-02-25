@@ -27,7 +27,7 @@ In both cases, over-engineering a metric may lead to entangled measurements that
 
 
 Simple metrics, that are easy to measure and comprehend are considered better proxies for the "true" objective.
-Working together with business or data analysts to ensure the metrics reflect business value helps to align the measurements with the true objective.
+Working together with business or data analysts to ensure the metrics reflect business value helps to align the measurements with the "true" objective.
 
 
 A great example can be found in <a href="https://developers.google.com/machine-learning/guides/rules-of-ml" target="blank">the 13th rule for machine learning</a> by Martin Zinchevich.
