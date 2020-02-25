@@ -4,7 +4,7 @@ author: Alex Serban, Joost Visser
 name: Use Collaborative Developments Platforrms Consistently
 category: Team
 unique_id: team_collab
-index: 26
+index: 27
 difficulty: #
 comments: True
 description:
