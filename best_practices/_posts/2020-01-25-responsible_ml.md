@@ -29,7 +29,7 @@ Moreover, if the ML model you are developing makes decisions about individuals t
 Moreover, it is crucial to assess that decisions are based on clear and interpretable features.
 
 Whenever processing personal information or whenever developing algorithms that take automated decisions, consider to:
-- assess that the personal information does not implies privacy breaches,
+- assess that personal data used does not breach privacy,
 - use privacy preserving ML whenever possible, e.g. differential privacy,
 - define and implement metrics for bias, fairness and responsible use of ML,
 - take security into account -- confidential information can be leaked by ML algorithms,
