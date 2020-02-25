@@ -1,8 +1,7 @@
 ---
 layout: practice
 author: Alex Serban, Joost Visser
-name: Run Build and Test at Each Commit
-aka: Use Continuous Integration
+name: Use Continuous Integration
 category: Coding
 unique_id: coding_build
 index: 18
@@ -18,7 +17,7 @@ motivation: Code changes and additions may introduce problems into the software 
 applicability:  #
 related: [coding_static, exp_tstfeature, coding_regr]
 dependencies: [coding_automate] #
-survey_question: 54 #
+survey_question: [Q55,Q54] #
 ---
 
 By running an automated build script at each commit, you achieve **Continuous Integration** (CI).

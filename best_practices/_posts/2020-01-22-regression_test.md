@@ -25,15 +25,11 @@ When adding or changing code, new defects can be introduced, not only in the cod
 
 By automating your regression tests, spotting newly introduced bugs after each change becomes effortless. Thus, automated regression tests allows you to focus on experimenting with new functionality rather than worrying about not breaking existing functionality.
 
-Testing frameworks are available to help writing, organising, running, and reporting on the outcome of regression tests.
-- **Unit testing**. For many programming languages, unit testing frameworks are available, such as JUnit (for Java), ...
-
-MENTION OTHER TYPES OF REGRESSION TESTING
+Testing frameworks are available to help writing, organising, running, and reporting on the outcome of regression tests. The most widely used from of regression testing is **unit testing**. For many programming languages, unit testing frameworks are available, such as JUnit (for Java), <a href="https://testthat.r-lib.org/">testthat</a> for R, or <a href="http://docs.python.org/library/unittest.html">unittest</a> for Python.
 
 When adding new code, also new regression tests should be written, to ensure that regression testing may find bugs there as well in future. The style of programming called **test-driven development** goes one step further and advocates for first writing a test for new functionalit and only then writing the code that provides that functionality.
 
-When running automated regression tests, it is important to make sure your test suite provides good **coverage**. For this, test coverage tooling can be used. For example:
-- Codecov
+When running automated regression tests, it is important to make sure your test suite provides good **coverage**. For this, test coverage tooling can be used such as <a href="https://codecov.io/">Codecov</a>.
 
 An advanced method for measuring test suite quality is mutation testing, where small perturbations (mutants) are injected into the code to see if the test suite detects them.
 
