@@ -1,7 +1,7 @@
 ---
 layout: practice
 author: Alex Serban, Joost Visser
-name: Datasets are Available on Shared Infrastructure (private or public)
+name: Data sets are Available on Shared Infrastructure (private or public)
 category: Data
 unique_id: data_share
 index: 5
@@ -13,7 +13,7 @@ image: #
 photocredit: #
 
 intent: Avoid data duplication, data bottlenecks and heavy data transfer. #
-motivation: The amount of input data for ML models is higher than usual software systems, demanding special practices to ensure good management. #
+motivation: The amount of data processed by ML models is higher than usual software systems, raising concerns related to duplication, transfer, storage and traceability. Making the data sets available on shared infrastructure helps mitigate these issues. #
 applicability: #
 related: #
 dependencies: #
@@ -24,9 +24,13 @@ Good data management and sharing is important for several reasons:
 - access control,
 - virtualization,
 - versioning,
-- maintainainability and freshness.
+- maintainability and freshness,
+- avoid duplication,
+- avoid unnecessary transfers and save time.
 
 Many applications deal with high data volumes.
-Transfering or copying a high volume of data is not trivial.
-Making datasets avaiable on shared infrastructuure (e.g. S3 Buckets, mountable disks) helps mitigate all these issues.
-Moreover, it can provide tracebility.
+Transferring or copying a high volume of data is not trivial and may introduce large delays in the processing pipelines.
+Needless to say duplication becomes an issue with large volumes of data.
+
+Making data sets available on shared infrastructure (e.g. S3 Buckets or mountable disks) helps mitigate these issues.
+Moreover, it is easier to impose access control policies and provide traceability i.e. keep a data access log.

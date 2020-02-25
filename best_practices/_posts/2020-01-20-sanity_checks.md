@@ -13,16 +13,15 @@ image: #
 photocredit: #
 
 intent: Avoid invalid or incomplete data being processed. #
-motivation: Data is at the heart of any machine learning model. Therefore, having the right data is crucial for model quality. #
+motivation: Data is at the heart of any machine learning model. Therefore, avoiding data errors is crucial for model quality. #
 applicability: #
-related: #
+related: [data_complete, data_reusable] #
 dependencies: #
 survey_question: Q32
 ---
 
-Whenever using external data sources, or collecting data that may be incomplete or ill formated, it is important to perform sanity checks.
-<!-- before using it. -->
-Invalid or incomplete data may cause outages in production or lead to innacurate models.
+Whenever using external data sources, or collecting data that may be incomplete or ill formatted, it is important to verify its quality.
+Invalid or incomplete data may cause outages in production or lead to inaccurate models.
 
 Start by checking simple data attributes, such as:
 
@@ -32,3 +31,6 @@ Start by checking simple data attributes, such as:
 - histograms of continuous values,
 
 and gradually include more complex data statistics, such as the ones recommended <a href="/blog/2020/input_data_completeness">here</a>.
+
+
+Also, make sure the data verification scripts are reusable and can be later integrated in a processing pipeline.

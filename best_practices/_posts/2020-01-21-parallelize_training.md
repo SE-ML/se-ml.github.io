@@ -1,7 +1,7 @@
 ---
 layout: practice
 author: Alex Serban, Joost Visser
-name: Parallelize Training Experiments
+name: Enable Parallel Training Experiments
 category: Experiment
 unique_id: exp_parallel
 index: 12
