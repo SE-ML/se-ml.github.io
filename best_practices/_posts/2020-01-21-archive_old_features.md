@@ -23,7 +23,7 @@ survey_question: Q41
 When features which are no longer used are not removed, they introduce clutter in the processing pipeline.
 
 
-This is equivalent to not removing 'dead code' in standard programming.
+This is equivalent to not removing 'dead code' in traditional programming.
 
 
 Keeping the pipeline clean from unused features allows faster experimentation and result interpretation, by focusing only on the most relevant features.
@@ -33,4 +33,4 @@ It also improves debugging.
 When removing features, it is also important to consider coverage: if some features are only rarely present, they are good candidates for removal.
 
 
-If you opt to not remove unused features, make sure that their documentation reflects their status.
+If you opt to not remove unused features, make sure that their documentation reflects this status.

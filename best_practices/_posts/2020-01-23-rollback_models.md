@@ -13,7 +13,7 @@ image: #
 photocredit: #
 
 intent: Avoid sub-optimal models in production. #
-motivation: Similar to deployment, rolling back models can be a tedious process. Instead of manually performing this task, it is recommended to define an automatic process for it.. #
+motivation: Similar to deployment, rolling back models can be a tedious process. Instead of manually performing this task, it is recommended to define an automatic process for it. #
 applicability: #
 related: [deployment_automate, deployment_monitor] #
 dependencies: #

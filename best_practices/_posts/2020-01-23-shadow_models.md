@@ -20,8 +20,8 @@ dependencies: #
 survey_question: Q59
 ---
 
-Instead of deploying a model straight into production, one can assess its quality and performance using the data from production without allowing the model to make decisions.
-This involves deploying the new model to shadow the current model in production and redirect the data to both models.
+Instead of deploying a model straight into production, one can assess its quality and performance using the data from production without allowing the model to make final decisions.
+This involves deploying the a model to "shadow" or "compete" with the model in production and redirect the data to both models.
 The model that is already deployed will still handle all decisions, until the shadow model is assessed and promoted to production.
 
 Using shadow models allows teams to avoid unintended behaviors in production  -- coming from skews between training and test data.

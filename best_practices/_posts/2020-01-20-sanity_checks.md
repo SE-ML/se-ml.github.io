@@ -33,4 +33,4 @@ Start by checking simple data attributes, such as:
 and gradually include more complex data statistics, such as the ones recommended <a href="/blog/2020/input_data_completeness">here</a>.
 
 
-Also, make sure the data verification scripts are reusable and can be later integrated in a processing pipeline.
+Also, make sure the data verification scripts are <a href="/blog/2020/reusable_data_cleaning/" target="blank">reusable</a> and can be later integrated in a processing pipeline.

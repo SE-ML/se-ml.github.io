@@ -14,7 +14,7 @@ photocredit: #
 
 
 intent: Increase the ability to deploy models on demand -- which increases availability and scalability. #
-motivation: Deploying and orchestrating different components of an application can be a tedious task. Instead of manually packaging and delivering models and in order to avoid manual interventions or errors, we can automate this task. #
+motivation: Deploying and orchestrating different components of an application can be a tedious task. Instead of manually packaging and delivering models and in order to avoid manual interventions or errors, one can automate this task. #
 applicability: #
 related: #
 dependencies: #
@@ -23,9 +23,9 @@ survey_question: Q56
 
 Automated deployment involves automatically packing the model together with its dependencies and 'shipping' it to a production server -- instead of manually connecting to a server and perform the deployment.
 
-Automated model deployment brings several advantages. At first, it saves time and increases reliability because the chances to introduce human errors are removed.
-Secondly, it improves availability and scalability because we can repeat the process on demand for as many instances as we want, without manual intervention.
-This means we can spin off many instances of the model whenever we have a large demand from the users and decrease the number of instances when the demand lowers.
+Automated model deployment brings several advantages. At first, it saves time and it increases reliability because the chances to introduce human errors are removed.
+Secondly, it improves availability and scalability because one can repeat the process on demand for as many instances as it is needed, without manual intervention.
+This means one can spin off many instances of the model whenever many users need access to a service and decrease the number of instances when the demand lowers.
 
 
 In order to facilitate continuous deployment:

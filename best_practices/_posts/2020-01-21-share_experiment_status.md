@@ -20,12 +20,12 @@ dependencies: #
 survey_question: Q47
 ---
 
-Although different team members have their own style of managing experiments and tracing their outcomes, it is recommended to adopt a common way of logging data, that is understood and accessible to all team members.
+Although different team members have their own style of managing experiments and tracing their outcomes, it is recommended to adopt a common way of logging data; that is understood and accessible to all team members.
 
 
-Sharing the outcomes within the team has several benefits for peer review, knowledge transfer and assessment.
+Sharing the outcomes within the team has several benefits for peer review, knowledge transfer and model assessment.
 
 
-Several <a href="https://github.com/SE-ML/awesome-seml#tooling" target="blank"> collaborative tools </a> enable central logging of experiment results.
+Several <a href="https://github.com/SE-ML/awesome-seml#tooling" target="blank"> collaborative tools </a> enable central logging of experimental results.
 
 Whenever possible, it is recommended to use one of the tools available internally or externally (e.g. <a href="https://github.com/SE-ML/awesome-seml#tooling" target="blank">Sacred or W&B</a>).
