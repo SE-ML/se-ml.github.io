@@ -1,7 +1,7 @@
 ---
 layout: practice
 author: Alex Serban, Joost Visser
-name: Deploy Shadow Models
+name: Enable Shadow Deployment
 category: Deployment
 unique_id: deployment_shadow
 index: 22
