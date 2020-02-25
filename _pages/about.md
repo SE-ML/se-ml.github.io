@@ -17,4 +17,4 @@ An ever-increasing number of organisations are developing applications that invo
 
 *Do traditional software engineering practices apply equally to the development of applications with ML components, or do these practices need to be adapted to cater for particular ML characteristics?*
 
-To investigate this question, we study the scientific and popular literature and engage with machine learning practitioners.
+To investigate this question, <a href="/members">we</a> study the scientific and popular literature and engage with machine learning practitioners.
