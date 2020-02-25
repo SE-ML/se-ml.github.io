@@ -5,7 +5,7 @@ name: Test all Feature Extraction Code
 category: Experiment
 unique_id: exp_tstfeature
 index: 8
-difficulty: #
+difficulty: "advanced"
 references: [CD4ML]
 comments: True
 description:

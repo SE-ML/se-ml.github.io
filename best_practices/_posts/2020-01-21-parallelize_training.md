@@ -5,7 +5,7 @@ name: Enable Parallel Training Experiments
 category: Experiment
 unique_id: exp_parallel
 index: 12
-difficulty: #
+difficulty: "basic"
 comments: True
 references: [CD4ML, MLPROD]
 description:

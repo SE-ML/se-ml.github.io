@@ -5,7 +5,7 @@ name: Facilitate Team Collaboration and Integration with Other Departments
 category: Team
 unique_id: team_communication
 index: 28
-difficulty: #
+difficulty: "basic"
 comments: True
 description:
 image: #

@@ -5,7 +5,7 @@ name: Capture the Training Objective in a Metric that is Easy to Measure and Und
 category: Experiment
 unique_id: exp_trainingmetric
 index: 7
-difficulty: #
+difficulty: "basic"
 references: [Rs4ML, OPML, DSTEAM, MLTEAM]
 comments: True
 description:

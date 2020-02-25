@@ -5,7 +5,7 @@ name: Continuously Measure Model Quality and Performance
 category: Experiment
 unique_id: exp_quality
 index: 14
-difficulty: #
+difficulty: "basic"
 references: [Rs4ML, TDBML]
 comments: True
 description:

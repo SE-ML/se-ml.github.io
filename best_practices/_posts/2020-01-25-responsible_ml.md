@@ -5,7 +5,7 @@ name: Enforce Fairness and Privacy
 category: Governance
 unique_id: gov_responsible
 index: 29
-difficulty: #
+difficulty: "medium"
 references: [DQML, MLFAIR, MLRES]
 comments: True
 description:

@@ -5,7 +5,7 @@ name: Make Data Sets Available on Shared Infrastructure (private or public)
 category: Data
 unique_id: data_share
 index: 5
-difficulty: #
+difficulty: "medium"
 references: [SD4DL, MSCS, MMLP, PMLPP]
 comments: True
 description:

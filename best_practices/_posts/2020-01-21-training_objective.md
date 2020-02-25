@@ -5,7 +5,7 @@ name: Share a Clearly Defined Training Objective within the Team
 category: Experiment
 unique_id: exp_trainingobjective
 index: 6
-difficulty: #
+difficulty: "basic"
 references: [Rs4ML, MMLP, MLTEAM]
 comments: True
 description:

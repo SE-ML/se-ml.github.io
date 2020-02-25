@@ -5,7 +5,7 @@ name: Automate Hyper-Parameter Optimization
 category: Experiment
 unique_id: exp_hyperparam
 index: 13
-difficulty: #
+difficulty: "advanced"
 comments: True
 description:
 image: #

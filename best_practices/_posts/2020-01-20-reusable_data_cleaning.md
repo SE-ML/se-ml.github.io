@@ -5,7 +5,7 @@ name: Write Reusable Scripts for Data Cleaning and Merging
 category: Data
 unique_id: data_reusable
 index: 3
-difficulty: #
+difficulty: "basic"
 references: ["DMP", "MLOps", "BPMLI"]
 comments: True
 description:

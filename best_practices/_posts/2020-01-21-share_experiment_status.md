@@ -5,7 +5,7 @@ name: Share Status and Outcomes of Experiments Within the Team
 category: Experiment
 unique_id: exp_status
 index: 15
-difficulty: #
+difficulty: "medium"
 references: [BPDL, PMLPP]
 comments: True
 description:

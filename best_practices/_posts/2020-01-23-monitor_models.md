@@ -5,7 +5,7 @@ name: Continuously Monitor the Behavior of Deployed Models
 category: Deployment
 unique_id: deployment_monitor
 index: 21
-difficulty: #
+difficulty: "basic"
 references: [CD4ML, MLPROD, MLLG, TFX, TDBML]
 comments: True
 description:

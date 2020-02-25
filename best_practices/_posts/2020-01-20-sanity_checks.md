@@ -5,7 +5,7 @@ name: Use Sanity Checks for All External Data Sources
 category: Data
 unique_id: data_sanity
 index: 1
-difficulty: #
+difficulty: "basic"
 comments: True
 references: ["DMP","MLOps","DQML"]
 description:

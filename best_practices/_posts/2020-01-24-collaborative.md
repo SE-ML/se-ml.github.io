@@ -5,7 +5,7 @@ name: Use Collaborative Developments Platforms Consistently
 category: Team
 unique_id: team_collab
 index: 26
-difficulty: #
+difficulty: "basic"
 comments: True
 description:
 image: #

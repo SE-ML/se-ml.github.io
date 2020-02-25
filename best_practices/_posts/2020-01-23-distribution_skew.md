@@ -5,7 +5,7 @@ name: Perform Checks to Detect Skews between Models
 category: Deployment
 unique_id: deployment_distskew
 index: 23
-difficulty: #
+difficulty: "advanced"
 references: [Rs4ML, CD4ML, TDBML, TFX]
 comments: True
 description:

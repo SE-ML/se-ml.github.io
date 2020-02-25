@@ -5,7 +5,7 @@ name: Actively Remove or Archive Features That are Not Used
 category: Experiment
 unique_id: exp_archive
 index: 10
-difficulty: #
+difficulty: "medium"
 comments: True
 references: [Rs4ML, MLTD]
 description:

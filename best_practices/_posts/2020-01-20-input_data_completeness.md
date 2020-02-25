@@ -5,7 +5,7 @@ name: Check that Input Data is Complete, Balanced and Well Distributed
 category: Data
 unique_id: data_complete
 index: 2
-difficulty: #
+difficulty: "medium"
 references: [DMP, MLTD, CTPML, DQML, MMLP]
 comments: True
 description: #

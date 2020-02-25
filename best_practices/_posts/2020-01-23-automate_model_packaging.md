@@ -5,7 +5,7 @@ name: Automate Model Deployment
 category: Deployment
 unique_id: deployment_automate
 index: 20
-difficulty: #
+difficulty: "medium"
 references: [VML, MLArch, MLLG, OPML]
 comments: True
 description:
