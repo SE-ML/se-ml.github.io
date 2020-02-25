@@ -36,10 +36,9 @@ layout: default
   {% assign pr_num = site.categories.best_practices  | where: 'category', page.category %}
 
   <div style="text-align:center;">
-
-  <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-  <span> {{page.index }} / {{sorted_practices.size}} •  {{page.category}} </span>
-  <a href="{{next_pr[0].url}}" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+      <span> {{page.index }} / {{sorted_practices.size}} •  {{page.category}} </span>
+      <a href="{{next_pr[0].url}}" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
   </div>
 
   <br><br>
@@ -115,6 +114,12 @@ layout: default
 </ul>
 {% endif %}
 
+<br><br>
+<div style="text-align:center;">
+      <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+      <span> {{page.index }} / {{sorted_practices.size}} •  {{page.category}} </span>
+      <a href="{{next_pr[0].url}}" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+</div>
 <br><br>
   {% if site.disqus_shortname and page.comments %}
     <div id="disqus_thread"></div>
