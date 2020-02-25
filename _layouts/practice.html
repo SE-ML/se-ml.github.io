@@ -44,8 +44,8 @@ layout: default
 
   <div style="text-align:center;">
       <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-      <span> {{page.index }} / {{sorted_practices.size}} •</span>
-      <span class="black">{{page.category}}</span> •
+      <span> {{page.index }} / {{sorted_practices.size}} </span> •
+      <a href="/practices#{{page.category | downcase}}"> <span>{{page.category}}</span> </a> •
       <div class="badge"><img src="{{badge}}"></img></div>
       <a href="{{next_pr[0].url}}" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
   </div>
@@ -109,29 +109,30 @@ layout: default
   </ul>
   {% endif %}
 
-{% if page.references.size > 0%}
-<h3 class="black bold">Read more</h3>
-  <ul>
-  {% for r in site.references %}
-     {% if page.references contains r.acronym  %}
-        <li>
-          <a href="{{r.webpage}}" target="_blank">{{ r.title }}</a>
-        </li>
-    {% endif %}
+  {% if page.references.size > 0%}
+  <h3 class="black bold">Read more</h3>
+    <ul>
+    {% for r in site.references %}
+      {% if page.references contains r.acronym  %}
+          <li>
+            <a href="{{r.webpage}}" target="_blank">{{ r.title }}</a>
+          </li>
+      {% endif %}
 
-  {% endfor %}
-</ul>
-{% endif %}
+    {% endfor %}
+  </ul>
+  {% endif %}
 
-<br><br>
-<div style="text-align:center;">
-      <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-      <span> {{page.index }} / {{sorted_practices.size}} •</span>
-      <span class="black">{{page.category}}</span> •
-      <div class="badge"><img src="{{badge}}"></img></div>
-      <a href="{{next_pr[0].url}}" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  <br><br>
+  <div style="text-align:center;">
+        <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+        <span> {{page.index }} / {{sorted_practices.size}} </span> •
+        <a href="/practices#{{page.category | downcase}}"> <span>{{page.category}}</span> </a> •
+        <div class="badge"><img src="{{badge}}"></img></div>
+        <a href="{{next_pr[0].url}}" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
   </div>
-<br><br>
+  <br><br>
+
   {% if site.disqus_shortname and page.comments %}
     <div id="disqus_thread"></div>
     <script type="text/javascript">
