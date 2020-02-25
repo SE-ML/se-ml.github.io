@@ -1,8 +1,7 @@
 ---
 layout: practice
 author: Alex Serban, Joost Visser
-name: Run Build at Each Commit
-aka: Use Continuous Integration
+name: Use Continuous Integration
 category: Coding
 unique_id: coding_build
 index: 18
