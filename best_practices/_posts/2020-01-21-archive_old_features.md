@@ -13,20 +13,21 @@ image: #
 photocredit: #
 
 intent: Avoid technical debt caused by unused features. #
-motivation: Features that are no longer used introduce technical debt and clutter. Removing or cleaning unused features from the data pipeline helps concentrate only on promising features and improves understandability.  #
+motivation: Features that are no longer used introduce technical debt and clutter. Removing or cleaning unused features from the data pipeline helps concentrate only on promising features and improves understandability and maintenance.  #
 applicability: #
 related: [data_complete, exp_owner] #
 dependencies: #
 survey_question: Q41
 ---
 
-If features directly derived data or from merging different data attributes which are no longer used are not removed, they introduce clutter in the infrastructure.
+When features which are no longer used are not removed, they introduce clutter in the processing pipeline.
 
 
 This is equivalent to not removing 'dead code' in standard programming.
 
 
-Keepping the pipeline clean from unused features allows faster experimentation and result interpretation by focusing only on the most relevant features.
+Keeping the pipeline clean from unused features allows faster experimentation and result interpretation, by focusing only on the most relevant features.
+It also improves debugging.
 
 
 When removing features, it is also important to consider coverage: if some features are only rarely present, they are good candidates for removal.

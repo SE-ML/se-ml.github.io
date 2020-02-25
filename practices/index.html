@@ -110,3 +110,18 @@ Tribes & squats ...
 
   {% endfor %}
 </ul>
+
+
+<h3 class="black bold"> Governance </h3>
+
+
+<ul>
+  {% for pr in sorted_practices %}
+     {% if pr.category == 'Governance' %}
+        <li>
+          <a class="black" href="{{pr.url}}">{{ pr.name }}</a>
+        </li>
+    {% endif %}
+
+  {% endfor %}
+</ul>

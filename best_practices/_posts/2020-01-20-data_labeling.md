@@ -13,7 +13,7 @@ image: #
 photocredit: #
 
 intent: Avoid invalid or incomplete labels. #
-motivation: Controlling the data labeling process ensures label quality -- an important quality factor for supervised learning algorithms. #
+motivation: Controlling the data labeling process ensures label quality -- an important quality driver for supervised learning algorithms. #
 applicability: #
 related: #
 dependencies: #
@@ -27,3 +27,5 @@ At first, data labeling raises challenges because the volume of data is typicall
 Secondly, choosing labels is a subjective activity and may introduce bias or noise.
 
 Imposing a strictly controlled process for data labeling guarantees that your algorithm is served with the best data and helps to avoid later issues related to model debugging and error tracing.
+
+A good data labelling process includes peer-reviewing all labels by a second team member.
