@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Avoid misunderstandings between multi-disciplinary team members. #
 motivation: In a multi-disciplinary team, members with different backgrounds may misinterpret training objectives. Therefore, it is important to clearly communicate the objectives within the team. #
-applicability: #
+applicability: Any ML team should share a clear training objective.
 related: [exp_trainingmetric] #
 dependencies: [exp_trainingmetric] #
 survey_question: Q37

@@ -13,7 +13,7 @@ photocredit: #
 
 intent: Enhance experimentation by automating hyper-parameter search and model selection. #
 motivation: Finding the right hyper-parameters for a model or choosing between different ML models can be a daunting task. Automated methods to perform these activities are now available, with great 'off the shelf' tool support.  #
-applicability: #
+applicability: Automatic hyper-parameter optimization should be considered in any ML application.
 related: [exp_peer] #
 dependencies: #
 survey_question: Q80

@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Avoid introducing errors in production pipelines. #
 motivation: Test if a model that performs well during training and initial testing will also perform well in production i.e. test if the training data distribution reflects the production one. #
-applicability: #
+applicability: Model skews should be monitored in any production-level ML application.
 related:  [deployment_automate, deployment_monitor] #
 dependencies: #
 survey_question: Q61

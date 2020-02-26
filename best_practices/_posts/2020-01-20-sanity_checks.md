@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Avoid invalid or incomplete data being processed. #
 motivation: Data is at the heart of any machine learning model. Therefore, avoiding data errors is crucial for model quality. #
-applicability: #
+applicability: Data quality control should be applied to any machine learning application. #
 related: [data_complete, data_reusable] #
 dependencies: #
 survey_question: Q32

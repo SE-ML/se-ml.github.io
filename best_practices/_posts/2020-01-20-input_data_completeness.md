@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Avoid invalid or incomplete data being processed. #
 motivation: The data generation processes are not static. Therefore, it is necessary to continuously check that data evolution does not introduce issues in distributions, completeness and balance. #
-applicability: #
+applicability: Data quality control should be applied to any machine learning application.
 related: [data_sanity, deployment_distskew] #
 dependencies: #
 survey_question: Q33

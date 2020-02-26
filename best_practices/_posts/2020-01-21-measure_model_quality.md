@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Detect errors early and improve experimentation agility. #
 motivation: #
-applicability: #
+applicability: Quality monitoring should be used in any training experiment.
 related: [exp_status, deployment_monitor] #
 dependencies: #
 survey_question: Q44

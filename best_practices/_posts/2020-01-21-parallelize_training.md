@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Avoid deadlocks during experimentation. #
 motivation: Machine learning relies heavily on empirical processes. In order to allow fast experimentation and avoid deadlocks, it is recommended to think upfront of experiment parallelization. #
-applicability: #
+applicability: Parallelization should be considered in any ML application.
 related: [exp_status] #
 dependencies: #
 survey_question: Q43

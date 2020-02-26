@@ -14,8 +14,8 @@ photocredit: #
 
 intent: Avoid development errors and bugs.  #
 motivation: Peer review is a well known quality assurance technique in software development. Actively performing peer review helps to improve quality, find defects and transfer knowledge between team members. #
-applicability: #
-related: [team_collab]#
+applicability: Training scripts should always be peer reviewed.
+related: [team_collab]
 dependencies: #
 survey_question: Q42
 ---

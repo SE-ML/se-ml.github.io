@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Avoid data duplication, data bottlenecks and heavy data transfer. #
 motivation: The amount of data processed by ML models is higher than usual software systems, raising concerns related to duplication, transfer, storage and traceability. Making the data sets available on shared infrastructure helps mitigate these issues. #
-applicability: #
+applicability: Data sharing should be applied to any ML application.
 related: #
 dependencies: #
 survey_question: Q36

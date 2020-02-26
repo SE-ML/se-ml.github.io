@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Enhance feature development, understanding and maintenance. #
 motivation: In a large data set, with multiple features that are composed from various data attributes, it is hard to keep track and understand all features. By assigning an owner and documenting each feature, they become easier to maintain and comprehend. #
-applicability: #
+applicability: Features should have an owner and documentation whenever features are manually engineered (and not automatically extracted, e.g. through deep learning).
 related: [exp_archive] #
 dependencies: #
 survey_question: Q39

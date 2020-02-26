@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Avoid technical debt caused by unused features. #
 motivation: Features that are no longer used introduce technical debt and clutter. Removing or cleaning unused features from the data pipeline helps concentrate only on promising features and improves understandability and maintenance.  #
-applicability: #
+applicability: Features should be archived whenever features are manually engineered (and not automatically extracted, e.g. through deep learning).
 related: [data_complete, exp_owner] #
 dependencies: #
 survey_question: Q41
