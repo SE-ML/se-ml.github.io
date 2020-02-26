@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Avoid invalid or incomplete labels. #
 motivation: Controlling the data labeling process ensures label quality -- an important quality driver for supervised learning algorithms. #
-applicability: #
+applicability: Data label control should be applied to any ML application that uses labels, i.e. in supervised learning.
 related: #
 dependencies: #
 survey_question: Q35

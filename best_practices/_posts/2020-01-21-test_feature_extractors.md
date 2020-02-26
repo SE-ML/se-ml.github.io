@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Avoid bugs in the feature extraction code. #
 motivation: Many times a feature will merge two or more data attributes or use custom data transformations. Testing this custom feature extraction code ensures no errors or bugs are introduced in this process. #
-applicability: #
+applicability: The feature extraction code should be tested whenever features are manually  engineered (and not automatically extracted, e.g. through deep learning).
 related: [data_sanity, coding_regr] #
 dependencies: #
 survey_question: Q40

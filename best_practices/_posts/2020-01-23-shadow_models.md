@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Test a model's behavior on production data, without any impact on the service it provides. #
 motivation: Before pushing a model into production, it is wise to test its quality and performance on data from production. In order to facilitate this task, one can deploy multiple models to 'shadow' each other. #
-applicability: #
+applicability: Shadow deployment should be implemented in any production-level ML application.
 related: [deployment_automate] #
 dependencies: #
 survey_question: Q59

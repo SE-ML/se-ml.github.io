@@ -12,9 +12,9 @@ description:
 image: #
 photocredit: #
 
-intent: Avoid untidy data mugging scripts, reuse code and increase reproducibility. #
+intent: Avoid untidy data wrangling scripts, reuse code and increase reproducibility. #
 motivation: Data cleaning and merging are exploratory processes and tend to be less structured. Many times these processes involve manual steps or poorly structured code which can not be later reused or integrated in a pipeline.  #
-applicability: #
+applicability: Reusable data cleaning scripts should be written for any ML application that does not use raw or standard data sets.
 related: [exp_tstfeature, coding_regr] #
 dependencies: #
 survey_question: Q34

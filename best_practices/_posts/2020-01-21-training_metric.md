@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Ensure the ML objective is easy to measure and is a good proxy for the "true" objective. #
 motivation: Many times the "true" objective is hard to capture in a metric and may lead to entangled measurements. Choosing a simple, observable metric as a proxy simplifies things, leads to better interpretability and enhances communication within the team. #
-applicability: #
+applicability: All training objectives should be captured in an easy to comprehend metric.
 related: [exp_trainingobjective] #
 dependencies: #
 survey_question: Q38

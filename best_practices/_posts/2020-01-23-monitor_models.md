@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Avoid unintended behavior in production models. #
 motivation: Once a model is promoted to production, the team has to understand how it performs. #
-applicability: #
+applicability: Monitoring should be implemented in any production-level ML application.
 related: [deployment_distskew, deployment_rollback, exp_quality] #
 dependencies: #
 survey_question: Q60

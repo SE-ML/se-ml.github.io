@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Avoid sub-optimal models in production. #
 motivation: Similar to deployment, rolling back models can be a tedious process. Instead of manually performing this task, it is recommended to define an automatic process for it. #
-applicability: #
+applicability: Automatic rollbacks should be implemented in any production-level ML application.
 related: [deployment_automate, deployment_monitor] #
 dependencies: #
 survey_question: Q62

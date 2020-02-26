@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Improve reproducibility, traceability and compliance. #
 motivation: In order to reproduce previous machine learning experiments, one needs more than just the executable code. Versioning the training and testing data, the final model and all configuration files concomitantly is complimentary to versioning the executable code. #
-applicability: #
+applicability: Versioning should be used in any ML application or experiment.
 related: [exp_owner, exp_tstfeature] #
 dependencies: #
 survey_question: Q48

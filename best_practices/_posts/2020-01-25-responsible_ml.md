@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Avoid irresponsible use of machine learning and decisions with negative societal impact. #
 motivation: When processing personal information or when developing decision making systems that can negatively impact individuals or groups, it is important to enforce requirements for fairness and privacy. #
-applicability: #
+applicability: Responsible ML should be applied in any production-level ML application that processes personal data or has a potentially negative an impact on society.
 related: [exp_status, deployment_monitor] #
 dependencies: #
 survey_question: Q64
