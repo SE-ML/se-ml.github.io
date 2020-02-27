@@ -16,14 +16,14 @@ motivation: The system that your team develops is meant to integrate with other 
 applicability:  #
 related: #
 dependencies: #
-survey_question: 66 # Our developers have frequent communication, close collaboration, and integrated way of working with IT operations staff.
+survey_question: Q66 # Our developers have frequent communication, close collaboration, and integrated way of working with IT operations staff.
 ---
 
-Any development team lives within a larger organisation.
+Any development team lives within a larger organization.
 
 There may be other teams that develop systems with which your system needs to interface. There might be teams in charge of infrastructure on which your system needs to be deployed. There may be teams in charge of other business functions such as marketing, production, etc. And your team likely reports to a manager who is ultimately accountable for how your team turns budget into product.
 
-While most member of your team should focus on tasks within the team, it is also important to maintain alignment with the rest of the organisation. This requires:
+While most member of your team should focus on tasks within the team, it is also important to maintain alignment with the rest of the organization. This requires:
 - **Frequent communication**: Both to gather information from outside the team, and to keep other informed of the progress and possible impediments your team is struggling with.
 - **Close collaboration**: For certain tasks, you may need to collaborate directly with people of other teams offering specific expertise or skills
-- **Integrated way of working**: When your teams uses methods and tools that are similar to those of other teams or interface with them seamlessly, you will experience less friction at the boudaries of your team
+- **Integrated way of working**: When your teams uses methods and tools that are similar to those of other teams or interface with them seamlessly, you will experience less friction at the boundaries of your team

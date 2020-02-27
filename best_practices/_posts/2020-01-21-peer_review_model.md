@@ -5,7 +5,7 @@ name: Peer Review Training Scripts
 category: Experiment
 unique_id: exp_peer
 index: 11
-difficulty: "basic"
+difficulty: "medium"
 comments: True
 references: [MLTS]
 description:

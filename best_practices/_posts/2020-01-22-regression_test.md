@@ -5,7 +5,7 @@ name: Run Automated Regression Tests
 category: Coding
 unique_id: coding_regr
 index: 17
-difficulty: "medium"
+difficulty: "advanced"
 references: [MLPROD]
 comments: True
 description:
@@ -17,7 +17,7 @@ motivation: When making changes, new defects can easily be introduced in existin
 applicability: Regression testing can be applied to any type of code. #
 related: [exp_tstfeature] #
 dependencies: [coding_build] #
-survey_question: 53 #
+survey_question: Q53 #
 
 ---
 

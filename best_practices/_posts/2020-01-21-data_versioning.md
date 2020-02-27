@@ -5,7 +5,7 @@ name: Use Versioning for Data, Model, Configurations and Training Scripts
 category: Experiment
 unique_id: exp_versioning
 index: 16
-difficulty: "medium"
+difficulty: "basic"
 comments: True
 references: [VML, MLPROD, MMLP, BPDL, MDLOPS, PMLPP]
 description:

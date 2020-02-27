@@ -5,7 +5,7 @@ name: Use Static Analysis to Check Code Quality
 category: Coding
 unique_id: coding_static
 index: 19
-difficulty: "basic"
+difficulty: "advanced"
 references: [BMS]
 comments: True
 description:
@@ -17,7 +17,7 @@ motivation: High-quality code is easier to understand, test, maintain, reuse, an
 applicability: Code quality control should be applied to any type of code. #
 related: [coding_build] # Static code analysis can be combined with Continuous Integration / Run Build at Each Commit #
 dependencies: #
-survey_question: 57 #
+survey_question: Q57 #
 ---
 
 By ensuring high code quality you can avoid the introduction of defects into the code, enable new team members to become productive more quickly, and more easily reason about the correctness of your code.

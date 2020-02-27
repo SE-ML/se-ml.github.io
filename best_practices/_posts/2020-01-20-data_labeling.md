@@ -5,7 +5,7 @@ name: Ensure Data Labeling is Performed in a Strictly Controlled Process
 category: Data
 unique_id: data_lbl
 index: 4
-difficulty: "medium"
+difficulty: "basic"
 references: ["DLB", "DLML", "DCML", "DOML"]
 comments: True
 description:

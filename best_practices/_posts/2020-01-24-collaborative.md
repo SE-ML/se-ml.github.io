@@ -16,7 +16,7 @@ motivation: Collaborative development platforms provide easy access to data, cod
 applicability: #
 related: #
 dependencies: #
-survey_question: 82 # We make consistent use of a collaborative development platform.
+survey_question: Q82 # We make consistent use of a collaborative development platform.
 ---
 
 Broadly used collaborative development environments include GitHub, GitLab, BitBucket, and Azure DevOps Server.
@@ -35,4 +35,4 @@ More recently, collaborative development environments have been develop with cap
 - experiment management
 - versioning and deployment of models
 
-Consistent use of a collabortive development environment implies that all team members make use of the environment for all their tasks and that they follow the same conventions in cases where similar tasks can possibly be carried out in different ways in the environment.
+Consistent use of a collaborative development environment implies that all team members make use of the environment for all their tasks and that they follow the same conventions in cases where similar tasks can possibly be carried out in different ways in the environment.
