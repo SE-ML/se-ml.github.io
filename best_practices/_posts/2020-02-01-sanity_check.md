@@ -2,6 +2,7 @@
 layout: practice
 author: Alex Serban, Joost Visser
 name: Use Sanity Checks for All External Data Sources
+title: Use Sanity Checks for All External Data Sources
 category: Data
 unique_id: data_sanity
 index: 1

@@ -2,6 +2,7 @@
 layout: practice
 author: Alex Serban, Joost Visser
 name: Log Production Predictions with the Model's Version and Input Data
+title: Log Production Predictions with the Model's Version and Input Data
 category: Deployment
 unique_id: deployment_log
 index: 25

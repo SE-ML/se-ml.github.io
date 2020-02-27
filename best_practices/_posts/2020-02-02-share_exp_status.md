@@ -2,6 +2,7 @@
 layout: practice
 author: Alex Serban, Joost Visser
 name: Share Status and Outcomes of Experiments Within the Team
+title: Share Status and Outcomes of Experiments Within the Team
 category: Experiment
 unique_id: exp_status
 index: 15

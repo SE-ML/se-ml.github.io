@@ -2,6 +2,7 @@
 layout: practice
 author: Alex Serban, Joost Visser
 name: Enforce Fairness and Privacy
+title: Enforce Fairness and Privacy
 category: Governance
 unique_id: gov_responsible
 index: 29

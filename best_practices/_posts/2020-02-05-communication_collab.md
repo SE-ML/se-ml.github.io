@@ -2,6 +2,7 @@
 layout: practice
 author: Alex Serban, Joost Visser
 name: Communicate, Align, and Collaborate With Others
+title: Communicate, Align, and Collaborate With Others
 category: Team
 unique_id: team_communication
 index: 28

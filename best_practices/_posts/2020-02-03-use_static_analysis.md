@@ -2,6 +2,7 @@
 layout: practice
 author: Alex Serban, Joost Visser
 name: Use Static Analysis to Check Code Quality
+title: Use Static Analysis to Check Code Quality
 category: Coding
 unique_id: coding_static
 index: 19

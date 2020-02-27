@@ -2,6 +2,7 @@
 layout: practice
 author: Alex Serban, Joost Visser
 name: Check that Input Data is Complete, Balanced and Well Distributed
+title: Check that Input Data is Complete, Balanced and Well Distributed
 category: Data
 unique_id: data_complete
 index: 2

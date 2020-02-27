@@ -2,6 +2,7 @@
 layout: practice
 author: Alex Serban, Joost Visser
 name: Test all Feature Extraction Code
+title: Test all Feature Extraction Code
 category: Experiment
 unique_id: exp_tstfeature
 index: 8

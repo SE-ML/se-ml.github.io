@@ -2,6 +2,7 @@
 layout: practice
 author: Alex Serban, Joost Visser
 name: Work Against a Shared Backlog
+title: Work Against a Shared Backlog
 category: Team
 unique_id: team_backlog
 index: 27

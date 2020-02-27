@@ -2,6 +2,7 @@
 layout: practice
 author: Alex Serban, Joost Visser
 name: Actively Remove or Archive Features That are Not Used
+title: Actively Remove or Archive Features That are Not Used
 category: Experiment
 unique_id: exp_archive
 index: 10

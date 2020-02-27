@@ -2,6 +2,7 @@
 layout: practice
 author: Alex Serban, Joost Visser
 name: Continuously Measure Model Quality and Performance
+title: Continuously Measure Model Quality and Performance
 category: Experiment
 unique_id: exp_quality
 index: 14

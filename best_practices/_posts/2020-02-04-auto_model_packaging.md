@@ -2,6 +2,7 @@
 layout: practice
 author: Alex Serban, Joost Visser
 name: Automate Model Deployment
+title: Automate Model Deployment
 category: Deployment
 unique_id: deployment_automate
 index: 20

@@ -2,6 +2,7 @@
 layout: practice
 author: Alex Serban, Joost Visser
 name: Make Data Sets Available on Shared Infrastructure (private or public)
+title: Make Data Sets Available on Shared Infrastructure (private or public)
 category: Data
 unique_id: data_share
 index: 5

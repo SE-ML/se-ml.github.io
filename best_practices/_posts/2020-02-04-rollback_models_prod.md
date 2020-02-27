@@ -2,6 +2,7 @@
 layout: practice
 author: Alex Serban, Joost Visser
 name: Enable Automatic Roll Backs for Production Models
+title: Enable Automatic Roll Backs for Production Models
 category: Deployment
 unique_id: deployment_rollback
 index: 24

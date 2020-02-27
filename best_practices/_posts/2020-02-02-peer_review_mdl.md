@@ -2,6 +2,7 @@
 layout: practice
 author: Alex Serban, Joost Visser
 name: Peer Review Training Scripts
+title: Peer Review Training Scripts
 category: Experiment
 unique_id: exp_peer
 index: 11

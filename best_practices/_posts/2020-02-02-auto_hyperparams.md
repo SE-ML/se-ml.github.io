@@ -2,6 +2,7 @@
 layout: practice
 author: Alex Serban, Joost Visser
 name: Automate Hyper-Parameter Optimization
+title: Automate Hyper-Parameter Optimization
 category: Experiment
 unique_id: exp_hyperparam
 index: 13
