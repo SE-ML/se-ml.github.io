@@ -51,7 +51,55 @@ body {
   margin: auto;
 }
 
+.large-image {
+  max-width: 600px;
+  margin: auto;
+}
+
 .blog-image {
   width: 100%;
   height: auto;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.black {
+  color: black;
+}
+
+.text-col {
+  color: $text-color;
+}
+
+.bold {
+  font-weight: 400;
+}
+
+.badge {
+  display: inline-block;
+  position: relative;
+  top: 3.8px;
+}
+
+.show-me {
+  display: inline-block;
+  position: absolute;
+  top: -20px;
+  width: 200px;
+}
+
+
+
+.parent .show-me .show-me-body {
+  opacity: 0;
+}
+
+.parent .hover-me:hover~.show-me .show-me-body {
+  opacity: 1;
 }

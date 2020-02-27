@@ -1,0 +1,34 @@
+Ref,Title,Authors,Type,Authority,Objectivity,Date,URL
+CD4ML,Continuous Delivery for Machine Learning,Danilo Sato & ..,GL - Tier 1,+++,,19 September 2019,https://martinfowler.com/articles/cd4ml.html
+Rs4ML,Rules of Machine Learning: Best Practices for ML Engineering,Martin Zinkovich,GL - Tier 1,+++,,-,https://developers.google.com/machine-learning/guides/rules-of-ml
+MLTD,Hidden Technical Debt in Machine Learning Systems,"Sculley, David, et al. """,AL,+++,,2014,https://research.google/pubs/pub43146/
+MSCS,Software Engineering for Machine Learning: A Case Study,Saleema Amershi et al,AL,+++,,May 2019,https://doi.org/10.1109/ICSE-SEIP.2019.00042
+SD4DL,Software development best practices in a deep learning environment,Per John,GL - Tier 3,+,,19 April 2019,https://towardsdatascience.com/software-development-best-practices-in-a-deep-learning-environment-a1769e9859b1
+DMP,Data management challenges in production machine learning,Neoklis Polyzotis,GL - Tier 1,+++,,-,https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45a9dcf23dbdfa24dbced358f825636c58518afa.pdf
+VML,Versioning for end-to-end machine learning pipelines,Van Der Weide,AL,+,,June 2018,https://doi.org/10.1145/3076246.3076248
+MLOps,ML Ops: Machine Learning as an engineered disciplined,Towards Data Sc.,GL - Tier 3,+/++,,3 January 2019,https://towardsdatascience.com/ml-ops-machine-learning-as-an-engineering-discipline-b86ca4874a3f
+MLArch,Preparing and Architecting for Machine Learning,Gartner / SAP,GL - Tier 2,+/++,-,17 January 2017,https://www.gartner.com/binaries/content/assets/events/keywords/catalyst/catus8/preparing_and_architecting_for_machine_learning.pdf
+MLTS,What’s your ML Test Score? A rubric for ML production systems,Eric Breck et al.,AL,+++,,-,
+SLRML,Preliminary Systematic Literature Review of Machine Learning System Development Process,Yasuhiro Watanabe et al.,AL,+,,12 October 2019,https://arxiv.org/abs/1910.05528
+MLLG,Machine Learning Logistics,Ted Dunning,GL - TIier 1,+ / ++,,September 2017,https://mapr.com/ebook/machine-learning-logistics/
+MLGov,Model Governance Reducing the Anarchy of Production,Vinay Sridhar,AL,+,,13 July 2018,https://www.usenix.org/conference/atc18/presentation/sridhar
+OPML,Operational Machine Learning,Nisha Talagala,GL - Tier 2,+,,30 April 2018,https://www.kdnuggets.com/2018/04/operational-machine-learning-successful-mlops.html
+CTPML,Continuous Training for Production ML in the TensorFlow Extended (TFX) Platform,Denis Baylor,AL,+++,,20 May 2019,https://www.usenix.org/system/files/opml19papers-baylor.pdf
+DLB,The curse of big data labeling and three ways to solve it ,AWS Admin,GL - Tier 2,+,,06 November 2018,https://aws.amazon.com/blogs/apn/the-curse-of-big-data-labeling-and-three-ways-to-solve-it/
+DLML,The ultimate guide to data labeling for ML,Cloudfactory,GL - Tier 3,+,,-,https://www.cloudfactory.com/data-labeling-guide
+DCML,A Survey on Data Collection for Machine Learning A Big Data - AI Integration Perspective_2019,Yuhi Rog,AL,+++,,8 October 2019,DOI: 10.1109/TKDE.2019.2946162
+DOML,How to organize data labelling for ML,Altexsoft,GL - Tier 3,+,,-,https://www.altexsoft.com/blog/datascience/how-to-organize-data-labeling-for-machine-learning-approaches-and-tools/
+DQML,Data quality model,ISO,GL - Tier 1,+++,,,"More info in the paper: A Data Quality in Use model for BigData, Table 2"
+MLFAIR,Fairness Indicators,Google,GL - Tier 1,+++,,11 December 2019,https://ai.googleblog.com/2019/12/fairness-indicators-scalable.html
+MLRES,Responsible AI practices,Google,GL - Tier 1,+++,,-,https://ai.google/responsibilities/responsible-ai-practices/
+DSTEAM,Team Data Science Process Documentation,Microsoft,GL - Tier 2,+,,-,https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/
+MLTEAM,How do teams work together on automated ML projects,Microsoft,GL - Tier 3,+,,9 April 2019,https://azure.microsoft.com/en-us/blog/how-do-teams-work-together-on-an-automated-machine-learning-project/
+MLPROD,Machine learning: Moving from experiments to production,Roman Seyffarth,GL - TIer 3,+,,19 Mar 2019,https://blog.codecentric.de/en/2019/03/machine-learning-experiments-production/
+BPMLI,Best Practices in Machine Learning Infrastructure,Algorithmia,GL - Tier 2,+,,5 July 2019,https://algorithmia.com/blog/best-practices-in-machine-learning-infrastructure
+MMLP,Managing Machine Learning Projects,V.M.Megler / Amazon,GL - TIer 2,+,,1 February 2019,https://d1.awsstatic.com/whitepapers/aws-managing-ml-projects.pdf
+BPDL,10 Best Practices for Deep Learning,James Le,GL - Tier 3,+,,December 2019,https://nanonets.com/blog/10-best-practices-deep-learning/#track-model-experiments
+TDBML,Testing and Debugging in Machine Learning,Google ,GL - Tier 2,++,,-, https://developers.google.com/machine-learning/testing-debugging/pipeline/production
+MDLOPS,ModelOps: Cloud-based lifecycle management for reliable and trusted AI,IBM Research,AL,+,,June 2019,
+PMLPP,Principled Machine Learning: Practices and Tools for Efficient Collaboration,David Herron,GL - TIer 3,+,,June 2019,https://dev.to/robogeek/principled-machine-learning-4eho
+TFX,TFX: A tensorflow-based Production-Scale ML Platform,Google,AL,+++,,17 August 2017,https://dl.acm.org/doi/pdf/10.1145/3097983.3098021?download=true
+,,,,,,,
