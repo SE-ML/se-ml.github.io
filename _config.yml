@@ -58,7 +58,7 @@ disqus_shortname: se4ml # put your disqus shortname
 
 # Optional features
 show_social_icons:  true
-enable_anchorjs:    false
+enable_anchorjs:    true
 enable_katex:       true
 
 # -----------------------------------------------------------------------------
