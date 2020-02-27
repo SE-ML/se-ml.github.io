@@ -28,14 +28,14 @@ layout: default
 
   {% if page.difficulty == 'basic' %}
     {% assign badge = "https://img.shields.io/badge/-basic-color"  %}
-    {% assign badge_text = "This is a basic practice"  %}
+    {% assign badge_text = "This practice was ranked as basic. Click to read more."  %}
   {% else%}
     {% if page.difficulty == 'medium' %}
       {% assign badge = "https://img.shields.io/badge/-medium-yellow"  %}
-      {% assign badge_text = "This is a medium practice"  %}
+      {% assign badge_text = "This practice was ranked as medium. Click to read more."  %}
     {% else %}
       {% assign badge = "https://img.shields.io/badge/-advanced-orange"  %}
-      {% assign badge_text = "This is an advanced practice"  %}
+      {% assign badge_text = "This practice was ranked as advanced. Click to read more."  %}
     {% endif %}
   {% endif %}
 
@@ -48,7 +48,7 @@ layout: default
       <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
       <span> {{page.index }} / {{sorted_practices.size}} </span> •
       <a href="/practices#{{page.category | downcase}}"> <span>{{page.category}}</span> </a> •
-      <a class="badge parent" href="">
+      <a class="badge parent" href="/blog/2020/catalog/">
           <img class="hover-me" src="{{badge}}"></img>
           <span class="show-me">
               <span class="show-me-body">{{badge_text}}</span>
@@ -132,14 +132,16 @@ layout: default
 
   <br><br>
   <div style="text-align:center;">
-        <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-        <span> {{page.index }} / {{sorted_practices.size}} </span> •
-        <a href="/practices#{{page.category | downcase}}"> <span>{{page.category}}</span> </a> •
-        <div class="badge">
-          <img src="{{badge}}"></img>
-        </div>
-
-        <a href="{{next_pr[0].url}}" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+      <span> {{page.index }} / {{sorted_practices.size}} </span> •
+      <a href="/practices#{{page.category | downcase}}"> <span>{{page.category}}</span> </a> •
+      <a class="badge parent" href="/blog/2020/catalog/">
+          <img class="hover-me" src="{{badge}}"></img>
+          <span class="show-me">
+              <span class="show-me-body">{{badge_text}}</span>
+          </span>
+      </a>
+      <a href="{{next_pr[0].url}}" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
   </div>
   <br><br>
 
