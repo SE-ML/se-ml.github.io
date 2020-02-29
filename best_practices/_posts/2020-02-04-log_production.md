@@ -26,4 +26,4 @@ Moreover, tracing decisions and mitigating incidents without access to the input
 
 In order to mitigate these issues, but also enhance compliance and traceability, it is recommended to log production prediction together with the model's version and input data.
 
-If <a href="/blog/2020/data_versioning/" target="blank">model and data versioning</a> is done properly, the model's version will lead to the training data repository and enable complete reproducibility.
+If <a href="/blog/2020/data_version/" target="blank">model and data versioning</a> is done properly, the model's version will lead to the training data repository and enable complete reproducibility.

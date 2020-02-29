@@ -8,7 +8,7 @@ unique_id: data_sanity
 index: 1
 difficulty: "medium"
 comments: True
-references: ["DMP","MLOps","DQML"]
+references: ["DMP","MLOps"]
 description:
 image: #
 photocredit: #
@@ -31,7 +31,7 @@ Start by checking simple data attributes, such as:
 - data min. or max. values,
 - histograms of continuous values,
 
-and gradually include more complex data statistics, such as the ones recommended <a href="/blog/2020/input_data_completeness">here</a>.
+and gradually include more complex data statistics, such as the ones recommended <a href="/blog/2020/input-data-complete/">here</a>.
 
 
-Also, make sure the data verification scripts are <a href="/blog/2020/reusable_data_cleaning/" target="blank">reusable</a> and can be later integrated in a processing pipeline.
+Also, make sure the data verification scripts are <a href="/blog/2020/reusable_data_clean/" target="blank">reusable</a> and can be later integrated in a processing pipeline.

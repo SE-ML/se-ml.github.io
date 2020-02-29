@@ -7,7 +7,7 @@ category: Governance
 unique_id: gov_responsible
 index: 29
 difficulty: "advanced"
-references: [DQML, MLFAIR, MLRES]
+references: [MLFAIR, MLRES]
 comments: True
 description:
 image: #

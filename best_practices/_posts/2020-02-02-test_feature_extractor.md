@@ -21,7 +21,7 @@ dependencies: #
 survey_question: Q40
 ---
 
-Similar to <a href="/blog/2020/sanity_checks/" target="blank">applying sanity checks to external data sources</a>, it is important to check that data generated internally is consistent and does not introduces errors or bugs.
+Similar to <a href="/blog/2020/sanity_check/" target="blank">applying sanity checks to external data sources</a>, it is important to check that data generated internally is consistent and does not introduces errors or bugs.
 
 
 In many cases, one would write custom code to merge data attributes into new features.

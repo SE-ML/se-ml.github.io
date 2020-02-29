@@ -7,7 +7,7 @@ category: Data
 unique_id: data_complete
 index: 2
 difficulty: "advanced"
-references: [DMP, MLTD, CTPML, DQML, MMLP]
+references: [DMP, MLTD, CTPML, MMLP]
 comments: True
 description: #
 image: #
@@ -21,7 +21,7 @@ dependencies: #
 survey_question: Q33
 ---
 
-Besides performing <a href="/blog/2020/sanity_checks/">sanity checks</a> on the input data, it is recommended to constantly check for data evolution. In a constantly evolving environment, data will also evolve over time.
+Besides performing <a href="/blog/2020/sanity_check/">sanity checks</a> on the input data, it is recommended to constantly check for data evolution. In a constantly evolving environment, data will also evolve over time.
 For example, your user distribution per geographical regions may change with time and lead to future biases towards over-representative regions.
 
 Continuously check that:
