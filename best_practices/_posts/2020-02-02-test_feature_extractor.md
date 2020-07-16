@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Joost Visser
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Test all Feature Extraction Code
 title: Test all Feature Extraction Code
 category: Experiment
@@ -30,3 +30,5 @@ The code written for such operations needs to be unit-tested in order to ensure 
 Failing to test the feature extraction code may lead to unintended bugs with severe impact on the final model.
 Such bugs are hard to debug and remove because they involve several data sources and functionality.
 
+
+If automatically extracted features are used, they should also be tested for correctness.

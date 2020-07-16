@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Joost Visser
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Enable Parallel Training Experiments
 title: Enable Parallel Training Experiments
 category: Experiment
@@ -37,6 +37,6 @@ In order to ease parallelization, make sure to:
 - avoid hidden dependencies
 
 
-and use virtualization, e.g. Docker.
+and use virtualization, e.g. <a href="https://www.docker.com/" target="_blank">Docker</a>.
 
 

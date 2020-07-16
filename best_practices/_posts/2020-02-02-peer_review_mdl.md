@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Joost Visser
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Peer Review Training Scripts
 title: Peer Review Training Scripts
 category: Experiment
@@ -33,4 +33,4 @@ This technique is known to help to:
 - enhance knowledge transfer within the team.
 
 
-Whenever possible, use a collaborative software development platform (e.g. Github), which already have mature features for peer review.
+Whenever possible, use a collaborative software development platform (e.g. Github), which already has mature features for peer review.

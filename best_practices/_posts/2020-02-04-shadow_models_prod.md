@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Joost Visser
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Enable Shadow Deployment
 title: Enable Shadow Deployment
 category: Deployment
@@ -27,4 +27,4 @@ The model that is already deployed will still handle all decisions, until the sh
 
 Using shadow models allows teams to avoid unintended behaviors in production  -- coming from skews between training and test data.
 However, it introduces more complexity in the deployment infrastructure.
-Luckily, <a href="https://github.com/SE-ML/awesome-seml#tooling" target="blank">tool support</a> for shadow or canary deployment is already matured.
+Luckily, <a href="https://github.com/SE-ML/awesome-seml#tooling" target="blank">tool support</a> for shadow or canary deployment has already matured.

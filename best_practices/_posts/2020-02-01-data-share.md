@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Joost Visser
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Make Data Sets Available on Shared Infrastructure (private or public)
 title: Make Data Sets Available on Shared Infrastructure (private or public)
 category: Data
@@ -29,8 +29,8 @@ Good data management and sharing is important for several reasons:
 - avoid duplication,
 - avoid unnecessary transfers and save time.
 
-Many applications deal with high data volumes.
-Transferring or copying high data volumes is not trivial and may introduce large delays in the processing pipelines.
+Many applications deal with large data volumes.
+Transferring or copying large data volumes is not trivial and may introduce large delays in the processing pipelines.
 Needless to say duplication becomes an issue with large volumes of data.
 
 Making data sets available on shared infrastructure (e.g. S3 Buckets or mountable disks) helps mitigate these issues.

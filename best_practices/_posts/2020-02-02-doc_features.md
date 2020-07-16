@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Joost Visser
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Assign an Owner to Each Feature and Document its Rationale
 title: Assign an Owner to Each Feature and Document its Rationale
 category: Experiment
@@ -27,4 +27,4 @@ Ensuring that someone in a team is in charge of the information regarding a feat
 Although feature names can be descriptive, it is important to also document their rationale in order to facilitate communication and share the knowledge among team members.
 
 
-This practice assumes that whenever a feature owner is leaving a team, the ownership is transferred to other members.
+This practice suggests that whenever a feature owner is leaving a team, the ownership is transferred to other members.

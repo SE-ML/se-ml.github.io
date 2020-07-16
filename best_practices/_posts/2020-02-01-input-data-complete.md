@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Joost Visser
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Check that Input Data is Complete, Balanced and Well Distributed
 title: Check that Input Data is Complete, Balanced and Well Distributed
 category: Data
@@ -27,9 +27,9 @@ For example, your user distribution per geographical regions may change with tim
 Continuously check that:
 
 - features are still present in enough examples,
-- features have the right number of values (cardinality) (e.g. there can not be more than an age/age derived feature),
+- features have the right number of values (cardinality) (e.g. there can not be more than one age/age derived feature),
 - hidden dependencies between data attributes are not present,
-- the input data distribution did not shifted: e.g. a group is misrepresented.
+- the input data distribution did not shift: e.g. a group is under- or over-represented.
 
 
 Many machine learning algorithms use the "independent and identically distributed" assumption, which means the training and test samples are independent (i.e. changing one sample does not influence the others) and are sampled from the *same* distribution.

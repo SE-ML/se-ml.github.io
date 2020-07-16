@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Joost Visser
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Work Against a Shared Backlog
 title: Work Against a Shared Backlog
 category: Team

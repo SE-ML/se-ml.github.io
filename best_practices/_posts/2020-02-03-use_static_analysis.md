@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Joost Visser
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Use Static Analysis to Check Code Quality
 title: Use Static Analysis to Check Code Quality
 category: Coding
@@ -25,7 +25,7 @@ By ensuring high code quality you can avoid the introduction of defects into the
 
 Static code analysis can be done in various ways:
 - **Linters**: A linter is a tool that finds undesirable patterns in program code and reports these back to the programmer. Linters can be activated in a code editor, and integrated development environment, or they can be run on the commandline.
-- **Quality gates**: You can integrate a static code quality analysis tool in automated build and testing script that runs every time a developer commits code changes to the versioning system. When quality issues are found, you can choose to have the commit rejected.
+- **Quality gates**: You can integrate a static code quality analysis tool in an automated build and testing script that runs every time a developer commits code changes to the versioning system. When quality issues are found, you can choose to have the commit rejected.
 - **Quality dashboards**: You can display the results of static code quality analysis tools on a dashboard available to the entire development team or even the larger organisation. This allows quality trends to be shared and acted upon at a broader level than just the individual developer.
 
 Apart from choosing and activating appropriate static analysis tools, it is important to embed the usage of the tools and their results in the way of work of the development team. This requires:

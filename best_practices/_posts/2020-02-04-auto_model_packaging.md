@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Joost Visser
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Automate Model Deployment
 title: Automate Model Deployment
 category: Deployment
@@ -15,7 +15,7 @@ photocredit: #
 
 
 intent: Increase the ability to deploy models on demand -- which increases availability and scalability. #
-motivation: Deploying and orchestrating different components of an application can be a tedious task. Instead of manually packaging and delivering models and in order to avoid manual interventions or errors, one can automate this task. #
+motivation: Deploying and orchestrating different components of an application can be a tedious task. Instead of manually packaging and delivering models, and in order to avoid manual interventions or errors, one can automate this task. #
 applicability: Automatic model deployment should be implemented in any production-level ML application.
 related: #
 dependencies: #

@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Joost Visser
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Use Sanity Checks for All External Data Sources
 title: Use Sanity Checks for All External Data Sources
 category: Data
@@ -34,4 +34,4 @@ Start by checking simple data attributes, such as:
 and gradually include more complex data statistics, such as the ones recommended <a href="/blog/2020/input-data-complete/">here</a>.
 
 
-Also, make sure the data verification scripts are <a href="/blog/2020/reusable_data_clean/" target="blank">reusable</a> and can be later integrated in a processing pipeline.
+Also, make sure the data verification scripts are <a href="/blog/2020/reusable_data_clean/">reusable</a> and can be later integrated in a processing pipeline.

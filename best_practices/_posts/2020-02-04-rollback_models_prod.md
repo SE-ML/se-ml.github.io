@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Joost Visser
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Enable Automatic Roll Backs for Production Models
 title: Enable Automatic Roll Backs for Production Models
 category: Deployment
@@ -21,6 +21,6 @@ dependencies: #
 survey_question: Q62
 ---
 
-If, due to changes in the input data or undetected skews, a deployed model performs sub-optimal, it should be rolled back to an earlier, better performing version.
+If, due to changes in the input data or undetected skew, a deployed model performs sub-optimal, it should be rolled back to an earlier, better performing version.
 
-Designing a process for automatic roll-back minimizes the time a sub-optimal model is kept in production.
+Designing a process for automatic roll-back minimizes the time a deployed model with sub-optimal performance is kept in production.

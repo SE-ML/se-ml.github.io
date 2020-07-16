@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Joost Visser
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Continuously Monitor the Behavior of Deployed Models
 title: Continuously Monitor the Behavior of Deployed Models
 category: Deployment
@@ -27,5 +27,5 @@ Because the performance between training and production data can vary drasticall
 The monitoring pipeline should include:
 - performance, quality and skew metrics,
 - fairness metrics,
-- model interpretability outputs (e.g. LIME),
+- model interpretability outputs (e.g. <a href="https://arxiv.org/pdf/1602.04938v1.pdf" target="_blank">LIME</a>),
 - metrics for the perceived effect of the model, e.g. user interactions, conversion rates, etc.

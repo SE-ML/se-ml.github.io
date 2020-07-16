@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Joost Visser
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Enforce Fairness and Privacy
 title: Enforce Fairness and Privacy
 category: Governance

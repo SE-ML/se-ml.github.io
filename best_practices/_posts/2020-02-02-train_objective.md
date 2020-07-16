@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Joost Visser
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Share a Clearly Defined Training Objective within the Team
 title: Share a Clearly Defined Training Objective within the Team
 category: Experiment

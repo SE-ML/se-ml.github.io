@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Joost Visser
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Ensure Data Labeling is Performed in a Strictly Controlled Process
 title: Ensure Data Labeling is Performed in a Strictly Controlled Process
 category: Data
@@ -21,7 +21,7 @@ dependencies: #
 survey_question: Q35
 ---
 
-In supervised learning, labels are crucial for the well functioning of any algorithm.
+In supervised learning, labels are crucial for the propeer functioning of any algorithm.
 However, labeling large quantities of data is not trivial.
 Incorrect labels introduce noise and may lead to sub-optimal results.
 At first, data labeling raises challenges because the volume of data is typically large.

@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Joost Visser
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Use A Collaborative Development Platform
 title: Use A Collaborative Development Platform
 category: Team
@@ -13,10 +13,11 @@ image: #
 photocredit: #
 
 intent: By making consistent use of a collaborative development platform teams can work together more effectively. #
-motivation: Collaborative development platforms provide easy access to data, code, information, and tools. They also help teams to keep each other informed, reach and record decisions, and work together asynchronously or remotely. #
+motivation: Collaborative development platforms provide easy access to data, code, information, and tools. They also help teams to keep each other informed, make and record decisions, and work together asynchronously or remotely. #
 applicability: #
 related: #
 dependencies: #
+
 survey_question: Q82 # We make consistent use of a collaborative development platform.
 ---
 
