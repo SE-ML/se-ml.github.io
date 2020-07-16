@@ -73,7 +73,7 @@ collections:
   staff:
       people: true
   references:
-      people: trues
+      people: true
 
 
 news_limit: 5
