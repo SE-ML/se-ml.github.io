@@ -13,8 +13,8 @@ news: true
 social: true
 ---
 
-An ever-increasing number of organisations are developing applications that involve machine learning components. The complexity and diversity of these applications calls for software engineering techniques to ensure that they are built in a **robust** and **future-proof** manner.
+An ever-increasing number of organisations are developing applications that involve machine learning components. The complexity and diversity of these applications calls for engineering techniques to ensure that they are built in a **robust** and **future-proof** manner.
 
-*Do traditional software engineering practices apply equally to the development of applications with ML components, or do these practices need to be adapted to cater for particular ML characteristics?*
+On this website we collect, validate and share engineering best practices for software including ML components.
+To this end, <a href="/members">we</a> study the scientific and popular literature and engage with machine learning practitioners.
 
-To investigate this question, <a href="/members">we</a> study the scientific and popular literature and engage with machine learning practitioners.
