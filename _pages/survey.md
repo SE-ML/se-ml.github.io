@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
+title: Survey on Engineering Best Practices for Machine Learning
+comments: False
+permalink: /survey
 ---
 
-<h2 style="color: black;">Survey on Software Engineering Best Practices for Machine Learning</h2>
-<br>
 
 We are running an online survey to measure the adoption of software engineering practices by teams that develop applications with machine learning components.
 

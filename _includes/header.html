@@ -23,22 +23,26 @@
         <!-- Practices -->
         <a class="page-link" href="{{ '/practices' | prepend: site.baseurl | prepend: site.url }}/">practices</a>
 
-        <!-- About -->
-        <a class="page-link" href="{{ site.baseurl | prepend: site.url }}/">about</a>
+        <!-- Publications -->
+        <a class="page-link" href="{{ '/publications' | prepend: site.baseurl | prepend: site.url }}/">publications</a>
+
 
         <!-- Blog -->
         <a class="page-link" href="{{ '/blog/' | prepend: site.baseurl | prepend: site.url }}">blog</a>
 
+        <!-- About -->
+        <a class="page-link" href="{{ site.baseurl | prepend: site.url }}/">about</a>
+
         <!-- Members -->
-        <a class="page-link" href="{{ '/members/' | prepend: site.baseurl | prepend: site.url }}">members</a>
+        <a class="page-link" href="{{ '/members/' | prepend: site.baseurl | prepend: site.url }}">team</a>
 
 
         <!-- Pages -->
-        {% for page in site.pages %}
+        {% comment %} {% for page in site.pages %}
           {% if page.title and page.url != "/" %}
             <a class="page-link" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a>
           {% endif %}
-        {% endfor %}
+        {% endfor %} {% endcomment %}
 
       </div>
     </nav>

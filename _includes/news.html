@@ -2,7 +2,7 @@
   <h2>news</h2>
   {% if site.news  %}
     <ul>
-    {% assign news = site.news %}
+    {% assign news = (site.news | sort: 'date') | reverse  %}
     {% for item in news limit: site.news_limit %}
       <li>
         <p>{{ item.content | remove: '<p>' | remove: '</p>' | emojify }} </p>

@@ -72,11 +72,13 @@ collections:
     permalink: /news/:path/
   staff:
       people: true
+  pub:
+      people: true
   references:
       people: true
 
 
-news_limit: 5
+news_limit: 3
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
