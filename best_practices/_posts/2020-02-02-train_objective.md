@@ -33,3 +33,4 @@ Sharing a clearly defined objective within the team assumes the training objecti
 
 This practice ensures that effort is not spent on futile activities and enhances team communication and efficiency.
 
+Moreover, it facilitates alignment with the team goal, and ensures that the outcomes of training can be correctly evaluated.

@@ -21,7 +21,7 @@ dependencies: #
 survey_question: Q35
 ---
 
-In supervised learning, labels are crucial for the propeer functioning of any algorithm.
+In supervised learning, labels are crucial for the proper functioning of any algorithm.
 However, labeling large quantities of data is not trivial.
 Incorrect labels introduce noise and may lead to sub-optimal results.
 At first, data labeling raises challenges because the volume of data is typically large.
@@ -30,3 +30,6 @@ Secondly, choosing labels is a subjective activity and may introduce bias or noi
 Imposing a strictly controlled process for data labeling guarantees that your algorithm is served with the best data and helps to avoid later issues related to model debugging and error tracing.
 
 A mature data labelling process includes peer-reviewing all labels by a second team member.
+
+Lower or sub-optimal label quality can impact the whole ML pipeline.
+In case this problem can not be addressed (and a ML solution is still desired), make sure you document and communicate this issue within the team.

@@ -18,4 +18,4 @@ An ever-increasing number of organisations are developing applications that invo
 On this website we collect, validate and share engineering best practices for software including ML components.
 To this end, <a href="/members">we</a> study the scientific and popular literature and engage with machine learning practitioners.
 
-For more information access our <a href="/practices">catalog of ML engineering best practices</a> or read our annual report on the <a href="">State of Engineering Practices for Machine Learning</a>.
+For more information access our <a href="/practices">catalog of ML engineering best practices</a> or read our annual report on the <a href="/report2020">State of Engineering Practices for Machine Learning</a>.

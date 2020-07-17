@@ -35,3 +35,5 @@ Needless to say duplication becomes an issue with large volumes of data.
 
 Making data sets available on shared infrastructure (e.g. S3 Buckets or mountable disks) helps mitigate these issues.
 Moreover, it facilitates the adoption of access control policies and provides traceability i.e. by keeping a data access log.
+
+Adopting standard naming conventions for the data sets -- e.g., to reflect the version -- is also considered a best practice.
