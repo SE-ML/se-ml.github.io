@@ -5,4 +5,4 @@ meta: 1
 inline: true
 ---
 
-We launched a **catalog** of Engineering best practices for Machine Learning applications. Read more about it <a href="/blog/2020/catalog/">here</a>!
+We launched a **catalogue** of Engineering best practices for Machine Learning applications. Read more about it <a href="/blog/2020/catalog/">here</a>!

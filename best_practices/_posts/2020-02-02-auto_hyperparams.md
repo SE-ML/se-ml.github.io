@@ -1,8 +1,8 @@
 ---
 layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
-name: Automate Hyper-Parameter Optimization
-title: Automate Hyper-Parameter Optimization
+name: Automate Hyper-Parameter Optimisation
+title: Automate Hyper-Parameter Optimisation
 category: Experiment
 unique_id: exp_hyperparam
 index: 13
@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Enhance experimentation, performnance and fair comparisons between algorithms, by automating hyper-parameter search and model selection. #
 motivation: Finding the right hyper-parameters for a model or choosing between different ML models can be a daunting task. Automated methods to perform these activities are now available, with great 'off the shelf' tool support.  #
-applicability: Automatic hyper-parameter optimization should be considered in any ML application.
+applicability: Automatic hyper-parameter optimisation should be considered in any ML application.
 related: [exp_peer] #
 dependencies: #
 survey_question: Q80

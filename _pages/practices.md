@@ -18,7 +18,7 @@ reviewing relevant <a href="https://github.com/SE-ML/awesome-seml/blob/master/re
 We are constantly running a <a href="https://se-ml.github.io/survey/" target="blank"> global survey</a>
 among ML engineering teams to measure the adoption of these practices.
 <br><br>
-The various practices are grouped into 6 categories, as illustrated in the diagram above.
+The various practices are grouped into 6 categories, as illustrated in the diagram above, and listed below.
 
 {% assign sorted_practices = site.categories.best_practices  | sort:"index" %}
 
