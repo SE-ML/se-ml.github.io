@@ -8,7 +8,7 @@ permalink: /survey
 
 We are running an online survey to measure the adoption of software engineering practices by teams that develop applications with machine learning components.
 
-<h3> Please <a class="blue" href="https://leidenuniv.eu.qualtrics.com/jfe/form/SV_cJhJOkx3CIm8sEB">take our 7-minute survey</a>. </h3>
+<h3> Please <a class="blue" href="https://leidenuniv.eu.qualtrics.com/jfe/form/SV_4ShLfuUn3bh7Qm9">take our 10-minute survey</a>. </h3>
 
 We do not collect any personal information. All answers are processed confidentially.
 We will share the lessons learnt from the survey through a freely available publication.
@@ -24,9 +24,9 @@ If you have questions about the survey, or you would like to share feedback on t
 Please share the survey:
 <br><br>
 
-<a href="https://twitter.com/intent/tweet?text=This survey on software engineering practices for machine learning applications takes about 7 minutes. Please take the survey and retweet!&url=https://leidenuniv.eu.qualtrics.com/jfe/form/SV_cJhJOkx3CIm8sEB&hashtags=se4ml"  target="_blank" class="twitter-share-button blue"><i class="fab fa-twitter"></i>  Twitter</a>
+<a href="https://twitter.com/intent/tweet?text=This survey on software engineering practices for machine learning applications takes about 7 minutes. Please take the survey and retweet!&url=https://leidenuniv.eu.qualtrics.com/jfe/form/SV_4ShLfuUn3bh7Qm9&hashtags=se4ml"  target="_blank" class="twitter-share-button blue"><i class="fab fa-twitter"></i>  Twitter</a>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-&nbsp; &nbsp; <a href="mailto:?subject=Software Engineering for Machine Learning - a quick survey&body=This survey on software engineering practices for machine learning applications takes about 7 minutes. Please take the survey and share the link! %0D%0A%0D%0Ahttps://leidenuniv.eu.qualtrics.com/jfe/form/SV_cJhJOkx3CIm8sEB"><i class="fas fa-envelope"></i>  Mail</a>
+&nbsp; &nbsp; <a href="mailto:?subject=Software Engineering for Machine Learning - a quick survey&body=This survey on software engineering practices for machine learning applications takes about 7 minutes. Please take the survey and share the link! %0D%0A%0D%0Ahttps://leidenuniv.eu.qualtrics.com/jfe/form/SV_4ShLfuUn3bh7Qm9"><i class="fas fa-envelope"></i>  Mail</a>
 &nbsp; &nbsp; <a id="demo" onclick="copyToClipboard(document.getElementById('demo').innerHTML)"><i class="fas fa-copy"></i>  Copy link</a>
 
 <script>
