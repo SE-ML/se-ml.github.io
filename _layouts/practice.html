@@ -29,13 +29,18 @@ layout: default
   {% if page.difficulty == 'basic' %}
     {% assign badge = "https://img.shields.io/badge/-basic-color"  %}
     {% assign badge_text = "This practice was ranked as basic. Click to read more."  %}
-  {% else%}
+  {% else %}
     {% if page.difficulty == 'medium' %}
       {% assign badge = "https://img.shields.io/badge/-medium-yellow"  %}
       {% assign badge_text = "This practice was ranked as medium. Click to read more."  %}
     {% else %}
-      {% assign badge = "https://img.shields.io/badge/-advanced-orange"  %}
-      {% assign badge_text = "This practice was ranked as advanced. Click to read more."  %}
+      {% if page.difficulty == 'advanced' %}
+        {% assign badge = "https://img.shields.io/badge/-advanced-orange"  %}
+        {% assign badge_text = "This practice was ranked as advanced. Click to read more."  %}
+      {% else %}
+        {% assign badge = "https://img.shields.io/badge/-not%20ranked-lightgrey"  %}
+        {% assign badge_text = "This practice was not ranked. Click to read more."  %}
+      {% endif %}
     {% endif %}
   {% endif %}
 

@@ -15,7 +15,7 @@ developing software systems with machine learning (ML) components.
 <br><br>
 These practices were identified by engaging with ML engineering teams and
 reviewing relevant <a href="https://github.com/SE-ML/awesome-seml/blob/master/readme.md" target="blank"> academic and grey literature</a>.
-We are constantly running a <a href="https://se-ml.github.io/survey/" target="blank"> global survey</a>
+We are continuously running a <a href="https://se-ml.github.io/survey/" target="blank"> global survey</a>
 among ML engineering teams to measure the adoption of these practices.
 <br><br>
 The various practices are grouped into 6 categories, as illustrated in the diagram above, and listed below.
