@@ -19,7 +19,7 @@ To download the report, click *display large* (top right corner).
 
 The practices from the survey are described in more detail in our online <a href="/practices">catalogue of ML engineering best practices</a>.
 
-More details about our survey methodology and statistical analysis are available in the scientific article <a href="/publications/esem_paper">Adoption and Effects of Software Engineering Best Practices in Machine Learning</a>.
+More details about our survey methodology and statistical analysis are available in the scientific article <a href="https://arxiv.org/abs/2007.14130">Adoption and Effects of Software Engineering Best Practices in Machine Learning</a>.
 
 To contribute to future versions of our survey report, please [take the survey](/survey/)!
 
