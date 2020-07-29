@@ -15,7 +15,7 @@ We will share the lessons learnt from the survey through a freely available publ
 <br><br>
 
 We built the survey by engaging with practitioners and identifying recommended practices in relevant literature.
-Based on this information, we also published an <a href="https://github.com/SE-ML/awesome-seml/blob/master/readme.md" target="_blank" class="blue">aweseome list</a> with the most interesting articles, blogs, whitepapers, and tools that we have come across.
+Based on this information, we also published an <a href="https://github.com/SE-ML/awesome-seml/blob/master/readme.md" target="_blank" class="blue">awesome list</a> with the most interesting articles, blogs, whitepapers, and tools that we have come across.
 <br><br>
 
 If you have questions about the survey, or you would like to share feedback on the survey with us after you have taken it, feel free to drop us an <a href="mailto:j.m.w.visser@liacs.leidenuniv.nl" class="blue">e-mail</a>.

@@ -5,4 +5,4 @@ meta: 1
 inline: true
 ---
 
-Our paper "Adoption and Effects of Software Engineering Best Practices in Machine Learning" was accepted at ESEM 2020.
+Our paper <a href="/publications">"Adoption and Effects of Software Engineering Best Practices in Machine Learning"</a> was accepted at ESEM 2020.
