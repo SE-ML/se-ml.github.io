@@ -21,5 +21,5 @@ The practices from the survey are described in more detail in our online <a href
 
 More details about our survey methodology and statistical analysis are available in the scientific article <a href="/publications">Adoption and Effects of Software Engineering Best Practices in Machine Learning</a>.
 
-To contribute to future versions of our survey report, please [take the survey](/survey/)!
+To contribute to future versions of our survey report, please [take the survey](/survey)!
 
