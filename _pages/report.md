@@ -17,7 +17,7 @@ Our study revealed:
 
 To download the report, click *display large* (top right corner).
 
-The practices from the survey are described in more detail in our online <a href="/practices/">catalogue of ML engineering best practices</a>.
+The practices from the survey are described in more detail in our online <a href="/practices">catalogue of ML engineering best practices</a>.
 
 More details about our survey methodology and statistical analysis are available in the scientific article <a href="/publications">Adoption and Effects of Software Engineering Best Practices in Machine Learning</a>.
 
