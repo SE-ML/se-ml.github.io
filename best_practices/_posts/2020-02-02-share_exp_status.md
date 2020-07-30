@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
 name: Share Status and Outcomes of Experiments Within the Team
 title: Share Status and Outcomes of Experiments Within the Team
-category: Experiment
+category: Training
 unique_id: exp_status
 index: 15
 difficulty: "basic"

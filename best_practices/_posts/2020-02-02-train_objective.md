@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
 name: Share a Clearly Defined Training Objective within the Team
 title: Share a Clearly Defined Training Objective within the Team
-category: Experiment
+category: Training
 unique_id: exp_trainingobjective
 index: 6
 difficulty: "basic"

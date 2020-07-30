@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
 name: Assign an Owner to Each Feature and Document its Rationale
 title: Assign an Owner to Each Feature and Document its Rationale
-category: Experiment
+category: Training
 unique_id: exp_owner
 index: 9
 difficulty: "advanced"

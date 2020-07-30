@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
 name: Enable Parallel Training Experiments
 title: Enable Parallel Training Experiments
-category: Experiment
+category: Training
 unique_id: exp_parallel
 index: 12
 difficulty: "basic"

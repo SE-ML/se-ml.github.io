@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
 name: Test all Feature Extraction Code
 title: Test all Feature Extraction Code
-category: Experiment
+category: Training
 unique_id: exp_tstfeature
 index: 8
 difficulty: "advanced"

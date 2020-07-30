@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
 name: Peer Review Training Scripts
 title: Peer Review Training Scripts
-category: Experiment
+category: Training
 unique_id: exp_peer
 index: 11
 difficulty: "medium"

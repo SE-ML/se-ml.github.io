@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
 name: Automate Hyper-Parameter Optimisation
 title: Automate Hyper-Parameter Optimisation
-category: Experiment
+category: Training
 unique_id: exp_hyperparam
 index: 13
 difficulty: "advanced"

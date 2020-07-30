@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
 name: Capture the Training Objective in a Metric that is Easy to Measure and Understand
 title: Capture the Training Objective in a Metric that is Easy to Measure and Understand
-category: Experiment
+category: Training
 unique_id: exp_trainingmetric
 index: 7
 difficulty: "basic"

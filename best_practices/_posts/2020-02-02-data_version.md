@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
 name: Use Versioning for Data, Model, Configurations and Training Scripts
 title: Use Versioning for Data, Model, Configurations and Training Scripts
-category: Experiment
+category: Training
 unique_id: exp_versioning
 index: 16
 difficulty: "basic"

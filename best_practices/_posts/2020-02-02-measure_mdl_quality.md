@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
 name: Continuously Measure Model Quality and Performance
 title: Continuously Measure Model Quality and Performance
-category: Experiment
+category: Training
 unique_id: exp_quality
 index: 14
 difficulty: "basic"
