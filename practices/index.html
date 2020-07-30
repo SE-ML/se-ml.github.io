@@ -41,13 +41,13 @@ The various practices are grouped into 6 categories, as illustrated in the diagr
 
 
 
-<h3 class="black bold" id="experiment"> Training </h3>
+<h3 class="black bold" id="training"> Training </h3>
 
 "No amount of experimentation can ever prove me right; a single experiment can prove me wrong." --Albert Einstein
 
 <ul>
   {% for pr in sorted_practices %}
-     {% if pr.category == 'Experiment' %}
+     {% if pr.category == 'Training' %}
         <li>
           <a  href="{{pr.url}}">{{ pr.name }}</a>
         </li>
