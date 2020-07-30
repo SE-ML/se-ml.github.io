@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /practices
+permalink: /practices/
 ---
 
 <h1 class="black"> Engineering best practices for Machine Learning </h1>
