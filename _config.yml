@@ -76,6 +76,9 @@ collections:
       people: true
   references:
       people: true
+  best_practices:
+    output: true
+    people: true
 
 
 news_limit: 5
