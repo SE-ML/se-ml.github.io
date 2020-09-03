@@ -12,7 +12,7 @@ description:
 image: #
 photocredit: #
 
-intent: Short statement of the purpose of the practice #
+intent: Make users aware that ML is used by the application, what it is used for, and what its limitations are. This allows users to understand better how to use or not use the application. #
 motivation: Description of the importance of using this practice #
 applicability: The context where the practice applies #
 related: Other related practices #

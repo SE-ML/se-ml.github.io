@@ -12,7 +12,7 @@ description:
 image: #
 photocredit: #
 
-intent: Short statement of the purpose of the practice #
+intent: Avoid building discriminatory practices into your ML application. #
 motivation: Description of the importance of using this practice #
 applicability: The context where the practice applies #
 related: Other related practices #

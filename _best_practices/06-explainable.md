@@ -12,7 +12,7 @@ description:
 image: #
 photocredit: #
 
-intent: Short statement of the purpose of the practice #
+intent: Allow users to critically assess the results and decisions of the ML application, so they can accept them on an informed basis, or catch possible errors.
 motivation: Description of the importance of using this practice #
 applicability: The context where the practice applies #
 related: Other related practices #
