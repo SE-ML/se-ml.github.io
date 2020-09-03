@@ -1,7 +1,7 @@
 ---
 layout: practice
 author:
-name: Our organisation subscribes to a code of conduct for Responsible AI.
+name: Subscribe to a Responsible AI Code of Conduct
 category: Governance
 index: 40
 difficulty: na
@@ -17,5 +17,8 @@ applicability: The context where the practice applies #
 related: Other related practices #
 dependencies: Similarities, differences and connections to other practices #
 survey_question: Q99 #
+survey_item: Our organisation subscribes to a code of conduct for Responsible AI.
 ---
+
+TODO
 

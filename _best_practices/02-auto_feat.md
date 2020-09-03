@@ -1,8 +1,8 @@
 ---
 layout: practice
 author:
-name: We use automated methods to generate or select features from input data.
-category: #
+name: Automated Feature Generation and Selection
+category: Training #
 index: 17
 difficulty: na
 references: #
