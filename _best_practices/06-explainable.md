@@ -1,7 +1,7 @@
 ---
 layout: practice
 author:
-name: Explanation Results and Decisions to Users
+name: Explain Results and Decisions to Users
 category: Governance
 index: 43
 unique_id: explainable
