@@ -1,9 +1,10 @@
 ---
 layout: practice
 author:
-name: Our team has a clearly defined decision process to make trade-offs between competing quality attributes (e.g. between accuracy, explainability, resource consumption).
+name: Decide Trade-Offs through Defined Team Process
 category: Team
 index: 38
+unique_id: tradeoff
 difficulty: na
 references: #
 comments: True
@@ -17,6 +18,8 @@ applicability: The context where the practice applies #
 related: Other related practices #
 dependencies: Similarities, differences and connections to other practices #
 survey_question: Q86 #
+survey_item: Our team has a clearly defined decision process to make trade-offs between competing quality attributes (e.g. between accuracy, explainability, resource consumption).
 ---
 
 
+TODO
