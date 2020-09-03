@@ -1,9 +1,10 @@
 ---
 layout: practice
 author:
-name: We perform regular risk assessments on our ML applications, addressing impact on users, organisations, and society.
+name: Perform Risk Assessments
 category: Governance
 index: 39
+unique_id: risk
 difficulty: na
 references: #
 comments: True
@@ -17,5 +18,7 @@ applicability: The context where the practice applies #
 related: Other related practices #
 dependencies: Similarities, differences and connections to other practices #
 survey_question: Q97 #
+survey_item: We perform regular risk assessments on our ML applications, addressing impact on users, 
 ---
 
+TODO

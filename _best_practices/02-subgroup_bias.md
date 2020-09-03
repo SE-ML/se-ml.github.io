@@ -1,9 +1,10 @@
 ---
 layout: practice
 author:
-name: We run tests to assess and manage subgroup bias (regarding e.g. gender or ethnicity).
+name: Assess and Manage Subgroup Bias
 category: Training
 index: 21
+unique_id: subgroup_bias
 difficulty: na
 references: #
 comments: True
@@ -17,5 +18,6 @@ applicability: The context where the practice applies #
 related: Other related practices #
 dependencies: Similarities, differences and connections to other practices #
 survey_question: Q95 #
+survey_item: We run tests to assess and manage subgroup bias (regarding e.g. gender or ethnicity).
 ---
 
