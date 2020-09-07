@@ -31,5 +31,5 @@ TDBML,Testing and Debugging in Machine Learning,Google ,GL - Tier 2,++,,-, https
 MDLOPS,ModelOps: Cloud-based lifecycle management for reliable and trusted AI,IBM Research,AL,+,,June 2019,
 PMLPP,Principled Machine Learning: Practices and Tools for Efficient Collaboration,David Herron,GL - TIer 3,+,,June 2019,https://dev.to/robogeek/principled-machine-learning-4eho
 TFX,TFX: A tensorflow-based Production-Scale ML Platform,Google,AL,+++,,17 August 2017,https://dl.acm.org/doi/pdf/10.1145/3097983.3098021?download=true
-BMS,Building Maintainable Software - Ten Guidelines for Future-Proof Code,Joost Visser, Sylvan Rigal, Gijs Wijnholds, Pascal van Eck, Rob van der Leek,GL - Tier 1,+++,,2016,https://books.google.nl/books?id=-QVQDAAAQBAJ&lpg=PR2&ots=76WJ7VLkGL&lr&pg=PP1#v=onepage&q&f=false
-TTAID,Toward Trustworthy AI Development: Mechanisms for Supporting Verifiable Claims,OpenAI, Google, Intel, many universities,GL - Tier 1,+++,,April 2020,https://arxiv.org/abs/2004.07213
+BMS,Building Maintainable Software - Ten Guidelines for Future-Proof Code,"Joost Visser, Sylvan Rigal, Gijs Wijnholds, Pascal van Eck, Rob van der Leek",GL - Tier 1,+++,,2016,https://books.google.nl/books?id=-QVQDAAAQBAJ&lpg=PR2&ots=76WJ7VLkGL&lr&pg=PP1#v=onepage&q&f=false
+TTAID,Toward Trustworthy AI Development: Mechanisms for Supporting Verifiable Claims,"OpenAI, Google, Intel, many universities",GL - Tier 1,+++,,April 2020,https://arxiv.org/abs/2004.07213
