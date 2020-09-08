@@ -6,7 +6,7 @@ category: Governance
 index: 39
 unique_id: risk
 difficulty: na
-references: [TTAID,AIHLEG] #
+references: [TTAID,AIHLEG,CAIAG] #
 comments: True
 description:
 image: #
