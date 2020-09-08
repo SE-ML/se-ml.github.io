@@ -6,7 +6,7 @@ category: Governance
 index: 44
 unique_id: concerns
 difficulty: na
-references: #
+references: [TTAID,AIHLEG] #
 comments: True
 description:
 image: #
@@ -22,5 +22,7 @@ survey_item: Our organisation offers safe channels for users and employees to ra
 ---
 
 TODO
+
+* Bounties
 
 

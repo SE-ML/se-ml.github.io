@@ -6,7 +6,7 @@ category: Governance
 index: 42
 unique_id: alert
 difficulty: na
-references: #
+references: [AIHLEG,MCARD] #
 comments: True
 description:
 image: #
