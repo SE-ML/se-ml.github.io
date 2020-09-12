@@ -35,3 +35,5 @@ To ensure the effectiveness of risks assessments, several issues need to be kept
 * Risk assessments are carried out by an internal team. Their familiarity with the organisation, its goals, and the application being asssessed allows to leverage their expertise both for identifying risks and designing mitigation actions. To avoid that his familiarity compromises independence and diversity of perspectives, great care must be taken in the **formation of the assessment team**.
 
 To alleviate these issues, a **third-party audit** can be commissioned in addition to internal risks assessments.
+
+A **red team exercise** is a specific way of conducting a risk assessment on your ML application, where a separate team is tasked to take an adversarial perspective to detect vulnerabilites or, in this case, unintended negative impacts of the ML application.
