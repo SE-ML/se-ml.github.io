@@ -41,4 +41,11 @@ SLAML,Six Levels of Auto ML,Bojan Tunguz,GL,,,Jan 2020,https://medium.com/@tungu
 SEDS,Software Engineering Decision Support - A New Paradigm for Learning Software Organizations,Günther Ruhe,AL,,,2003,https://doi.org/10.1007/978-3-540-40052-3_10
 MOIEA,Multiobjective Optimization - Interactive and Evolutionary Approaches,Branke et al,AL,+++,,2008,https://doi.org/10.1007/978-3-540-88908-3
 GDMMA,Group Decision Making - Methodology and Applications,Günter Fandel,AL,,,1990,https://doi.org/10.1007/978-3-642-75935-2_24
-CAIAG,Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing,Raji et al,AL,+++,,2020,https://doi.org/10.1145/3351095.3372873																			
+CAIAG,Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing,Raji et al,AL,+++,,2020,https://doi.org/10.1145/3351095.3372873
+ITDFDS,Inherent Trade-Offs in the Fair Determination of Risk Scores,"Kleinberg, Mullainathan, Raghavan",AL,,,2020,https://arxiv.org/abs/1609.05807
+LFR,Learning Fair Representations,Zemel et al,AL,,,2020,https://www.cs.toronto.edu/~toni/Papers/icml-final.pdf
+IFCUL,The Implicit Fairness Criterion of Unconstrained Learning,"Liu, Simchowitz, Hardt",AL,,,2020,http://proceedings.mlr.press/v97/liu19f.html
+PFG,Preventing Fairness Gerrymandering: Auditing and Learning for Subgroup Fairness, Kearns et al,AL,,,2020,http://proceedings.mlr.press/v80/kearns18a.html
+MCCIM,Multicalibration: Calibration for the (Computationally-Identifiable) Masses, Hebert-Johnson et al,AL,,,2020,http://proceedings.mlr.press/v80/hebert-johnson18a.html
+FMLSS,Fairness MLSS 2020,Moritz Hardt,GL - Tier 1,+++,,2020,https://www.youtube.com/watch?v=Igq_S_7IfOU
+
