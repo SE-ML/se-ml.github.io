@@ -1,12 +1,12 @@
 ---
 layout: practice
-author:
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Employ Interpretable Models When Possible
 category: Training
 index: 14
 unique_id: interpretable
 difficulty: na
-references: [IMLG] #
+references: [IMLG,TTAID,AIHLEG] #
 comments: True
 description:
 image: #

@@ -1,6 +1,6 @@
 ---
 layout: practice
-author:
+author: Joost Visser, Alex Serban, Koen van der Blom
 name: Perform Risk Assessments
 category: Governance
 index: 39

@@ -1,6 +1,6 @@
 ---
 layout: practice
-author:
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Assess and Manage Subgroup Bias
 category: Training
 index: 21
