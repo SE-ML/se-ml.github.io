@@ -1,6 +1,6 @@
 ---
 layout: practice
-author:
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Subscribe to a Responsible AI Code of Conduct
 category: Governance
 index: 40
