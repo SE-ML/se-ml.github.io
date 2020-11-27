@@ -6,23 +6,29 @@ category: Training
 index: 14
 unique_id: interpretable
 difficulty: na
-references: #
+references: [IMLG] #
 comments: True
 description:
 image: #
 photocredit: #
 
 intent: Intepretable models help to facilitate users, developers, and auditors to understand and account for the results of your ML application. #
-motivation: Description of the importance of using this practice #
-applicability: Non-interpretable models often only provide a small performance gain over an interpretable alternative. Interpretability should not be sacrificed for performance without making a well-considered trade-off decision.  #
-related: [tradeoff] #
+motivation: Interpretable models help to build trust, transparency and auditability of ML applications. Moreover, they help application developers to understand the decisions, learn more about the problems solved and understand the data.  #
+applicability: Non-interpretable models often only provide a performance gain over interpretable alternatives. Whenever possible, it is recommended to use interpretable models over non-interpretable, black-box models even though small performance benefits are sacrified. #
+related: [tradeoff, alert] #
 dependencies: Similarities, differences and connections to other practices #
 survey_question: Q104 #
 survey_item: Our ML applications employ interpretable models whenever possible.
 
 ---
 
-For many non-interpretable ML models, an interpretable alternative exists that achieves similar performance. 
+In ML applications, developers are often faced with a trade-off between understanding *why* a decision is made and focusing only on performance metrics.
+In many cases, knowing *why* can help to learn more about the problem solved, the data and the reasons why an algorithm fails.
 
-TODO
+In some scenarios failures of ML models may not have major consequences.
+For example, a recommender system for products of an e-commerce shop, can fail to provide the intended predictions without impacting human lives.
+Nevertheless, understanding the failures modes of the model can help developers to rapidly solve the issues and provide a better service.
 
+In other scenarios, such as using deep learning for object recognition, non-interpretable models offer significant performance advantages over interpretable models.
+Balancing the trade-off between black-box models and more interpretable ones is a task ML developers will face all the time.
+However, whenever an interpretable model offers competitive performance with black-box models, it is recommended to use the former.

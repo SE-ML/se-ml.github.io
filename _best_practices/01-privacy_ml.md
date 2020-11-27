@@ -22,7 +22,7 @@ survey_item: We use privacy-preserving ML techniques (e.g. federated learning, d
 
 ---
 
-Whenever processing data that can be used to indentify or trace back information to individuals -- such as medical records -- it is compulsive to use privacy preserving techniques in order to protect the individuals' privacy.
+Whenever processing data that can be used to indentify or trace back information to individuals -- such as medical records -- it is imperative to use privacy preserving techniques in order to protect the individuals' privacy.
 Moreover, ML models are known to leak information (see membership attacks), and may reveal information about the training data
 
 Anonymisation, pseudonymisation, differential privacy, federated ML or using cryptographic techniques -- such as homomorphic encryption -- are examples of privacy preserving ML techniques.

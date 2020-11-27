@@ -22,7 +22,7 @@ survey_item: We use various methods to assure the security of our application un
 
 ---
 
-For any application that exposes an external interface or uses personal or sensitive data, it is compulsive to reflect and take actions for improving its security.
+For any application that exposes an external interface or uses personal or sensitive data, it is imperative to reflect and take actions for improving its security.
 Security is known as an arms race, with attackers constantly improving their techniques, and defenders updating their systems in order to predict and prevent new threats.
 Therefore, ensuring security is a continuous task.
 
