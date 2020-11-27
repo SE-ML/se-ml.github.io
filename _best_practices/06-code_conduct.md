@@ -25,3 +25,5 @@ Moreover, defining or subscribing to a code of conduct helps to build trust with
 
 A code of conduct can be regarded as a chart which guides all applications developed inside an organisation.
 Responsible AI can guard against the use of biased algorithms (or data) and ensure that decisions made by ML models can be justified and explainable.
+
+Publishing the code of conduct to which you subscribe can help to communicate the organisation's value and build public trust.
