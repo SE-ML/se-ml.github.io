@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Allow users to critically assess the results and decisions of the ML application, so they can accept them on an informed basis, or catch possible errors.
 motivation: Users are entitled to know the basis on which a decision that affects them was made. #
-applicability: This practice applies to all applications using ML. #
+applicability: Explanations should be applied to any machine learning application.
 related: [alert, audit_trails, interpretable]  #
 dependencies: Similarities, differences and connections to other practices #
 survey_question: Q101 #

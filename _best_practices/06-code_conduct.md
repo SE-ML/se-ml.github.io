@@ -13,7 +13,7 @@ photocredit: #
 
 intent: Build trust and ensure adherence to ethical principles and values. #
 motivation: ML and AI can severly impact human lives, usually without  malicious intentions.   #
-applicability: This practice applies to all applications using ML. #
+applicability: Code of conducts should be applied to any machine learning application. #
 related: [tradeoff,audits, interpretable] #
 dependencies: #
 survey_question: Q99 #

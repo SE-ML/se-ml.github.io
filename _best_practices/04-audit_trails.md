@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Allow post-mortem behaviour analysis of the application. #
 motivation: Concerns about the social implications of ML and AI led to a rising interest to regulate and audit applications. #
-applicability: This practice apply to all applications processing user data, but brings benefits to all applications using ML.  #
+applicability: Audit trails should be applied to any machine learning application.  #
 related: [audits, deployment_log, interpretable] #
 dependencies: Similarities, differences and connections to other practices #
 survey_question: 1 #

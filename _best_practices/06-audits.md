@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Obtain an independent assessment of the strenghts and weaknesses of your application and engineering processes.  #
 motivation: Gain new insights into your ML application and build trust.  #
-applicability: This practice applies to all applications using ML. #
+applicability: Audits should be applied to any machine learning application. #
 related: [audit_trails] #
 dependencies: #
 survey_question: Q103 #

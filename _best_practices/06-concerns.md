@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Obtain honest feedback, allowing timely remediation, rather than giving rise to conflict.  #
 motivation: Users can help improve the application by providing feedback.  #
-applicability: This practice applies to all applications using ML. #
+applicability: Safe communication channels should be applied to any machine learning application.
 related: [alert] #
 dependencies: #
 survey_question: Q102 #

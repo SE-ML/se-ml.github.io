@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Define methodology for generation, evaluation, prioritisation and selection of solution alternatives. #
 motivation:  Software development is characterised by multiple objectives and constraints, uncertainty and incomplete information. Moreover, the problem parameters change very often. #
-applicability: This practice applies to all applications involving software. #
+applicability: Trade-off processes should be applied to any machine learning application. #
 related: [interpretable] #
 dependencies: Similarities, differences and connections to other practices #
 survey_question: Q86 #

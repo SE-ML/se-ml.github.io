@@ -14,7 +14,7 @@ photocredit: #
 
 intent: Make users aware that ML is used by the application, what it is used for, and what its limitations are. This allows users to understand better how to use or not use the application. #
 motivation:  ML systems should not represent themselves as humans to users. Humans have the right to know that they are interacting with a ML system. #
-applicability: This practice applies to all applications using ML. #
+applicability: User communication should be applied to any machine learning application. #
 related: [concerns]
 dependencies: #
 survey_question: Q100 #
