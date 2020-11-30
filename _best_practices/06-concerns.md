@@ -1,6 +1,6 @@
 ---
 layout: practice
-author:
+author: Alex Serban, Koen van der Blom, Joost Visser
 name: Provide Safe Channels to Raise Concerns
 category: Governance
 index: 44
@@ -13,16 +13,16 @@ image: #
 photocredit: #
 
 intent: Obtain honest feedback, allowing timely remediation, rather than giving rise to conflict.  #
-motivation: Description of the importance of using this practice #
-applicability: The context where the practice applies #
-related: Other related practices #
-dependencies: Similarities, differences and connections to other practices #
+motivation: Users can help improve the application by providing feedback.  #
+applicability: This practice applies to all applications using ML. #
+related: [alert] #
+dependencies: #
 survey_question: Q102 #
 survey_item: Our organisation offers safe channels for users and employees to raise concerns about privacy, safety, security, fairness, or other concerns related to our ML applications.
 ---
 
-TODO
+Communication channels between users and developers can help to discuss issues, dilemmas or emergent concerns regarding ethical use of ML.
+In order to facilitate communication, increase transparency and obtain feedback for your application, it is recommended to provide safe channels for users to raise concerns.
 
-* Bounties
-
-
+These channels can be as simple as mailing lists, blogs (e.g., Disqus) or phone numbers.
+Make sure to include options for anonymisation in order to protect the users' privacy and be as inclusive as possible.

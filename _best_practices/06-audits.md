@@ -6,20 +6,22 @@ category: Governance
 index: 45
 unique_id: audits
 difficulty: na
-references: #
+references: [TTAID, AIHLEG] #
 comments: True
 description:
 image: #
 photocredit: #
 
-intent: Obtain an independent assessment of the strenghts and weaknesses of your application and engineering processes. To gain new insights and build trust.  #
-motivation: Description of the importance of using this practice #
-applicability: The context where the practice applies #
+intent: Obtain an independent assessment of the strenghts and weaknesses of your application and engineering processes.  #
+motivation: Gain new insights into your ML application and build trust.  #
+applicability: This practice applies to all applications using ML. #
 related: [audit_trails] #
-dependencies: Similarities, differences and connections to other practices #
+dependencies: #
 survey_question: Q103 #
 survey_item: The ML applications developed by our organisation are regularly subjected to third party audits.
 
 ---
 
-TODO
+In order to gain new insights into your development life-cycle and compare with other applications and regulations,
+it is recommended to have your application audited by an external, independent and trustable actor.
+Sharing the outcomes of the audit and a strategy for solving the emergent issues can increase transparency and trust.
