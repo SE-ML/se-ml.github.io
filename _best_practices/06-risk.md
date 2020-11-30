@@ -3,7 +3,7 @@ layout: practice
 author: Joost Visser, Alex Serban, Koen van der Blom
 name: Perform Risk Assessments
 category: Governance
-index: 39
+index: 40
 unique_id: risk
 difficulty: na
 references: [TTAID,AIHLEG,CAIAG] #
