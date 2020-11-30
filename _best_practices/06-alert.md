@@ -23,7 +23,7 @@ survey_item: Our application informs users that it makes use of machine learning
 
 The following is an extract from the EU ethics guidelines for responsible AI:
 [AI] users should be able to make informed decisions about sytems using ML, and should be given the knowledge and tools to comprehend and interact with systems using ML to a satisfactory degree.
-[Moreover, ...] AI system should not not  represent  themselves  as  humans  to  users; humans have  the  right  to  be informed  that they  are  interacting  with  an  AI  system.  This  entails  that AI  systems must be identifiable  as  such.  In addition,  the  option  to  decide  against  this  interaction  in  favour  of  human  interaction  should  be  provided where needed  to  ensure  compliance  with  fundamental  rights.
+[Moreover, ...] AI system should not  represent  themselves  as  humans  to  users; humans have  the  right  to  be informed  that they  are  interacting  with  an  AI  system.  This  entails  that AI  systems must be identifiable  as  such.  In addition,  the  option  to  decide  against  this  interaction  in  favour  of  human  interaction  should  be  provided where needed  to  ensure  compliance  with  fundamental  rights.
 
 The potential impact of AI and ML on society calls for mature and responsible uses and regulations of these technologies.
 Since ML can be deployed to shape of influence human behaviour through mechanisms that can be difficult to detect, failing to inform users of ML use may violate human rights.

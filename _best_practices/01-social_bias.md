@@ -12,9 +12,9 @@ description:
 image: #
 photocredit: #
 
-intent: Identify instances of social bias in training data, in order to allow counteracting the effects of this bias in training and deployed models.
-motivation: Bias in data is one of the main sources of unfairness in ML applications. Responsible use of ML requires that developers of ML applications counteract such unfairness, which starts with identifying the sources of bias. #
-applicability: Testing for social bias in training data should be done whenever you work with input data that contains information that relates to people. Not only when your data has explicit fields for gender, ethnicity, etc, but also seemingly inocuous data like location, name, or even hobbies might implicitly encode social traits.  #
+intent: Identify instances of social bias in training data, in order to counteract the effects of this bias in training and deployed models.
+motivation: Bias in data is one of the main sources of unfairness in ML applications. Responsible use of ML requires that developers of ML applications counteract unfairness, starting with identifying the sources of bias. #
+applicability: Testing for social bias in training data should be done whenever you process data containing personal information -- not only when your data has explicit fields for gender, ethnicity, etc, -- but also seemingly inocuous data such as location, name, or even hobbies might implicitly encode social traits.  #
 related: [discriminatory_attributes,subgroup_bias,risk] #
 dependencies: Similarities, differences and connections to other practices #
 survey_question: Q84 #
@@ -26,7 +26,7 @@ In order to avoid social bias in ML algorithms, it is imperative to *continuousl
 In many cases, other data attributes (such as location or neighborhood) can be proxies to sensitive social attributes and may introduce latent bias.
 Using or not testing for these latent biases is a common pitfall, called failure through unawareness. A common example is the one day delivery service offered by Amazon, which was biased for race: [Amazon Doesn’t Consider the Race of Its Customers. Should It?](https://www.bloomberg.com/graphics/2016-amazon-same-day/).
 
-Social bias can be detected technically -- by analyising the distributions of social factors, and avoiding over or under representation.
+Social bias can be detected technically -- by analyising the distributions of social factors, and avoiding (over- or) under-representation.
 However, technical limitations may prevent bias stemming from latent factors to be detected.
 
 

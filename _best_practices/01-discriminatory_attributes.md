@@ -12,8 +12,8 @@ description:
 image: #
 photocredit: #
 
-intent: Avoid building discriminatory practices into your ML application. #
-motivation: Using personal data attributes such as gender or ethnicity as features of ML algorithms introduces discriminatory bias, and ultimately lead to models with a negative impact on the society. #
+intent: Avoid building discriminatory practices into ML applications. #
+motivation: Using personal data attributes such as gender or ethnicity as features of ML algorithms introduces discriminatory bias, and ultimately leads to models with a negative impact on the society. #
 applicability: Discriminatory attributes should not be used in applications with a direct or indirect impact on human lives, the society or the environment. #
 related: [social_bias,subgroup_bias,risk] #
 dependencies: #

@@ -13,7 +13,7 @@ image: #
 photocredit: #
 
 intent: To identify and mitigate possible unintended negative impact of your ML application. #
-motivation: Your ML application potentially could have unintended negative impact on your users, your own organisation, other organisations, or society at large. A risk assessment is a deliberate, structured process to identify such risks before they occur, so mitigating measures can be designed and implemented.  #
+motivation: ML applications could have unintended negative impact on your users, the organisation, other organisations, or society at large. A risk assessment is a deliberate, structured process to identify such risks before they occur, so mitigating measures can be designed and implemented.  #
 applicability: At least one risk assessment should be conducted for any ML application before it goes live. When the stakes are higher (e.g., safety-relevant, vulnerable users, involves personal information), risk assessments should be conducted more frequently and more thoroughly. #
 related: [audits]  #
 dependencies: Similarities, differences and connections to other practices #

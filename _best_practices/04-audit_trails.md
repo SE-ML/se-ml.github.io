@@ -24,7 +24,7 @@ survey_items: Our ML applications provide comprehensive audit trails that allow 
 
 The social implications that ML and more general AI technologies may have on the society call for tight regulations to ensure the consumer rights are respected. For example, the EU GDPR law, as well as the Credit score in the US, require the *right to an explanation* for automated decision making systems.
 
-Post-mortem analysis and traceability of ML behaviour is difficult in case teams to not design the application for audit trails.
+Post-mortem analysis and traceability of ML behaviour is difficult in case teams do not design the application for audit trails.
 A first step towards opening the applications for audits is to devise a strategy for auditing and make it part of the development life-cycle.
 
 Such a strategy should include plans for storing and preserving audit trails of past decisions, together with data describing each stage of the development life-cycle.
