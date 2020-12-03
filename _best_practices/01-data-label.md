@@ -32,4 +32,4 @@ Imposing a strictly controlled process for data labelling guarantees that your a
 A mature data labelling process includes peer-reviewing all labels by a second team member.
 
 Lower or sub-optimal label quality can impact the whole ML pipeline.
-In case this problem can not be addressed (and a ML solution is still desired), make sure you document and communicate this issue within the team.
+In case this problem can not be addressed (and an ML solution is still desired), make sure you document and communicate this issue within the team.

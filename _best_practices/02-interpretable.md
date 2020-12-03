@@ -12,11 +12,11 @@ description:
 image: #
 photocredit: #
 
-intent: Intepretable models help users, developers, and auditors to understand and account for the results of ML applications. #
+intent: Interpretable models help users, developers, and auditors to understand and account for the results of ML applications. #
 motivation: Interpretable models help to build trust, transparency and auditability of ML applications. Moreover, they help application developers to understand the decisions, learn more about the problems solved and understand the data.  #
-applicability: Non-interpretable models often only provide a performance gain over interpretable alternatives. Whenever possible, it is recommended to use interpretable models over non-interpretable, black-box models even though small performance benefits are sacrified. #
+applicability: Non-interpretable models often only provide a performance gain over interpretable alternatives. Whenever possible, it is recommended to use interpretable models over non-interpretable, black-box models even though small performance benefits are sacrificed. #
 related: [tradeoff, alert] #
-dependencies: Similarities, differences and connections to other practices #
+dependencies: #
 survey_question: Q104 #
 survey_item: Our ML applications employ interpretable models whenever possible.
 
