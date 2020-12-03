@@ -26,6 +26,6 @@ For example, consider an application where we divide the data based on location 
 After division, it may be the case that we only have data where the population of New York is predominantly female, and the population of Amsterdam is predominantly male.
 This division introduces a subgroup bias, which ultimately leads to socially biased models.
 
-In order to avoid subgroup bias, it is imperative to test, assess and calibrate the models as in the case of group bias.**TODO: Koen: group bias here referes to 'regular social bias'? If yes: rephrase it to that and make it a link to the social bias page**
+In order to avoid subgroup bias, it is imperative to test, assess and calibrate the models as in the case of [social bias](/best_practices/01-social_bias/).
 
 Follow the references in order to learn more about technical approaches to ensure fair predictions for every sub-population which can be identified in a set of groups.

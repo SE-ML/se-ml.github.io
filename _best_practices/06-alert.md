@@ -21,9 +21,9 @@ survey_question: Q100 #
 survey_item: Our application informs users that it makes use of machine learning and describes its intended use and limitations.
 ---
 
-The following is an extract from the EU ethics guidelines for responsible AI: **TODO: Link to the guidelines?**
-**TODO: Confirm we can use blockquotes in this markdown environment; otherwise use some other way to clearly differentiate this from the rest of the text**
-> [AI] users should be able to make informed decisions about sytems [sic]**TODO: Confirm it was their typo and not ours** using ML, and should be given the knowledge and tools to comprehend and interact with systems using ML to a satisfactory degree.
+The following is an extract from the [EU ethics guidelines for trustworthy AI](https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai):
+
+> [AI] users should be able to make informed decisions about systems [sic] using ML, and should be given the knowledge and tools to comprehend and interact with systems using ML to a satisfactory degree.
 > [Moreover, ...] AI system should not  represent  themselves  as  humans  to  users; humans have  the  right  to  be informed  that they  are  interacting  with  an  AI  system.  This  entails  that AI  systems must be identifiable  as  such.  In addition,  the  option  to  decide  against  this  interaction  in  favour  of  human  interaction  should  be  provided where needed  to  ensure  compliance  with  fundamental  rights.
 
 The potential impact of AI and ML on society calls for mature and responsible uses and regulations of these technologies.

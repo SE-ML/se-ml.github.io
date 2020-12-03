@@ -30,5 +30,5 @@ Besides software relate trade-offs -- such as selecting the right architectural 
 
 For example, a team process can include the prioritisation of interpretable models over black-box models, or a procedure to roll-back production systems when the accuracy drops significantly.
 A team process can empower team members to take action even though other members responsible for decisions are not present.
-Large companies, with vast experience in software development, adopt company wide policies that are followed by all teams (e.g. Amazon's 14 leadership principles**TODO: Add link/reference?**).
+Large companies, with vast experience in software development, adopt company wide policies that are followed by all teams (e.g. [Amazon's 14 leadership principles](https://www.aboutamazon.com/about-us/leadership-principles)).
 Defining a process that can be adopted by multiple teams in the organisation enhances collaboration and communication between teams.
