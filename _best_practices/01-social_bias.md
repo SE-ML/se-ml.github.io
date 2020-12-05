@@ -24,7 +24,7 @@ survey_item: We consistently test for social bias in our training data (regardin
 In order to avoid social bias in ML algorithms, it is imperative to *continuously* check that the training data is well balanced with respect to social attributes such as gender, or ethnicity.
 
 In many cases, other data attributes (such as location or neighbourhood) can be proxies to sensitive social attributes and may introduce latent bias.
-Using or not testing for these latent biases is a common pitfall, called failure through unawareness. A common example is the one day delivery service offered by Amazon, which was biased for race: [Amazon Doesn’t Consider the Race of Its Customers. Should It?](https://www.bloomberg.com/graphics/2016-amazon-same-day/).
+Using or not testing for these latent biases is a common pitfall, called failure through unawareness. A common example is the one day delivery service offered by Amazon, which was biased for race: <a href="https://www.bloomberg.com/graphics/2016-amazon-same-day/">Amazon Doesn’t Consider the Race of Its Customers. Should It?</a>.
 
 Social bias can be detected technically -- by analysing the distributions of social factors, and avoiding (over- or) under-representation.
 However, technical limitations may prevent bias stemming from latent factors to be detected.

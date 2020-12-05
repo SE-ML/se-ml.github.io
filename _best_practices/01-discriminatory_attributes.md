@@ -23,13 +23,13 @@ survey_item: We prevent potentially discriminatory data attributes (such as gend
 
 When processing personal data -- for example the customer data in a banking application -- it is important to prevent discriminatory attributes from being used as model features, because the resulting models may base their decisions on these attributes, and ultimately introduce biases.
 
-A widely known example for misusing this practice is the [COMPAS](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing) case; where discriminatory attributes were used to predict if a perpetrator was likely to recidivate.
+A widely known example for misusing this practice is the <a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">COMPAS</a> case; where discriminatory attributes were used to predict if a perpetrator was likely to recidivate.
 
 An intuitive step to prevent such attributes from being used as feature is to remove them from the training data.
 However, removing sensitive attributes (or not including them in the first place) is no cure for fairness concerns, and can exacerbate them if used improperly.
 
 Always be aware that there may be latent sensivtive attributes. For instance, sometimes a combination of features -- that are not considered discriminatory themselves -- can be used by an ML algorithm to reconstruct a discriminatory attribute. Ultimately, this would have the same effect as using discriminatory attributes directly.
 
-In order to prevent the use of discriminatory attributes, a hybrid approach is needed; consisting of removing the attributes from the training data, testing for latent factors that may uncover them, and constantly testing for other biases such as [social](/best_practices/01-social_bias/) or [subgroup](/best_practices/02-subgroup_bias/) bias.
+In order to prevent the use of discriminatory attributes, a hybrid approach is needed; consisting of removing the attributes from the training data, testing for latent factors that may uncover them, and constantly testing for other biases such as <a href="/best_practices/01-social_bias/">social</a> or <a href="/best_practices/02-subgroup_bias/"></a> bias.
 
 

@@ -27,5 +27,5 @@ Because the performance between training and production data can vary drasticall
 The monitoring pipeline should include:
 - performance, quality and skew metrics,
 - fairness metrics,
-- model interpretability outputs (e.g. [LIME](https://arxiv.org/pdf/1602.04938v1.pdf)),
+- model interpretability outputs (e.g. <a href="https://arxiv.org/pdf/1602.04938v1.pdf">LIME</a>),
 - metrics for the perceived effect of the model, e.g. user interactions, conversion rates, etc.

@@ -21,7 +21,7 @@ dependencies: #
 survey_question: Q33
 ---
 
-Besides performing [sanity checks](/best_practices/01-sanity_check/) on the input data, it is recommended to constantly check for data evolution. In a constantly evolving environment, data will also evolve over time.
+Besides performing <a href="/best_practices/01-sanity_check/">sanity checks</a> on the input data, it is recommended to constantly check for data evolution. In a constantly evolving environment, data will also evolve over time.
 For example, your user distribution per geographical regions may change with time and lead to future biases towards over-representative regions.
 
 Continuously check that:

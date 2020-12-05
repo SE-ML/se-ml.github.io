@@ -31,7 +31,7 @@ Static code analysis can be done in various ways:
 Apart from choosing and activating appropriate static analysis tools, it is important to embed the usage of the tools and their results in the way of work of the development team. This requires:
 - Agreeing on what level of quality is expected
 - Encouraging team members to act on quality issues in a meaningful way, i.e. by finding and eliminating the root causes
-- Allowing the team to spend time on quality corrections before moving on to implementing more functonality
+- Allowing the team to spend time on quality corrections before moving on to implementing more functionality
 
 There are various pitfalls to look out for:
 - Some static analysis tools produce many "false positives": findings that are not relevant in the context at hand, but absorb attention and time from developers

@@ -23,8 +23,8 @@ survey_item: We use privacy-preserving ML techniques (e.g. federated learning, d
 ---
 
 Whenever processing data that can be used to identify or trace back information to individuals -- such as medical records -- it is imperative to use privacy preserving techniques in order to protect the individuals' privacy.
-Moreover, ML models are known to leak information (see [membership attacks](https://www.cs.cornell.edu/~shmat/shmat_oak17.pdf)), and may reveal information about the training data.
+Moreover, ML models are known to leak information (see <a href="https://www.cs.cornell.edu/~shmat/shmat_oak17.pdf">membership attacks</a>), and may reveal information about the training data.
 
 Anonymisation, pseudonymisation, differential privacy, federated ML or using cryptographic techniques -- such as homomorphic encryption -- are examples of privacy preserving ML techniques.
 
-The tool support for privacy preserving ML is mature, with tools such as [Opacus](https://github.com/pytorch/opacus), [CrypTen](https://github.com/facebookresearch/CrypTen) or [PySift](https://github.com/OpenMined/PySyft) being developed and maintained by large research centres such as Facebook AI research.
+The tool support for privacy preserving ML is mature, with tools such as <a href="https://github.com/pytorch/opacus">Opacus</a>), <a href="https://github.com/facebookresearch/CrypTen">CrypTen</a> or <a href="https://github.com/OpenMined/PySyft">PySift</a> being developed and maintained by large research centres such as Facebook AI research.

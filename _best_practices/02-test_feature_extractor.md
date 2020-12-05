@@ -21,14 +21,12 @@ dependencies: #
 survey_question: Q40
 ---
 
-Similar to [applying sanity checks to external data sources](/best_practices/01-sanity_check/), it is important to check that data generated internally is consistent and does not introduces errors or bugs.
-
+Similar to <a href="/best_practices/01-sanity_check/"> applying sanity checks to external data sources </a>, it is important to check that data generated internally is consistent and does not introduces errors or bugs.
 
 In many cases, one would write custom code to merge data attributes into new features.
 The code written for such operations needs to be unit-tested in order to ensure that it does not introduces functional bugs, but also to ensure that the returned data will match the expected values needed to train an ML algorithm.
 
 Failing to test the feature extraction code may lead to unintended bugs with severe impact on the final model.
 Such bugs are hard to debug and remove because they involve several data sources and functionality.
-
 
 If automatically extracted features are used, they should also be tested for correctness.

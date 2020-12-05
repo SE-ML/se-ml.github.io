@@ -29,6 +29,6 @@ Therefore, ensuring security is a continuous task.
 Besides classical cyber threats that apply to software systems, machine learning adds new security risks both during training and deployment.
 Training time attacks are known as data poisoning, and consist of attackers trying to alter the training data in order to induce malicious behaviour -- such as misclassifying certain examples.
 
-Test time (or inference) attacks are more diverse, and consist of adding small perturbations to test data in order to induce malicious behaviour (adversarial attacks), reverse engineering the model or checking if some data was used for training (membership attacks). Like other branches of machine learning, security is also a [growing](https://nicholas.carlini.com/writing/2019/all-adversarial-example-papers.html) field of study.
+Test time (or inference) attacks are more diverse, and consist of adding small perturbations to test data in order to induce malicious behaviour (adversarial attacks), reverse engineering the model or checking if some data was used for training (membership attacks). Like other branches of machine learning, security is also a <a href="https://nicholas.carlini.com/writing/2019/all-adversarial-example-papers.html">growing</a> field of study.
 
 As mentioned earlier, security requires a proactive approach, with some mechanisms including security code reviews, using security analysis tools, penetration testing, and actively performing red teaming exercises.

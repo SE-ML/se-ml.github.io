@@ -1,0 +1,1594 @@
+
+  \begin{frame}[plain]{ Test all Feature Extraction Code
+ }
+
+  \textbf{Intent}: Avoid bugs in the feature extraction code. 
+ 
+
+  \textbf{Motivation}: Many times a feature will merge two or more data attributes or use custom data transformations. Testing this custom feature extraction code ensures no errors or bugs are introduced in this process. 
+ 
+
+  \textbf{Applicability}: The feature extraction code should be tested whenever features are manually  engineered (and not automatically extracted, e.g. through deep learning).
+ 
+
+  \textbf{Description}: 
+
+Similar to  applying sanity checks to external data sources , it is important to check that data generated internally is consistent and does not introduces errors or bugs.
+
+
+In many cases, one would write custom code to merge data attributes into new features.
+The code written for such operations needs to be unit-tested in order to ensure that it does not introduces functional bugs, but also to ensure that the returned data will match the expected values needed to train an ML algorithm.
+
+
+Failing to test the feature extraction code may lead to unintended bugs with severe impact on the final model.
+Such bugs are hard to debug and remove because they involve several data sources and functionality.
+
+
+If automatically extracted features are used, they should also be tested for correctness.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Enable Shadow Deployment
+ }
+
+  \textbf{Intent}: Test a model's behaviour on production data, without any impact on the service it provides. 
+ 
+
+  \textbf{Motivation}: Before pushing a model into production, it is wise to test its quality and performance on data from production. In order to facilitate this task, one can deploy multiple models to 'shadow' each other. 
+ 
+
+  \textbf{Applicability}: Shadow deployment should be implemented in any production-level ML application.
+ 
+
+  \textbf{Description}: 
+
+Instead of deploying a model straight into production, one can assess its quality and performance using the data from production without allowing the model to make final decisions.
+This involves deploying the a model to ``shadow'' or ``compete'' with the model in production and redirect the data to both models.
+The model that is already deployed will still handle all decisions, until the shadow model is assessed and promoted to production.
+
+
+Using shadow models allows teams to avoid unintended behaviours in production  -- coming from skews between training and test data.
+However, it introduces more complexity in the deployment infrastructure.
+Luckily, tool support for shadow or canary deployment has already matured.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Explain Results and Decisions to Users
+ }
+
+  \textbf{Intent}: Allow users to critically assess the results and decisions of the ML application, so they can accept them on an informed basis, or catch possible errors.
+ 
+
+  \textbf{Motivation}: Users are entitled to know the basis on which a decision that affects them was made. 
+ 
+
+  \textbf{Applicability}: Explanations should be applied to any machine learning application.
+ 
+
+  \textbf{Description}: 
+
+ML systems involve highly complex between data, algorithms and models. As a result they are often difficult to understand, even for other experts.
+
+
+In order to increase transparency and align the application with ethics guidelines, it is imperative to inform users on the reasons why a decision was made.
+For example, the EU GDPR law, as well as the Credit score in the US, require the \emph{right to an explanation} for automated decision making systems.
+
+
+Not only may users be more accepting of decisions made by ML systems when they understand what the decision was based on, it also helps them to raise concerns when the explanation is unsatisfactory, or -- in the extreme case -- plain wrong. In turn this helps to improve ML systems to make better decisions, and provide improved explanations in the future.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Establish Responsible AI Values
+ }
+
+  \textbf{Intent}: Explicitly align all stakeholders on the ethical values and constraints of your ML application
+ 
+
+  \textbf{Motivation}: ML applications can severely impact human lives. Avoiding negative impacts, even without malicious intent, requires all stakeholders to operate according to the same ethical values.
+ 
+
+  \textbf{Applicability}: Values for Responsible AI should be established for any ML application.
+ 
+
+  \textbf{Description}: 
+
+A good starting point for sharing ethical values across organisations is to subscribe to a code of conduct. You can create one specific for your situation, or you can refer to a general governance framework.
+
+
+General governance frameworks that you may want to refer to include:
+- Google Responsible AI
+- Microsoft AI principles
+- European Commission High-Level Expert Group - Ethical guidelines for trustworthy AI
+
+
+These frameworks set high-level objectives for concerns such as security, privacy, and fairness. They can be complemented or refined for your specific situation.
+
+
+Defining or subscribing to a code of conduct helps to build trust with users and enhances the auditability of your development process and your applications.
+
+
+The values set by a code of conduct can be refined into a set of concrete governance objectives.
+The governance objectives appropriate for a given ML application depend on factors such as:
+- the type of \textbf{data} being processed: for example, when personal information is processed, privacy objectives are relevant
+- the \textbf{usage} context: for example, when used for autonomous driving, safety objectives are relevant
+- the \textbf{organisational} context: for example, a government agency may require usage of open data and non-proprietary ML algorithms
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Test for Social Bias in Training Data
+ }
+
+  \textbf{Intent}: Identify instances of social bias in training data, in order to counteract the effects of this bias in training and deployed models.
+ 
+
+  \textbf{Motivation}: Bias in data is one of the main sources of unfairness in ML applications. Responsible use of ML requires that developers of ML applications counteract unfairness, starting with identifying the sources of bias. 
+ 
+
+  \textbf{Applicability}: Testing for social bias in training data should be done whenever you process data containing personal information -- not only when your data has explicit fields for gender, ethnicity, etc, -- but also seemingly innocuous data such as location, name, or even hobbies might implicitly encode social traits.  
+ 
+
+  \textbf{Description}: 
+
+In order to avoid social bias in ML algorithms, it is imperative to \emph{continuously} check that the training data is well balanced with respect to social attributes such as gender, or ethnicity.
+
+
+In many cases, other data attributes (such as location or neighbourhood) can be proxies to sensitive social attributes and may introduce latent bias.
+Using or not testing for these latent biases is a common pitfall, called failure through unawareness. A common example is the one day delivery service offered by Amazon, which was biased for race: Amazon Doesn’t Consider the Race of Its Customers. Should It?.
+
+
+Social bias can be detected technically -- by analysing the distributions of social factors, and avoiding (over- or) under-representation.
+However, technical limitations may prevent bias stemming from latent factors to be detected.
+
+
+Therefore, it is important to be aware of technical limitations, and improve the social and human factors that can aid bias detection.
+For example, in order to strengthen your teams' ability to detect and remove social biases, it is recommended to build diverse teams, both in terms of demographics and in terms of skill sets.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Provide Safe Channels to Raise Concerns
+ }
+
+  \textbf{Intent}: Obtain honest feedback, allowing timely remediation, rather than giving rise to conflict.  
+ 
+
+  \textbf{Motivation}: Users can help improve the application by providing feedback.  
+ 
+
+  \textbf{Applicability}: Safe communication channels should be applied to any machine learning application.
+ 
+
+  \textbf{Description}: 
+
+Communication channels between users and developers can help to discuss issues, dilemmas or emergent concerns regarding ethical use of ML. Users may, for example, wish to raise concerns about (perceived) bias or inquire about how an ML system reached a dicision.
+
+
+In order to facilitate communication, increase transparency and obtain feedback for your application, it is recommended to provide safe channels for users to raise concerns.
+
+
+These channels can be as simple as mailing lists, blogs (e.g., Disqus) or phone numbers.
+Make sure to include options for anonymisation in order to protect the users' privacy and be as inclusive as possible.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Share a Clearly Defined Training Objective within the Team
+ }
+
+  \textbf{Intent}: Avoid misunderstandings between multi-disciplinary team members. 
+ 
+
+  \textbf{Motivation}: In a multi-disciplinary team, members with different backgrounds may misinterpret training objectives. Therefore, it is important to clearly communicate the objectives within the team. 
+ 
+
+  \textbf{Applicability}: Any ML team should share a clear training objective.
+ 
+
+  \textbf{Description}: 
+
+When working in a diverse team, it is important to understand the background and roles of each member in order to avoid miscommunications and misunderstandings.
+In some cases different team members may fail to agree on the true objective or misinterpret it altogether.
+
+
+For example, we may want to develop a recommendation model that only uses data from the last 15 days, but fail to clearly communicate this constraint within the team.
+
+
+Sharing a clearly defined objective within the team assumes the training objective can be converged towards each member, using specific disciplinary language and terminology.
+
+
+This practice ensures that effort is not spent on futile activities and enhances team communication and efficiency.
+
+
+Moreover, it facilitates alignment with the team goal, and ensures that the outcomes of training can be correctly evaluated.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Use Privacy-Preserving ML Techniques
+ }
+
+  \textbf{Intent}: Provide privacy protection for individuals whose data is used in the development of ML applications. 
+ 
+
+  \textbf{Motivation}: Many ML applications rely on personal data. As in any software application, this data should be handled with care, as stipulated by privacy regulations (e.g. GDPR), information security standards, and ethical criteria. Specifically for ML-applications, privacy risk may occur because of pooling data from different sources, sharing data sets for training, and deploying models trained with personal data. Privacy-preserving techniques can be applied to mitigate these risks. 
+ 
+
+  \textbf{Applicability}: Consider using privacy-preserving ML techniques whenever you are using data about individuals, especially in case of personally identifiable information. 
+ 
+
+  \textbf{Description}: 
+
+Whenever processing data that can be used to identify or trace back information to individuals -- such as medical records -- it is imperative to use privacy preserving techniques in order to protect the individuals' privacy.
+Moreover, ML models are known to leak information (see membership attacks), and may reveal information about the training data.
+
+
+Anonymisation, pseudonymisation, differential privacy, federated ML or using cryptographic techniques -- such as homomorphic encryption -- are examples of privacy preserving ML techniques.
+
+
+The tool support for privacy preserving ML is mature, with tools such as Opacus), CrypTen or PySift being developed and maintained by large research centres such as Facebook AI research.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Employ Interpretable Models When Possible
+ }
+
+  \textbf{Intent}: Interpretable models help users, developers, and auditors to understand and account for the results of ML applications. 
+ 
+
+  \textbf{Motivation}: Interpretable models help to build trust, transparency and auditability of ML applications. Moreover, they help application developers to understand the decisions, learn more about the problems solved and understand the data.  
+ 
+
+  \textbf{Applicability}: Non-interpretable models often only provide a performance gain over interpretable alternatives. Whenever possible, it is recommended to use interpretable models over non-interpretable, black-box models even though small performance benefits are sacrificed. 
+ 
+
+  \textbf{Description}: 
+
+In ML applications, developers are often faced with a trade-off between understanding \emph{why} a decision is made and focusing only on performance metrics.
+In many cases, knowing \emph{why} can help to learn more about the problem solved, the data and the reasons why an algorithm fails.
+
+
+In some scenarios failures of ML models may not have major consequences.
+For example, a recommender system for products of an e-commerce shop, can fail to provide the intended predictions without impacting human lives.
+Nevertheless, understanding the failures modes of the model can help developers to rapidly solve the issues and provide a better service.
+
+
+In other scenarios, such as using deep learning for object recognition, non-interpretable models offer significant performance advantages over interpretable models.
+Balancing the trade-off between black-box models and more interpretable ones is a task ML developers will face all the time.
+However, whenever an interpretable model offers competitive performance with black-box models, it is recommended to use the former.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Use A Collaborative Development Platform
+ }
+
+  \textbf{Intent}: By making consistent use of a collaborative development platform teams can work together more effectively. 
+ 
+
+  \textbf{Motivation}: Collaborative development platforms provide easy access to data, code, information, and tools. They also help teams to keep each other informed, make and record decisions, and work together asynchronously or remotely. 
+ 
+
+  \textbf{Applicability}: 
+ 
+
+  \textbf{Description}: 
+
+Broadly used collaborative development environments include GitHub, GitLab, BitBucket, and Azure DevOps Server.
+
+
+Some collaborative development environments are offered as cloud services, others may be installed on-premises, or both. Commonly offered capabilities include:
+- Version control
+- Issue and progress tracking
+- Search, notifications, discussion
+- Continuous integration
+- A range of developer tools as (third-party) plugins
+
+
+Collaborative development environments have been developed for, and gained wide-spread adoption by, ``traditional'' software development teams.
+
+
+More recently, collaborative development environments have been develop with capabilities specifically geared towards data-intensive tasks such as data science and machine learning:
+- storage and versioning of large data sets
+- experiment management
+- versioning and deployment of models
+
+
+Consistent use of a collaborative development environment implies that all team members make use of the environment for all their tasks and that they follow the same conventions in cases where similar tasks can possibly be carried out in different ways in the environment.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Enable Parallel Training Experiments
+ }
+
+  \textbf{Intent}: Avoid deadlocks during experimentation. 
+ 
+
+  \textbf{Motivation}: Machine learning relies heavily on empirical processes. In order to allow fast experimentation and avoid deadlocks, it is recommended to think upfront of experiment parallelization. 
+ 
+
+  \textbf{Applicability}: Parallelization should be considered in any ML application.
+ 
+
+  \textbf{Description}: 
+
+Developing machine learning components is different than traditional software development because we expect that much of the code used during experimentation to be thrown away if the experiments failed.
+
+
+This involves writing code that will be never used again, needless to say it will never reach production.
+
+
+However, in order to enable fast experimentation and parallel deployment, the code must still be developed and managed wisely.
+Not using proper encapsulation or dependency management can significantly impact experiment parallelization and slow down the overall development.
+
+
+In order to ease parallelization, make sure to:
+- think of and prepare the infrastructure for parallel processing and deployment,
+- encapsulate code,
+- avoid hidden dependencies
+
+
+and use virtualization, e.g. Docker.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Actively Remove or Archive Features That are Not Used
+ }
+
+  \textbf{Intent}: Avoid technical debt caused by unused features. 
+ 
+
+  \textbf{Motivation}: Features that are no longer used introduce technical debt and clutter. Removing or cleaning unused features from the data pipeline helps concentrate only on promising features and improves understandability and maintenance.  
+ 
+
+  \textbf{Applicability}: Features should be archived whenever features are manually engineered (and not automatically extracted, e.g. through deep learning).
+ 
+
+  \textbf{Description}: 
+
+When features which are no longer used are not removed, they introduce clutter in the processing pipeline.
+
+
+This is equivalent to not removing `dead code' in traditional programming.
+
+
+Keeping the pipeline clean from unused features allows faster experimentation and result interpretation, by focusing only on the most relevant features.
+It also improves debugging.
+
+
+When removing features, it is also important to consider coverage: if some features are only rarely present, they are good candidates for removal.
+
+
+If you opt to not remove unused features, make sure that their documentation reflects this status.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Automate Hyper-Parameter Optimisation
+ }
+
+  \textbf{Intent}: Enhance experimentation, performance and fair comparisons between algorithms, by automating hyper-parameter search and model selection. 
+ 
+
+  \textbf{Motivation}: Finding the right hyper-parameters for a model or choosing between different ML models can be a daunting task. Automated methods to perform these activities are now available, with great 'off the shelf' tool support.  
+ 
+
+  \textbf{Applicability}: Automatic hyper-parameter optimisation should be considered in any ML application.
+ 
+
+  \textbf{Description}: 
+
+The performance of ML models depends on the choice of hyper-parameters.
+Moreover, in many cases one would train different ML models (e.g. SVMs or Gradient Boosting) and choose the better performing one.
+
+
+Instead of manually trying out hyper-parameters or performing manual model selection, one can automate these tasks and gain experimentation speed and performance.
+
+
+However, it is still recommended that models are peer-reviewed and assessed by team members before deployment to production.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Enforce Fairness and Privacy
+ }
+
+  \textbf{Intent}: Avoid irresponsible use of machine learning and decisions with negative societal impact. 
+ 
+
+  \textbf{Motivation}: When processing personal information or when developing decision making systems that can negatively impact individuals or groups, it is important to enforce requirements for fairness and privacy. 
+ 
+
+  \textbf{Applicability}: Responsible ML should be applied in any production-level ML application that processes personal data or has a potentially negative an impact on society.
+ 
+
+  \textbf{Description}: 
+
+Machine Learning is a data driven process and, in most cases, the algorithm's performance improves when using more data.
+This characteristic of ML algorithms is a central drive for collecting and processing more data.
+Although there are many benefits that can be harvested from processing personal or sensitive data, it is essential to consider and assess the potential privacy violations in using this data.
+
+
+Moreover, if the ML model you are developing makes decisions about individuals that can have a negative impact on their life -- e.g. an automatic loan system that may automatically refuse loans -- it is crucial to assess the algorithm's fairness and inclusiveness for all members of the society.
+Moreover, it is crucial to assess that decisions are based on clear and interpretable features.
+
+
+Whenever processing personal information or whenever developing algorithms that take automated decisions, consider to:
+- assess that personal data used does not breach privacy,
+- use privacy preserving ML whenever possible, e.g. differential privacy,
+- define and implement metrics for bias, fairness and responsible use of ML,
+- take security into account -- confidential information can be leaked by ML algorithms,
+- continuously monitor that the algorithm behaves responsibly,
+- be as transparent as possible about the data used and the model you are developing.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Share Status and Outcomes of Experiments Within the Team
+ }
+
+  \textbf{Intent}: Facilitate knowledge transfer, peer review and model assessment. 
+ 
+
+  \textbf{Motivation}: Team members have different ways of managing and logging experiment related data. Adopting a common way to log experiment data and share it within the team enables members to collectively monitor and assess training outcomes. 
+ 
+
+  \textbf{Applicability}: Experiment tracking should be used for any training experiment.
+ 
+
+  \textbf{Description}: 
+
+Although different team members have their own style of managing experiments and tracing their outcomes, it is recommended to adopt a common way of logging data; that is understood and accessible to all team members.
+
+
+Sharing the outcomes within the team has several benefits for peer review, knowledge transfer and model assessment.
+
+
+Several collaborative tools enable central logging of experimental results.
+
+
+Whenever possible, it is recommended to use one of the tools available internally or externally (e.g. Sacred or W\&B).
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Write Reusable Scripts for Data Cleaning and Merging
+ }
+
+  \textbf{Intent}: Avoid untidy data wrangling scripts, reuse code and increase reproducibility. 
+ 
+
+  \textbf{Motivation}: Data cleaning and merging are exploratory processes and tend to be less structured. Many times these processes involve manual steps or poorly structured code which can not be reused later or integrated in a pipeline.  
+ 
+
+  \textbf{Applicability}: Reusable data cleaning scripts should be written for any ML application that does not use raw or standard data sets.
+ 
+
+  \textbf{Description}: 
+
+Most of the time, training machine learning models is preceded by an exploratory phase, in which non-structured code is written or manual steps are performed in order to get the data in the right format, or merge several data sources.
+Especially when using notebooks, there is a tendency to write ad-hoc data processing scripts, which depend on variables already stored in memory when running previous cells.
+
+
+Before moving to the training phase, it is important to convert this code into reusable scripts and move it into methods which can be called and \emph{tested} individually.
+This will enable code reuse and ease integration into processing pipelines.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Automate Configuration of Algorithms or Model Structure
+ }
+
+  \textbf{Intent}: Improve algorithm and model performance by automatically optimising their structures 
+ 
+
+  \textbf{Motivation}: Predicting which algorithm and model architectures or structures are high-performing is very difficult, and trying different combinations is time-consuming. Optimisation tools are available to automate this. 
+ 
+
+  \textbf{Applicability}: Any ML application can benefit from automatic configuration. 
+ 
+
+  \textbf{Description}: 
+
+Like with hyper-parameters, performance of ML models also depends on their structure (also: configuration or architecture). By using automated tools for this a larger number of options can be systematically evaluated, resulting in better performance than when manually trying different configurations.
+
+
+Through the use of programming by optimisation (PbO) more configuration options might be exposed. For instance in the case of neural architecture search (NAS) you could only optimise the number of layers, but by also exposing the type of layers (e.g. convolutional, pooling, etc.) more and possibly better structures become available.
+
+
+As with any ML method, automatically configured models should be carefully assessed by team members, and also undergo peer-review before being used in a production environment.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Provide Audit Trails
+ }
+
+  \textbf{Intent}: Allow post-mortem behaviour analysis of the application. 
+ 
+
+  \textbf{Motivation}: Concerns about the social implications of ML and AI led to a rising interest to regulate and audit applications. 
+ 
+
+  \textbf{Applicability}: Audit trails should be applied to any machine learning application.  
+ 
+
+  \textbf{Description}: 
+
+The social implications that ML and more general AI technologies may have on society call for tight regulations to ensure the consumer rights are respected. For example, the EU GDPR law, as well as the Credit score in the US, require the \emph{right to an explanation} for automated decision making systems.
+
+
+Post-mortem analysis and traceability of ML behaviour is difficult in case teams do not design the application for audit trails.
+A first step towards opening the applications for audits is to devise a strategy for auditing and make it part of the development life-cycle.
+
+
+Such a strategy should include plans for storing and preserving audit trails of past decisions, together with data describing each stage of the development life-cycle.
+For example, define and store design checklists (which describe why a model was preferred over others), keep records about the training data distribution (at the time of developing a model), keep records regarding the known failure modes of the ML model and keep production logs that can trace back decisions to a model and the used training data.
+
+
+Automating the audit artefacts -- such as automatic generation of reports -- will enhance your ability to adhere to the audit strategy and will facilitate communication across teams.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Default Practice Template
+ }
+
+  \textbf{Intent}: Short statement of the purpose of the practice 
+ 
+
+  \textbf{Motivation}: Description of the importance of using this practice 
+ 
+
+  \textbf{Applicability}: The context where the practice applies 
+ 
+
+  \textbf{Description}: 
+
+Some Description
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Use Continuous Integration
+ }
+
+  \textbf{Intent}: Catch any code integration problems as early as possible. 
+ 
+
+  \textbf{Motivation}: Code changes and additions may introduce problems into the software system as a whole. This can be detected by running an automated build script each time that code is committed to the versioning repository.
+ 
+
+  \textbf{Applicability}:  
+ 
+
+  \textbf{Description}: 
+
+By running an automated build script at each commit, you achieve \textbf{Continuous Integration} (CI).
+
+
+For this, you need to activate and configure a CI server in your development environment. Examples of CI servers include: TravisCI, CircleCI, and Appveyer. Some collaborative development environments include a built-in CI server.
+
+
+To test not only possible \textbf{compilation errors} that may be introduced by code changes, but also possible \textbf{runtime defects} and \textbf{code quality problems}, the CI server must be configured to trigger one or more static analysis tools and your automated regression tests.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Continuously Monitor the Behaviour of Deployed Models
+ }
+
+  \textbf{Intent}: Avoid unintended behaviour in production models. 
+ 
+
+  \textbf{Motivation}: Once a model is promoted to production, the team has to understand how it performs. 
+ 
+
+  \textbf{Applicability}: Monitoring should be implemented in any production-level ML application.
+ 
+
+  \textbf{Description}: 
+
+Monitoring plays an important role in production level machine learning.
+Because the performance between training and production data can vary drastically, it is important to continuously monitor the behaviour of deployed models and raise alerts when unintended behaviour is observed.
+
+
+The monitoring pipeline should include:
+- performance, quality and skew metrics,
+- fairness metrics,
+- model interpretability outputs (e.g. LIME),
+- metrics for the perceived effect of the model, e.g. user interactions, conversion rates, etc.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Automated Feature Generation and Selection
+ }
+
+  \textbf{Intent}: Reduce human effort required to develop and select features through automation 
+ 
+
+  \textbf{Motivation}: Developing high-quality features, and identifying which feature combinations are most useful is a time consuming task. While human validation is still needed for automatically generated or selected features, it can greatly reduce the total required effort. 
+ 
+
+  \textbf{Applicability}: Automated feature generation and selection is useful in any ML application where features are used, as long as the expertise is available to assess the quality of what is generated. 
+ 
+
+  \textbf{Description}: 
+
+Creating high quality features is complex and time-consuming. By automating this process it is possible to find better features, and especially to reduce the human time needed for this task. Similarly, a subset of features can be selected automatically. This reduces the need for manual experimentation with different combinations of features.
+
+
+Automation is not magic, and careful selection and monitoring of for instance the performance metrics used for feature generation remain important.
+
+
+Another point is that generated features might exacerbate biases in the data because it may improve performance on the training data. It might also take advantage of biases that are not immediately obvious when looking at the data, and thus may have been left in. While these issues also exist in manual feature generation and selection, special care needs to be taken to not blindly trust an automated system. The automatically generated and selected features need to be assessed with the same care as any other feature. To aid this process, automatically generated features should have an owner and documentation, just like manually created features (see related practices).
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Capture the Training Objective in a Metric that is Easy to Measure and Understand
+ }
+
+  \textbf{Intent}: Ensure the ML objective is easy to measure and is a good proxy for the "true" objective. 
+ 
+
+  \textbf{Motivation}: Many times the "true" objective is hard to capture in a metric and may lead to entangled measurements. Choosing a simple, observable metric as a proxy simplifies things, leads to better interpretability and enhances communication within the team. 
+ 
+
+  \textbf{Applicability}: All training objectives should be captured in an easy to comprehend metric.
+ 
+
+  \textbf{Description}: 
+
+Choosing an objective to optimize is not trivial because (1) the objective may be hard to capture in a metric or (2) the objective evolves over time.
+
+
+In both cases, over-engineering a metric may lead to entangled measurements that are hard to comprehend and assess.
+
+
+Simple metrics, that are easy to measure and comprehend are considered better proxies for the ``true'' objective.
+Working together with business or data analysts to ensure the metrics reflect business value helps to align the measurements with the ``true'' objective.
+
+
+A great example can be found in the 13th rule for machine learning by Martin Zinchevich.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Run Automated Regression Tests
+ }
+
+  \textbf{Intent}: Avoid the introduction of bugs in code. 
+ 
+
+  \textbf{Motivation}: When making changes, new defects can easily be introduced in existing code. A suite of automated regression tests helps to spot such defects as early as possible. 
+ 
+
+  \textbf{Applicability}: Regression testing can be applied to any type of code. 
+ 
+
+  \textbf{Description}: 
+
+When adding or changing code, new defects can be introduced, not only in the code that has just been worked on, but also in the code that existed before. Regression testing aims to spot those bugs and hence prevent the quality of the software to deteriorate (regress).
+
+
+By automating your regression tests, spotting newly introduced bugs after each change becomes effortless. Thus, automated regression tests allows you to focus on experimenting with new functionality rather than worrying about not breaking existing functionality.
+
+
+Testing frameworks are available to help writing, organizing, running, and reporting on the outcome of regression tests. The most widely used from of regression testing is \textbf{unit testing}. For many programming languages, unit testing frameworks are available, such as JUnit (for Java), test that for R, or unittest for Python.
+
+
+When adding new code, also new regression tests should be written, to ensure that regression testing may find bugs there as well in the future. The style of programming called \textbf{test-driven development} goes one step further and advocates for first writing a test for new functionality and only then writing the code that provides that functionality.
+
+
+When running automated regression tests, it is important to make sure your test suite provides good \textbf{coverage}. For this, test coverage tooling can be used such as Codecov.
+
+
+An advanced method for measuring test suite quality is mutation testing, where small perturbations (mutants) are injected into the code to see if the test suite detects them.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Inform Users on ML Usage
+ }
+
+  \textbf{Intent}: Make users aware that ML is used by the application, what it is used for, and what its limitations are. This allows users to understand better how to use or not use the application. 
+ 
+
+  \textbf{Motivation}:  ML systems should not represent themselves as humans to users. Humans have the right to know that they are interacting with an ML system. 
+ 
+
+  \textbf{Applicability}: User communication should be applied to any machine learning application. 
+ 
+
+  \textbf{Description}: 
+
+The following is an extract from the EU ethics guidelines for trustworthy AI:
+
+
+\begin{quotation}
+[AI] users should be able to make informed autonomous decisions regarding AI systems. They should be given the knowledge and tools to comprehend and interact with AI systems to a satisfactory degree and, where possible, be enabled to reasonably self-assess or challenge the system.
+[Moreover, ...] AI system should not  represent  themselves  as  humans  to  users; humans have  the  right  to  be informed  that they  are  interacting  with  an  AI  system.  This  entails  that AI  systems must be identifiable  as  such.  In addition,  the  option  to  decide  against  this  interaction  in  favour  of  human  interaction  should  be  provided where needed  to  ensure  compliance  with  fundamental  rights.
+\end{quotation}
+
+
+The potential impact of AI and ML on society calls for mature and responsible uses and regulations of these technologies.
+Since ML can be deployed to shape or influence human behaviour through mechanisms that can be difficult to detect, failing to inform users of ML use may violate human rights.
+Communicating that decisions that can impact users are made through ML increases transparency and helps users make better decisions.
+
+
+Communication with users can be made through labels that inform of ML usage, and through public descriptions of the ML system (e.g. through model cards).
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Check that Input Data is Complete, Balanced and Well Distributed
+ }
+
+  \textbf{Intent}: Avoid invalid or incomplete data being processed. 
+ 
+
+  \textbf{Motivation}: The data generation processes are not static. Therefore, it is necessary to continuously check that data evolution does not introduce issues in distributions, completeness and balance. 
+ 
+
+  \textbf{Applicability}: Data quality control should be applied to any machine learning application.
+ 
+
+  \textbf{Description}: 
+
+Besides performing sanity checks on the input data, it is recommended to constantly check for data evolution. In a constantly evolving environment, data will also evolve over time.
+For example, your user distribution per geographical regions may change with time and lead to future biases towards over-representative regions.
+
+
+Continuously check that:
+
+
+\begin{itemize}
+
+  \item features are still present in enough examples,
+
+  \item features have the right number of values (cardinality) (e.g. there can not be more than one age/age derived feature),
+
+  \item hidden dependencies between data attributes are not present,
+
+  \item the input data distribution did not shift: e.g. a group is under- or over-represented.
+
+\end{itemize}
+
+
+Many machine learning algorithms use the ``independent and identically distributed'' assumption, which means the training and test samples are independent (i.e. changing one sample does not influence the others) and are sampled from the \emph{same} distribution.
+In case your algorithms use this assumption, make sure to include checks between training, testing and production data to ensure no drifts are present.
+
+
+Building a strong data validation pipeline should also include:
+- dashboards or visual elements to continuously monitor data quality and
+- alerts for informing team members when unusual events occur.
+
+
+If your model performs close to real-time or online learning, a strong alert system can help to detect errors early and correct them.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Have Your Application Audited
+ }
+
+  \textbf{Intent}: Obtain an independent assessment of the strenghts and weaknesses of your application and engineering processes.  
+ 
+
+  \textbf{Motivation}: Gain new insights into your ML application and build trust.  
+ 
+
+  \textbf{Applicability}: Audits should be applied to any machine learning application. 
+ 
+
+  \textbf{Description}: 
+
+In order to gain new insights into your development life-cycle and compare with other applications and regulations,
+it is recommended to have your application audited by an external, independent and trustable actor.
+Sharing the outcomes of the audit and a strategy for solving the emergent issues can increase transparency and trust.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Use Sanity Checks for All External Data Sources
+ }
+
+  \textbf{Intent}: Avoid invalid or incomplete data being processed. 
+ 
+
+  \textbf{Motivation}: Data is at the heart of any machine learning model. Therefore, avoiding data errors is crucial for model quality. 
+ 
+
+  \textbf{Applicability}: Data quality control should be applied to any machine learning application. 
+ 
+
+  \textbf{Description}: 
+
+Whenever using external data sources, or collecting data that may be incomplete or ill formatted, it is important to verify its quality.
+Invalid or incomplete data may cause outages in production or lead to inaccurate models.
+
+
+Start by checking simple data attributes, such as:
+
+
+\begin{itemize}
+
+  \item data types,
+
+  \item missing values,
+
+  \item data min. or max. values,
+
+  \item histograms of continuous values,
+
+\end{itemize}
+
+
+and gradually include more complex data statistics, such as the ones recommended here.
+
+
+The missing data can also be substituted using data imputation; such as imputation by zero, mean, median, random values, etc.
+
+
+Also, make sure the data verification scripts are reusable and can be later integrated in a processing pipeline.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Assign an Owner to Each Feature and Document its Rationale
+ }
+
+  \textbf{Intent}: Enhance feature development, understanding and maintenance. 
+ 
+
+  \textbf{Motivation}: In a large data set, with multiple features that are composed from various data attributes, it is hard to keep track and understand all features. By assigning an owner and documenting each feature, they become easier to maintain and comprehend. 
+ 
+
+  \textbf{Applicability}: Features should have an owner and documentation whenever features are manually engineered (and not automatically extracted, e.g. through deep learning).
+ 
+
+  \textbf{Description}: 
+
+Ensuring that someone in a team is in charge of the information regarding a feature facilitates feature maintainability and improves the overall understanding of the data and models.
+
+
+Although feature names can be descriptive, it is important to also document their rationale in order to facilitate communication and share the knowledge among team members.
+
+
+This practice suggests that whenever a feature owner is leaving a team, the ownership is transferred to other members.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Assure Application Security
+ }
+
+  \textbf{Intent}: Prevent attackers from stealing or corrupting data, or from disrupting the availability of an application.  
+ 
+
+  \textbf{Motivation}: Security incidents can lead to public data leaks, financial losses, or disrupt the availability of an application. 
+ 
+
+  \textbf{Applicability}: Security is important for any application with an external interface or which processes personal or sensitive data. 
+ 
+
+  \textbf{Description}: 
+
+For any application that exposes an external interface or uses personal or sensitive data, it is imperative to reflect and take actions to improve its security.
+Security is known as an arms race, with attackers constantly improving their techniques, and defenders updating their systems in order to predict and prevent new threats.
+Therefore, ensuring security is a continuous task.
+
+
+Besides classical cyber threats that apply to software systems, machine learning adds new security risks both during training and deployment.
+Training time attacks are known as data poisoning, and consist of attackers trying to alter the training data in order to induce malicious behaviour -- such as misclassifying certain examples.
+
+
+Test time (or inference) attacks are more diverse, and consist of adding small perturbations to test data in order to induce malicious behaviour (adversarial attacks), reverse engineering the model or checking if some data was used for training (membership attacks). Like other branches of machine learning, security is also a growing field of study.
+
+
+As mentioned earlier, security requires a proactive approach, with some mechanisms including security code reviews, using security analysis tools, penetration testing, and actively performing red teaming exercises.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Use Versioning for Data, Model, Configurations and Training Scripts
+ }
+
+  \textbf{Intent}: Improve reproducibility, traceability and compliance. 
+ 
+
+  \textbf{Motivation}: In order to reproduce previous machine learning experiments, one needs more than just the executable code. Versioning the training and testing data, the final model and all configuration files is complementary to versioning the executable code. 
+ 
+
+  \textbf{Applicability}: Versioning should be used in any ML application or experiment.
+ 
+
+  \textbf{Description}: 
+
+Versioning in machine learning learning involves more components than in traditional software: among the executable code we have to store the training and testing data sets, the configuration files and the final model artifacts.
+
+
+Storing all information allows previous experiments to be reproduced and re-assessed.
+Moreover, it helps auditing, compliance and backward traceability and compatibility.
+
+
+However, many of these artifacts have distinct and large sizes, which makes versioning difficult.
+In most cases data and model artifacts  will be versioned in different systems than code and configuration files.
+
+
+In order to avoid versioning issues, make sure to:
+- include a link to the data version in the code / configuration artifacts together with an unique id and a time stamp,
+- add feature documentation for all data and link it to the code artifacts,
+- add tests for data processing and merging,
+- include scripts for running or deploying the experiment, e.g. bash scripts, infrastructure scripts, etc.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Perform Risk Assessments
+ }
+
+  \textbf{Intent}: To identify and mitigate possible unintended negative impact of your ML application. 
+ 
+
+  \textbf{Motivation}: ML applications could have unintended negative impact on your users, the organisation, other organisations, or society at large. A risk assessment is a deliberate, structured process to identify such risks before they occur, so mitigating measures can be designed and implemented.  
+ 
+
+  \textbf{Applicability}: At least one risk assessment should be conducted for any ML application before it goes live. When the stakes are higher (e.g., safety-relevant, vulnerable users, involves personal information), risk assessments should be conducted more frequently and more thoroughly. 
+ 
+
+  \textbf{Description}: 
+
+Unintended negative effects of an ML application should not be detected after they have happened in production, nor should we  wait for a (rare and expensive) third-party audit to detect them in a late stage of development.
+
+
+By conducting an internal risk assessment, the expertise of your organisation is leveraged to identify and mitigate negative impacts as early as possible.
+
+
+\begin{itemize}
+
+  \item \textbf{Who?} A risk assessment can be conducted by an internal team. Some members may be part of the team that develops the application, but to ensure a fresh and diverse perspective, they should be supplemented with people with different skills, backgrounds, and relative independence.
+
+  \item \textbf{When?} Some form of risk assessment should already be conducted before development of the ML application starts, or in early phases of its development. Depending on the severity and likelihood of risks identified in the initial assessment, further risk assessments should be conducted with appropriate frequency and rigour, to monitor the effectiveness of mitigation steps and shifts in the risk profile due to design changes.
+
+  \item \textbf{How?} A risk assessment should follow a pre-determined process, typically involving (1) a scoping phase to establish which artefacts (applications, data, models, etc.) and associated use cases are assessed against which criteria, (2) a discovery phase where artefacts, documentation, and interviewees are probed and observations are collected, (3) an analysis phase where risks are surfaced, their severity and likelihood are estimated, and possible mitigating steps are formulated, and (4) a reporting phase where all findings are documented and shared with appropriate stakeholders.
+
+\end{itemize}
+
+
+To ensure the effectiveness of risks assessments, several issues need to be kept in mind:
+
+
+\begin{itemize}
+
+  \item Risk assessments are a type of internal audit, where the scope, process, rigour, and criteria are chosen by the organisation itself. There should be a \textbf{clear mandate and desire} by the organisation to keep its own risk assessments honest, and not use them as a mere ritual or act of reputation management.
+
+  \item Risk assessments are carried out by an internal team. Their familiarity with the organisation, its goals, and the application being assessed allows them to leverage their expertise both for identifying risks and designing mitigation actions. To avoid that this familiarity compromises independence and diversity of perspectives, great care must be taken in the \textbf{formation of the assessment team}.
+
+\end{itemize}
+
+
+To alleviate these issues, a \textbf{third-party audit} can be commissioned in addition to internal risks assessments.
+
+
+A \textbf{red team exercise} is a specific way of conducting a risk assessment on your ML application, where a separate team is tasked to take an adversarial perspective to detect vulnerabilities or, in this case, unintended negative impacts of the ML application.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Continuously Measure Model Quality and Performance
+ }
+
+  \textbf{Intent}: Detect errors early and improve experimentation agility. 
+ 
+
+  \textbf{Motivation}: 
+ 
+
+  \textbf{Applicability}: Quality monitoring should be used in any training experiment.
+ 
+
+  \textbf{Description}: 
+
+For long running experiments -- such as training deep neural networks for object recognition or language tasks -- it is important to detect errors as early as possible in the training process.
+Moreover, it is important to continuously check model quality and performance on different benchmarks which reflect match the production environment as close as possible.
+
+
+By continuously monitoring the model's quality and performance, one allows errors to be detected and contained early.
+Moreover, experiments can be stopped early, avoiding futile use of resources.
+
+
+Ultimately, continuous monitoring enhances experimentation agility.
+It also helps to keep an experiment ``log-book'' and keep track of past experiments and hyper-parameter configurations.
+
+
+Monitoring should also include regular snapshots of the model in order to return to different versions of the model and facilitate retraining.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Enable Automatic Roll Backs for Production Models
+ }
+
+  \textbf{Intent}: Avoid sub-optimal models in production. 
+ 
+
+  \textbf{Motivation}: Similar to deployment, rolling back models can be a tedious process. Instead of manually performing this task, it is recommended to define an automatic process for it. 
+ 
+
+  \textbf{Applicability}: Automatic rollbacks should be implemented in any production-level ML application.
+ 
+
+  \textbf{Description}: 
+
+If, due to changes in the input data or undetected skew, a deployed model performs sub-optimal, it should be rolled back to an earlier, better performing version.
+
+
+Designing a process for automatic roll-back minimizes the time a deployed model with sub-optimal performance is kept in production.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Assess and Manage Subgroup Bias
+ }
+
+  \textbf{Intent}: Avoid bias and unfair decisions within subgroups. 
+ 
+
+  \textbf{Motivation}: Ensuring fairness between two groups can lead to violations within subgroups. 
+ 
+
+  \textbf{Applicability}: Subgroup bias should be assessed and managed for all applications which process data regarding groups and subgroups of individuals. 
+ 
+
+  \textbf{Description}: 
+
+Subgroup bias can arise from improperly divided groups, often defined in order to avoid group bias or due to a lack of data.
+For example, consider an application where we divide the data based on location in New York and Amsterdam.
+After division, it may be the case that we only have data where the population of New York is predominantly female, and the population of Amsterdam is predominantly male.
+This division introduces a subgroup bias, which ultimately leads to socially biased models.
+
+
+In order to avoid subgroup bias, it is imperative to test, assess and calibrate the models as in the case of social bias.
+
+
+Follow the references in order to learn more about technical approaches to ensure fair predictions for every sub-population which can be identified in a set of groups.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Use Static Analysis to Check Code Quality
+ }
+
+  \textbf{Intent}: Avoid the introduction of code that is difficult to test, maintain, or extend. 
+ 
+
+  \textbf{Motivation}: High-quality code is easier to understand, test, maintain, reuse, and extend. The most effective way of ensuring high code quality is to make use of static analysis tools. 
+ 
+
+  \textbf{Applicability}: Code quality control should be applied to any type of code. 
+ 
+
+  \textbf{Description}: 
+
+By ensuring high code quality you can avoid the introduction of defects into the code, enable new team members to become productive more quickly, and more easily reason about the correctness of your code.
+
+
+Static code analysis can be done in various ways:
+- \textbf{Linters}: A linter is a tool that finds undesirable patterns in program code and reports these back to the programmer. Linters can be activated in a code editor, and integrated development environment, or they can be run on the commandline.
+- \textbf{Quality gates}: You can integrate a static code quality analysis tool in an automated build and testing script that runs every time a developer commits code changes to the versioning system. When quality issues are found, you can choose to have the commit rejected.
+- \textbf{Quality dashboards}: You can display the results of static code quality analysis tools on a dashboard available to the entire development team or even the larger organisation. This allows quality trends to be shared and acted upon at a broader level than just the individual developer.
+
+
+Apart from choosing and activating appropriate static analysis tools, it is important to embed the usage of the tools and their results in the way of work of the development team. This requires:
+- Agreeing on what level of quality is expected
+- Encouraging team members to act on quality issues in a meaningful way, i.e. by finding and eliminating the root causes
+- Allowing the team to spend time on quality corrections before moving on to implementing more functionality
+
+
+There are various pitfalls to look out for:
+- Some static analysis tools produce many ``false positives": findings that are not relevant in the context at hand, but absorb attention and time from developers
+- When static analysis tools are not configured to look at all code (e.g. just program code, but not database scripts). This leads to a blind spot and false confidence in code quality.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Perform Checks to Detect Skew between Models
+ }
+
+  \textbf{Intent}: Avoid introducing errors in production pipelines. 
+ 
+
+  \textbf{Motivation}: Test if a model that performs well during training and initial testing will also perform well in production i.e. test if the training data distribution reflects the production one. 
+ 
+
+  \textbf{Applicability}: Model skew should be monitored in any production-level ML application.
+ 
+
+  \textbf{Description}: 
+
+In a quickly changing environment or when the training data does not reflect the production distribution, it is not uncommon to have models that perform well during training and initial testing, but not in production.
+In order to avoid deployment of under-performing or sub-optimal models, it is recommended to check possible skew between  the production and training environments.
+
+
+Make sure to:
+- check performance skew between training and hold-out data,
+- check skew between data generated in previous days,
+- check skew between live data and training.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Automate Model Deployment
+ }
+
+  \textbf{Intent}: Increase the ability to deploy models on demand -- which increases availability and scalability. 
+ 
+
+  \textbf{Motivation}: Deploying and orchestrating different components of an application can be a tedious task. Instead of manually packaging and delivering models, and in order to avoid manual interventions or errors, one can automate this task. 
+ 
+
+  \textbf{Applicability}: Automatic model deployment should be implemented in any production-level ML application.
+ 
+
+  \textbf{Description}: 
+
+Automated deployment involves automatically packing the model together with its dependencies and `shipping' it to a production server -- instead of manually connecting to a server and perform the deployment.
+
+
+Automated model deployment brings several advantages. At first, it saves time and it increases reliability because the chances to introduce human errors are removed.
+Secondly, it improves availability and scalability because one can repeat the process on demand for as many instances as it is needed, without manual intervention.
+This means one can spin off many instances of the model whenever many users need access to a service and decrease the number of instances when the demand lowers.
+
+
+In order to facilitate continuous deployment:
+- use virtualization abstractions , e.g. Docker, Kubeflow,
+- use CD tools, e.g. Gitlab CD/Shipyard, Travis, etc.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Peer Review Training Scripts
+ }
+
+  \textbf{Intent}: Avoid development errors and bugs.  
+ 
+
+  \textbf{Motivation}: Peer review is a well known quality assurance technique in software development. Actively performing peer review helps to improve quality, find defects and transfer knowledge between team members. 
+ 
+
+  \textbf{Applicability}: Training scripts should always be peer reviewed.
+ 
+
+  \textbf{Description}: 
+
+Errors and bugs can easily slip in the code during development.
+In order to enhance code quality, techniques from standard programming -- such as peer review -- can also be applied to machine learning code.
+
+
+Peer review is a well known technique, in which members of the team review the code between themselves.
+This technique is known to help to:
+
+
+\begin{itemize}
+
+  \item avoid errors,
+
+  \item ease debugging,
+
+  \item ease incident response,
+
+  \item enhance knowledge transfer within the team.
+
+\end{itemize}
+
+
+Whenever possible, use a collaborative software development platform (e.g. Github), which already has mature features for peer review.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Communicate, Align, and Collaborate With Others
+ }
+
+  \textbf{Intent}: Ensure alignment with other (development) teams, management, and external stakeholders. 
+ 
+
+  \textbf{Motivation}: The system that your team develops is meant to integrate with other systems within the context of a wider organization. this requires communication, alignment, and collaboration with others outside the team.
+ 
+
+  \textbf{Applicability}:  
+ 
+
+  \textbf{Description}: 
+
+Any development team lives within a larger organization.
+
+
+There may be other teams that develop systems with which your system needs to interface. There might be teams in charge of infrastructure on which your system needs to be deployed. There may be teams in charge of other business functions such as marketing, production, etc. And your team likely reports to a manager who is ultimately accountable for how your team turns budget into product.
+
+
+While most members of your team should focus on tasks within the team, it is also important to maintain alignment with the rest of the organization. This requires:
+- \textbf{Frequent communication}: Both to gather information from outside the team, and to keep others informed of the progress and possible impediments your team is struggling with.
+- \textbf{Close collaboration}: For certain tasks, you may need to collaborate directly with people in other teams offering specific expertise or skills
+- \textbf{Integrated way of working}: When your teams uses methods and tools that are similar to those of other teams or interface with them seamlessly, you will experience less friction at the boundaries of your team
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Ensure Data Labelling is Performed in a Strictly Controlled Process
+ }
+
+  \textbf{Intent}: Avoid invalid or incomplete labels. 
+ 
+
+  \textbf{Motivation}: Controlling the data labelling process ensures label quality -- an important quality driver for supervised learning algorithms. 
+ 
+
+  \textbf{Applicability}: Data label control should be applied to any ML application that uses labels, i.e. in supervised learning.
+ 
+
+  \textbf{Description}: 
+
+In supervised learning, labels are crucial for the proper functioning of any algorithm.
+However, labelling large quantities of data is not trivial.
+Incorrect labels introduce noise and may lead to sub-optimal results.
+At first, data labelling raises challenges because the volume of data is typically large.
+Secondly, choosing labels is a subjective activity and may introduce bias or noise.
+
+
+Imposing a strictly controlled process for data labelling guarantees that your algorithm is served with the best data and helps to avoid later issues related to model debugging and error tracing.
+
+
+A mature data labelling process includes peer-reviewing all labels by a second team member.
+
+
+Lower or sub-optimal label quality can impact the whole ML pipeline.
+In case this problem can not be addressed (and an ML solution is still desired), make sure you document and communicate this issue within the team.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Decide Trade-Offs through Defined Team Process
+ }
+
+  \textbf{Intent}: Define methodology for generation, evaluation, prioritisation and selection of solution alternatives. 
+ 
+
+  \textbf{Motivation}:  Software development is characterised by multiple objectives and constraints, uncertainty and incomplete information. Moreover, the problem parameters change very often. 
+ 
+
+  \textbf{Applicability}: Trade-off processes should be applied to any machine learning application. 
+ 
+
+  \textbf{Description}: 
+
+Software development can be seen as a multi-objective optimisation problem, where trade-offs between quality attributes of a system have to be made and recorded.
+In most cases, decisions have to be made under uncertainty and incomplete information.
+In order to enhance the ability of a team to make the right decisions at the right time, it is imperative to define and enforce a standard process across team members.
+
+
+ML adds more uncertainty to a system, and increases the importance of this practice.
+Besides software relate trade-offs -- such as selecting the right architectural style or prioritising the maintenance cycle for certain components -- new trade-offs regarding ML quality attributes must be considered.
+
+
+For example, a team process can include the prioritisation of interpretable models over black-box models, or a procedure to roll-back production systems when the accuracy drops significantly.
+A team process can empower team members to take action even though other members responsible for decisions are not present.
+Large companies, with vast experience in software development, adopt company wide policies that are followed by all teams (e.g. Amazon's 14 leadership principles).
+Defining a process that can be adopted by multiple teams in the organisation enhances collaboration and communication between teams.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Work Against a Shared Backlog
+ }
+
+  \textbf{Intent}: Avoid misunderstandings on the content, priority, and status of tasks. 
+ 
+
+  \textbf{Motivation}: An actively maintained list of agreed-upon work items (backlog) enables coordination of tasks within the team and with external stakeholders. It also helps in planning ahead and performing retrospective evaluations.
+ 
+
+  \textbf{Applicability}: 
+ 
+
+  \textbf{Description}: 
+
+A backlog is a list of work items, typically described concisely and recorded in an issue tracker.
+
+
+Work items can be taken off the backlog and placed on a planning or tracking board when they are selected to be worked on by the team.
+
+
+The backlog is typically maintained by a product owner. The backlog is an important instrument for communication with external stakeholders on one hand, and team members on the other. Also, the backlog is used to record agreements and decisions regarding the content of each work item, its priority, estimated required effort, etc.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Make Data Sets Available on Shared Infrastructure (private or public)
+ }
+
+  \textbf{Intent}: Avoid data duplication, data bottlenecks and heavy data transfer. 
+ 
+
+  \textbf{Motivation}: The amount of data processed by ML models is higher than usual software systems, raising concerns related to duplication, transfer, storage and traceability. Making the data sets available on shared infrastructure helps mitigate these issues. 
+ 
+
+  \textbf{Applicability}: Data sharing should be applied to any ML application.
+ 
+
+  \textbf{Description}: 
+
+Good data management and sharing is important for several reasons:
+- access control,
+- virtualization,
+- versioning,
+- maintainability and freshness,
+- avoid duplication,
+- avoid unnecessary transfers and save time.
+
+
+Many applications deal with large data volumes.
+Transferring or copying large data volumes is not trivial and may introduce large delays in the processing pipelines.
+Needless to say duplication becomes an issue with large volumes of data.
+
+
+Making data sets available on shared infrastructure (e.g. S3 Buckets or mountable disks) helps mitigate these issues.
+Moreover, it facilitates the adoption of access control policies and provides traceability i.e. by keeping a data access log.
+
+
+Adopting standard naming conventions for the data sets -- e.g., to reflect the version -- is also considered a best practice.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Prevent Discriminatory Data Attributes Used As Model Features
+ }
+
+  \textbf{Intent}: Avoid building discriminatory practices into ML applications. 
+ 
+
+  \textbf{Motivation}: Using personal data attributes such as gender or ethnicity as features of ML algorithms introduces discriminatory bias, and ultimately leads to models with a negative impact on society. 
+ 
+
+  \textbf{Applicability}: Discriminatory attributes should not be used in applications with a direct or indirect impact on human lives, society or the environment. 
+ 
+
+  \textbf{Description}: 
+
+When processing personal data -- for example the customer data in a banking application -- it is important to prevent discriminatory attributes from being used as model features, because the resulting models may base their decisions on these attributes, and ultimately introduce biases.
+
+
+A widely known example for misusing this practice is the COMPAS case; where discriminatory attributes were used to predict if a perpetrator was likely to recidivate.
+
+
+An intuitive step to prevent such attributes from being used as feature is to remove them from the training data.
+However, removing sensitive attributes (or not including them in the first place) is no cure for fairness concerns, and can exacerbate them if used improperly.
+
+
+Always be aware that there may be latent sensivtive attributes. For instance, sometimes a combination of features -- that are not considered discriminatory themselves -- can be used by an ML algorithm to reconstruct a discriminatory attribute. Ultimately, this would have the same effect as using discriminatory attributes directly.
+
+
+In order to prevent the use of discriminatory attributes, a hybrid approach is needed; consisting of removing the attributes from the training data, testing for latent factors that may uncover them, and constantly testing for other biases such as social or  bias.
+
+
+ 
+
+
+  \end{frame}
+
+  
+  \begin{frame}[plain]{ Log Production Predictions with the Model's Version and Input Data
+ }
+
+  \textbf{Intent}: Enhance debugging, enable traceability, reproducibility, compliance and incident management. 
+ 
+
+  \textbf{Motivation}: Tracing decisions back to the input data and the model's version can be difficult. It is therefore recommended to log production predictions together with the model's version and input data.  
+ 
+
+  \textbf{Applicability}: Prediction logging should be implemented in any production-level ML application.
+ 
+
+  \textbf{Description}: 
+
+Debugging production models is difficult if one does not have access to the input data.
+Moreover, tracing decisions and mitigating incidents without access to the input data is almost inconceivable.
+
+
+In order to mitigate these issues, but also enhance traceability, it is recommended to log production prediction together with the model's version and input data.
+
+
+If model and data versioning is done properly, the model's version will lead to the training data repository and enable complete reproducibility.
+
+
+ 
+
+
+  \end{frame}
+
+  

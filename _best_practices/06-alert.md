@@ -21,7 +21,7 @@ survey_question: Q100 #
 survey_item: Our application informs users that it makes use of machine learning and describes its intended use and limitations.
 ---
 
-The following is an extract from the [EU ethics guidelines for trustworthy AI](https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai):
+The following is an extract from the <a href="https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai">EU ethics guidelines for trustworthy AI</a>:
 
 > [AI] users should be able to make informed autonomous decisions regarding AI systems. They should be given the knowledge and tools to comprehend and interact with AI systems to a satisfactory degree and, where possible, be enabled to reasonably self-assess or challenge the system.
 > [Moreover, ...] AI system should not  represent  themselves  as  humans  to  users; humans have  the  right  to  be informed  that they  are  interacting  with  an  AI  system.  This  entails  that AI  systems must be identifiable  as  such.  In addition,  the  option  to  decide  against  this  interaction  in  favour  of  human  interaction  should  be  provided where needed  to  ensure  compliance  with  fundamental  rights.

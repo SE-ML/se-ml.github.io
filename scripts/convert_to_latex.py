@@ -1,4 +1,7 @@
 import json
+import markdown
+import mdx_latex
+import regex as re
 from pathlib import Path
 
 def split_content(c):
@@ -17,39 +20,66 @@ def parse_to_dic(content):
   dic_, parse_c = {}, False
   ct = ''
   for c in content:
-    if 'name' in c:
+    if 'name:' in c:
       dic_['name'] = split_content(c)
-    elif 'index' in c:
+    elif 'index:' in c:
       dic_['index'] = split_content(c)
-    elif 'references' in c:
+    elif 'references:' in c:
       dic_['references'] = split_content(c)
-    elif 'intent' in c:
+    elif 'intent:' in c:
       dic_['intent'] = split_content(c)
-    elif 'motivation' in c:
+    elif 'motivation:' in c:
       dic_['motivation'] = split_content(c)
-    elif 'applicability' in c:
+    elif 'applicability:' in c:
       dic_['applicability'] = split_content(c)
-    elif 'related' in c:
+    elif 'related:' in c:
       dic_['related'] = split_content(c)
     elif '---' in c and dic_ != {}:
       parse_c = True
     elif parse_c == True:
       ct += c
   dic_['content'] = ct
+
   return dic_
 
 
 def dic_to_tex(dic):
-  template = """
-  \\textbf{{Title}}: {0} \n
+  # md = markdown.Markdown(None, extensions=['latex'])
+  md = markdown.Markdown()
+  latex_mdx = mdx_latex.LaTeXExtension()
+  latex_mdx.extendMarkdown(md, markdown.__dict__)
+
+  # template = """
+  # \\textbf{{Title}}: {0} \n
+  # \\textbf{{Intent}}: {1} \n
+  # \\textbf{{Motivation}}: {2} \n
+  # \\textbf{{Applicability}}: {3} \n
+  # \\textbf{{Description}}: {4} \n
+  # \\bigskip
+  # """
+
+  template="""
+  \\begin{{frame}}[plain]{{ {0} }}
+
   \\textbf{{Intent}}: {1} \n
   \\textbf{{Motivation}}: {2} \n
   \\textbf{{Applicability}}: {3} \n
   \\textbf{{Description}}: {4} \n
-  \\bigskip
+
+  \\end{{frame}}
+
   """
+  # cont_ = dic['content'].replace('#', '')
+  pattern =r'<(a|/a).*?>'
+  cont_ = re.sub(pattern , "", dic['content'])
+  cont_ = md.convert(cont_)
+  cont_ = cont_.replace('<root>', '')
+  cont_ = cont_.replace('</root>', '')
+
   return template.format(dic['name'], dic['intent'], dic['motivation'],
-  dic['applicability'], dic['content']).replace('#', '')
+  dic['applicability'], cont_).replace('#', '')
+
+
 
 
 headers = """
@@ -69,6 +99,10 @@ footer = """
 \\end{document}
 """
 
+
+headers = ""
+footer = ""
+
 def main():
   files = read_files()
   files_dic = [parse_to_dic(x) for x in files]
@@ -76,12 +110,13 @@ def main():
   file = open("scripts/main.tex", "w")
   file.write(headers)
   for i in files_dic:
+    # try:
     print(i)
-    try:
-      pr_ = dic_to_tex(i)
-      file.write(pr_)
-    except Exception as e:
-      pass
+    pr_ = dic_to_tex(i)
+    file.write(pr_)
+    # except Exception as e:
+    #   print(e)
+    #   pass
 
   file.write(footer)
   file.close()

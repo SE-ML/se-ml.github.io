@@ -29,9 +29,9 @@ survey_item: Our organisation subscribes to a code of conduct for Responsible AI
 A good starting point for sharing ethical values across organisations is to subscribe to a code of conduct. You can create one specific for your situation, or you can refer to a general governance framework.
 
 General governance frameworks that you may want to refer to include:
-- [Google Responsible AI](https://ai.google/responsibilities/responsible-ai-practices)
-- [Microsoft AI principles](https://www.microsoft.com/en-us/ai/responsible-ai)
-- [European Commission High-Level Expert Group - Ethical guidelines for trustworthy AI](https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai)
+- <a href="https://ai.google/responsibilities/responsible-ai-practices">Google Responsible AI</a>
+- <a href="https://www.microsoft.com/en-us/ai/responsible-ai">Microsoft AI principles</a>
+- <a href="https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai">European Commission High-Level Expert Group - Ethical guidelines for trustworthy AI</a>
 
 These frameworks set high-level objectives for concerns such as security, privacy, and fairness. They can be complemented or refined for your specific situation.
 
