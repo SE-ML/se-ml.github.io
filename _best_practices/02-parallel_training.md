@@ -37,6 +37,6 @@ In order to ease parallelization, make sure to:
 - avoid hidden dependencies
 
 
-and use virtualization, e.g. <a href="https://www.docker.com/" target="_blank">Docker</a>.
+and use virtualization, e.g. [Docker](https://www.docker.com/).
 
 

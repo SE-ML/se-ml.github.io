@@ -27,6 +27,6 @@ Although different team members have their own style of managing experiments and
 Sharing the outcomes within the team has several benefits for peer review, knowledge transfer and model assessment.
 
 
-Several <a href="https://github.com/SE-ML/awesome-seml#tooling" target="blank"> collaborative tools </a> enable central logging of experimental results.
+Several [collaborative tools](https://github.com/SE-ML/awesome-seml#tooling) enable central logging of experimental results.
 
-Whenever possible, it is recommended to use one of the tools available internally or externally (e.g. <a href="https://github.com/SE-ML/awesome-seml#tooling" target="blank">Sacred or W&B</a>).
+Whenever possible, it is recommended to use one of the tools available internally or externally (e.g. [Sacred or W&B](https://github.com/SE-ML/awesome-seml#tooling")).

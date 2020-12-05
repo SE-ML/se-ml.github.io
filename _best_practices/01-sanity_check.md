@@ -31,9 +31,9 @@ Start by checking simple data attributes, such as:
 - data min. or max. values,
 - histograms of continuous values,
 
-and gradually include more complex data statistics, such as the ones recommended <a href="/blog/2020/input-data-complete/">here</a>.
+and gradually include more complex data statistics, such as the ones recommended [here](/best_practices/01-input-data-complete/).
 
 
 The missing data can also be substituted using data imputation; such as imputation by zero, mean, median, random values, etc.
 
-Also, make sure the data verification scripts are <a href="/blog/2020/reusable_data_clean/">reusable</a> and can be later integrated in a processing pipeline.
+Also, make sure the data verification scripts are [reusable](/best_practices/01-reusable_data_clean/) and can be later integrated in a processing pipeline.

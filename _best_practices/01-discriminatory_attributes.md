@@ -30,6 +30,6 @@ However, removing sensitive attributes (or not including them in the first place
 
 Always be aware that there may be latent sensivtive attributes. For instance, sometimes a combination of features -- that are not considered discriminatory themselves -- can be used by an ML algorithm to reconstruct a discriminatory attribute. Ultimately, this would have the same effect as using discriminatory attributes directly.
 
-In order to prevent the use of discriminatory attributes, a hybrid approach is needed; consisting of removing the attributes from the training data, testing for latent factors that may uncover them, and constantly testing for other biases such as [social](/blog/2020/social_bias/) or [subgroup](/blog/2020/subgroup_bias/) bias.
+In order to prevent the use of discriminatory attributes, a hybrid approach is needed; consisting of removing the attributes from the training data, testing for latent factors that may uncover them, and constantly testing for other biases such as [social](/best_practices/01-social_bias/) or [subgroup](/best_practices/02-subgroup_bias/) bias.
 
 
