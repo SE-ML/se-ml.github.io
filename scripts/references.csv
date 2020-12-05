@@ -16,7 +16,7 @@ OPML,Operational Machine Learning,Nisha Talagala,GL - Tier 2,+,,30 April 2018,ht
 CTPML,Continuous Training for Production ML in the TensorFlow Extended (TFX) Platform,Denis Baylor,AL,+++,,20 May 2019,https://www.usenix.org/system/files/opml19papers-baylor.pdf
 DLB,The curse of big data labeling and three ways to solve it ,AWS Admin,GL - Tier 2,+,,06 November 2018,https://aws.amazon.com/blogs/apn/the-curse-of-big-data-labeling-and-three-ways-to-solve-it/
 DLML,The ultimate guide to data labeling for ML,Cloudfactory,GL - Tier 3,+,,-,https://www.cloudfactory.com/data-labeling-guide
-DCML,A Survey on Data Collection for Machine Learning A Big Data - AI Integration Perspective_2019,Yuhi Rog,AL,+++,,8 October 2019,DOI: 10.1109/TKDE.2019.2946162
+DCML,A Survey on Data Collection for Machine Learning A Big Data - AI Integration Perspective,Yuhi Rog,AL,+++,,8 October 2019,https://arxiv.org/pdf/1811.03402.pdf
 DOML,How to organize data labelling for ML,Altexsoft,GL - Tier 3,+,,-,https://www.altexsoft.com/blog/datascience/how-to-organize-data-labeling-for-machine-learning-approaches-and-tools/
 DQML,Data quality model,ISO,GL - Tier 1,+++,,,"More info in the paper: A Data Quality in Use model for BigData, Table 2"
 MLFAIR,Fairness Indicators,Google,GL - Tier 1,+++,,11 December 2019,https://ai.googleblog.com/2019/12/fairness-indicators-scalable.html
@@ -29,6 +29,17 @@ MMLP,Managing Machine Learning Projects,V.M.Megler / Amazon,GL - TIer 2,+,,1 Feb
 BPDL,10 Best Practices for Deep Learning,James Le,GL - Tier 3,+,,December 2019,https://nanonets.com/blog/10-best-practices-deep-learning/#track-model-experiments
 TDBML,Testing and Debugging in Machine Learning,Google ,GL - Tier 2,++,,-, https://developers.google.com/machine-learning/testing-debugging/pipeline/production
 MDLOPS,ModelOps: Cloud-based lifecycle management for reliable and trusted AI,IBM Research,AL,+,,June 2019,
-PMLPP,Principled Machine Learning: Practices and Tools for Efficient Collaboration,David Herron,GL - TIer 3,+,,June 2019,https://dev.to/robogeek/principled-machine-learning-4eho
+PMLPP,Principled Machine Learning: Practices and Tools for Efficient Collaboration,David Herron,GL - Tier 3,+,,June 2019,https://dev.to/robogeek/principled-machine-learning-4eho
 TFX,TFX: A tensorflow-based Production-Scale ML Platform,Google,AL,+++,,17 August 2017,https://dl.acm.org/doi/pdf/10.1145/3097983.3098021?download=true
-,,,,,,,
+BMS,Building Maintainable Software - Ten Guidelines for Future-Proof Code,"Joost Visser, Sylvan Rigal, Gijs Wijnholds, Pascal van Eck, Rob van der Leek",GL - Tier 1,+++,,2016,https://books.google.nl/books?id=-QVQDAAAQBAJ&lpg=PR2&ots=76WJ7VLkGL&lr&pg=PP1#v=onepage&q&f=false
+TTAID,Toward Trustworthy AI Development: Mechanisms for Supporting Verifiable Claims,"OpenAI, Google, Intel, many universities",GL - Tier 1,+++,,April 2020,https://arxiv.org/abs/2004.07213
+AIHLEG,Ethics Guidelines for Trustworthy AI,AI high-level expert group,GL - Tier 1,+++,,April 2019,https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai
+MCARD,Model Cards for Model Reporting,Mitchell et al,AL,+++,,Jan 2019,https://dl.acm.org/doi/abs/10.1145/3287560.3287596
+GOOAML,An Overview of Google\`s Work on AutoML and Future Directions,Jeff Dean (Google),GL,,,June 2019,https://slideslive.com/38917526/an-overview-of-googles-work-on-automl-and-future-directions
+SLAML,Six Levels of Auto ML,Bojan Tunguz,GL,,,Jan 2020,https://medium.com/@tunguz/six-levels-of-auto-ml-a277aa1f0f38
+4LAML,The Four Maturity Levels of Automated Machine Learning: Towards Domain Specific AutoML,Zelros AI,GL,,?,Sep 2019,https://medium.com/@Zelros/the-four-maturity-levels-of-automated-machine-learning-towards-domain-specific-automl-d6e6cfdbbcf1
+SEDS,Software Engineering Decision Support - A New Paradigm for Learning Software Organizations,Günther Ruhe,AL,,,2003,https://doi.org/10.1007/978-3-540-40052-3_10
+MOIEA,Multiobjective Optimization - Interactive and Evolutionary Approaches,Branke et al,AL,+++,,2008,https://doi.org/10.1007/978-3-540-88908-3
+GDMMA,Group Decision Making - Methodology and Applications,Günter Fandel,AL,,,1990,https://doi.org/10.1007/978-3-642-75935-2_24
+CAIAG,Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing,Raji et al,AL,+++,,2020,https://doi.org/10.1145/3351095.3372873
+IMLG,Interpretable Machine Learning,Christoph Molnar,GL - Tier 1,,,2020,https://christophm.github.io/interpretable-ml-book/
