@@ -1,7 +1,7 @@
 ---
 layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
-name: Use Privacy-Preserving ML Techniques
+name: Use Privacy-Preserving Machine Learning Techniques
 category: Data
 index: 7
 unique_id: privacy_preserving
