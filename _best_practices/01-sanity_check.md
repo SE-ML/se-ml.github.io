@@ -21,7 +21,7 @@ dependencies: #
 survey_question: Q32
 ---
 
-Whenever using external data sources, or collecting data that may be incomplete or ill formatted, it is important to verify its quality.
+Whenever external data sources are used, or data that may be incomplete or ill formatted is collected, it is important to verify the data quality.
 Invalid or incomplete data may cause outages in production or lead to inaccurate models.
 
 Start by checking simple data attributes, such as:
@@ -34,6 +34,6 @@ Start by checking simple data attributes, such as:
 and gradually include more complex data statistics, such as the ones recommended <a href="/best_practices/01-input-data-complete/">here</a>.
 
 
-The missing data can also be substituted using data imputation; such as imputation by zero, mean, median, random values, etc.
+Missing data can also be substituted using data <a href="https://en.wikipedia.org/wiki/Imputation_%28statistics%29">imputation</a>; such as imputation by zero, mean, median, random values, etc.
 
-Also, make sure the data verification scripts are <a href="/best_practices/01-reusable_data_clean/">reusable</a> and can be later integrated in a processing pipeline.
+Also, make sure the data verification scripts are <a href="/best_practices/01-reusable_data_clean/">reusable</a> and can be later integrated in any processing pipeline.

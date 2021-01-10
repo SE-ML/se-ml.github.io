@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Koen van der Blom, Joost Visser
+author: Joost Visser, Alex Serban, Koen van der Blom
 name: Use Static Analysis to Check Code Quality
 title: Use Static Analysis to Check Code Quality
 category: Coding

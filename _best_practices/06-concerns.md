@@ -21,7 +21,7 @@ survey_question: Q102 #
 survey_item: Our organisation offers safe channels for users and employees to raise concerns about privacy, safety, security, fairness, or other concerns related to our ML applications.
 ---
 
-Communication channels between users and developers can help to discuss issues, dilemmas or emergent concerns regarding ethical use of ML. Users may, for example, wish to raise concerns about (perceived) bias or inquire about how an ML system reached a dicision.
+Communication channels between users and developers can help to discuss issues, dilemmas or emergent concerns regarding ethical use of machine learning. Users may, for example, wish to raise concerns about (perceived) bias or inquire about how an machine learning system reached a decision.
 
 In order to facilitate communication, increase transparency and obtain feedback for your application, it is recommended to provide safe channels for users to raise concerns.
 
