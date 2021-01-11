@@ -18,7 +18,7 @@ motivation: Code changes and additions may introduce problems into the software 
 applicability:  #
 related: [coding_static, exp_tstfeature, coding_regr]
 dependencies: [coding_automate] #
-survey_question: [Q55,Q54] #
+survey_question: Q55 #
 ---
 
 By running an automated build script at each commit, you achieve **Continuous Integration** (CI).
@@ -26,4 +26,3 @@ By running an automated build script at each commit, you achieve **Continuous In
 For this, you need to activate and configure a CI server in your development environment. Examples of CI servers include: TravisCI, CircleCI, and Appveyer. Some collaborative development environments include a built-in CI server.
 
 To test not only possible **compilation errors** that may be introduced by code changes, but also possible **runtime defects** and **code quality problems**, the CI server must be configured to trigger one or more static analysis tools and your automated regression tests.
-

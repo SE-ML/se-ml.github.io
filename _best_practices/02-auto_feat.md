@@ -17,7 +17,7 @@ motivation: Developing high-quality features, and identifying which feature comb
 applicability: Automated feature generation and selection is useful in any machine learning application where features are used, as long as the expertise is available to assess the quality of what is generated. #
 related: [exp_owner] #
 dependencies: #
-survey_question: Q90 #
+survey_question: Q80 #
 ---
 
 Creating high quality features is complex and time-consuming. By automating this process it is possible to find better features, and especially to reduce the human time needed for this task. Similarly, a subset of features can be selected automatically. This reduces the need for manual experimentation with different combinations of features.

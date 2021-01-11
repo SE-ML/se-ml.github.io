@@ -5,131 +5,139 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title">{{ page.name }}</h1>
-    <p class="post-meta">{{ page.date | date: "%B, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <p class="post-meta">{{ page.date | date: "%B, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if
+      page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
 
 
-  {% assign sorted_practices = site.best_practices  | sort:"index" %}
-  {% assign sorted_practices = site.best_practices  | where_exp: "item", "item.index > 0" %}
+  {% assign sorted_practices = site.best_practices | sort:"index" %}
+  {% assign sorted_practices = site.best_practices | where_exp: "item", "item.index > 0" %}
 
   {% if page.index == 1 %}
-    {% assign next_pr_index = page.index | plus:1  %}
-    {% assign back_pr_index = sorted_practices.size %}
+  {% assign next_pr_index = page.index | plus:1 %}
+  {% assign back_pr_index = sorted_practices.size %}
   {% else%}
-    {% if page.index == sorted_practices.size %}
-      {% assign next_pr_index = 1 %}
-      {% assign back_pr_index = page.index | minus:1  %}
-    {% else %}
-      {% assign next_pr_index = page.index | plus:1  %}
-      {% assign back_pr_index = page.index | minus:1  %}
-    {% endif %}
+  {% if page.index == sorted_practices.size %}
+  {% assign next_pr_index = 1 %}
+  {% assign back_pr_index = page.index | minus:1 %}
+  {% else %}
+  {% assign next_pr_index = page.index | plus:1 %}
+  {% assign back_pr_index = page.index | minus:1 %}
+  {% endif %}
   {% endif %}
 
 
   {% if page.difficulty == 'basic' %}
-    {% assign badge = "https://img.shields.io/badge/-basic-color"  %}
-    {% assign badge_text = "This practice was ranked as basic. Click to read more."  %}
+  {% assign badge = "https://img.shields.io/badge/-basic-color" %}
+  {% assign badge_text = "This practice was ranked as basic. Click to read more." %}
   {% else %}
-    {% if page.difficulty == 'medium' %}
-      {% assign badge = "https://img.shields.io/badge/-medium-yellow"  %}
-      {% assign badge_text = "This practice was ranked as medium. Click to read more."  %}
-    {% else %}
-      {% if page.difficulty == 'advanced' %}
-        {% assign badge = "https://img.shields.io/badge/-advanced-orange"  %}
-        {% assign badge_text = "This practice was ranked as advanced. Click to read more."  %}
-      {% else %}
-        {% assign badge = "https://img.shields.io/badge/-not%20ranked-lightgrey"  %}
-        {% assign badge_text = "This practice was not ranked. Click to read more."  %}
-      {% endif %}
-    {% endif %}
+  {% if page.difficulty == 'medium' %}
+  {% assign badge = "https://img.shields.io/badge/-medium-yellow" %}
+  {% assign badge_text = "This practice was ranked as medium. Click to read more." %}
+  {% else %}
+  {% if page.difficulty == 'advanced' %}
+  {% assign badge = "https://img.shields.io/badge/-advanced-orange" %}
+  {% assign badge_text = "This practice was ranked as advanced. Click to read more." %}
+  {% else %}
+  {% assign badge = "https://img.shields.io/badge/-not%20ranked-lightgrey" %}
+  {% assign badge_text = "This practice was not ranked. Click to read more." %}
+  {% endif %}
+  {% endif %}
   {% endif %}
 
 
-  {% assign next_pr = site.best_practices  | where: 'index', next_pr_index %}
-  {% assign last_pr = site.best_practices  | where: 'index', back_pr_index %}
-  {% assign pr_num = site.best_practices  | where: 'category', page.category %}
+  {% assign next_pr = site.best_practices | where: 'index', next_pr_index %}
+  {% assign last_pr = site.best_practices | where: 'index', back_pr_index %}
+  {% assign pr_num = site.best_practices | where: 'category', page.category %}
 
   <div style="text-align:center;">
-      <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-      <span> {{page.index }} / {{sorted_practices.size}} </span> •
-      <a href="/practices/#{{page.category | downcase}}"> <span>{{page.category}}</span> </a> •
-      <a class="badge parent" href="/ranking">
-          <img class="hover-me" src="{{badge}}"></img>
-          <span class="show-me">
-              <span class="show-me-body">{{badge_text}}</span>
-          </span>
-      </a>
-      <a href="{{next_pr[0].url}}" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+    <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> {{page.index }} / {{sorted_practices.size}} </span> •
+    <a href="/practices/#{{page.category | downcase}}"> <span>{{page.category}}</span> </a> •
+    <a class="badge parent" href="/ranking">
+      <img class="hover-me" src="{{badge}}"></img>
+      <span class="show-me">
+        <span class="show-me-body">{{badge_text}}</span>
+      </span>
+    </a>
+    <a href="{{next_pr[0].url}}" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
   </div>
 
   <br><br>
 
   {% if page.image%}
-    <div class="image-container">
-      <img src="{{page.image}}" class="blog-image"></img>
-      {% if page.photocredit%}
-      <p>{{page.photocredit}}</p>
-      {% endif %}
-    </div>
+  <div class="image-container">
+    <img src="{{page.image}}" class="blog-image"></img>
+    {% if page.photocredit%}
+    <p>{{page.photocredit}}</p>
+    {% endif %}
+  </div>
   {% endif %}
 
 
   {% if page.intent%}
-    <h3 class="black bold">Intent</h3>
-    <div>
-      {{page.intent}}
-    </div>
+  <h3 class="black bold">Intent</h3>
+  <div>
+    {{page.intent}}
+  </div>
   {% endif %}
 
   {% if page.motivation%}
-    <h3 class="black bold">Motivation</h3>
-    <div >
-      {{page.motivation}}
-    </div>
+  <h3 class="black bold">Motivation</h3>
+  <div>
+    {{page.motivation}}
+  </div>
   {% endif %}
 
   {% if page.applicability%}
-    <h3 class="black bold">Applicability</h3>
-    <div>
-      {{page.applicability}}
-    </div>
+  <h3 class="black bold">Applicability</h3>
+  <div>
+    {{page.applicability}}
+  </div>
   {% endif %}
 
   {% if page.content%}
-    <h3 class="black bold">Description</h3>
-    <div>
-      {{page.content}}
-    </div>
+  <h3 class="black bold">Description</h3>
+  <div>
+    {{page.content}}
+  </div>
   {% endif %}
 
+  {% if page.difficulty != 'na' %}
+  <h3 class="black bold">Adoption</h3>
+  {% include _plots/{{page.survey_question}}.html %}
+  {% endif %}
+
+
+
   {% if page.related%}
-    <h3 class="black bold">Related</h3>
-    <ul>
+  <h3 class="black bold">Related</h3>
+  <ul>
 
     {% for r in page.related %}
-      {% comment %} {{r}} {% endcomment %}
-        {% for pr in sorted_practices %}
-            {% comment %} {{pr.unique_id}} {% endcomment %}
-            {% if r == pr.unique_id %}
-                <li>
-                  <a href="{{pr.url}}">{{ pr.name }}</a>
-                </li>
-            {% endif %}
+    {% comment %} {{r}} {% endcomment %}
+    {% for pr in sorted_practices %}
+    {% comment %} {{pr.unique_id}} {% endcomment %}
+    {% if r == pr.unique_id %}
+    <li>
+      <a href="{{pr.url}}">{{ pr.name }}</a>
+    </li>
+    {% endif %}
 
-        {% endfor %}
+    {% endfor %}
     {% endfor %}
   </ul>
   {% endif %}
 
   {% if page.references.size > 0%}
   <h3 class="black bold">Read more</h3>
-    <ul>
+  <ul>
     {% for r in site.references %}
-      {% if page.references contains r.acronym  %}
-          <li>
-            <a href="{{r.webpage}}" target="_blank">{{ r.title }}</a>
-          </li>
-      {% endif %}
+    {% if page.references contains r.acronym %}
+    <li>
+      <a href="{{r.webpage}}" target="_blank">{{ r.title }}</a>
+    </li>
+    {% endif %}
 
     {% endfor %}
   </ul>
@@ -137,32 +145,33 @@ layout: default
 
   <br><br>
   <div style="text-align:center;">
-      <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-      <span> {{page.index }} / {{sorted_practices.size}} </span> •
-      <a href="/practices/#{{page.category | downcase}}"> <span>{{page.category}}</span> </a> •
-      <a class="badge parent" href="/blog/2020/catalog/">
-          <img class="hover-me" src="{{badge}}"></img>
-          <span class="show-me">
-              <span class="show-me-body">{{badge_text}}</span>
-          </span>
-      </a>
-      <a href="{{next_pr[0].url}}" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+    <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> {{page.index }} / {{sorted_practices.size}} </span> •
+    <a href="/practices/#{{page.category | downcase}}"> <span>{{page.category}}</span> </a> •
+    <a class="badge parent" href="/blog/2020/catalog/">
+      <img class="hover-me" src="{{badge}}"></img>
+      <span class="show-me">
+        <span class="show-me-body">{{badge_text}}</span>
+      </span>
+    </a>
+    <a href="{{next_pr[0].url}}" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
   </div>
   <br><br>
 
   {% if site.disqus_shortname and page.comments %}
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-      var disqus_shortname  = '{{ site.disqus_shortname }}';
-      var disqus_identifier = '{{ page.id }}';
-      var disqus_title      = {{ page.title | jsonify }};
-      (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = '{{ site.disqus_shortname }}';
+    var disqus_identifier = '{{ page.id }}';
+    var disqus_title = {{ page.title | jsonify }};
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
   {% endif %}
 
 </div>
