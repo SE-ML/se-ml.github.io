@@ -21,7 +21,7 @@ dependencies: #
 survey_question: Q48
 ---
 
-Versioning in machine learning learning involves more components than in traditional software: among the executable code we have to store the training and testing data sets, the configuration files and the final model artifacts.
+Versioning in machine learning involves more components than in traditional software: among the executable code we have to store the training and testing data sets, the configuration files and the final model artifacts.
 
 Storing all information allows previous experiments to be reproduced and re-assessed.
 Moreover, it helps auditing, compliance and backward traceability and compatibility.
