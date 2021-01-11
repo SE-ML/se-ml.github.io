@@ -21,7 +21,7 @@ dependencies: #
 survey_question: Q32
 ---
 
-Whenever external data sources are used, or data that may be incomplete or ill formatted is collected, it is important to verify the data quality.
+Whenever external data sources are used, or data that may be incomplete or ill formatted, it is important to verify the data quality.
 Invalid or incomplete data may cause outages in production or lead to inaccurate models.
 
 Start by checking simple data attributes, such as:
