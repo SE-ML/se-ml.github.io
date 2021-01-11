@@ -28,7 +28,7 @@ This involves writing code that will be never used again, needless to say it wil
 
 
 However, in order to enable fast experimentation and parallel deployment, the code must still be developed and managed wisely.
-Not using proper encapsulation or dependency management can significantly impact experiment parallelisation, and slow down the development.
+Not using proper encapsulation or dependency management can significantly impact experiment parallelisation, and slow down development.
 
 
 In order to ease parallelisation, make sure to:
