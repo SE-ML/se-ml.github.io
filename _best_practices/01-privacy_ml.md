@@ -27,4 +27,4 @@ Moreover, machine learning models are known to leak information (see <a href="ht
 
 Anonymisation, pseudonymisation, differential privacy, federated machine learning, or using cryptographic techniques -- such as homomorphic encryption -- are examples of privacy preserving machine learning techniques.
 
-The tool support for privacy preserving machine learning is mature, with tools such as <a href="https://github.com/pytorch/opacus">Opacus</a>), <a href="https://github.com/facebookresearch/CrypTen">CrypTen</a> or <a href="https://github.com/OpenMined/PySyft">PySift</a> being developed and maintained by large research centres such as Facebook AI research (FAIR).
+The tool support for privacy preserving machine learning is mature, with tools such as <a href="https://github.com/pytorch/opacus">Opacus</a>), <a href="https://github.com/facebookresearch/CrypTen">CrypTen</a> or <a href="https://github.com/OpenMined/PySyft">PySift</a> being developed and maintained by large research centres such as Facebook AI Research (FAIR).
