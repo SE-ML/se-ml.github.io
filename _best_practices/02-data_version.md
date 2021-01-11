@@ -14,8 +14,8 @@ image: #
 photocredit: #
 
 intent: Improve reproducibility, traceability and compliance. #
-motivation: In order to reproduce previous machine learning experiments, one needs more than just the executable code. Versioning the training and testing data, the final model and all configuration files is complementary to versioning the executable code. #
-applicability: Versioning should be used in any ML application or experiment.
+motivation: In order to reproduce previous machine learning experiments, one needs more than just the executable code. Versioning the training and testing data, the final model, and all configuration files is complementary to versioning the executable code. #
+applicability: Versioning should be used in any machine learning application or experiment.
 related: [exp_owner, exp_tstfeature] #
 dependencies: #
 survey_question: Q48
@@ -27,7 +27,7 @@ Storing all information allows previous experiments to be reproduced and re-asse
 Moreover, it helps auditing, compliance and backward traceability and compatibility.
 
 However, many of these artifacts have distinct and large sizes, which makes versioning difficult.
-In most cases data and model artifacts  will be versioned in different systems than code and configuration files.
+In most cases, data and model artifacts will be versioned in different systems than code and configuration files.
 
 In order to avoid versioning issues, make sure to:
 - include a link to the data version in the code / configuration artifacts together with an unique id and a time stamp,

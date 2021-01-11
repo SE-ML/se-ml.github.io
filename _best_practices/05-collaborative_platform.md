@@ -1,6 +1,6 @@
 ---
 layout: practice
-author: Alex Serban, Koen van der Blom, Joost Visser
+author: Joost Visser, Alex Serban, Koen van der Blom
 name: Use A Collaborative Development Platform
 title: Use A Collaborative Development Platform
 category: Team

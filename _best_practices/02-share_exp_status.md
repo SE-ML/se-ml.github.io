@@ -15,7 +15,7 @@ photocredit: #
 
 intent: Facilitate knowledge transfer, peer review and model assessment. #
 motivation: Team members have different ways of managing and logging experiment related data. Adopting a common way to log experiment data and share it within the team enables members to collectively monitor and assess training outcomes. #
-applicability: Experiment tracking should be used for any training experiment.
+applicability: Experiment tracking and sharing should be used for any training experiment.
 related: [exp_quality] #
 dependencies: #
 survey_question: Q47

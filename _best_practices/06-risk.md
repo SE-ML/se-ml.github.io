@@ -12,16 +12,16 @@ description:
 image: #
 photocredit: #
 
-intent: To identify and mitigate possible unintended negative impact of your ML application. #
-motivation: ML applications could have unintended negative impact on your users, the organisation, other organisations, or society at large. A risk assessment is a deliberate, structured process to identify such risks before they occur, so mitigating measures can be designed and implemented.  #
-applicability: At least one risk assessment should be conducted for any ML application before it goes live. When the stakes are higher (e.g., safety-relevant, vulnerable users, involves personal information), risk assessments should be conducted more frequently and more thoroughly. #
+intent: Identify and mitigate possible unintended negative impact of your machine learning application. #
+motivation: Machine learning applications could have unintended negative impact on your users, the organisation, other organisations, or society at large. A risk assessment is a deliberate, structured process to identify such risks before they occur, so mitigating measures can be designed and implemented.  #
+applicability: At least one risk assessment should be conducted for any machine learning application before it goes live. When the stakes are higher (e.g. safety-relevant, vulnerable users, use of personal information), risk assessments should be conducted more frequently and more thoroughly. #
 related: [audits]  #
 dependencies: #
 survey_question: Q97 #
 survey_item: We perform regular risk assessments on our ML applications, addressing impact on users, organisations, and society.
 ---
 
-Unintended negative effects of an ML application should not be detected after they have happened in production, nor should we  wait for a (rare and expensive) third-party audit to detect them in a late stage of development.
+Unintended negative effects of an machine learning application should not be detected after they have happened in production, nor should we  wait for a (rare and expensive) third-party audit to detect them in a late stage of development.
 
 By conducting an internal risk assessment, the expertise of your organisation is leveraged to identify and mitigate negative impacts as early as possible.
 
@@ -36,4 +36,4 @@ To ensure the effectiveness of risks assessments, several issues need to be kept
 
 To alleviate these issues, a **third-party audit** can be commissioned in addition to internal risks assessments.
 
-A **red team exercise** is a specific way of conducting a risk assessment on your ML application, where a separate team is tasked to take an adversarial perspective to detect vulnerabilities or, in this case, unintended negative impacts of the ML application.
+A **red team exercise** is a specific way of conducting a risk assessment on your machine learning application, where a separate team is tasked to take an adversarial perspective to detect vulnerabilities or, in this case, unintended negative impacts of the machine learning application.

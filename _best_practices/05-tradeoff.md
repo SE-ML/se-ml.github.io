@@ -25,8 +25,8 @@ Software development can be seen as a multi-objective optimisation problem, wher
 In most cases, decisions have to be made under uncertainty and incomplete information.
 In order to enhance the ability of a team to make the right decisions at the right time, it is imperative to define and enforce a standard process across team members.
 
-ML adds more uncertainty to a system, and increases the importance of this practice.
-Besides software relate trade-offs -- such as selecting the right architectural style or prioritising the maintenance cycle for certain components -- new trade-offs regarding ML quality attributes must be considered.
+Machine learning adds more uncertainty to a system, and increases the importance of this practice.
+Besides software relate trade-offs -- such as selecting the right architectural style or prioritising the maintenance cycle for certain components -- new trade-offs regarding machine learning quality attributes must be considered.
 
 For example, a team process can include the prioritisation of interpretable models over black-box models, or a procedure to roll-back production systems when the accuracy drops significantly.
 A team process can empower team members to take action even though other members responsible for decisions are not present.

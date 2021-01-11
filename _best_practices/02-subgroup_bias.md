@@ -21,7 +21,7 @@ survey_question: Q95 #
 survey_item: We run tests to assess and manage subgroup bias (regarding e.g. gender or ethnicity).
 ---
 
-Subgroup bias can arise from improperly divided groups, often defined in order to avoid group bias or due to a lack of data.
+Subgroup bias can arise from improperly divided groups, often defined in order to avoid group bias, or due to a lack of data.
 For example, consider an application where we divide the data based on location in New York and Amsterdam.
 After division, it may be the case that we only have data where the population of New York is predominantly female, and the population of Amsterdam is predominantly male.
 This division introduces a subgroup bias, which ultimately leads to socially biased models.
