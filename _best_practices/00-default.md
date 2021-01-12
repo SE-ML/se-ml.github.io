@@ -4,7 +4,7 @@ author: Alex Serban, Koen van der Blom, Joost Visser
 name: Default Practice Template
 category: #
 index: -10
-difficulty: "medium"
+difficulty: na
 references: #
 comments: True
 description:
