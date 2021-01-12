@@ -15,7 +15,7 @@ Our study revealed:
 
 <iframe src="https://drive.google.com/file/d/1ve71bZhWlXIjdqdn1A_8elzu-OKrwJex/preview" width="640" height="360"></iframe>
 
-To download the report, click *display large* (top right corner).
+<a href="/assets/pdf/The 2020 State of Engineering Practices Machine Learning.pdf" target="_blank">Click to download the report.</a>
 
 The practices from the survey are described in more detail in our online <a href="/practices">catalogue of ML engineering best practices</a>.
 
