@@ -1,0 +1,24 @@
+.plot-data-type, .plot-team-exp {
+  float: left;
+}
+
+.plot-org-type, .plot-team-size{
+  margin-left: 50%
+}
+
+.plot-org-type{
+  margin-top: 7px;
+}
+
+
+@media screen and (max-width: $viewport-small) {
+  .plot-data-type, .plot-team-exp {
+   float: none;
+   margin-right:0;
+   width:auto;
+   border:0;
+ }
+ .plot-org-type, .plot-team-size{
+   margin-left: 0%;
+ }
+}
