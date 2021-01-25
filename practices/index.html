@@ -2,18 +2,22 @@
 layout: default
 ---
 
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
+</script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
 <h1 class="black"> Engineering best practices for Machine Learning </h1>
 
-
- <div class="large-image">
-      <img src="/assets/img/SE4ML-practices-diagram.png" class="blog-image">
+<div class="large-image">
+  <img src="/assets/img/SE4ML-practices-diagram.png" class="blog-image">
 </div>
 <br>
 The list below gathers a set of engineering best practices for
 developing software systems with machine learning (ML) components.
 <br><br>
 These practices were identified by engaging with ML engineering teams and
-reviewing relevant <a href="https://github.com/SE-ML/awesome-seml/blob/master/readme.md" target="blank"> academic and grey literature</a>.
+reviewing relevant <a href="https://github.com/SE-ML/awesome-seml/blob/master/readme.md" target="blank"> academic and
+  grey literature</a>.
 We are continuously running a <a href="https://se-ml.github.io/survey" target="blank"> global survey</a>
 among ML engineering teams to measure the adoption of these practices.
 <br><br>
@@ -21,106 +25,139 @@ The various practices are grouped into 6 categories, as illustrated in the diagr
 
 {% assign sorted_practices = site.best_practices  | sort:"index" %}
 
+<br><br>
 
+<table class="table" class="cell-border" id="practiceTable">
+  <thead>
+    <tr>
+      <th class="head-td">Index</th>
+      <th class="head-td">Practice</th>
+      <th class="head-td">Category</th>
+      <th class="head-td">Difficulty</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for pr in sorted_practices %}
+    {% if pr.index >= 0 %}
+    <tr>
+      <td class="table-center">{{pr.index}}</td>
+      <td><a href="{{pr.url}}">{{ pr.name }}</a></td>
+      <td class="table-center">{{pr.category}}</td>
+      <td class="table-center">{{pr.difficulty}}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+  </tbody>
+</table>
+
+<script>
+  $('#practiceTable').DataTable({
+    "paging": false,
+    "info": false,
+    "bFilter": false
+  });
+</script>
+<!--
 <h3 class="black bold" id="data"> Data </h3>
 
 
 "Whoever owns the data pipeline will own the production pipeline for machine learning."
 --<a href="https://twitter.com/chipro/status/1232105910631157761">Chip Huyen<a>
 
-<ul>
-  {% for pr in sorted_practices %}
-     {% if pr.category == 'Data' %}
-        <li>
-          <a  href="{{pr.url}}">{{ pr.name }}</a>
-        </li>
-    {% endif %}
+    <ul>
+      {% for pr in sorted_practices %}
+      {% if pr.category == 'Data' %}
+      <li>
+        <a href="{{pr.url}}">{{ pr.name }}</a>
+      </li>
+      {% endif %}
 
-  {% endfor %}
-</ul>
-
-
-
-<h3 class="black bold" id="training"> Training </h3>
-
-"No amount of experimentation can ever prove me right; a single experiment can prove me wrong." --Albert Einstein
-
-<ul>
-  {% for pr in sorted_practices %}
-     {% if pr.category == 'Training' %}
-        <li>
-          <a  href="{{pr.url}}">{{ pr.name }}</a>
-        </li>
-    {% endif %}
-
-  {% endfor %}
-</ul>
+      {% endfor %}
+    </ul>
 
 
 
-<h3  class="black bold" id="coding"> Coding </h3>
+    <h3 class="black bold" id="training"> Training </h3>
 
-"You can’t be an AI expert these days and not have some grounding in software engineering."
---<a href="https://twitter.com/Grady_Booch/status/1004078706518736896">Grady Booch</a>
+    "No amount of experimentation can ever prove me right; a single experiment can prove me wrong." --Albert
+    Einstein
 
-<ul>
-  {% for pr in sorted_practices %}
-     {% if pr.category == 'Coding' %}
-        <li>
-          <a   href="{{pr.url}}">{{ pr.name }}</a>
-        </li>
-    {% endif %}
+    <ul>
+      {% for pr in sorted_practices %}
+      {% if pr.category == 'Training' %}
+      <li>
+        <a href="{{pr.url}}">{{ pr.name }}</a>
+      </li>
+      {% endif %}
 
-  {% endfor %}
-</ul>
-
-
-
-<h3 class="black bold" id="deployment"> Deployment </h3>
-
-“If your model isn’t deployed into production, does it really exist?”
---<a href="https://twitter.com/code_star/status/1041913975154331648">Anonymous<a>
-
-<ul>
-  {% for pr in sorted_practices %}
-     {% if pr.category == 'Deployment' %}
-        <li>
-          <a  href="{{pr.url}}">{{ pr.name }}</a>
-        </li>
-    {% endif %}
-
-  {% endfor %}
-</ul>
+      {% endfor %}
+    </ul>
 
 
-<h3 class="black bold" id="team"> Team </h3>
 
-"If you want to go fast, go alone; but if you want to go far, go together." -- African proverb, allegedly
+    <h3 class="black bold" id="coding"> Coding </h3>
 
-<ul>
-  {% for pr in sorted_practices %}
-     {% if pr.category == 'Team' %}
-        <li>
-          <a  href="{{pr.url}}">{{ pr.name }}</a>
-        </li>
-    {% endif %}
+    "You can’t be an AI expert these days and not have some grounding in software engineering."
+    --<a href="https://twitter.com/Grady_Booch/status/1004078706518736896">Grady Booch</a>
 
-  {% endfor %}
-</ul>
+    <ul>
+      {% for pr in sorted_practices %}
+      {% if pr.category == 'Coding' %}
+      <li>
+        <a href="{{pr.url}}">{{ pr.name }}</a>
+      </li>
+      {% endif %}
+
+      {% endfor %}
+    </ul>
 
 
-<h3 class="black bold" id="governance"> Governance </h3>
 
-"Where there is great power there is great responsibility."
---<a href="https://quoteinvestigator.com/2015/07/23/great-power/">Winston Churchill<a>
+    <h3 class="black bold" id="deployment"> Deployment </h3>
 
-<ul>
-  {% for pr in sorted_practices %}
-     {% if pr.category == 'Governance' %}
-        <li>
-          <a  href="{{pr.url}}">{{ pr.name }}</a>
-        </li>
-    {% endif %}
+    “If your model isn’t deployed into production, does it really exist?”
+    --<a href="https://twitter.com/code_star/status/1041913975154331648">Anonymous<a>
 
-  {% endfor %}
-</ul>
+        <ul>
+          {% for pr in sorted_practices %}
+          {% if pr.category == 'Deployment' %}
+          <li>
+            <a href="{{pr.url}}">{{ pr.name }}</a>
+          </li>
+          {% endif %}
+
+          {% endfor %}
+        </ul>
+
+
+        <h3 class="black bold" id="team"> Team </h3>
+
+        "If you want to go fast, go alone; but if you want to go far, go together." -- African proverb, allegedly
+
+        <ul>
+          {% for pr in sorted_practices %}
+          {% if pr.category == 'Team' %}
+          <li>
+            <a href="{{pr.url}}">{{ pr.name }}</a>
+          </li>
+          {% endif %}
+
+          {% endfor %}
+        </ul>
+
+
+        <h3 class="black bold" id="governance"> Governance </h3>
+
+        "Where there is great power there is great responsibility."
+        --<a href="https://quoteinvestigator.com/2015/07/23/great-power/">Winston Churchill<a>
+
+            <ul>
+              {% for pr in sorted_practices %}
+              {% if pr.category == 'Governance' %}
+              <li>
+                <a href="{{pr.url}}">{{ pr.name }}</a>
+              </li>
+              {% endif %}
+
+              {% endfor %}
+            </ul> -->
