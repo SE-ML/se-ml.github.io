@@ -148,7 +148,7 @@ layout: default
     <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
     <span> {{page.index }} / {{sorted_practices.size}} </span> •
     <a href="/practices/#{{page.category | downcase}}"> <span>{{page.category}}</span> </a> •
-    <a class="badge parent" href="/blog/2020/catalog/">
+    <a class="badge parent" href="/ranking">
       <img class="hover-me" src="{{badge}}"></img>
       <span class="show-me">
         <span class="show-me-body">{{badge_text}}</span>
@@ -163,9 +163,15 @@ layout: default
   <script type="text/javascript">
     var disqus_shortname = '{{ site.disqus_shortname }}';
     var disqus_identifier = '{{ page.id }}';
-    var disqus_title = {{ page.title | jsonify }};
+    var disqus_title = {
+      {
+        page.title | jsonify
+      }
+    };
     (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
       dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
