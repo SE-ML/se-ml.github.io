@@ -18,14 +18,14 @@ table {
         padding: 12px;
         line-height: 1.2;
         vertical-align: top;
-        border-top: 1px solid #333;
+        border-top: 1px solid #666;
       }
     }
   }
   // Bottom align for column headings
   > thead > tr > th {
     vertical-align: bottom;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #666;
   }
   // Remove top border from thead by default
   > caption + thead,
@@ -40,6 +40,25 @@ table {
   }
   // Account for multiple tbody instances
   > tbody + tbody {
-    border-top: 2px solid #333;
+    border-top: 2px solid #666;
   }
+}
+
+table.dataTable thead th, table.dataTable thead td {
+  border-bottom: 1px solid rgba(129, 129, 129, 0.5) !important;
+}
+
+table.dataTable.no-footer {
+  border-bottom: 1px solid rgba(129, 129, 129, 0.5) !important;
+}
+table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table > tbody > tr > td, table > tfoot > tr > th, table > tfoot > tr > td {
+  border-top: 0px !important;
+}
+
+.table-center{
+  text-align: center;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+  padding: 10px 10px !important;
 }
