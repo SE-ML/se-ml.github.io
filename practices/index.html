@@ -2,9 +2,8 @@
 layout: default
 ---
 
-<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
-</script>
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+
 
 <h1 class="black"> Engineering best practices for Machine Learning </h1>
 
@@ -26,97 +25,79 @@ The various practices are grouped into 6 categories, as illustrated in the diagr
 {% assign sorted_practices = site.best_practices  | sort:"index" %}
 
 <br><br>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home"
+      aria-selected="true">List View</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+      aria-selected="false">Table View</a>
+  </li>
 
-<table class="table" class="cell-border" id="practiceTable">
-  <thead>
-    <tr>
-      <th class="head-td">Index</th>
-      <th class="head-td">Practice</th>
-      <th class="head-td">Category</th>
-      <th class="head-td">Difficulty</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for pr in sorted_practices %}
-    {% if pr.index >= 0 %}
-    <tr>
-      <td class="table-center">{{pr.index}}</td>
-      <td><a href="{{pr.url}}">{{ pr.name }}</a></td>
-      <td class="table-center">{{pr.category}}</td>
-      <td class="table-center">{{pr.difficulty}}</td>
-    </tr>
-    {% endif %}
-    {% endfor %}
-  </tbody>
-</table>
+</ul>
 
-<script>
-  $('#practiceTable').DataTable({
-    "paging": false,
-    "info": false,
-    "bFilter": false
-  });
-</script>
-<!--
-<h3 class="black bold" id="data"> Data </h3>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
+    <h3 class="black bold" id="data"> Data </h3>
 
-"Whoever owns the data pipeline will own the production pipeline for machine learning."
---<a href="https://twitter.com/chipro/status/1232105910631157761">Chip Huyen<a>
+    "Whoever owns the data pipeline will own the production pipeline for machine learning."
+    --<a href="https://twitter.com/chipro/status/1232105910631157761">Chip Huyen<a>
 
-    <ul>
-      {% for pr in sorted_practices %}
-      {% if pr.category == 'Data' %}
-      <li>
-        <a href="{{pr.url}}">{{ pr.name }}</a>
-      </li>
-      {% endif %}
+        <ul>
+          {% for pr in sorted_practices %}
+          {% if pr.category == 'Data' %}
+          <li>
+            <a href="{{pr.url}}">{{ pr.name }}</a>
+          </li>
+          {% endif %}
 
-      {% endfor %}
-    </ul>
+          {% endfor %}
+        </ul>
 
 
 
-    <h3 class="black bold" id="training"> Training </h3>
+        <h3 class="black bold" id="training"> Training </h3>
 
-    "No amount of experimentation can ever prove me right; a single experiment can prove me wrong." --Albert
-    Einstein
+        "No amount of experimentation can ever prove me right; a single experiment can prove me wrong." --Albert
+        Einstein
 
-    <ul>
-      {% for pr in sorted_practices %}
-      {% if pr.category == 'Training' %}
-      <li>
-        <a href="{{pr.url}}">{{ pr.name }}</a>
-      </li>
-      {% endif %}
+        <ul>
+          {% for pr in sorted_practices %}
+          {% if pr.category == 'Training' %}
+          <li>
+            <a href="{{pr.url}}">{{ pr.name }}</a>
+          </li>
+          {% endif %}
 
-      {% endfor %}
-    </ul>
-
-
-
-    <h3 class="black bold" id="coding"> Coding </h3>
-
-    "You can’t be an AI expert these days and not have some grounding in software engineering."
-    --<a href="https://twitter.com/Grady_Booch/status/1004078706518736896">Grady Booch</a>
-
-    <ul>
-      {% for pr in sorted_practices %}
-      {% if pr.category == 'Coding' %}
-      <li>
-        <a href="{{pr.url}}">{{ pr.name }}</a>
-      </li>
-      {% endif %}
-
-      {% endfor %}
-    </ul>
+          {% endfor %}
+        </ul>
 
 
 
-    <h3 class="black bold" id="deployment"> Deployment </h3>
+        <h3 class="black bold" id="coding"> Coding </h3>
 
-    “If your model isn’t deployed into production, does it really exist?”
-    --<a href="https://twitter.com/code_star/status/1041913975154331648">Anonymous<a>
+        "You can’t be an AI expert these days and not have some grounding in software engineering."
+        --<a href="https://twitter.com/Grady_Booch/status/1004078706518736896">Grady Booch</a>
+
+        <ul>
+          {% for pr in sorted_practices %}
+          {% if pr.category == 'Coding' %}
+          <li>
+            <a href="{{pr.url}}">{{ pr.name }}</a>
+          </li>
+          {% endif %}
+
+          {% endfor %}
+        </ul>
+
+
+
+        <h3 class="black bold" id="deployment"> Deployment </h3>
+
+        “If your model isn’t deployed into production, does it really exist?”
+        --<a href="https://twitter.com/code_star/status/1041913975154331648">Anonymous</a>
 
         <ul>
           {% for pr in sorted_practices %}
@@ -149,15 +130,101 @@ The various practices are grouped into 6 categories, as illustrated in the diagr
         <h3 class="black bold" id="governance"> Governance </h3>
 
         "Where there is great power there is great responsibility."
-        --<a href="https://quoteinvestigator.com/2015/07/23/great-power/">Winston Churchill<a>
+        --<a href="https://quoteinvestigator.com/2015/07/23/great-power/">Winston Churchill</a>
 
-            <ul>
-              {% for pr in sorted_practices %}
-              {% if pr.category == 'Governance' %}
-              <li>
-                <a href="{{pr.url}}">{{ pr.name }}</a>
-              </li>
-              {% endif %}
+        <ul>
+          {% for pr in sorted_practices %}
+          {% if pr.category == 'Governance' %}
+          <li>
+            <a href="{{pr.url}}">{{ pr.name }}</a>
+          </li>
+          {% endif %}
 
-              {% endfor %}
-            </ul> -->
+          {% endfor %}
+        </ul>
+
+
+
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+    <br>
+    {% assign badge = "https://img.shields.io/badge/-advanced-orange" %}
+    {% assign badge_text = "This practice was ranked as advanced. Click to read more." %}
+    <table class="table table-borderless table-hover align-middle" id="practiceTable">
+      <thead>
+        <tr>
+          <th class="head-td" style="width: 10%">Index</th>
+          <th class="head-td">Practice</th>
+          <th class="head-td" style="width: 10%">Category</th>
+          <th class="head-td" style="width: 10%">Difficulty</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for pr in sorted_practices %}
+        {% if pr.index >= 0 %}
+
+        {% if pr.difficulty == 'basic' %}
+        {% assign badge = "https://img.shields.io/badge/-basic-color" %}
+        {% assign badge_text = "This practice was ranked as basic. Click to read more." %}
+        {% assign data_order = 0%}
+        {% else %}
+        {% if pr.difficulty == 'medium' %}
+        {% assign badge = "https://img.shields.io/badge/-medium-yellow" %}
+        {% assign badge_text = "This practice was ranked as medium. Click to read more." %}
+        {% assign data_order = 2%}
+        {% else %}
+        {% if pr.difficulty == 'advanced' %}
+        {% assign badge = "https://img.shields.io/badge/-advanced-orange" %}
+        {% assign badge_text = "This practice was ranked as advanced. Click to read more." %}
+        {% assign data_order = 3%}
+        {% else %}
+        {% assign badge = "https://img.shields.io/badge/-not%20ranked-lightgrey" %}
+        {% assign badge_text = "This practice was not ranked. Click to read more." %}
+        {% assign data_order = 4%}
+        {% endif %}
+        {% endif %}
+        {% endif %}
+
+        <tr>
+          <td style="width: 10%" class="table-center">{{pr.index}}</td>
+          <td style="width: 50%"><a href="{{pr.url}}">{{pr.name}}</a></td>
+          <td style="width: 10%" class="table-center"> {{pr.category}}</td>
+          <td style="width: 10%" class="table-center" data-order="{{data_order}}">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="{{badge}}"></img>
+              <span class="show-me">
+                <span class="show-me-body">{{badge_text}}</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+    <script>
+      var nameType = $.fn.dataTable.absoluteOrder({
+        value: '4',
+        position: 'bottom'
+      });
+
+
+
+      $('#practiceTable').DataTable({
+        "paging": false,
+        "info": false,
+        columnDefs: [{
+          targets: 3,
+          type: nameType
+        }]
+
+      });
+    </script>
+
+
+  </div>
+</div>

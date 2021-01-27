@@ -19,7 +19,9 @@
 
 .site-nav {
   float: right;
-  line-height: $nav-height;
+  // line-height: $nav-height;
+  line-height: 20px;
+  margin-bottom: 10px;
 
   .nav-trigger {
     display: none;
@@ -30,13 +32,28 @@
   }
 
   .page-link {
+    display: inline;
     line-height: $line-height;
     color: $text-color;
+    padding: 0;
+    border: 0;
 
     // Gaps between nav items, but not on the first one
     &:not(:first-child) {
       margin-left: 10px;
     }
+  }
+
+  .page-link:hover {
+    background-color: #fff !important;
+  }
+
+  .page-link:focus {
+    background-color: #fff !important;
+  }
+
+  .page-link:active {
+    background-color: #fff !important;
   }
 
   // added for hamburger
@@ -85,6 +102,7 @@
     .page-link {
       display: block;
       padding: 5px 10px;
+      border: 0;
 
       &:not(:last-child) {
         margin-right: 0;

@@ -58,3 +58,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 .table-center{
   text-align: center;
 }
+
+table.dataTable thead th, table.dataTable thead td {
+  padding: 10px 10px !important;
+}

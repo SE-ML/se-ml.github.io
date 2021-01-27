@@ -32,8 +32,8 @@ body {
   max-width: calc(800px - (#{$horizontal-spacing-unit} * 2));
   margin-right: auto;
   margin-left: auto;
-  padding-right: $horizontal-spacing-unit;
-  padding-left: $horizontal-spacing-unit;
+  // padding-right: $horizontal-spacing-unit;
+  // padding-left: $horizontal-spacing-unit;
   @extend .clearfix;
 }
 
