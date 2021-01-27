@@ -151,6 +151,17 @@ The various practices are grouped into 6 categories, as illustrated in the diagr
     <br>
     {% assign badge = "https://img.shields.io/badge/-advanced-orange" %}
     {% assign badge_text = "This practice was ranked as advanced. Click to read more." %}
+
+
+    <!-- <ul id="tag-list">
+      <li>Data</li>
+      <li>Training</li>
+      <li>Coding</li>
+      <li>Deployment</li>
+      <li>Team</li>
+      <li>Governance</li>
+    </ul> -->
+
     <table class="table table-borderless table-hover align-middle" id="practiceTable">
       <thead>
         <tr>
@@ -221,6 +232,18 @@ The various practices are grouped into 6 categories, as illustrated in the diagr
           targets: 3,
           type: nameType
         }]
+
+      });
+
+      var table = $('#practiceTable').DataTable();
+
+      $('#tag-list').on('click', 'li', function () {
+
+        console.log($(this).text())
+        table
+          .columns(2)
+          .search($(this).text())
+          .draw()
 
       });
     </script>
