@@ -19,6 +19,7 @@ By analysing the academic and grey literature, we extracted 14 operational pract
 {% assign sorted_practices = site.best_practices  | sort:"index" %}
 
 #### Human agency and oversight
+<img class="hover-me" src="https://img.shields.io/badge/EU-Human%20Agency-lightgrey?labelColor=003399">
 <ul>
 {% for pr in sorted_practices %}
   <!-- {{pr.labels}} -->
@@ -29,6 +30,7 @@ By analysing the academic and grey literature, we extracted 14 operational pract
 </ul>
 
 #### Technical robustness and safety
+<img class="hover-me" src="https://img.shields.io/badge/EU-Robustness-lightgrey?labelColor=003399">
 <ul>
 {% for pr in sorted_practices %}
   {% if pr.labels contains 'robustness' %}
@@ -38,7 +40,7 @@ By analysing the academic and grey literature, we extracted 14 operational pract
 </ul>
 
 #### Privacy and Data Governance
-
+<img class="hover-me" src="https://img.shields.io/badge/EU-Privacy-lightgrey?labelColor=003399">
 <ul>
 {% for pr in sorted_practices %}
   {% if pr.labels contains 'privacy' %}
@@ -48,7 +50,7 @@ By analysing the academic and grey literature, we extracted 14 operational pract
 </ul>
 
 #### Transparency
-
+<img class="hover-me" src="https://img.shields.io/badge/EU-Transparency-lightgrey?labelColor=003399">
 <ul>
 {% for pr in sorted_practices %}
   {% if pr.labels contains 'transparency' %}
@@ -59,7 +61,7 @@ By analysing the academic and grey literature, we extracted 14 operational pract
 
 
 #### Diversity, Non-Discrimination and Fairness
-
+<img class="hover-me" src="https://img.shields.io/badge/EU-Fairness-lightgrey?labelColor=003399">
 <ul>
 {% for pr in sorted_practices %}
   {% if pr.labels contains 'fairness' %}
@@ -69,8 +71,7 @@ By analysing the academic and grey literature, we extracted 14 operational pract
 </ul>
 
 #### Accountability
-
-
+<img class="hover-me" src="https://img.shields.io/badge/EU-Accountability-lightgrey?labelColor=003399">
 <ul>
 {% for pr in sorted_practices %}
   {% if pr.labels contains 'accountability' %}
