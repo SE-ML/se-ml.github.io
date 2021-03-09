@@ -15,7 +15,7 @@ While research in ethics of AI increased significantly during the last years, pr
 
 Why does this gap exist between theory and practice, and how can it be closed?
 
-In our own research (SE4ML), we have approached this issue from several angles, specifically for the major AI subarea of Machine Learning (ML). On the one hand, we studied ML engineering practices and their level of adoption among ML engineering teams. On the other hand, we studied the requirements for trustworthy ML formulated by policy makers. Finally, we investigated the relative importance of a range of decision drivers for architects of ML systems.
+In our own research (SE4ML), we have approached this issue from several angles, specifically for the major AI subarea machine learning (ML). On the one hand, we studied ML engineering practices and their level of adoption among ML engineering teams. On the other hand, we studied the requirements for trustworthy ML formulated by policy makers. Finally, we investigated the relative importance of a range of decision drivers for architects of ML systems.
 
 As we discuss in more detail below, our overall conclusion is that ML engineering teams lack concrete courses of action for designing and building their systems, specifically to satisfy trustworthiness requirements, such as security, robustness, and fairness. Also, we can draw the conclusion that practitioners are aware of the ethical and robustness risks raised by improper development of ML components, but are currently constrained by more traditional concerns such as scaling their systems, or maintaining performance between training and testing.
 
