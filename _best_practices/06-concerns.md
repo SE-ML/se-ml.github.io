@@ -19,6 +19,9 @@ related: [alert, explainable, social_bias, audit_trails] #
 dependencies: #
 survey_question: Q102 #
 survey_item: Our organisation offers safe channels for users and employees to raise concerns about privacy, safety, security, fairness, or other concerns related to our ML applications.
+
+labels: [transparency]
+
 ---
 
 Communication channels between users and developers can help to discuss issues, dilemmas or emergent concerns regarding ethical use of machine learning. Users may, for example, wish to raise concerns about (perceived) bias or inquire about how an machine learning system reached a decision.

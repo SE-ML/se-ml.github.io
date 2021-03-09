@@ -19,6 +19,9 @@ applicability: Prediction logging should be implemented in any production-level 
 related: [exp_versioning]
 dependencies: #
 survey_question: Q63
+
+labels: [traceability]
+
 ---
 
 Debugging production models is difficult if one does not have access to the input data.

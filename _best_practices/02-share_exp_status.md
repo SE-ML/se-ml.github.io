@@ -19,6 +19,9 @@ applicability: Experiment tracking and sharing should be used for any training e
 related: [exp_quality] #
 dependencies: #
 survey_question: Q47
+
+labels:
+
 ---
 
 Although different team members have their own style of managing experiments and tracing their outcomes, it is recommended to adopt a common way of logging data; that is understood and accessible to all team members.

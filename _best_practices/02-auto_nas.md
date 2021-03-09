@@ -19,6 +19,9 @@ related: [exp_hyperparam] #
 dependencies: #
 survey_question: Q91 #
 survey_item: We use automated methods to configure our algorithms or the structure of our models.
+
+labels:
+
 ---
 
 Like with hyper-parameters, performance of machine learning models also depends on their structure (also: configuration or architecture). By using automated tools for this task, a larger number of options can be systematically evaluated, resulting in better performance than when manually trying different configurations.

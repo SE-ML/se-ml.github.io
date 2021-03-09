@@ -19,6 +19,9 @@ applicability: Data availability on shared infrastructure should be applied to a
 related: #
 dependencies: #
 survey_question: Q36
+
+labels: [traceability]
+
 ---
 
 Good data management and storage is important for several reasons:

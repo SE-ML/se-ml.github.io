@@ -19,6 +19,9 @@ applicability: Data quality control should be applied to any machine learning ap
 related: [data_complete, data_reusable] #
 dependencies: #
 survey_question: Q32
+
+labels:
+
 ---
 
 Whenever external data sources are used, or data is collected that may be incomplete or ill formatted, it is important to verify the data quality.

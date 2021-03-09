@@ -19,6 +19,9 @@ applicability: Parallelisation should be considered in any machine learning appl
 related: [exp_status] #
 dependencies: #
 survey_question: Q43
+
+labels: agility
+
 ---
 
 The development of machine learning components is different than traditional software development because we expect that much of the code used during experimentation to be thrown away when the experiments failed.

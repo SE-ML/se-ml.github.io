@@ -19,8 +19,10 @@ applicability: Versioning should be used in any machine learning application or 
 related: [exp_owner, exp_tstfeature] #
 dependencies: #
 survey_question: Q48
----
 
+labels: [traceability]
+
+---
 Versioning in machine learning involves more components than in traditional software: among the executable code we have to store the training and testing data sets, the configuration files and the final model artifacts.
 
 Storing all information allows previous experiments to be reproduced and re-assessed.

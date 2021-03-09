@@ -18,6 +18,9 @@ applicability: #
 related: team_collab #
 dependencies: #
 survey_question: Q65 # Our team works against an issue backlog that is actively maintained in collaboration with our product owner.
+
+labels: [effectiveness, traceability]
+
 ---
 
 A backlog is a list of work items, typically described concisely and recorded in an issue tracker.

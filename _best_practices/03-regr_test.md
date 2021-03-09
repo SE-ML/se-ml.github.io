@@ -20,6 +20,9 @@ related: [exp_tstfeature] #
 dependencies: [coding_build] #
 survey_question: Q53 #
 
+
+labels: quality
+
 ---
 
 When adding or changing code, new defects can be introduced, not only in the code that has just been worked on, but also in the code that existed before. Regression testing aims to spot those bugs and hence prevent the quality of the software to deteriorate (regress).

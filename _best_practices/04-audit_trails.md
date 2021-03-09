@@ -20,6 +20,9 @@ dependencies: #
 survey_question: Q96 #
 survey_items: Our ML applications provide comprehensive audit trails that allow critical assessment of model behaviour.
 
+
+labels: [accountability]
+
 ---
 
 The social implications that machine learning and more general artificial intelligence technologies may have on society call for tight regulations to ensure the consumer rights are respected. For example, the EU GDPR law, as well as the Credit score in the US, require the *right to an explanation* for automated decision making systems.

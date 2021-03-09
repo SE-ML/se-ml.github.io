@@ -19,6 +19,9 @@ related: [alert, audit_trails, interpretable, concerns]  #
 dependencies: #
 survey_question: Q101 #
 survey_item: Our application provides each user with a clear explanation of the results or decisions that they receive.
+
+labels: [transparency]
+
 ---
 
 Machine learning systems involve highly complex between data, algorithms and models. As a result they are often difficult to understand, even for other experts.

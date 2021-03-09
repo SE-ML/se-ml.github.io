@@ -28,19 +28,19 @@ layout: default
 
 
   {% if page.difficulty == 'basic' %}
-  {% assign badge = "https://img.shields.io/badge/-basic-color" %}
-  {% assign badge_text = "This practice was ranked as basic. Click to read more." %}
+  {% assign badge = "https://img.shields.io/badge/Difficulty-Basic-lightgrey?labelColor=1F4DAF" %}
+  {% assign badge_text = "This practice was ranked as basic. <br>Click to read more." %}
   {% else %}
   {% if page.difficulty == 'medium' %}
-  {% assign badge = "https://img.shields.io/badge/-medium-yellow" %}
-  {% assign badge_text = "This practice was ranked as medium. Click to read more." %}
+  {% assign badge = "https://img.shields.io/badge/Difficulty-Medium-lightgrey?labelColor=1F4DAF" %}
+  {% assign badge_text = "This practice was ranked as medium. <br>Click to read more." %}
   {% else %}
   {% if page.difficulty == 'advanced' %}
-  {% assign badge = "https://img.shields.io/badge/-advanced-orange" %}
-  {% assign badge_text = "This practice was ranked as advanced. Click to read more." %}
+  {% assign badge = "https://img.shields.io/badge/Difficulty-Advanced-lightgrey?labelColor=1F4DAF" %}
+  {% assign badge_text = "This practice was ranked as advanced. <br>Click to read more." %}
   {% else %}
-  {% assign badge = "https://img.shields.io/badge/-not%20ranked-lightgrey" %}
-  {% assign badge_text = "This practice was not ranked. Click to read more." %}
+  {% assign badge = "https://img.shields.io/badge/Difficulty-Not%20ranked-lightgrey?labelColor=1F4DAF" %}
+  {% assign badge_text = "This practice was not ranked. <br>Click to read more." %}
   {% endif %}
   {% endif %}
   {% endif %}
@@ -60,6 +60,109 @@ layout: default
         <span class="show-me-body">{{badge_text}}</span>
       </span>
     </a>
+    {% for label in page.labels %}
+    {% if label == "quality" %}
+    •
+    <a class="badge parent" href="/effects">
+      <img class="hover-me" src="https://img.shields.io/badge/Effect-Quality-lightgrey?labelColor=1F4DAF">
+      <span class="show-me">
+        <span class="show-me-body">This practice helps to increase<br>the software quality.<br>Click to read
+          more.</span>
+      </span>
+    </a>
+    {% endif %}
+    {% if label == "agility" %}
+    •
+    <a class="badge parent" href="/effects">
+      <img class="hover-me" src="https://img.shields.io/badge/Effect-Agility-lightgrey?labelColor=1F4DAF">
+      <span class="show-me">
+        <span class="show-me-body">This practice helps to increase<br>the team's agility.<br>Click to read more.</span>
+      </span>
+    </a>
+    {% endif %}
+    {% if label == "effectiveness" %}
+    •
+    <a class="badge parent" href="/effects">
+      <img class="hover-me" src="https://img.shields.io/badge/Effect-Effectiveness-lightgrey?labelColor=1F4DAF">
+      <span class="show-me">
+        <span class="show-me-body">This practice helps to increase<br>the team's effectiveness.<br>Click to read
+          more.</span>
+      </span>
+    </a>
+    {% endif %}
+    {% if label == "traceability" %}
+    •
+    <a class="badge parent" href="/effects">
+      <!-- <img class="hover-me" src="https://img.shields.io/badge/-traceability-brightgreen"></img> -->
+      <img class="hover-me" src="https://img.shields.io/badge/Effect-Traceability-lightgrey?labelColor=1F4DAF">
+      <span class="show-me">
+        <span class="show-me-body">This practice helps to increase<br>the traceability of ML components.<br>Click to
+          read more.</span>
+      </span>
+    </a>
+    {% endif %}
+    {% if label == "fairness" %}
+    •
+    <a class="badge parent" href="/eu">
+      <img class="hover-me" src="https://img.shields.io/badge/EU-Fairness-lightgrey?labelColor=003399"></img>
+      <span class="show-me">
+        <span class="show-me-body">This practice addresses requirements<br>from the EU guidelines for trustworthy
+          ML.<br>Click to read more.</span>
+      </span>
+    </a>
+    {% endif %}
+    {% if label == "privacy" %}
+    •
+    <a class="badge parent" href="/eu">
+      <img class="hover-me" src="https://img.shields.io/badge/EU-Privacy-lightgrey?labelColor=003399"></img>
+      <span class="show-me">
+        <span class="show-me-body">This practice addresses requirements<br>from the EU guidelines for trustworthy
+          ML.<br>Click to read more.</span>
+      </span>
+    </a>
+    {% endif %}
+    {% if label == "agency" %}
+    •
+    <a class="badge parent" href="/eu">
+      <img class="hover-me" src="https://img.shields.io/badge/EU-Human%20Agency-lightgrey?labelColor=003399"></img>
+      <span class="show-me">
+        <span class="show-me-body">This practice addresses requirements<br>from the EU guidelines for trustworthy
+          ML.<br>Click to read more.</span>
+      </span>
+    </a>
+    {% endif %}
+    {% if label == "robustness" %}
+    •
+    <a class="badge parent" href="/eu">
+      <img class="hover-me" src="https://img.shields.io/badge/EU-Robustness-lightgrey?labelColor=003399"></img>
+      <span class="show-me">
+        <span class="show-me-body">This practice addresses requirements<br>from the EU guidelines for trustworthy
+          ML.<br>Click to read more.</span>
+      </span>
+    </a>
+    {% endif %}
+    {% if label == "accountability" %}
+    •
+    <a class="badge parent" href="/eu">
+      <img class="hover-me" src="https://img.shields.io/badge/EU-Accountability-lightgrey?labelColor=003399"></img>
+      <span class="show-me">
+        <span class="show-me-body">This practice addresses requirements<br>from the EU guidelines for trustworthy
+          ML.<br>Click to read more.</span>
+      </span>
+    </a>
+    {% endif %}
+    {% if label == "transparency" %}
+    •
+    <a class="badge parent" href="/eu">
+      <img class="hover-me" src="https://img.shields.io/badge/EU-Transparency-lightgrey?labelColor=003399"></img>
+      <span class="show-me">
+        <span class="show-me-body">This practice addresses requirements<br>from the EU guidelines for trustworthy
+          ML.<br>Click to read more.</span>
+      </span>
+    </a>
+    {% endif %}
+    {% endfor %}
+
     <a href="{{next_pr[0].url}}" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
   </div>
 

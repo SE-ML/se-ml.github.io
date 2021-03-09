@@ -19,6 +19,9 @@ related: [concerns]
 dependencies: #
 survey_question: Q100 #
 survey_item: Our application informs users that it makes use of machine learning and describes its intended use and limitations.
+
+labels: [transparency]
+
 ---
 
 The following is an extract from the <a href="https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai">EU ethics guidelines for trustworthy AI</a>:

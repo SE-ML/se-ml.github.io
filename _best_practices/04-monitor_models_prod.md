@@ -19,6 +19,9 @@ applicability: Monitoring should be implemented in any production-level ML appli
 related: [deployment_distskew, deployment_rollback, exp_quality] #
 dependencies: #
 survey_question: Q60
+
+labels: [agility, traceability]
+
 ---
 
 Monitoring plays an important role in production level machine learning.

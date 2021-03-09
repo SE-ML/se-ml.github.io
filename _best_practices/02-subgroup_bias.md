@@ -19,6 +19,9 @@ related: [social_bias,discriminatory_attributes,risk] #
 dependencies: #
 survey_question: Q95 #
 survey_item: We run tests to assess and manage subgroup bias (regarding e.g. gender or ethnicity).
+
+labels: [fairness]
+
 ---
 
 Subgroup bias can arise from improperly divided groups, often defined in order to avoid group bias, or due to a lack of data.

@@ -19,6 +19,9 @@ applicability: The feature extraction code should be tested whenever features ar
 related: [data_sanity, coding_regr] #
 dependencies: #
 survey_question: Q40
+
+labels:
+
 ---
 
 Similar to <a href="/best_practices/01-sanity_check/"> applying sanity checks to external data sources</a>, it is important to check that data generated internally is consistent, and does not introduces errors or bugs.

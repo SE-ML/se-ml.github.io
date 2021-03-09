@@ -20,6 +20,8 @@ dependencies: #
 survey_question: Q93 #
 survey_item: We use privacy-preserving ML techniques (e.g. federated learning, differential privacy, or homomorphic encryption).
 
+labels: [privacy]
+
 ---
 
 Whenever processing data that can be used to identify or trace back information to individuals -- such as medical records -- it is imperative to use privacy preserving techniques in order to protect the individuals' privacy.

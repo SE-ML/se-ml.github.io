@@ -19,6 +19,9 @@ applicability: Code quality control should be applied to any type of code. #
 related: [coding_build] # Static code analysis can be combined with Continuous Integration / Run Build at Each Commit #
 dependencies: #
 survey_question: Q57 #
+
+labels: quality
+
 ---
 
 By ensuring high code quality you can avoid the introduction of defects into the code, enable new team members to become productive more quickly, and more easily reason about the correctness of your code.

@@ -19,6 +19,9 @@ applicability: Any machine learning team should share a clear training objective
 related: [exp_trainingmetric] #
 dependencies: [exp_trainingmetric] #
 survey_question: Q37
+
+labels: [effectiveness]
+
 ---
 
 When working in a diverse team, it is important to understand the background and roles of each member in order to avoid miscommunications and misunderstandings.

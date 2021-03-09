@@ -19,6 +19,9 @@ applicability:  #
 related: [coding_static, exp_tstfeature, coding_regr]
 dependencies: [coding_automate] #
 survey_question: Q55 #
+
+labels: [agility, quality]
+
 ---
 
 By running an automated build script at each commit, you achieve **Continuous Integration** (CI).

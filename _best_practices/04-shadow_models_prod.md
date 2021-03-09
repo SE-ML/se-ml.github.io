@@ -19,6 +19,9 @@ applicability: Shadow deployment should be implemented in any production-level M
 related: [deployment_automate] #
 dependencies: #
 survey_question: Q59
+
+labels: agility
+
 ---
 
 Instead of deploying a model straight into production, one can assess its quality and performance using the data from production without allowing the model to make final decisions.

@@ -24,6 +24,9 @@ related: [tradeoff,audits,interpretable] #
 dependencies: #
 survey_question: Q99 #
 survey_item: Our organisation subscribes to a code of conduct for Responsible AI.
+
+labels: [transparency]
+
 ---
 
 A good starting point for sharing ethical values across organisations is to subscribe to a code of conduct. You can create one specific for your situation, or you can refer to a general governance framework.

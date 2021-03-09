@@ -19,6 +19,9 @@ applicability: Features should have an owner and documentation whenever features
 related: [exp_archive] #
 dependencies: #
 survey_question: Q39
+
+labels: quality
+
 ---
 
 Ensuring that someone in the team is in charge of the information regarding a feature facilitates feature maintainability, and improves the overall understanding of the data and models.

@@ -20,6 +20,9 @@ dependencies: #
 survey_question: Q103 #
 survey_item: The ML applications developed by our organisation are regularly subjected to third party audits.
 
+
+labels: [accountability]
+
 ---
 
 In order to gain new insights into your development life-cycle and compare with other applications and regulations,

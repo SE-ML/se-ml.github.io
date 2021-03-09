@@ -19,6 +19,9 @@ applicability: Training scripts should always be peer reviewed.
 related: [team_collab]
 dependencies: #
 survey_question: Q42
+
+labels: quality
+
 ---
 
 Errors and bugs can easily slip in the code during development.

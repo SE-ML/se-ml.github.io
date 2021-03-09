@@ -19,6 +19,9 @@ related: #
 dependencies: #
 
 survey_question: Q82 # We make consistent use of a collaborative development platform.
+
+labels: [effectiveness]
+
 ---
 
 Broadly used collaborative development environments include GitHub, GitLab, BitBucket, and Azure DevOps Server.

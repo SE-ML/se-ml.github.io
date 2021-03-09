@@ -19,6 +19,9 @@ related: [discriminatory_attributes,subgroup_bias,risk] #
 dependencies: #
 survey_question: Q84 #
 survey_item: We consistently test for social bias in our training data (regarding e.g. gender or ethnicity).
+
+labels: [fairness]
+
 ---
 
 In order to avoid social bias in ML algorithms, it is imperative to *continuously* check that the training data is well balanced with respect to social attributes such as gender, ethnicity, or otherwise belonging to a specific social group.

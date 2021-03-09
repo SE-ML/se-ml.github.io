@@ -19,6 +19,9 @@ related: [audits]  #
 dependencies: #
 survey_question: Q97 #
 survey_item: We perform regular risk assessments on our ML applications, addressing impact on users, organisations, and society.
+
+labels: [robustness]
+
 ---
 
 Unintended negative effects of an machine learning application should not be detected after they have happened in production, nor should we  wait for a (rare and expensive) third-party audit to detect them in a late stage of development.

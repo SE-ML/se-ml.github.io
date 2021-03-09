@@ -19,6 +19,9 @@ applicability: Automatic rollbacks should be implemented in any production-level
 related: [deployment_automate, deployment_monitor] #
 dependencies: #
 survey_question: Q62
+
+labels: agility
+
 ---
 
 If, due to changes in the input data or undetected skew, a deployed model performs sub-optimal, it should be rolled back to an earlier, better performing version.

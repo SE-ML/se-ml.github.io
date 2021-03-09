@@ -19,6 +19,8 @@ applicability: Data label control should be applied to any machine learning appl
 related: #
 dependencies: #
 survey_question: Q35
+
+labels:
 ---
 
 In supervised learning, labels are crucial for the proper functioning of any algorithm.

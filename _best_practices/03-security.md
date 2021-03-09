@@ -20,6 +20,9 @@ dependencies: #
 survey_question: Q92 #
 survey_item: We use various methods to assure the security of our application under cyber attacks (e.g. code review, analysis tools, penetration tests, red teaming exercises).
 
+
+labels: [robustness]
+
 ---
 
 For any application that exposes an external interface or uses personal or sensitive data, it is imperative to reflect and take actions to improve its security.

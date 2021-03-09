@@ -19,6 +19,9 @@ applicability: All training objectives should be captured in an easy to comprehe
 related: [exp_trainingobjective] #
 dependencies: #
 survey_question: Q38
+
+labels:
+
 ---
 
 Choosing an objective to optimize is not trivial because (1) the objective may be hard to capture in a metric, and (2) the objective evolves over time.

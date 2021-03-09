@@ -19,6 +19,9 @@ related: [interpretable] #
 dependencies: #
 survey_question: Q86 #
 survey_item: Our team has a clearly defined decision process to make trade-offs between competing quality attributes (e.g. between accuracy, explainability, resource consumption).
+
+labels: [agency]
+
 ---
 
 Software development can be seen as a multi-objective optimisation problem, where trade-offs between quality attributes of a system have to be made and recorded.

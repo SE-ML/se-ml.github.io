@@ -19,6 +19,9 @@ applicability: Model skew should be monitored in any production-level machine le
 related:  [deployment_automate, deployment_monitor] #
 dependencies: #
 survey_question: Q61
+
+labels:
+
 ---
 
 In a quickly changing environment or when the training data does not reflect the production distribution, it is not uncommon to have models that perform well during training and initial testing, but not in production.

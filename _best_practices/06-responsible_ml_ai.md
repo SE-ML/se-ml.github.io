@@ -19,6 +19,9 @@ applicability: Responsible ML should be applied in any production-level ML appli
 related: [social_bias, subgroup_bias, privacy_preserving, exp_status, deployment_monitor] #
 dependencies: #
 survey_question: Q64
+
+labels: EU
+
 ---
 
 Machine learning is a data driven process and, in most cases, the algorithm's performance improves when using more data.

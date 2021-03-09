@@ -18,6 +18,9 @@ applicability: Reusable data cleaning scripts should be written for any ML appli
 related: [exp_tstfeature, coding_regr] #
 dependencies: #
 survey_question: Q34
+
+labels: [traceability]
+
 ---
 
 Most of the time, training machine learning models is preceded by an exploratory phase, in which non-structured code is written, or manual steps are performed in order to get the data in the right format, merge several data sources, etc.

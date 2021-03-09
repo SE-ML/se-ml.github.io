@@ -19,6 +19,9 @@ applicability: Data quality control should be applied to any machine learning ap
 related: [data_sanity, deployment_distskew, social_bias] #
 dependencies: #
 survey_question: Q33
+
+labels:
+
 ---
 
 Besides performing <a href="/best_practices/01-sanity_check/">sanity checks</a> on the input data, it is recommended to constantly check for data evolution. In a continuously evolving environment, the data distribution will evolve over time.

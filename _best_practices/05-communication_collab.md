@@ -18,6 +18,9 @@ applicability:  #
 related: [team_collab]
 dependencies: #
 survey_question: Q66 # Our developers have frequent communication, close collaboration, and integrated way of working with IT operations staff.
+
+labels: [agility, effectiveness]
+
 ---
 
 Any development team lives within a larger organization.

@@ -20,6 +20,9 @@ applicability: Automatic model deployment should be implemented in any productio
 related: #
 dependencies: #
 survey_question: Q56
+
+labels: agility
+
 ---
 
 Automated deployment involves automatically packing the model together with its dependencies and 'shipping' it to a production server -- instead of manually connecting to a server and perform the deployment.

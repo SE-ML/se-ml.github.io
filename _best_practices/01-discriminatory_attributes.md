@@ -19,6 +19,10 @@ related: [social_bias,subgroup_bias,risk] #
 dependencies: #
 survey_question: Q94 #
 survey_item: We prevent potentially discriminatory data attributes (such as gender or ethnicity) from being used as model features.
+
+
+labels: [fairness]
+
 ---
 
 When processing personal data -- for example the customer data in a banking application -- it is important to prevent discriminatory attributes from being used as model features, because the resulting models may base their decisions on these attributes, and ultimately discriminate users.

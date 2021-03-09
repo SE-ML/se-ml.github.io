@@ -19,6 +19,8 @@ applicability: Features should be archived whenever features are manually engine
 related: [data_complete, exp_owner] #
 dependencies: #
 survey_question: Q41
+
+labels: quality
 ---
 
 When features which are no longer used are not removed, they introduce clutter in the processing pipeline.
