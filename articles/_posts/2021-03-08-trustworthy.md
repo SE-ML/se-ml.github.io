@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Why do ML engineers struggle to build trustworthy ML applications?
+author: Alex Serban, Joost Visser
 date: 2021-03-08 15:32:00-0400
 comments: True
 description: Adoption of practices for trustworthy ML.  #
@@ -10,11 +11,13 @@ photocredit: #
 
 
 
-While research in ethics of AI increased significantly during the last years, practitioners tend to neglect the risks coming from inequity or unfairness of their ML components. This is one of the insights of the annual [State of AI](https://hai.stanford.edu/blog/state-ai-10-charts) report for 2020 recently published by the Human-Centred Artificial Intelligence group from Stanford University. Why does this gap exist between theory and practice, and how can it be closed?
+While research in ethics of AI increased significantly during the last years, practitioners tend to neglect the risks coming from inequity or unfairness of their ML components. This is one of the insights of the annual [State of AI](https://hai.stanford.edu/blog/state-ai-10-charts) report for 2020 recently published by the Human-Centred Artificial Intelligence group from Stanford University.
+
+Why does this gap exist between theory and practice, and how can it be closed?
 
 In our own research (SE4ML), we have approached this issue from several angles, specifically for the major AI subarea of Machine Learning (ML). On the one hand, we studied ML engineering practices and their level of adoption among ML engineering teams. On the other hand, we studied the requirements for trustworthy ML formulated by policy makers. Finally, we investigated the relative importance of a range of decision drivers for architects of ML systems.
 
-As we discuss in more detail below, our overall conclusion is that ML engineering teams lack concrete courses of action for designing and building their systems, specifically to satisfy trustworthiness requirements, such security, robustness, and fairness. Also, we can draw the conclusion that practitioners are aware of the ethical and robustness risks raised by improper development of ML components, but are currently constrained by more traditional concerns such as scaling their systems, or maintaining performance between training and testing.
+As we discuss in more detail below, our overall conclusion is that ML engineering teams lack concrete courses of action for designing and building their systems, specifically to satisfy trustworthiness requirements, such as security, robustness, and fairness. Also, we can draw the conclusion that practitioners are aware of the ethical and robustness risks raised by improper development of ML components, but are currently constrained by more traditional concerns such as scaling their systems, or maintaining performance between training and testing.
 
 ### What are ML engineering practices?
 
@@ -32,7 +35,7 @@ In particular, we followed the requirements for trustworthy ML developed by the 
 
 Inspired by these requirements, we searched the literature for engineering practices that can be directly applied by developers, to address ethical and robust development of ML components.
 In total, we identified [14 new practices](/eu), which include topics such as testing for bias, assuring security, or having the application audited by third parties.
-For all new practices, we summarised the related work into a body of knowledge that follow the same structure a the previous practices from our catalogue, including detailed description, concise statement of intent, motivation, applicability, related practices, and references.
+For all new practices, we summarised the related work into a body of knowledge that follows the same structure as the previous practices from our catalogue, including detailed description, concise statement of intent, motivation, applicability, related practices, and references.
 
 We also extended our [survey](https://se-ml.github.io/survey) to measure the adoption of trustworthiness practices by teams developing ML solutions.
 Unfortunately, we found out that the practices for trustworthy ML have relatively low adoption (as can be seen in the figure above).
