@@ -5,7 +5,7 @@ name: Automate Feature Generation and Selection
 category: Training #
 unique_id: exp_auto_feat
 index: 17
-difficulty: "advanced"
+difficulty: na
 references: #
 comments: True
 description:
@@ -17,7 +17,7 @@ motivation: Developing high-quality features, and identifying which feature comb
 applicability: Automated feature generation and selection is useful in any machine learning application where features are used, as long as the expertise is available to assess the quality of what is generated. #
 related: [exp_owner] #
 dependencies: #
-survey_question: Q80 #
+survey_question: Q90 #
 
 labels:
 
