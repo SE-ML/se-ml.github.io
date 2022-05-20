@@ -5,7 +5,7 @@ name: Employ Interpretable Models When Possible
 category: Training
 index: 14
 unique_id: interpretable
-difficulty: na
+difficulty: "advanced"
 references: [IMLG,TTAID,AIHLEG] #
 comments: True
 description:

@@ -5,7 +5,7 @@ name: Explain Results and Decisions to Users
 category: Governance
 index: 43
 unique_id: explainable
-difficulty: na
+difficulty: "advanced"
 references: [AIHLEG] #
 comments: True
 description:

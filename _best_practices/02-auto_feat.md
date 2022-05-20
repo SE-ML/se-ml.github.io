@@ -5,7 +5,7 @@ name: Automate Feature Generation and Selection
 category: Training #
 unique_id: exp_auto_feat
 index: 17
-difficulty: na
+difficulty: "advanced'
 references: #
 comments: True
 description:

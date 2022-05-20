@@ -5,7 +5,7 @@ name: Have Your Application Audited
 category: Governance
 index: 45
 unique_id: audits
-difficulty: na
+difficulty: "advanced"
 references: [TTAID, AIHLEG] #
 comments: True
 description:

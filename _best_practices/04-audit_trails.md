@@ -5,7 +5,7 @@ name: Provide Audit Trails
 category: Deployment
 index: 34
 unique_id: audit_trails
-difficulty: na
+difficulty: "advanced"
 references: [CAIAG, AIHLEG, TTAID] #
 comments: True
 description:

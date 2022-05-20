@@ -5,7 +5,7 @@ name: Prevent Discriminatory Data Attributes Used As Model Features
 category: Data
 index: 6
 unique_id: discriminatory_attributes
-difficulty: na
+difficulty: "advanced"
 references: [FMLSS] #
 comments: True
 description:

@@ -5,7 +5,7 @@ name: Inform Users on Machine Learning Usage
 category: Governance
 index: 42
 unique_id: alert
-difficulty: na
+difficulty: "advanced"
 references: [AIHLEG,MCARD] #
 comments: True
 description:

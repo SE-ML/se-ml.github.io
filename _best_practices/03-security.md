@@ -5,7 +5,7 @@ name: Assure Application Security
 category: Coding
 index: 27
 unique_id: security
-difficulty: na
+difficulty: "advanced"
 references: [TTAID]#
 comments: True
 description:

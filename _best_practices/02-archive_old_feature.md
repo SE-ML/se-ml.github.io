@@ -6,7 +6,7 @@ title: Actively Remove or Archive Features That are Not Used
 category: Training
 unique_id: exp_archive
 index: 13
-difficulty: "advanced"
+difficulty: "medium"
 comments: True
 references: [Rs4ML, MLTD]
 description:

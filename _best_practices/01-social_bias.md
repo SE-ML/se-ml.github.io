@@ -5,7 +5,7 @@ name: Test for Social Bias in Training Data
 category: Data
 unique_id: social_bias
 index: 3
-difficulty: na
+difficulty: "advanced"
 references: [ITDFDS, LFR, IFCUL, FMLSS] #
 comments: True
 description:

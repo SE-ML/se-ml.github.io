@@ -5,7 +5,7 @@ name: Assess and Manage Subgroup Bias
 category: Training
 index: 21
 unique_id: subgroup_bias
-difficulty: na
+difficulty: "advanced"
 references: [PFG, MCCIM]#
 comments: True
 description:

@@ -5,7 +5,7 @@ name: Use Privacy-Preserving Machine Learning Techniques
 category: Data
 index: 7
 unique_id: privacy_preserving
-difficulty: na
+difficulty: "advanced"
 references: [TTAID]
 comments: True
 description:

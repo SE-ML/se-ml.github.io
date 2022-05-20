@@ -6,7 +6,7 @@ title: Assign an Owner to Each Feature and Document its Rationale
 category: Training
 unique_id: exp_owner
 index: 12
-difficulty: "advanced"
+difficulty: "medium"
 comments: True
 references: [Rs4ML]
 description:

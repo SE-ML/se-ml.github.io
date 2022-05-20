@@ -6,7 +6,7 @@ title: Use Static Analysis to Check Code Quality
 category: Coding
 unique_id: coding_static
 index: 26
-difficulty: "advanced"
+difficulty: "medium"
 references: [BMS]
 comments: True
 description:

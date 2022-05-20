@@ -5,7 +5,7 @@ name: Perform Risk Assessments
 category: Governance
 index: 40
 unique_id: risk
-difficulty: na
+difficulty: "advanced"
 references: [TTAID,AIHLEG,CAIAG] #
 comments: True
 description:

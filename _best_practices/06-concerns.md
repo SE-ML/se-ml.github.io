@@ -5,7 +5,7 @@ name: Provide Safe Channels to Raise Concerns
 category: Governance
 index: 44
 unique_id: concerns
-difficulty: na
+difficulty: "advanced"
 references: [TTAID,AIHLEG] #
 comments: True
 description:

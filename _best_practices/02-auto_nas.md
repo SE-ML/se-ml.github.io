@@ -5,7 +5,7 @@ name: Automate Configuration of Algorithms or Model Structure
 category: Training
 unique_id: exp_auto_nas
 index: 19
-difficulty: na
+difficulty: "advanced"
 references: #
 comments: True
 description:

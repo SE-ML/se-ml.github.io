@@ -6,7 +6,7 @@ title: Test all Feature Extraction Code
 category: Training
 unique_id: exp_tstfeature
 index: 11
-difficulty: "advanced"
+difficulty: "medium"
 references: [CD4ML]
 comments: True
 description:

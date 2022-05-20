@@ -4,7 +4,7 @@ author: Alex Serban, Koen van der Blom, Joost Visser
 name: Establish Responsible AI Values
 category: Governance
 index: 39
-difficulty: na
+difficulty: "advanced"
 references: [TTAID, AIHLEG] #
 comments: True
 description:

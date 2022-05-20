@@ -6,7 +6,7 @@ title: Use Continuous Integration
 category: Coding
 unique_id: coding_build
 index: 25
-difficulty: "medium"
+difficulty: "advanced"
 references: [CD4ML]
 comments: True
 description:

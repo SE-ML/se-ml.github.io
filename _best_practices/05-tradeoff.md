@@ -5,7 +5,7 @@ name: Decide Trade-Offs through Defined Team Process
 category: Team
 index: 38
 unique_id: tradeoff
-difficulty: na
+difficulty: "medium"
 references: [SEDS, GDMMA, MOIEA] #
 comments: True
 description:
