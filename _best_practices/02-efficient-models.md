@@ -1,7 +1,7 @@
 ---
 layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
-name: Use the most efficient models
+name: Use The Most Efficient Models
 category: Training
 index: 24
 unique_id: efficient_compression
@@ -12,8 +12,8 @@ description:
 image: #
 photocredit: #
 
-intent: Avoid overparametrised or energy inefficient models. #
-motivation: Overparametrised or large models consume resources that are potentially excessive. Using smaller models -- such as prunned, compressed or distilled models -- can often make efficient use of computational resources without loss of performance.
+intent: Avoid overparametrised or energy-inefficient models. #
+motivation: Overparametrised or large models consume resources that are potentially excessive. Using smaller models -- such as pruned, compressed or distilled models -- can often make efficient use of computational resources without loss of performance.
 applicability: Efficient models should be the first choice for any ML application.
 related: [] #
 dependencies: #
@@ -26,8 +26,8 @@ survey_item: #
 ---
 
 Large models are often associated with richer representations and better performance. 
-However, the use of large models can lead to inefficent resource management.
-For example, using smaller models which run at smaller resolutions for image classification tasks can pottentially improve computational, storage and data transfer resources -- ultimately leading to smaller development and operational costs and to a smaller carbon footprint.
+However, the use of large models can lead to inefficient resource management.
+For example, using smaller models which run at smaller resolutions for image classification tasks can potentially improve computational, storage and data transfer resources -- ultimately leading to smaller development and operational costs and to a smaller carbon footprint.
 Therefore, the use of efficient models should be a critical objective in any application of ML.
 
 There are multiple ways to select or develop efficient models, either by (i) selecting a model with less parameters for the task at hand or (ii) compressing, pruning or distilling a large model to a more efficient one.
