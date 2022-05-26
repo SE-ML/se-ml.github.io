@@ -14,8 +14,8 @@ By accumulating the answers in this manner, we expect to cancel out the noise st
 
 We split the list of ranked practice in 3 percentiles corresponding to "basic" (first group with high adoption), "medium" (second group) and "advanced" (third group with low adoption).
 
-An overview of the percentage of answers for each practice is illustrated below.
+<!-- An overview of the percentage of answers for each practice is illustrated below.
 
  <div>
       <img src="/assets/img/ranked_practices.png" class="blog-image">
-</div>
+</div> -->
