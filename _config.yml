@@ -2,6 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 name: SE-ML
+title: SE-ML
 email: j.m.w.visser@liacs.leidenuniv.nl
 description: > # this means to ignore newlines until "url:"
   Webpage for the Software Engineering for Machine Learning

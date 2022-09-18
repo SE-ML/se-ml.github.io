@@ -21,8 +21,9 @@ $ bundle install
 #### Run development server
 
 ```sh
-bundle exec jekyll serve
+bundle exec jekyll serve --incremental
 ```
+> The website will be available at [localhost:4000](http://localhost:4000)
 
 ### Deploy to production
 
