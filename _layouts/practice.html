@@ -10,8 +10,7 @@ layout: default
   </header>
 
 
-  {% assign sorted_practices = site.best_practices | sort:"index" %}
-  {% assign sorted_practices = site.best_practices | where_exp: "item", "item.index > 0" %}
+  {% assign sorted_practices = site.best_practices | where_exp: "item", "item.index > 0" | sort:"index" %}
 
   {% if page.index == 1 %}
   {% assign next_pr_index = page.index | plus:1 %}
@@ -52,7 +51,7 @@ layout: default
 
   <div style="text-align:center;">
     <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-    <span> {{page.index }} / {{sorted_practices.size}} </span> •
+    <span> {{ page.index }} / {{ sorted_practices.size | minus:1 }} </span> •
     <a href="/practices/#{{page.category | downcase}}"> <span>{{page.category}}</span> </a> •
     <a class="badge parent" href="/ranking">
       <img class="hover-me" src="{{badge}}"></img>
@@ -249,7 +248,7 @@ layout: default
   <br><br>
   <div style="text-align:center;">
     <a href="{{last_pr[0].url}}" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-    <span> {{page.index }} / {{sorted_practices.size}} </span> •
+    <span> {{ page.index }} / {{ sorted_practices.size | minus:1 }} </span> •
     <a href="/practices/#{{page.category | downcase}}"> <span>{{page.category}}</span> </a> •
     <a class="badge parent" href="/ranking">
       <img class="hover-me" src="{{badge}}"></img>
