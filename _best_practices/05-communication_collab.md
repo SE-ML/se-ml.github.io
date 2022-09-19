@@ -13,7 +13,7 @@ image: #
 photocredit: #
 
 intent: Ensure alignment with other (development) teams, management, and external stakeholders. #
-motivation: The system that your team develops is meant to integrate with other systems within the context of a wider organization. this requires communication, alignment, and collaboration with others outside the team.
+motivation: The system that your team develops is meant to integrate with other systems within the context of a wider organization. This requires communication, alignment, and collaboration with others outside the team.
 applicability:  #
 related: [team_collab]
 dependencies: #

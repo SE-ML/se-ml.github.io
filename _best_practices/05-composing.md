@@ -4,7 +4,7 @@ author: András Schmelczer
 name: Allow Robustly Composing Inference Functions
 title: Allow Robustly Composing Inference Functions
 category: Deployment
-unique_id: deployment_cache
+unique_id: deployment_composing
 index: 35
 difficulty: na
 references: [MSCS, GREATAI]

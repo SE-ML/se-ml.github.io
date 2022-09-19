@@ -6,18 +6,18 @@ title: Cache Production Predictions
 category: Deployment
 unique_id: deployment_cache
 index: 35
-difficulty: "na"
-references: [van2021, CMMD]
+difficulty: na
+references: [SAASSA, GREEN, CMMD, GREATAI]
 comments: True
 description:
-image: #
-photocredit: #
+image:
+photocredit:
 
 intent: Improve performance, allow more flexibility for the clients, and reduce the deployment's carbon footprint.
 motivation: Avoiding the expensive, especially in the case of Deep Learning models, recomputation of results can lead to lower latency, lower costs, and an overall more socially conscious deployment.
 applicability: Caching should be implemented in production-level ML applications where repeating input values may occur.
 related: [deployment_log]
-dependencies: #
+dependencies:
 survey_question:
 
 labels: [quality]

@@ -6,7 +6,7 @@ category: Coding
 index: 27
 unique_id: security
 difficulty: "advanced"
-references: [TTAID]#
+references: [TTAID]
 comments: True
 description:
 image: #
