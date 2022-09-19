@@ -5,7 +5,7 @@ name: Use Static Analysis to Check Code Quality
 title: Use Static Analysis to Check Code Quality
 category: Coding
 unique_id: coding_static
-index: 26
+index: 29
 difficulty: "medium"
 references: [BMS]
 comments: True

@@ -5,7 +5,7 @@ name: Communicate, Align, and Collaborate With Others
 title: Communicate, Align, and Collaborate With Others
 category: Team
 unique_id: team_communication
-index: 37
+index: 43
 difficulty: "basic"
 comments: True
 description:

@@ -5,7 +5,7 @@ name: Capture the Training Objective in a Metric that is Easy to Measure and Und
 title: Capture the Training Objective in a Metric that is Easy to Measure and Understand
 category: Training
 unique_id: exp_trainingmetric
-index: 10
+index: 11
 difficulty: "basic"
 references: [Rs4ML, OPML, DSTEAM, MLTEAM]
 comments: True

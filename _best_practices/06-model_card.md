@@ -5,7 +5,7 @@ name: Keep the Model and its Documentation Together
 title: Keep the Model and its Documentation Together
 category: Governance
 unique_id: governance_model_card
-index: 46
+index: 52
 difficulty: na
 references: [MCARD, MCMR2, MCT, GREATAI]
 comments: True

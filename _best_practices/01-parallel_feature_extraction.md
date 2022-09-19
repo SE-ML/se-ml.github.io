@@ -5,7 +5,7 @@ name: Parallelise Feature Extraction
 title: Parallelise Feature Extraction
 category: Data
 unique_id: data_parallel
-index: 16
+index: 9
 difficulty: na
 comments: True
 references: [RAY, PPP, GREATAI]

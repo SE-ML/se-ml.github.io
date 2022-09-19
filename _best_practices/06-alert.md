@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
 name: Inform Users on Machine Learning Usage
 category: Governance
-index: 42
+index: 48
 unique_id: alert
 difficulty: "advanced"
 references: [AIHLEG,MCARD] #

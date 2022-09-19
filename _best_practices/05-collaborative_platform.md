@@ -5,7 +5,7 @@ name: Use A Collaborative Development Platform
 title: Use A Collaborative Development Platform
 category: Team
 unique_id: team_collab
-index: 35
+index: 41
 difficulty: "basic"
 comments: True
 description:

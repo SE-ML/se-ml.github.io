@@ -5,7 +5,7 @@ name: Cache Production Predictions
 title: Cache Production Predictions
 category: Deployment
 unique_id: deployment_cache
-index: 35
+index: 39
 difficulty: na
 references: [SAASSA, GREEN, CMMD, GREATAI]
 comments: True

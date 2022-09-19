@@ -5,7 +5,7 @@ name: Allow Robustly Composing Inference Functions
 title: Allow Robustly Composing Inference Functions
 category: Deployment
 unique_id: deployment_composing
-index: 35
+index: 40
 difficulty: na
 references: [MSCS, GREATAI]
 comments: True

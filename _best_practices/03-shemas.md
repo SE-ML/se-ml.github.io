@@ -5,7 +5,7 @@ name: Implement Standard Schemas for Common Prediction Tasks
 title: Implement Standard Schemas for Common Prediction Tasks
 category: Coding
 unique_id: coding_schemas
-index: 35
+index: 31
 difficulty: na
 references: [PYDANTIC, GREATAI]
 comments: True

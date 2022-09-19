@@ -5,7 +5,7 @@ name: Allow Experimentation with the Inference Function
 title: Allow Experimentation with the Inference Function
 category: Training
 unique_id: training_experimentation
-index: 35
+index: 26
 difficulty: na
 references: [GRADIO, STREAMLIT, GREATAI]
 comments: True

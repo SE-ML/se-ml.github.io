@@ -5,7 +5,7 @@ name: Continuously Monitor the Behaviour of Deployed Models
 title: Continuously Monitor the Behaviour of Deployed Models
 category: Deployment
 unique_id: deployment_monitor
-index: 30
+index: 34
 difficulty: "medium"
 references: [CD4ML, MLPROD, MLLG, TFX, TDBML]
 comments: True
