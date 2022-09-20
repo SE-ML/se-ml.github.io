@@ -6,7 +6,7 @@
 
 Install [jekyll](https://jekyllrb.com/docs/).
 
-### Development:
+### Development
 
 #### Install dependencies
 
