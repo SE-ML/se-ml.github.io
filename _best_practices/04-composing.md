@@ -7,14 +7,14 @@ category: Deployment
 unique_id: deployment_composing
 index: 40
 difficulty: na
-references: [MSCS, GREATAI]
+references: [MSCS, VE2E, GREATAI]
 comments: True
 description:
 image:
 photocredit:
 
-intent: Create simpler services and promote reuse by letting the inference functions call each other.
-motivation: Just as in conventional software, composability and modularity can lead to simpler and more flexible architectures. However, extra care needs to be taken to avoid non-monotonic error propagation. 
+intent: Create more focused services and promote reuse by letting the inference functions call each other.
+motivation: Just as with conventional software, composability and modularity can lead to simpler and more flexible architectures. However, extra care needs to be taken to avoid non-monotonic error propagation. 
 applicability: Enabling robust inference function composition should be implemented in any production-level ML application.
 related: [exp_versioning, governance_model_card]
 dependencies:

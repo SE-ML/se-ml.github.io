@@ -24,8 +24,8 @@ labels: [transparency]
 
 ---
 
-ML models are not perfect, and their imperfections can often be unintuitive to interpret. Therefore, it is expected of their creators to ensure that the model's users have a precise understanding of its boundaries. This includes measured performance, the means of measuring that, for instance, evaluation metrics and data used, applicability, and known edge cases.
+ML models are not perfect, and their imperfections can often be unintuitive to notice and interpret. Therefore, it is expected of their creators to ensure that the model's users have a precise understanding of its boundaries. This includes measured performance, the means of measuring that &mdash; for instance, evaluation metrics and data used &mdash; applicability, and known edge cases.
 
-Documentation can come in many shapes, but <a href="https://modelcards.withgoogle.com/about" target="_blank">Model Cards</a>, pioneered by Google, are a safe choice for starting out. They allow a large degree of freedom while still providing some structure for the document.
+Documentation can come in many shapes, but <a href="https://modelcards.withgoogle.com/about" target="_blank">Model Cards</a>, pioneered by Google, are a safe choice for starting out. They allow a large degree of freedom while still providing a clear structure.
 
-Model Cards and, in general, documentation of machine learning models should be aimed at both technical and non-technical audiences. It's not only for the engineers looking to apply it but also for the end-users whose data it might be applied to, and legal or other governing professionals who oversee the safety, legality, and ethics of the model's usage.
+Model cards and, in general, documentation of machine learning models should be aimed at both technical and non-technical audiences. It's not only for the engineers looking to apply it but also for the end-users whose data it might be applied to, and legal or other governing professionals who oversee the safety, legality, and ethics of the model's usage.

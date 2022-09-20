@@ -15,7 +15,7 @@ photocredit: #
 intent: Make users aware that machine learning is used by the application, what it is used for, and what its limitations are. This allows users to understand better how to use, or not use the application. #
 motivation:  Machine learning systems should not represent themselves as humans to users. Humans have the right to know that they are interacting with a machine learning system. #
 applicability: User communication should be applied to any machine learning application. #
-related: [concerns]
+related: [concerns, governance_model_card]
 dependencies: #
 survey_question: Q100 #
 survey_item: Our application informs users that it makes use of machine learning and describes its intended use and limitations.

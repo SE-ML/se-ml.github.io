@@ -14,8 +14,8 @@ image:
 photocredit:
 
 intent: Increase interoperability within the organisation and facilitate code reuse.
-motivation: Developing tools, dashboards, and APIs for ML models can be made more efficient by allowing easily reusing them for different models.
-applicability: All machine learning teams should share a repository of standard schemas within the organisation.
+motivation: Developing tools, dashboards, and APIs for ML models can be made more efficient by allowing to reuse them for different models easily. However, this is only possible if these models share a similar interface.
+applicability: Machine learning teams should share a repository of standard schemas within every organisation.
 related: [data_reusable, team_communication, deployment_log]
 dependencies:
 survey_question:
@@ -28,4 +28,4 @@ Standard prediction response schemas allow interchanging models without friction
 
 Next to helping code reuse, quality can also be improved through this. For instance, having a required `explanation` field could coerce colleagues into considering more explainable approaches. 
 
-Additionally, the mostly stable schemas can prevent the unnecessary overhead of deciding the appropriate schemas for each new ML service. It can also help avoid mistakes coming from small differences between inference function outputs, such as mistaking `log_probability` for a `probability` percentage.
+Additionally, the refined, mostly stable schemas can prevent the unnecessary overhead of deciding the appropriate interface for each new ML service. It can also help avoid mistakes coming from slight differences between inference function outputs, such as mistaking `log_probability` for `probability` or `odds`.
