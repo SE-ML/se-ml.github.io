@@ -17,8 +17,7 @@ intent: Models applied without a nuanced understanding of their capabilities and
 motivation: Providing prospective users and/or the public with a clear description of the models' strengths, biases, and shortcomings must be an integral part of responsible open-sourcing. This way, both misguided applications and public distrust can be averted.
 applicability: Clear documentation must be distributed together with the models in all cases where models are made accessible to third parties.
 related: [data_lbl, team_communication, alert]
-dependencies: #
-survey_question:
+dependencies: survey_question:
 
 labels: [transparency]
 
