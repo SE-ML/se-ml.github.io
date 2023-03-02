@@ -1,6 +1,6 @@
 ---
-title: The 2020 State of AutoML Adoption
-webpage: /automl-report2020
+title: AutoML Adoption in ML Software
+webpage: https://openreview.net/forum?id=D5H5LjwvIqt #
 description: #
-date: 2020-11-11 00:00:00-0400
+date: 2022-03-01
 ---
