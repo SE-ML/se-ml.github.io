@@ -5,7 +5,7 @@ name: Continuously Measure Model Quality and Performance
 title: Continuously Measure Model Quality and Performance
 category: Training
 unique_id: exp_quality
-index: 20
+index: 21
 difficulty: "basic"
 references: [Rs4ML, TDBML]
 comments: True

@@ -5,7 +5,7 @@ name: Log Production Predictions with the Model's Version and Input Data
 title: Log Production Predictions with the Model's Version and Input Data
 category: Deployment
 unique_id: deployment_log
-index: 33
+index: 37
 difficulty: "medium"
 references: [MMLP, MLGov, MDLOPS]
 comments: True

@@ -4,7 +4,7 @@ author: Koen van der Blom, Alex Serban, Joost Visser
 name: Automate Feature Generation and Selection
 category: Training #
 unique_id: exp_auto_feat
-index: 17
+index: 18
 difficulty: "advanced"
 references: #
 comments: True

@@ -5,7 +5,7 @@ name: Enable Shadow Deployment
 title: Enable Shadow Deployment
 category: Deployment
 unique_id: deployment_shadow
-index: 29
+index: 33
 difficulty: "medium"
 references: [VML, MLLG, TFX]
 comments: True

@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
 name: Provide Safe Channels to Raise Concerns
 category: Governance
-index: 44
+index: 50
 unique_id: concerns
 difficulty: "advanced"
 references: [TTAID,AIHLEG] #

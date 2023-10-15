@@ -2,12 +2,13 @@
 # Site settings
 # -----------------------------------------------------------------------------
 name: SE-ML
+title: SE-ML
 email: j.m.w.visser@liacs.leidenuniv.nl
 description: > # this means to ignore newlines until "url:"
   Webpage for the Software Engineering for Machine Learning
 footer_text: #
 
-url:  # the base hostname & protocol for your site
+url: "https://se-ml.github.io" # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
 last_updated: # leave blank if you don't want to display last updated
 

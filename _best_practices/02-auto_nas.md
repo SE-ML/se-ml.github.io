@@ -4,7 +4,7 @@ author: Koen van der Blom, Alex Serban, Joost Visser
 name: Automate Configuration of Algorithms or Model Structure
 category: Training
 unique_id: exp_auto_nas
-index: 19
+index: 20
 difficulty: "advanced"
 references: #
 comments: True

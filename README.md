@@ -1,15 +1,16 @@
 # se-ml.github.io
 
-Software Engineering for Machine Learning Homepage
+> Software Engineering for Machine Learning Homepage
 
+### Prerequisites
 
-### Prereq
 Install [jekyll](https://jekyllrb.com/docs/).
 
-### Development:
+### Development
 
-#### Install dependencies:
-```
+#### Install dependencies
+
+```sh
 $ git clone https://github.com/SE-ML/se-ml.github.io
 $ cd se-ml.github.io
 $ git fetch --all
@@ -17,18 +18,21 @@ $ git checkout -b source origin/source
 $ bundle install
 ```
 
-#### Run dev server:
-```
+#### Run development server
+
+```sh
 $ bundle exec jekyll serve
 ```
+> The website will be available at [localhost:4000](http://localhost:4000)
 
-### Deploy to production:
-```
+### Deploy to production
+
+```sh
 $ ./bin/deploy -u se-ml
 ```
 
+#### Kudos
 
-#### Kudos:
 - this webpage uses the [al-folio](https://alshedivat.github.io/al-folio/) theme.
 - some icons are downloaded from [Freepik](https://www.freepik.com/).
 

@@ -3,7 +3,7 @@ layout: practice
 author:
 name: Have Your Application Audited
 category: Governance
-index: 45
+index: 51
 unique_id: audits
 difficulty: "advanced"
 references: [TTAID, AIHLEG] #

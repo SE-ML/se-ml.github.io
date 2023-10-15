@@ -3,10 +3,10 @@ layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
 name: Assess and Manage Subgroup Bias
 category: Training
-index: 21
+index: 22
 unique_id: subgroup_bias
 difficulty: "advanced"
-references: [PFG, MCCIM]#
+references: [PFG, MCCIM]
 comments: True
 description:
 image: #
