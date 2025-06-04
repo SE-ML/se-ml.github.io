@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | AutoML adoption in software engineering for machine learning</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/blog/2020/automl/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
+  </script>
+  <script src="/assets/js/absolute.js">
+  </script>
+
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">practices</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">AutoML adoption in software engineering for machine learning</h1>
+    <p class="post-meta">December 11, 2020 •
+      Koen van der Blom, Holger Hoos, Alex Serban, Joost Visser</p>
+  </header>
+
+  
+
+  <article class="post-content">
+    <p><em>This blog post has originally been published on <a href="https://automl.org">automl.org</a></em></p>
+
+<p><em>In our global survey among teams that build ML applications, we found ample room for increased adoption of AutoML techniques. While AutoML is adopted at least partially by more than 70% of teams in research labs and tech companies, for teams in non-tech and government organisations adoption is still below 50%. Full adoption remains limited to under 10% in research and tech, and to less than 5% in non-tech and government.</em></p>
+
+<p><strong>Software engineering for machine learning</strong></p>
+
+<p>With the inclusion of ML techniques in software, the risks and requirements of the software also changes. In turn, the best ways to maintain and develop software with ML components is different from traditional software engineering (TSE). We call this new field software engineering for machine learning (SE4ML).</p>
+
+<p>Based on a study of the academic and “grey” literature (the latter comprises blog articles, presentation slides and white papers), we identified best practices for SE4ML, and composed a <a href="https://github.com/SE-ML/awesome-seml">recommended reading list</a> on the topic. These practices include the use of AutoML techniques to improve the use of ML components in software. All practices are described in our <a href="/practices/">practice catalogue</a>. We encourage readers to have a look and to send us their suggestions for additions.</p>
+
+<p><img src="/assets/img/SE4ML-practices-diagram.png" class="blog-image" />
+<em>Figure 1: Engineering best practices for machine learning.</em></p>
+
+<p>Having a solid overview of the best practices, we set up a survey to find out the extent to which these SE4ML practices have already been adopted. We asked teams working on software with machine learning components to which degree they followed each practice in their work. In the resulting data we saw that tech companies have the highest adoption of the new ML related best practices, while research labs have the highest adoption of AutoML. Overall, more practices are adopted by teams that are larger and more experienced, with practices originating from TSE seeing slightly lower adoption than the new ML specific practices.</p>
+
+<p><strong>Effects of best practice adoption</strong></p>
+
+<p>Besides the adoption of best practices, we also investigated the effects of the practices. This resulted in insights into which specific practices relate to which desired outcomes. For instance, we found that software quality is influenced most by continuous integration, automated regression tests, and static analysis. On the other hand, agility is primarily affected by automated model deployment, having a cohesive- multi-disciplinary team, and enabling parallel training experiments. With these insights into the effectiveness of different practices, we hope to increase practice adoption and improve the quality of software with ML components.</p>
+
+<p>A brief overview of additional survey results can be found in our piece titled “<a href="/report2020">The 2020 State of Engineering Practices for Machine Learning</a>”, and in our technical publication “<a href="https://doi.org/10.1145/3382494.3410681">Adoption and Effects of Software Engineering Best Practices in Machine Learning</a>”.</p>
+
+<p><strong>How about automated ML?</strong></p>
+
+<p>A recent line of research advancements in ML focuses on automated machine learning (AutoML), an area that aims to automate (parts of) the construction and use of ML pipelines to enable a wider audience to make effective and responsible use of ML, without needing to become an expert in the field. We took a closer look at our survey results and found that, compared to non-tech companies and governmental organisations, research labs and tech companies are ahead in the adoption of AutoML practices (see Figure 2).</p>
+
+<p><img src="/assets/img/AutoML-by-organisation.png" class="blog-image" />
+<em>Figure 2: AutoML adoption by organisation type.</em></p>
+
+<p>While overall AutoML adoption is similar across continents, non-profit and low-tech organisations see higher adoption in Europe than in North America. We also found that teams with multiple years of experience are more likely to adopt AutoML techniques. Finally, across the board, there is significant room to increase adoption of AutoML, but this is especially true for non-tech companies and governmental organisations.</p>
+
+<p>More detailed information on our findings regarding AutoML adoption can be found in our piece titled “<a href="/automl-report2020">The 2020 State of AutoML Adoption</a>”.</p>
+
+<p><strong>Looking forward</strong></p>
+
+<p>Based on feedback from and interviews with participants, we recently revised our survey to learn more. Specifically, in our latest version of the survey, we ask in more detail about responsible use of ML and about the adoption of different AutoML techniques such as automated feature selection and neural architecture search. You can help us by taking the <a href="/survey/">10-minute survey</a> and by spreading the word. If you want to stay up to date with our progress, keep an eye on our <a href="https://se-ml.github.io/">website</a>.</p>
+
+
+  </article>
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'se4ml';
+    var disqus_identifier = '/blog/2020/automl';
+    var disqus_title = {
+      {
+        page.title | jsonify
+      }
+    };
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  
+
+</div>
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'G-05407HJNMT', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+</body>
+
+</html>

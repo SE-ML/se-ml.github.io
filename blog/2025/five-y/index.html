@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Machine Learning Engineering Practices in Recent Years: Trends and Challenges</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/blog/2025/five-y/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
+  </script>
+  <script src="/assets/js/absolute.js">
+  </script>
+
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">practices</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Machine Learning Engineering Practices in Recent Years: Trends and Challenges</h1>
+    <p class="post-meta">June 3, 2025 •
+      Alex Serban</p>
+  </header>
+
+  
+
+  <article class="post-content">
+    <p>Following the recent recognition of our <a href="https://doi.org/10.1016/j.jss.2023.111907">article on engineering best practices for ML</a> by the Journal of Systems and Software (JSS) as one of the two <a href="https://www.linkedin.com/posts/jss-journal_icse2025-jss-activity-7322975476027650048-xi-D?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAcSfhoBdLy9U0O6K8ob2eA72MXJyyNUFrw">papers of the year 2024</a>, we conducted a follow-up study that analyzes the latest trends in ML engineering best practices.
+Since our initial collection of practices was finalized around 2021, we identified and reviewed 108 new articles published from 2022 to 2025 in leading software engineering journals and on arXiv.</p>
+
+<p>This article is the first in a series designed to reveal the latest developments in ML engineering best practices, pinpoint new challenges, and discuss topics that have received less attention. Our current analysis identifies five major research directions in the current literature and three areas that are underrepresented.</p>
+
+<p>We discuss these findings, give details on article selection and analysis, and present a complete list of references categorized by the identified topics.</p>
+
+<h3 id="data-collection">Data Collection</h3>
+
+<p>To gather relevant articles, we initially parsed the titles and abstracts of all published articles from 2022 to 2025 in prominent venues in the field, such as ICSE, ESEM, TSE, and others. These lists were obtained either directly from the publication sites or through dblp. For example, dblp conveniently compiles all <a href="https://dblp.org/db/journals/tse/index.html">TSE</a> publications from a single year onto one page, which simplified our parsing process.</p>
+
+<p>Next, we parsed all articles from arXiv’s computer science software engineering (cs.SE) category between 2022 and 2025 using the official API.</p>
+
+<p>The titles and abstracts were first filtered automatically to check for the presence of keywords such as “ML”, “machine learning”, “artificial intelligence”, and others. The remaining titles were manually reviewed, resulting in the selection of 108 relevant articles, which are included in the references section.</p>
+
+<p>Additionally, we attempted to use the phi-4 model to filter relevant articles by providing the title and abstract in a prompt. The prompt asked whether the article pertains to (a) software engineering for machine learning (SE4ML), (b) machine learning for software engineering (ML4SE), or (c) solely software engineering without any machine learning components. Unfortunately, the results were unsatisfactory as the model often failed to distinguish between SE4ML and ML4SE. More advanced prompting techniques, such as providing explicit examples, might have yielded better results. However, manually reviewing the titles ensured the accuracy of our selection.</p>
+
+<h3 id="recent-trends-in-ml-engineering-practices">Recent Trends in ML Engineering Practices</h3>
+
+<p>To identify trends from the selected articles, we began by reviewing and categorizing them based on the primary engineering topics they addressed. Subsequently, for each topic, we identified subtopics to provide a more detailed analysis. This resulted in five core topics, discussed below.</p>
+
+<h4 id="1-engineering-practices-for-ml-and-responsible-ml">1. Engineering Practices for ML and Responsible ML</h4>
+
+<p>The development of engineering practices for ML is steadily evolving, with increasing emphasis on Responsible ML. Among general ML practices, requirements engineering emerges as the most extensively represented area, with studies addressing elicitation techniques for general ML systems [90, 93], frameworks tailored to Responsible ML [1, 83], and broader mapping efforts that explore the landscape of ML-specific requirements  engineering [34, 78]. Closely following are contributions in architecture design, where researchers propose novel architectures [21] and reusable architectural patterns for AI and ML systems [29, 82, 106].</p>
+
+<p>Other areas, such as AutoML practices [63, 70] and data engineering [13, 36], remain significantly underrepresented despite their foundational role in successful ML development. This gap is addressed further in the challenges section, where the need for more robust and systematic data practices is discussed.
+Additionally, a notable portion of the literature focuses on practices within diverse development contexts [3, 14, 18, 25, 73, 80, 81, 86, 87], highlighting how real-world constraints shape ML engineering.</p>
+
+<p>The most substantial body of work centers on Responsible ML – covering key concerns such as fairness, bias mitigation, transparency, security, and ethical governance. Within this domain, several comprehensive catalogues of best practices and design patterns have been proposed to guide practitioners [10, 12, 17, 35, 69, 95, 96]. Specific themes such as Green ML/AI [31, 43, 51] and AI governance [2, 23, 33, 38, 95] are also gaining traction, reflecting a broader shift toward aligning innovation with long-term social, environmental, and ethical responsibilities.</p>
+
+<h4 id="2-mlops-model-management-and-deployment">2. MLOps, Model Management, and Deployment</h4>
+
+<p>The operationalization of ML models emerged as another area of focus, with MLOps practices gaining considerable traction in both research and industry. A substantial body of work investigates the challenges, perceptions, and adoption of MLOps, highlighting gaps in automation, tooling, collaboration, and quality assurance across ML pipelines [32, 37, 40, 48, 50, 52, 76, 79, 89, 91, 94, 104, 108].</p>
+
+<p>A second group of studies contributes to the development of MLOps practices and pipeline design, proposing architectural frameworks and best practices for automating training, deployment, and explainability within production settings [45, 60, 72, 103]. Complementing this, research on model management and maintenance addresses versioning, reuse, and governance – key to sustainable ML operations in dynamic environments [16, 24, 26].</p>
+
+<p>Tooling support is another growing area, with emerging solutions aimed at improving collaborative model development and version control, such as MGit and Git-Theta [68, 71].</p>
+
+<h4 id="3-off-the-shelf-models-and-agentic-architectures">3. Off-the-Shelf Models and Agentic Architectures</h4>
+
+<p>Agentic architectures are emerging as a dynamic paradigm in ML system design, where autonomous agents interact, collaborate, and adapt within complex, often real-time environments. This approach is increasingly powered by foundation models and supported through multi-agent coordination frameworks. The studies identified investigate how to design [44, 54, 56], develop [20], and deploy [27] such systems responsibly [56].</p>
+
+<p>Complementing it, a growing body of work addresses design patterns and software architectures for foundation model-based systems, offering taxonomies and reference frameworks that help develop these systems [74, 77].</p>
+
+<h4 id="4-ml-software-quality-assessment">4. ML Software Quality Assessment</h4>
+
+<p>A growing body of research explores ML-specific quality assessment, including testing techniques which highlighting unique challenges such as non-determinism, generalization, and evaluation cost trade-offs [19, 22, 41, 61, 62, 65, 97]. Complementing this, more specialized techniques like test case prioritization have been explored to improve continuous integration workflows [98], while studies on testing in practice offer insights from real-world deployments [100].</p>
+
+<p>Parallel efforts in Responsible ML testing aim to adopt fairness, explainability, and ethical testing in ML pipelines – proposing tools, metrics, and frameworks for fairness auditing, risk assessment, and certification [6, 9, 46, 47, 66, 67, 84, 85, 107, 42].</p>
+
+<p>Maintaining ML systems over time demands robust maintenance practices, with recent studies analyzing the evolution of ML maintenance practices in open-source ecosystems [55], the management of technical debt [58], and the identification of code smells and architectural tactics for maintenance [92, 101, 102, 105]. These efforts illustrate a maturing field, moving beyond performance-centric evaluation to more integrated engineering strategies that account for long-term risk, responsible development, and maintenance.</p>
+
+<h4 id="5-using-ml-to-improve-engineering-practices">5. Using ML to Improve Engineering Practices</h4>
+
+<p>Last, an emerging direction explores how ML and LLMs can be used to improve engineering practices. Recent work investigate the role of LLMs in software quality assurance [4], in developing trustworthy software [28] or for engineering practice recommendations [64].</p>
+
+<h3 id="open-challenges-and-underrepresented-topics">Open Challenges and Underrepresented Topics</h3>
+
+<p>Considering the trends discussed, we explore three topics that remain underdeveloped and warrant further attention. It is important to note that the perspectives presented here are subjective and open to debate.</p>
+
+<h4 id="1-data-engineering">1. Data Engineering</h4>
+
+<p>Regardless of the ML methodology employed, the literature consistently underscores the critical role of high-quality data in achieving optimal results and maintaining model performance over time. Therefore, it is essential to focus on developing advanced data pipelines that enable efficient model debugging, maintenance, and evolution.</p>
+
+<p>These pipelines should prioritize automation, where monitoring systems can automatically flag outliers detected in deployed models and send them to annotation teams for review. Similarly, new data should undergo automatic quality and relevance checks before being integrated into annotation pipelines. Once new annotations are accepted, they should automatically trigger new training pipelines, ensuring that models are continually updated with the most accurate and relevant data.</p>
+
+<p>While some <a href="https://se-ml.github.io/practices/">practices in the data category</a> indicate progress in these directions, more complex capabilities are essential for maintaining model relevance in dynamic environments. However, they are rarely implemented or studied on a large scale, pointing to a significant area for further research and development.</p>
+
+<h4 id="2-higher-focus-on-scaling-and-model-efficiency-engineering">2. Higher Focus on Scaling and Model Efficiency Engineering</h4>
+
+<p>Recently, there has been a surge in publications exploring advanced scaling and optimization techniques for training and runing inference on ML models (e.g., [109, 110, 111]). However, these techniques are seldom adopted or discussed within the software engineering community, and they are not often translated into practical applications. Methods such as model compression, quantization, distillation, and more sophisticated optimization strategies like developing custom kernels require further investigation, particularly as larger models frequently operate inefficiently in real-world settings.</p>
+
+<p>While leading companies are already leveraging these techniques – exemplified by organizations like DeepSeek, OpenAI, and Mistral (which has one of the fastest inference speeds) – there is an urgent need for the broader software engineering community to examine, abstract, and convert these methods into practical guidelines. This will help ensure that the advantages of these advanced optimization techniques are more widely accessible and can be effectively utilized across diverse applications and industries.</p>
+
+<h4 id="3-incentivization-and-collection-of-user-feedback-from-deployed-models">3. Incentivization and Collection of User Feedback from Deployed Models</h4>
+
+<p>Collecting and incentivizing users to provide feedback for deployed models is essential for understanding model performance, identifying biases and areas for improvement, and improving user satisfaction. However, the most effective methods for collecting this feedback and the contexts in which they should be applied remain unclear. This presents a significant opportunity for the software engineering community to develop and refine best practices.</p>
+
+<p>Consider, for example, suggesting improved translations to DeepL or providing more detailed feedback for a generated phrase in Mistral. These platforms have begun to integrate user feedback mechanisms, but they are still clumsy or incomplete. Here, the software engineering community can play a more important role in creating standardized approaches for collecting and utilizing user feedback, ensuring that deployed models continuously evolve and improve based on real-world usage and user insights.
+Given the current state of ML, fostering collective participation and collaboration is essential to mitigate some of the biases and inefficiencies present in current systems.</p>
+
+<h3 id="conclusions">Conclusions</h3>
+
+<p>In this first article, we explore trends in the evolution of machine learning engineering practices, building upon the prior work that resulted in the <a href="http://localhost:4000/practices/">catalog of practices available on this website</a>. By analyzing 108 articles published between 2022 and 2025, we identified 5 key trends and 3 underrepresented areas in the field of ML engineering. Our initial findings highlight significant progress especially in the area of Responsible ML and persistent challenges.</p>
+
+<p>In the upcoming articles, we will explore each identified trend in greater detail, examining novel practices and research directions while potentially uncovering new challenges and underrepresented topics.</p>
+
+<h3 id="references-in-ordered-descending-by-date">References in ordered descending by date</h3>
+
+<ol>
+  <li>How to Elicit Explainability Requirements? A Comparison of Interviews, Focus Groups, and Surveys</li>
+  <li>Toward Effective AI Governance: A Review of Principles</li>
+  <li>Software Engineering for Self-Adaptive Robotics: A Research Agenda</li>
+  <li>Advancing Software Quality: A Standards-Focused Review of LLM-Based Assurance Techniques</li>
+  <li>Future of Code with Generative AI: Transparency and Safety in the Era of AI Generated Software</li>
+  <li>What Makes a Fairness Tool Project Sustainable in Open Source?</li>
+  <li>Can We Recycle Our Old Models? An Empirical Evaluation of Model Selection Mechanisms for AIOps Solutions</li>
+  <li>Understanding Large Language Model Supply Chain: Structure, Domain, and Vulnerabilities</li>
+  <li>Whence Is A Model Fair? Fixing Fairness Bugs via Propensity Score Matching</li>
+  <li>Explainability for Embedding AI: Aspirations and Actuality</li>
+  <li>Who Speaks for Ethics? How Demographics Shape Ethical Advocacy in Software Development</li>
+  <li>Extending Behavioral Software Engineering: Decision-Making and Collaboration in Human-AI Teams for Responsible Software Engineering</li>
+  <li>Data Requirement Goal Modeling for Machine Learning Systems</li>
+  <li>Towards practicable Machine Learning development using AI Engineering Blueprints</li>
+  <li>Systematic Literature Review of Automation and Artificial Intelligence in Usability Issue Detection</li>
+  <li>Model Lake: a New Alternative for Machine Learning Models Management and Governance</li>
+  <li>Contextual Fairness-Aware Practices in ML: A Cost-Effective Empirical Evaluation</li>
+  <li>A Systematic Survey on Debugging Techniques for Machine Learning Systems</li>
+  <li>Challenges in Testing Large Language Model Based Software: A Faceted Taxonomy</li>
+  <li>Agentic AI Software Engineers: Programming with Trust</li>
+  <li>Hierarchical Fallback Architecture for High Risk Online Machine Learning Inference</li>
+  <li>A quantitative framework for evaluating architectural patterns in ML systems</li>
+  <li>Securing the AI Frontier: Urgent Ethical and Regulatory Imperatives for AI-Driven Cybersecurity</li>
+  <li>Variability-Aware Machine Learning Model Selection: Feature Modeling, Instantiation, and Experimental Case Study</li>
+  <li>The Current Challenges of Software Engineering in the Era of Large Language Models</li>
+  <li>An Efficient Model Maintenance Approach for MLOps</li>
+  <li>Microservice-based edge platform for AI services</li>
+  <li>Engineering Trustworthy Software: A Mission for LLMs</li>
+  <li>Architectural Patterns for Designing Quantum Artificial Intelligence Systems</li>
+  <li>Overview of Current Challenges in Multi-Architecture Software Engineering and a Vision for the Future</li>
+  <li>Do Developers Adopt Green Architectural Tactics for ML-Enabled Systems? A Mining Software Repository Study</li>
+  <li>Machine Learning Operations: A Mapping Study</li>
+  <li>Responsible AI in Open Ecosystems: Reconciling Innovation with Risk Assessment and Disclosure</li>
+  <li>How Mature is Requirements Engineering for AI-based Systems? A Systematic Mapping Study on Practices, Challenges, and Future Research Directions</li>
+  <li>A Catalog of Fairness-Aware Practices in Machine Learning Engineering</li>
+  <li>Data Quality Antipatterns for Software Analytics</li>
+  <li>A Large-Scale Study of Model Integration in ML-Enabled Software Systems</li>
+  <li>Balancing Innovation and Ethics in AI-Driven Software Development</li>
+  <li>Project Archetypes: A Blessing and a Curse for AI Development</li>
+  <li>Initial Insights on MLOps: Perception and Adoption by Practitioners</li>
+  <li>ModelVerification.jl: a Comprehensive Toolbox for Formally Verifying Deep Neural Networks</li>
+  <li>Deriva-ML: A Continuous FAIRness Approach to Reproducible Machine Learning Models</li>
+  <li>Innovating for Tomorrow: The Convergence of SE and Green AI</li>
+  <li>Agent Design Pattern Catalogue: A Collection of Architectural Patterns for Foundation Model based Agents</li>
+  <li>Automating the Training and Deployment of Models in MLOps by Integrating Systems with Machine Learning</li>
+  <li>Software Fairness Debt</li>
+  <li>How fair are we? From conceptualization to automated assessment of fairness definitions</li>
+  <li>Professional Insights into Benefits and Limitations of Implementing MLOps Principles</li>
+  <li>Empirical Analysis on CI/CD Pipeline Evolution in Machine Learning Projects</li>
+  <li>An Empirical Study of Challenges in Machine Learning Asset Management</li>
+  <li>Green AI: A Preliminary Empirical Study on Energy Consumption in DL Models Across Different Runtime Infrastructures</li>
+  <li>Towards MLOps: A DevOps Tools Recommender System for Machine Learning System</li>
+  <li>A Systematic Literature Review on Explainability for Machine/Deep Learning-based Software Engineering Research</li>
+  <li>Design Patterns for Machine Learning Based Systems with Human-in-the-Loop</li>
+  <li>Analyzing the Evolution and Maintenance of ML Models on Hugging Face</li>
+  <li>Towards Responsible Generative AI: A Reference Architecture for Designing Foundation Model based Agents</li>
+  <li>Continuous Management of Machine Learning-Based Application Behavior</li>
+  <li>An Empirical Study of Self-Admitted Technical Debt in Machine Learning Software</li>
+  <li>Secure Software Development: Issues and Challenges</li>
+  <li>Towards an MLOps Architecture for XAI in Industrial Applications</li>
+  <li>Identifying Concerns When Specifying Machine Learning-Enabled Systems: A Perspective-Based Approach</li>
+  <li>Software Testing of Generative AI Systems: Challenges and Opportunities</li>
+  <li>A General Recipe for Automated Machine Learning in Practice</li>
+  <li>On Using Information Retrieval to Recommend Machine Learning Good Practices for Software Engineers</li>
+  <li>The Costly Dilemma: Generalization, Evaluation and Cost-Optimal Deployment of Large Language Models</li>
+  <li>A New Perspective on Evaluation Methods for Explainable Artificial Intelligence (XAI)</li>
+  <li>Revisiting the Performance-Explainability Trade-Off in Explainable Artificial Intelligence (XAI)</li>
+  <li>MGit: A Model Versioning and Management System</li>
+  <li>Designing Explainable Predictive Machine Learning Artifacts: Methodology and Practical Demonstration</li>
+  <li>Fix Fairness, Don’t Ruin Accuracy: Performance Aware Fairness Repair using AutoML</li>
+  <li>Git-Theta: A Git Extension for Collaborative Development of Machine Learning Models</li>
+  <li>Responsible Design Patterns for Machine Learning Pipelines</li>
+  <li>QB4AIRA: A Question Bank for AI Risk Assessment</li>
+  <li>A Taxonomy of Foundation Model based Systems through the Lens of Software Architecture</li>
+  <li>Towards machine learning guided by best practices</li>
+  <li>Scaling ML Products At Startups: A Practitioner’s Guide</li>
+  <li>A Reference Architecture for Designing Foundation Model based Systems</li>
+  <li>Machine Learning with Requirements: a Manifesto</li>
+  <li>Toward End-to-End MLOps Tools Map: A Preliminary Study based on a Multivocal Literature Review</li>
+  <li>Analysis of Software Engineering Practices in General Software and Machine Learning Startups</li>
+  <li>A Case Study on AI Engineering Practices: Developing an Autonomous Stock Trading System</li>
+  <li>Design Patterns for AI-based Systems: A Multivocal Literature Review and Pattern Repository</li>
+  <li>Requirements Engineering Framework for Human-centered Artificial Intelligence Software Systems</li>
+  <li>Framework for Certification of AI-Based Systems</li>
+  <li>Towards Concrete and Connected AI Risk Assessment (C$^2$AIRA): A Systematic Mapping Study</li>
+  <li>What are the Machine Learning best practices reported by practitioners on Stack Exchange?</li>
+  <li>Towards Modular Machine Learning Solution Development: Benefits and Trade-offs</li>
+  <li>An architectural technical debt index based on machine learning and architectural smells</li>
+  <li>Studying the Characteristics of AIOps Projects on GitHub</li>
+  <li>Requirements Engineering for Artificial Intelligence Systems: A Systematic Mapping Study</li>
+  <li>Quality Assurance in MLOps Setting: An Industrial Perspective</li>
+  <li>Capabilities for Better ML Engineering</li>
+  <li>Requirements Engineering for Machine Learning: A Review and Reflection</li>
+  <li>Operationalizing Machine Learning: An Interview Study</li>
+  <li>Responsible AI Pattern Catalogue: A Collection of Best Practices for AI Governance and Engineering</li>
+  <li>A Methodology and Software Architecture to Support Explainability-by-Design</li>
+  <li>Software Testing for Machine Learning</li>
+  <li>Comparative Study of Machine Learning Test Case Prioritization for Continuous Integration Testing</li>
+  <li>Aspirations and Practice of Model Documentation: Moving the Needle with Nudging and Traceability</li>
+  <li>Exploring ML testing in practice – Lessons learned from an interactive rapid review with Axis Communications</li>
+  <li>Achieving Guidance in Applied Machine Learning through Software Engineering Techniques</li>
+  <li>Code Smells for Machine Learning Applications</li>
+  <li>MLOps best practices, challenges and maturity models</li>
+  <li>How Do Model Export Formats Impact the Development of ML-Enabled Systems? A Case Study on Model Integration</li>
+  <li>Architectural tactics to achieve quality attributes of machine-learning-enabled systems: a systematic literature review</li>
+  <li>Design Patterns for AI-based Systems: A Multivocal Literature Review and Pattern Repository</li>
+  <li>Fairness-aware machine learning engineering: how far are we?</li>
+  <li>We Have No Idea How Models will Behave in Production until Production: How Engineers Operationalize Machine Learning</li>
+</ol>
+
+<h4 id="other-references">Other references</h4>
+
+<ol>
+  <li>The Ultra-Scale Playbook: Training LLMs on GPU Clusters</li>
+  <li>DeepSeek-V3 Technical Report</li>
+  <li>Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware for AI Architectures</li>
+</ol>
+
+<h3 id="references-ordered-by-groups">References ordered by groups</h3>
+
+<h4 id="development-of-practices-for-responsible-mlai">Development of practices for Responsible ML/AI</h4>
+
+<ol>
+  <li>How to Elicit Explainability Requirements? A Comparison of Interviews, Focus Groups, and Surveys</li>
+  <li>Toward Effective AI Governance: A Review of Principles</li>
+  <li>Software Engineering for Self-Adaptive Robotics: A Research Agenda</li>
+  <li>Explainability for Embedding AI: Aspirations and Actuality</li>
+  <li>Extending Behavioral Software Engineering: Decision-Making and Collaboration in Human-AI Teams for Responsible Software Engineering</li>
+  <li>Data Requirement Goal Modeling for Machine Learning Systems</li>
+  <li>Towards practicable Machine Learning development using AI Engineering Blueprints</li>
+  <li>Contextual Fairness-Aware Practices in ML: A Cost-Effective Empirical Evaluation</li>
+  <li>A Systematic Survey on Debugging Techniques for Machine Learning Systems</li>
+  <li>Hierarchical Fallback Architecture for High Risk Online Machine Learning Inference</li>
+  <li>Securing the AI Frontier: Urgent Ethical and Regulatory Imperatives for AI-Driven Cybersecurity</li>
+  <li>The Current Challenges of Software Engineering in the Era of Large Language Models</li>
+  <li>Architectural Patterns for Designing Quantum Artificial Intelligence Systems</li>
+  <li>Do Developers Adopt Green Architectural Tactics for ML-Enabled Systems? A Mining Software Repository Study</li>
+  <li>Responsible AI in Open Ecosystems: Reconciling Innovation with Risk Assessment and Disclosure</li>
+  <li>How Mature is Requirements Engineering for AI-based Systems? A Systematic Mapping Study on Practices, Challenges, and Future Research Directions</li>
+  <li>A Catalog of Fairness-Aware Practices in Machine Learning Engineering</li>
+  <li>Data Quality Antipatterns for Software Analytics</li>
+  <li>Balancing Innovation and Ethics in AI-Driven Software Development</li>
+  <li>Project Archetypes: A Blessing and a Curse for AI Development</li>
+  <li>Innovating for Tomorrow: The Convergence of SE and Green AI</li>
+  <li>Green AI: A Preliminary Empirical Study on Energy Consumption in DL Models Across Different Runtime Infrastructures</li>
+  <li>A General Recipe for Automated Machine Learning in Practice</li>
+  <li>Designing Explainable Predictive Machine Learning Artifacts: Methodology and Practical Demonstration</li>
+  <li>Fix Fairness, Don’t Ruin Accuracy: Performance Aware Fairness Repair using AutoML</li>
+  <li>QB4AIRA: A Question Bank for AI Risk Assessment</li>
+  <li>Towards machine learning guided by best practices</li>
+  <li>Machine Learning with Requirements: a Manifesto</li>
+  <li>Analysis of Software Engineering Practices in General Software and Machine Learning Startups</li>
+  <li>A Case Study on AI Engineering Practices: Developing an Autonomous Stock Trading System</li>
+  <li>Design Patterns for AI-based Systems: A Multivocal Literature Review and Pattern Repository</li>
+  <li>Requirements Engineering Framework for Human-centered Artificial Intelligence Software Systems</li>
+  <li>What are the Machine Learning best practices reported by practitioners on Stack Exchange?</li>
+  <li>Towards Modular Machine Learning Solution Development: Benefits and Trade-offs</li>
+  <li>Requirements Engineering for Artificial Intelligence Systems: A Systematic Mapping Study</li>
+  <li>Requirements Engineering for Machine Learning: A Review and Reflection</li>
+  <li>Responsible AI Pattern Catalogue: A Collection of Best Practices for AI Governance and Engineering</li>
+  <li>A Methodology and Software Architecture to Support Explainability-by-Design</li>
+  <li>Aspirations and Practice of Model Documentation: Moving the Needle with Nudging and Traceability</li>
+  <li>Design Patterns for AI-based Systems: A Multivocal Literature Review and Pattern Repository</li>
+</ol>
+
+<h4 id="mlops-model-management-and-deployment">MLOps, model management, and deployment</h4>
+
+<ol>
+  <li>Can We Recycle Our Old Models? An Empirical Evaluation of Model Selection Mechanisms for AIOps Solutions</li>
+  <li>Model Lake: a New Alternative for Machine Learning Models Management and Governance</li>
+  <li>Variability-Aware Machine Learning Model Selection: Feature Modeling, Instantiation, and Experimental Case Study</li>
+  <li>An Efficient Model Maintenance Approach for MLOps</li>
+  <li>Machine Learning Operations: A Mapping Study</li>
+  <li>A Large-Scale Study of Model Integration in ML-Enabled Software Systems</li>
+  <li>Initial Insights on MLOps: Perception and Adoption by Practitioners</li>
+  <li>Automating the Training and Deployment of Models in MLOps by Integrating Systems with Machine Learning</li>
+  <li>Professional Insights into Benefits and Limitations of Implementing MLOps Principles</li>
+  <li>An Empirical Study of Challenges in Machine Learning Asset Management</li>
+  <li>Towards MLOps: A DevOps Tools Recommender System for Machine Learning System</li>
+  <li>Towards an MLOps Architecture for XAI in Industrial Applications</li>
+  <li>MGit: A Model Versioning and Management System</li>
+  <li>Git-Theta: A Git Extension for Collaborative Development of Machine Learning Models</li>
+  <li>Responsible Design Patterns for Machine Learning Pipelines</li>
+  <li>Scaling ML Products At Startups: A Practitioner’s Guide</li>
+  <li>Toward End-to-End MLOps Tools Map: A Preliminary Study based on a Multivocal Literature Review</li>
+  <li>Studying the Characteristics of AIOps Projects on GitHub</li>
+  <li>Quality Assurance in MLOps Setting: An Industrial Perspective</li>
+  <li>Operationalizing Machine Learning: An Interview Study</li>
+  <li>MLOps best practices, challenges and maturity models</li>
+  <li>How Do Model Export Formats Impact the Development of ML-Enabled Systems? A Case Study on Model Integration</li>
+  <li>We Have No Idea How Models will Behave in Production until Production: How Engineers Operationalize Machine Learning</li>
+</ol>
+
+<h4 id="off-the-shelf-models-and-agentic-architectures">Off-the-Shelf Models and Agentic Architectures</h4>
+
+<ol>
+  <li>Agentic AI Software Engineers: Programming with Trust</li>
+  <li>Microservice-based edge platform for AI services</li>
+  <li>Agent Design Pattern Catalogue: A Collection of Architectural Patterns for Foundation Model based Agents</li>
+  <li>Design Patterns for Machine Learning Based Systems with Human-in-the-Loop</li>
+  <li>Towards Responsible Generative AI: A Reference Architecture for Designing Foundation Model based Agents</li>
+  <li>A Taxonomy of Foundation Model based Systems through the Lens of Software Architecture</li>
+  <li>A Reference Architecture for Designing Foundation Model based Systems</li>
+</ol>
+
+<h4 id="ml-software-quality-assessment">ML software quality assessment</h4>
+
+<ol>
+  <li>What Makes a Fairness Tool Project Sustainable in Open Source?</li>
+  <li>Understanding Large Language Model Supply Chain: Structure, Domain, and Vulnerabilities</li>
+  <li>Whence Is A Model Fair? Fixing Fairness Bugs via Propensity Score Matching</li>
+  <li>Challenges in Testing Large Language Model Based Software: A Faceted Taxonomy</li>
+  <li>A quantitative framework for evaluating architectural patterns in ML systems</li>
+  <li>ModelVerification.jl: a Comprehensive Toolbox for Formally Verifying Deep Neural Networks</li>
+  <li>Software Fairness Debt</li>
+  <li>How fair are we? From conceptualization to automated assessment of fairness definitions</li>
+  <li>Analyzing the Evolution and Maintenance of ML Models on Hugging Face</li>
+  <li>An Empirical Study of Self-Admitted Technical Debt in Machine Learning Software</li>
+  <li>Identifying Concerns When Specifying Machine Learning-Enabled Systems: A Perspective-Based Approach</li>
+  <li>Software Testing of Generative AI Systems: Challenges and Opportunities</li>
+  <li>The Costly Dilemma: Generalization, Evaluation and Cost-Optimal Deployment of Large Language Models</li>
+  <li>A New Perspective on Evaluation Methods for Explainable Artificial Intelligence (XAI)</li>
+  <li>Revisiting the Performance-Explainability Trade-Off in Explainable Artificial Intelligence (XAI)</li>
+  <li>Framework for Certification of AI-Based Systems</li>
+  <li>Towards Concrete and Connected AI Risk Assessment (C$^2$AIRA): A Systematic Mapping Study</li>
+  <li>Capabilities for Better ML Engineering</li>
+  <li>Software Testing for Machine Learning</li>
+  <li>Comparative Study of Machine Learning Test Case Prioritization for Continuous Integration Testing</li>
+  <li>Exploring ML testing in practice – Lessons learned from an interactive rapid review with Axis Communications</li>
+  <li>Achieving Guidance in Applied Machine Learning through Software Engineering Techniques</li>
+  <li>Code Smells for Machine Learning Applications</li>
+  <li>Architectural tactics to achieve quality attributes of machine-learning-enabled systems: a systematic literature review</li>
+  <li>Fairness-aware machine learning engineering: how far are we?</li>
+  <li>Deriva-ML: A Continuous FAIRness Approach to Reproducible Machine Learning Models</li>
+</ol>
+
+<h4 id="using-ml-to-improve-engineering-practices">Using ML to improve engineering practices</h4>
+
+<ol>
+  <li>Advancing Software Quality: A Standards-Focused Review of LLM-Based Assurance Techniques</li>
+  <li>Future of Code with Generative AI: Transparency and Safety in the Era of AI Generated Software</li>
+  <li>Engineering Trustworthy Software: A Mission for LLMs</li>
+  <li>On Using Information Retrieval to Recommend Machine Learning Good Practices for Software Engineers</li>
+</ol>
+
+  </article>
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'se4ml';
+    var disqus_identifier = '/blog/2025/five-y';
+    var disqus_title = {
+      {
+        page.title | jsonify
+      }
+    };
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  
+
+</div>
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'G-05407HJNMT', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+</body>
+
+</html>

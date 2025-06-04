@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Why do ML engineers struggle to build trustworthy ML applications?</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/blog/2021/trustworthy/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
+  </script>
+  <script src="/assets/js/absolute.js">
+  </script>
+
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">practices</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Why do ML engineers struggle to build trustworthy ML applications?</h1>
+    <p class="post-meta">March 8, 2021 •
+      Alex Serban, Joost Visser</p>
+  </header>
+
+  
+
+  <article class="post-content">
+    <p>While research in ethics of AI increased significantly during the last years, practitioners tend to neglect the risks coming from inequity or unfairness of their ML components. This is one of the insights of the annual <a href="https://hai.stanford.edu/blog/state-ai-10-charts">State of AI</a> report for 2020 recently published by the Human-Centred Artificial Intelligence group from Stanford University.</p>
+
+<p>Why does this gap exist between theory and practice, and how can it be closed?</p>
+
+<p>In our own research (SE4ML), we have approached this issue from several angles, specifically for the major AI subarea machine learning (ML). On the one hand, we studied ML engineering practices and their level of adoption among ML engineering teams. On the other hand, we studied the requirements for trustworthy ML formulated by policy makers. Finally, we investigated the relative importance of a range of decision drivers for architects of ML systems.</p>
+
+<p>As we discuss in more detail below, our overall conclusion is that ML engineering teams lack concrete courses of action for designing and building their systems, specifically to satisfy trustworthiness requirements, such as security, robustness, and fairness. Also, we can draw the conclusion that practitioners are aware of the ethical and robustness risks raised by improper development of ML components, but are currently constrained by more traditional concerns such as scaling their systems, or maintaining performance between training and testing.</p>
+
+<h3 id="what-are-ml-engineering-practices">What are ML engineering practices?</h3>
+
+<p>ML engineering is a discipline concerned with developing engineering principles for the design, development, operation and maintenance of software systems with ML components. In order to facilitate the adoption of engineering principles by practitioners, we have systematically distilled actionable engineering practices. On our <a href="https://se-ml.github.io/practices/">website</a>, we share the software engineering best practices for ML components. Moreover, we measure and publish the adoption rate of these practices and their perceived effects, in order to allow comparisons and assessments of teams of engineers building software with ML components.</p>
+
+<div style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+  <img src="/assets/img/trustworthy_adoption.png" style="max-width: 500px" />
+  <p style="text-align: center;">Adoption of practices for trustworthy ML, in the order defined <a href="/eu">in the catalogue</a>.</p>
+</div>
+
+<h3 id="trustworthy-ml">Trustworthy ML</h3>
+
+<p>Following recent interest by policy makers to address improper use of machine learning (ML), we made efforts to extend our catalogue of practices to include operational practices for trustworthy ML.
+In particular, we followed the requirements for trustworthy ML developed by the High level expert group on AI from the European Commission, which defines <a href="https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai">trustworthy AI</a> as being lawful, ethical and robust, and defines 7 key requirements for trustworthy AI.</p>
+
+<p>Inspired by these requirements, we searched the literature for engineering practices that can be directly applied by developers, to address ethical and robust development of ML components.
+In total, we identified <a href="/eu">14 new practices</a>, which include topics such as testing for bias, assuring security, or having the application audited by third parties.
+For all new practices, we summarised the related work into a body of knowledge that follows the same structure as the previous practices from our catalogue, including detailed description, concise statement of intent, motivation, applicability, related practices, and references.</p>
+
+<p>We also extended our <a href="https://se-ml.github.io/survey">survey</a> to measure the adoption of trustworthiness practices by teams developing ML solutions.
+Unfortunately, we found out that the practices for trustworthy ML have relatively low adoption (as can be seen in the figure above).
+In particular, practices related to assuring security of ML components have the lowest adoption.</p>
+
+<p>The contributing factors to these results are diverse.
+For example, most defences against adversarial examples — a known threat to ML components — have been breached.
+Moreover, research into data poisoning attacks shows that only a small percentage of training data needs to be altered in order to induce malicious behaviours.
+We believe the lack of “off the shelf” solution to security issues of ML components is the largest contributor factor to our results.</p>
+
+<div style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+  <img src="/assets/img/decision_drivers.png" style="max-width: 400px" />
+  <p style="text-align: center;">Architectural decision drivers for systems using ML components.</p>
+</div>
+
+<h3 id="architecture-of-ml-systems">Architecture of ML systems</h3>
+
+<p>In a parallel study, in which we investigated how practitioners define the software architecture of systems with ML components, we asked practitioners to rank the most important decision drivers for their systems.
+Once again, we found out that decision drivers related to trustworthy ML, such as Security, Privacy, or Robustness, were considered less important than more traditional drivers such as Performance or Scalability (as can be seen in the figure above).
+These results entail that practitioners are still working on solving basic concerns for developing and operationalising the ML components, and tend to neglect the importance of trustworthy ML.</p>
+
+<h3 id="outlook">Outlook</h3>
+
+<p>We believe that consistent efforts to address ethics and robustness through the eyes of software engineering will enhance the practitioners’ ability to prioritise these requirements, and develop trustworthy ML components.
+Moreover, we believe that the adoption of trustworthiness-specific and general ML engineering practices is interconnected.
+For instance, the practice of continuous integration can make the practices for bias testing more effective.
+Therefore, we are working on defining sets of traditional engineering and trustworthiness related practices that can be directly applied by practitioners to develop more ethical and robust ML components.</p>
+
+<p>Learn more about the <a href="/eu">practices for trustworthy ML</a> by reading our <a href="https://arxiv.org/pdf/2103.00964.pdf">publication</a>.</p>
+
+  </article>
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'se4ml';
+    var disqus_identifier = '/blog/2021/trustworthy';
+    var disqus_title = {
+      {
+        page.title | jsonify
+      }
+    };
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  
+
+</div>
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'G-05407HJNMT', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+</body>
+
+</html>

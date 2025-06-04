@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | EU Guidelines for Trustworthy AI</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/eu">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
+  </script>
+  <script src="/assets/js/absolute.js">
+  </script>
+
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">practices</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">EU Guidelines for Trustworthy AI</h1>
+    <p class="post-meta"></p>
+  </header>
+
+  
+  <div class="image-container">
+    <img src="/assets/img/eu.jpg" class="blog-image"></img>
+    
+    <p>Requirements for trustworthy AI from the High-Level expert group on AI setup by the EU Commission.</p>
+    
+  </div>
+  
+
+  <article class="post-content">
+    <p>In order to avoid unintentional harm that improper development of AI technologies can have on the society, the European Commission, through the High-Level expert group on AI, published a series guidelines and checklists for development of trustworthy AI.</p>
+
+<p>By analysing the guidelines, we found out they do not specify actions to be taken by those involved in building AI systems.
+In order to increase the actionability of the guidelines, we made efforts to extend our catalogue of practices with new practices that address the EU requirements for trustworthy AI.</p>
+
+<p>In particular, we focused on a major sub-field of AI, called machine learning (ML).
+By analysing the academic and grey literature, we extracted 14 operational practices for trustworthy ML that address the 7 requirements for trustworthy AI from the picture above as follows:</p>
+
+<h4 id="human-agency-and-oversight">Human agency and oversight</h4>
+<p><img class="hover-me" src="https://img.shields.io/badge/EU-Human%20Agency-lightgrey?labelColor=003399" /></p>
+<ul>
+
+  <!--  -->
+  
+
+  <!--  -->
+  
+
+  <!--  -->
+  
+
+  <!-- fairness -->
+  
+
+  <!-- traceability -->
+  
+
+  <!--  -->
+  
+
+  <!-- fairness -->
+  
+
+  <!-- privacy -->
+  
+
+  <!-- traceability -->
+  
+
+  <!-- effectiveness -->
+  
+
+  <!--  -->
+  
+
+  <!--  -->
+  
+
+  <!-- quality -->
+  
+
+  <!-- quality -->
+  
+
+  <!-- agency -->
+  
+     <li> <a href="/best_practices/02-interpretable/">Employ Interpretable Models When Possible</a> </li>
+  
+
+  <!-- quality -->
+  
+
+  <!-- agility -->
+  
+
+  <!--  -->
+  
+
+  <!--  -->
+  
+
+  <!--  -->
+  
+
+  <!--  -->
+  
+
+  <!-- fairness -->
+  
+
+  <!-- traceability -->
+  
+
+  <!--  -->
+  
+
+  <!-- quality -->
+  
+
+  <!--  -->
+  
+
+  <!-- agilityquality -->
+  
+
+  <!-- quality -->
+  
+
+  <!-- robustness -->
+  
+
+  <!-- agility -->
+  
+
+  <!-- agility -->
+  
+
+  <!-- agilitytraceability -->
+  
+
+  <!--  -->
+  
+
+  <!-- agility -->
+  
+
+  <!-- traceability -->
+  
+
+  <!-- accountability -->
+  
+
+  <!-- effectiveness -->
+  
+
+  <!-- effectivenesstraceability -->
+  
+
+  <!-- agilityeffectiveness -->
+  
+
+  <!-- agency -->
+  
+     <li> <a href="/best_practices/05-tradeoff/">Decide Trade-Offs through Defined Team Process</a> </li>
+  
+
+  <!-- transparency -->
+  
+
+  <!-- robustness -->
+  
+
+  <!-- EU -->
+  
+
+  <!-- transparency -->
+  
+
+  <!-- transparency -->
+  
+
+  <!-- transparency -->
+  
+
+  <!-- accountability -->
+  
+
+</ul>
+
+<h4 id="technical-robustness-and-safety">Technical robustness and safety</h4>
+<p><img class="hover-me" src="https://img.shields.io/badge/EU-Robustness-lightgrey?labelColor=003399" /></p>
+<ul>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <li>  <a href="/best_practices/03-security/">Assure Application Security</a> </li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <li>  <a href="/best_practices/06-risk/">Perform Risk Assessments</a> </li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+<h4 id="privacy-and-data-governance">Privacy and Data Governance</h4>
+<p><img class="hover-me" src="https://img.shields.io/badge/EU-Privacy-lightgrey?labelColor=003399" /></p>
+<ul>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <li>  <a href="/best_practices/01-privacy_ml/">Use Privacy-Preserving Machine Learning Techniques</a> </li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+<h4 id="transparency">Transparency</h4>
+<p><img class="hover-me" src="https://img.shields.io/badge/EU-Transparency-lightgrey?labelColor=003399" /></p>
+<ul>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <li>  <a href="/best_practices/06-code_conduct/">Establish Responsible AI Values</a> </li>
+  
+
+  
+
+  
+
+  
+    <li>  <a href="/best_practices/06-alert/">Inform Users on Machine Learning Usage</a> </li>
+  
+
+  
+    <li>  <a href="/best_practices/06-explainable/">Explain Results and Decisions to Users</a> </li>
+  
+
+  
+    <li>  <a href="/best_practices/06-concerns/">Provide Safe Channels to Raise Concerns</a> </li>
+  
+
+  
+
+</ul>
+
+<h4 id="diversity-non-discrimination-and-fairness">Diversity, Non-Discrimination and Fairness</h4>
+<p><img class="hover-me" src="https://img.shields.io/badge/EU-Fairness-lightgrey?labelColor=003399" /></p>
+<ul>
+
+  
+
+  
+
+  
+
+  
+    <li>  <a href="/best_practices/01-social_bias/">Test for Social Bias in Training Data</a> </li>
+  
+
+  
+
+  
+
+  
+    <li>  <a href="/best_practices/01-discriminatory_attributes/">Prevent Discriminatory Data Attributes Used As Model Features</a> </li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <li>  <a href="/best_practices/02-subgroup_bias/">Assess and Manage Subgroup Bias</a> </li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+<h4 id="accountability">Accountability</h4>
+<p><img class="hover-me" src="https://img.shields.io/badge/EU-Accountability-lightgrey?labelColor=003399" /></p>
+<ul>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <li>  <a href="/best_practices/04-audit_trails/">Provide Audit Trails</a> </li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <li>  <a href="/best_practices/06-audits/">Have Your Application Audited</a> </li>
+  
+
+</ul>
+
+
+  </article>
+
+  
+
+</div>
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'G-05407HJNMT', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+</body>
+
+</html>

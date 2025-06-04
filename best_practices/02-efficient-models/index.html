@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>SE-ML</title>
+  <title>SE-ML | 02 Efficient Models</title>
   <meta name="description" content="Webpage for the Software Engineering for Machine Learning
 ">
 
@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/best_practices/02-efficient-models/">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
@@ -113,54 +113,317 @@
 
   <div class="page-content">
     <div class="wrapper">
-      <div class="header-bar">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Use The Most Efficient Models</h1>
+    <p class="post-meta">June, 2025 • Alex Serban, Koen van der Blom, Joost Visser</p>
+  </header>
+
+
   
-  <h4>What are we up to?</h4>
+  
+
+  
+
+
+  
+
+
+  
+  
+  
+
+  <div style="text-align:center;">
+    <a href="/best_practices/02-share_exp_status/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 24 / 46 </span> •
+    <a href="/practices/#training"> <span>Training</span> </a> •
+    <a class="badge parent" href="/ranking">
+      <img class="hover-me" src="https://img.shields.io/badge/Difficulty-Not%20ranked-lightgrey?labelColor=1F4DAF"></img>
+      <span class="show-me">
+        <span class="show-me-body">This practice was not ranked. <br>Click to read more.</span>
+      </span>
+    </a>
+    
+
+    <a href="/best_practices/03-cont-int/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+
+  <br><br>
+
+  
+
+
+  
+  <h3 class="black bold">Intent</h3>
+  <div>
+    Avoid overparametrised or energy-inefficient models.
+  </div>
+  
+
+  
+  <h3 class="black bold">Motivation</h3>
+  <div>
+    Overparametrised or large models consume resources that are potentially excessive. Using smaller models -- such as pruned, compressed or distilled models -- can often make efficient use of computational resources without loss of performance.
+  </div>
+  
+
+  
+  <h3 class="black bold">Applicability</h3>
+  <div>
+    Efficient models should be the first choice for any ML application.
+  </div>
+  
+
+  
+  <h3 class="black bold">Description</h3>
+  <div>
+    <p>Large models are often associated with richer representations and better performance. 
+However, the use of large models can lead to inefficient resource management.
+For example, using smaller models which run at smaller resolutions for image classification tasks can potentially improve computational, storage and data transfer resources – ultimately leading to smaller development and operational costs and to a smaller carbon footprint.
+Therefore, the use of efficient models should be a critical objective in any application of ML.</p>
+
+<p>There are multiple ways to select or develop efficient models, either by (i) selecting a model with less parameters for the task at hand or (ii) compressing, pruning or distilling a large model to a more efficient one.
+The first strategy should always be tested, as thin models can bring more advantages – e.g., better interpretability or faster run times.
+For example, if a Random Forest model performs on par with a neural network, the former should always be employed.</p>
+
+<p>The second strategy should be tested when only large models can be employed for the task at hand.
+Compression, pruning or distillation are known strategy that can be used to significantly reduce the number of parameters of a model while also maintaining performance.</p>
+
+  </div>
+  
+
+  
+
+
+
+  
+  <h3 class="black bold">Related</h3>
+  <ul>
+
+    
+  </ul>
+  
+
+  
+  <h3 class="black bold">Read more</h3>
+  <ul>
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    <li>
+      <a href="https://arxiv.org/abs/2006.05525" target="_blank">Knowledge Distillation: A Survey</a>
+    </li>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+  </ul>
+  
+
+  <br><br>
+  <div style="text-align:center;">
+    <a href="/best_practices/02-share_exp_status/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 24 / 46 </span> •
+    <a href="/practices/#training"> <span>Training</span> </a> •
+    <a class="badge parent" href="/ranking">
+      <img class="hover-me" src="https://img.shields.io/badge/Difficulty-Not%20ranked-lightgrey?labelColor=1F4DAF"></img>
+      <span class="show-me">
+        <span class="show-me-body">This practice was not ranked. <br>Click to read more.</span>
+      </span>
+    </a>
+    
+
+    <a href="/best_practices/03-cont-int/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+  <br><br>
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'se4ml';
+    var disqus_identifier = '/best_practices/02-efficient-models';
+    var disqus_title = {
+      {
+        page.title | jsonify
+      }
+    };
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  
+
 </div>
-
-
-<ul class="post-list">
-  
-    <li>
-      <h2><a class="post-title blue-1" href="/blog/2025/five-y/">Machine Learning Engineering Practices in Recent Years: Trends and Challenges</a></h2>
-      <p class="post-meta">June 3, 2025</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title blue-1" href="/blog/2021/trustworthy/">Why do ML engineers struggle to build trustworthy ML applications?</a></h2>
-      <p class="post-meta">March 8, 2021</p>
-      <p>Adoption of practices for trustworthy ML.</p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title blue-1" href="/blog/2020/automl/">AutoML adoption in software engineering for machine learning</a></h2>
-      <p class="post-meta">December 11, 2020</p>
-      <p>Adoption of AutoML and other practices for applications with ML components.</p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title blue-1" href="/blog/2020/report2020/">The 2020 State of Engineering Practices for Machine Learning</a></h2>
-      <p class="post-meta">July 21, 2020</p>
-      <p>We published the results of our global survey on the adoption of engineering practices for ML teams.</p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title blue-1" href="/blog/2020/catalog/">A catalogue of Engineering best practices for Machine Learning</a></h2>
-      <p class="post-meta">February 26, 2020</p>
-      <p>We published a catalogue of engineering best practices for ML applications.</p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title blue-1" href="/blog/2020/survey/">A global survey on SE4ML</a></h2>
-      <p class="post-meta">January 28, 2020</p>
-      <p>Measuring the adoption of engineering best practices for machine learning.</p>
-    </li>
-  
-</ul>
-
-
-
     </div>
   </div>
 

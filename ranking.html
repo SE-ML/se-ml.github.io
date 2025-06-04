@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>SE-ML</title>
+  <title>SE-ML | Ranking the Practices by Adoption</title>
   <meta name="description" content="Webpage for the Software Engineering for Machine Learning
 ">
 
@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/ranking">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
@@ -113,54 +113,36 @@
 
   <div class="page-content">
     <div class="wrapper">
-      <div class="header-bar">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Ranking the Practices by Adoption</h1>
+    <p class="post-meta"></p>
+  </header>
+
   
-  <h4>What are we up to?</h4>
+
+  <article class="post-content">
+    <p>Using the results from our <a href="/survey">survey</a>, we ranked the practices based on three level of difficulty: basic, medium and advanced.</p>
+
+<p>The ranking algorithm computes, for each practice, the percentage of “Completely” answers (corresponding to at least high adoption of a practice), the percentage of “Completely + Mostly” answers (corresponding to at least medium adoption of a practice) and the percentage of “Completely + Mostly + Partially” answers (corresponding to at least low adoption of a practice).</p>
+
+<p>The final rank is the average of: the practice rank on at least high, its rank on at least medium, and its rank on at least low adoption.
+By accumulating the answers in this manner, we expect to cancel out the noise stemming from fuzzy boundaries between subsequent answer types or the relative unachievability of complete adoption of a particular practice.</p>
+
+<p>We split the list of ranked practice in 3 percentiles corresponding to “basic” (first group with high adoption), “medium” (second group) and “advanced” (third group with low adoption).</p>
+
+<!-- An overview of the percentage of answers for each practice is illustrated below.
+
+ <div>
+      <img src="/assets/img/ranked_practices.png" class="blog-image">
+</div> -->
+
+  </article>
+
+  
+
 </div>
-
-
-<ul class="post-list">
-  
-    <li>
-      <h2><a class="post-title blue-1" href="/blog/2025/five-y/">Machine Learning Engineering Practices in Recent Years: Trends and Challenges</a></h2>
-      <p class="post-meta">June 3, 2025</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title blue-1" href="/blog/2021/trustworthy/">Why do ML engineers struggle to build trustworthy ML applications?</a></h2>
-      <p class="post-meta">March 8, 2021</p>
-      <p>Adoption of practices for trustworthy ML.</p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title blue-1" href="/blog/2020/automl/">AutoML adoption in software engineering for machine learning</a></h2>
-      <p class="post-meta">December 11, 2020</p>
-      <p>Adoption of AutoML and other practices for applications with ML components.</p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title blue-1" href="/blog/2020/report2020/">The 2020 State of Engineering Practices for Machine Learning</a></h2>
-      <p class="post-meta">July 21, 2020</p>
-      <p>We published the results of our global survey on the adoption of engineering practices for ML teams.</p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title blue-1" href="/blog/2020/catalog/">A catalogue of Engineering best practices for Machine Learning</a></h2>
-      <p class="post-meta">February 26, 2020</p>
-      <p>We published a catalogue of engineering best practices for ML applications.</p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title blue-1" href="/blog/2020/survey/">A global survey on SE4ML</a></h2>
-      <p class="post-meta">January 28, 2020</p>
-      <p>Measuring the adoption of engineering best practices for machine learning.</p>
-    </li>
-  
-</ul>
-
-
-
     </div>
   </div>
 

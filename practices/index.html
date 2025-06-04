@@ -1,11 +1,119 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
 
 
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/practices/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
+  </script>
+  <script src="/assets/js/absolute.js">
+  </script>
+
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 
-<h1 class="black"> Engineering best practices for Machine Learning </h1>
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">practices</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <h1 class="black"> Engineering best practices for Machine Learning </h1>
 
 <div class="large-image">
   <img src="/assets/img/SE4ML-practices-diagram.png" class="blog-image">
@@ -27,7 +135,7 @@ The practices are labeled with their <a href="/ranking">difficulty</a>, their <a
   trustworthy ML</a> they
 help to satisfy.
 
-{% assign sorted_practices = site.best_practices  | sort:"index" %}
+
 
 <br><br>
 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -51,14 +159,180 @@ help to satisfy.
     --<a href="https://twitter.com/chipro/status/1232105910631157761">Chip Huyen<a>
 
         <ul>
-          {% for pr in sorted_practices %}
-          {% if pr.category == 'Data' %}
-          <li>
-            <a href="{{pr.url}}">{{ pr.name }}</a>
-          </li>
-          {% endif %}
+          
+          
 
-          {% endfor %}
+          
+          
+          <li>
+            <a href="/best_practices/01-sanity_check/">Use Sanity Checks for All External Data Sources</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/01-input-data-complete/">Check that Input Data is Complete, Balanced and Well Distributed</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/01-social_bias/">Test for Social Bias in Training Data</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/01-reusable_data_clean/">Write Reusable Scripts for Data Cleaning and Merging</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/01-data-label/">Ensure Data Labelling is Performed in a Strictly Controlled Process</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/01-discriminatory_attributes/">Prevent Discriminatory Data Attributes Used As Model Features</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/01-privacy_ml/">Use Privacy-Preserving Machine Learning Techniques</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/01-data-share/">Make Data Sets Available on Shared Infrastructure (private or public)</a>
+          </li>
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
         </ul>
 
 
@@ -69,14 +343,212 @@ help to satisfy.
         Einstein
 
         <ul>
-          {% for pr in sorted_practices %}
-          {% if pr.category == 'Training' %}
-          <li>
-            <a href="{{pr.url}}">{{ pr.name }}</a>
-          </li>
-          {% endif %}
+          
+          
 
-          {% endfor %}
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/02-train_objective/">Share a Clearly Defined Training Objective within the Team</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/02-train_metric/">Capture the Training Objective in a Metric that is Easy to Measure and Understand</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/02-test_feature_extractor/">Test all Feature Extraction Code</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/02-doc_features/">Assign an Owner to Each Feature and Document its Rationale</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/02-archive_old_feature/">Actively Remove or Archive Features That are Not Used</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/02-interpretable/">Employ Interpretable Models When Possible</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/02-peer_review_mdl/">Peer Review Training Scripts</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/02-parallel_training/">Enable Parallel Training Experiments</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/02-auto_feat/">Automate Feature Generation and Selection</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/02-auto_hyperparams/">Automate Hyper-Parameter Optimisation</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/02-auto_nas/">Automate Configuration of Algorithms or Model Structure</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/02-measure_mdl_quality/">Continuously Measure Model Quality and Performance</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/02-subgroup_bias/">Assess and Manage Subgroup Bias</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/02-data_version/">Use Versioning for Data, Model, Configurations and Training Scripts</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/02-share_exp_status/">Share Status and Outcomes of Experiments Within the Team</a>
+          </li>
+          
+
+          
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/02-efficient-models/">Use The Most Efficient Models</a>
+          </li>
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
         </ul>
 
 
@@ -87,14 +559,164 @@ help to satisfy.
         --<a href="https://twitter.com/Grady_Booch/status/1004078706518736896">Grady Booch</a>
 
         <ul>
-          {% for pr in sorted_practices %}
-          {% if pr.category == 'Coding' %}
-          <li>
-            <a href="{{pr.url}}">{{ pr.name }}</a>
-          </li>
-          {% endif %}
+          
+          
 
-          {% endfor %}
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/03-regr_test/">Run Automated Regression Tests</a>
+          </li>
+          
+
+          
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/03-cont-int/">Use Continuous Integration</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/03-use_static_analysis/">Use Static Analysis to Check Code Quality</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/03-security/">Assure Application Security</a>
+          </li>
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
         </ul>
 
 
@@ -105,14 +727,176 @@ help to satisfy.
         --<a href="https://twitter.com/code_star/status/1041913975154331648">Anonymous</a>
 
         <ul>
-          {% for pr in sorted_practices %}
-          {% if pr.category == 'Deployment' %}
-          <li>
-            <a href="{{pr.url}}">{{ pr.name }}</a>
-          </li>
-          {% endif %}
+          
+          
 
-          {% endfor %}
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/04-auto_model_packaging/">Automate Model Deployment</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/04-shadow_models_prod/">Enable Shadow Deployment</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/04-monitor_models_prod/">Continuously Monitor the Behaviour of Deployed Models</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/04-dist_skew/">Perform Checks to Detect Skew between Models</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/04-rollback_models_prod/">Enable Automatic Roll Backs for Production Models</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/04-log_production/">Log Production Predictions with the Model's Version and Input Data</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/04-audit_trails/">Provide Audit Trails</a>
+          </li>
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
         </ul>
 
 
@@ -121,14 +905,164 @@ help to satisfy.
         "If you want to go fast, go alone; but if you want to go far, go together." -- African proverb, allegedly
 
         <ul>
-          {% for pr in sorted_practices %}
-          {% if pr.category == 'Team' %}
-          <li>
-            <a href="{{pr.url}}">{{ pr.name }}</a>
-          </li>
-          {% endif %}
+          
+          
 
-          {% endfor %}
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/05-collaborative_platform/">Use A Collaborative Development Platform</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/05-use_backlog/">Work Against a Shared Backlog</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/05-communication_collab/">Communicate, Align, and Collaborate With Others</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/05-tradeoff/">Decide Trade-Offs through Defined Team Process</a>
+          </li>
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
         </ul>
 
 
@@ -138,14 +1072,176 @@ help to satisfy.
         --<a href="https://quoteinvestigator.com/2015/07/23/great-power/">Winston Churchill</a>
 
         <ul>
-          {% for pr in sorted_practices %}
-          {% if pr.category == 'Governance' %}
-          <li>
-            <a href="{{pr.url}}">{{ pr.name }}</a>
-          </li>
-          {% endif %}
+          
+          
 
-          {% endfor %}
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/06-code_conduct/">Establish Responsible AI Values</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/06-risk/">Perform Risk Assessments</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/06-responsible_ml_ai/">Enforce Fairness and Privacy</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/06-alert/">Inform Users on Machine Learning Usage</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/06-explainable/">Explain Results and Decisions to Users</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/06-concerns/">Provide Safe Channels to Raise Concerns</a>
+          </li>
+          
+
+          
+          
+          <li>
+            <a href="/best_practices/06-audits/">Have Your Application Audited</a>
+          </li>
+          
+
+          
         </ul>
 
 
@@ -154,8 +1250,8 @@ help to satisfy.
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
     <br>
-    {% assign badge = "https://img.shields.io/badge/-advanced-lightgrey" %}
-    {% assign badge_text = "This practice was ranked as advanced. Click to read more." %}
+    
+    
 
 
     <!-- <ul id="tag-list">
@@ -177,49 +1273,1021 @@ help to satisfy.
         </tr>
       </thead>
       <tbody>
-        {% for pr in sorted_practices %}
-        {% if pr.index >= 0 %}
+        
+        
+        
+        
 
-        {% if pr.difficulty == 'basic' %}
-        {% assign badge = "https://img.shields.io/badge/-basic-lightgrey" %}
-        {% assign badge_text = "This practice was ranked as basic. Click to read more." %}
-        {% assign data_order = 0%}
-        {% else %}
-        {% if pr.difficulty == 'medium' %}
-        {% assign badge = "https://img.shields.io/badge/-medium-lightgrey" %}
-        {% assign badge_text = "This practice was ranked as medium. Click to read more." %}
-        {% assign data_order = 2%}
-        {% else %}
-        {% if pr.difficulty == 'advanced' %}
-        {% assign badge = "https://img.shields.io/badge/-advanced-lightgrey" %}
-        {% assign badge_text = "This practice was ranked as advanced. Click to read more." %}
-        {% assign data_order = 3%}
-        {% else %}
-        {% assign badge = "https://img.shields.io/badge/-not%20ranked-lightgrey" %}
-        {% assign badge_text = "This practice was not ranked. Click to read more." %}
-        {% assign data_order = 4%}
-        {% endif %}
-        {% endif %}
-        {% endif %}
+        
 
         <tr>
-          <td style="width: 10%" class="table-center">{{pr.index}}</td>
-          <td style="width: 50%"><a href="{{pr.url}}">{{pr.name}}</a></td>
-          <td style="width: 10%" class="table-center"> {{pr.category}}</td>
-          <td style="width: 10%" class="table-center" data-order="{{data_order}}">
+          <td style="width: 10%" class="table-center">1</td>
+          <td style="width: 50%"><a href="/best_practices/01-sanity_check/">Use Sanity Checks for All External Data Sources</a></td>
+          <td style="width: 10%" class="table-center"> Data</td>
+          <td style="width: 10%" class="table-center" data-order="2">
 
 
             <a class=" badge parent" href="/ranking">
-              <img class="hover-me" src="{{badge}}"></img>
+              <img class="hover-me" src="https://img.shields.io/badge/-medium-lightgrey"></img>
               <span class="show-me">
-                <span class="show-me-body">{{badge_text}}</span>
+                <span class="show-me-body">This practice was ranked as medium. Click to read more.</span>
               </span>
             </a>
 
           </td>
         </tr>
-        {% endif %}
-        {% endfor %}
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">2</td>
+          <td style="width: 50%"><a href="/best_practices/01-input-data-complete/">Check that Input Data is Complete, Balanced and Well Distributed</a></td>
+          <td style="width: 10%" class="table-center"> Data</td>
+          <td style="width: 10%" class="table-center" data-order="0">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-basic-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as basic. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">3</td>
+          <td style="width: 50%"><a href="/best_practices/01-social_bias/">Test for Social Bias in Training Data</a></td>
+          <td style="width: 10%" class="table-center"> Data</td>
+          <td style="width: 10%" class="table-center" data-order="3">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-advanced-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as advanced. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">4</td>
+          <td style="width: 50%"><a href="/best_practices/01-reusable_data_clean/">Write Reusable Scripts for Data Cleaning and Merging</a></td>
+          <td style="width: 10%" class="table-center"> Data</td>
+          <td style="width: 10%" class="table-center" data-order="0">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-basic-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as basic. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">5</td>
+          <td style="width: 50%"><a href="/best_practices/01-data-label/">Ensure Data Labelling is Performed in a Strictly Controlled Process</a></td>
+          <td style="width: 10%" class="table-center"> Data</td>
+          <td style="width: 10%" class="table-center" data-order="0">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-basic-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as basic. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">6</td>
+          <td style="width: 50%"><a href="/best_practices/01-discriminatory_attributes/">Prevent Discriminatory Data Attributes Used As Model Features</a></td>
+          <td style="width: 10%" class="table-center"> Data</td>
+          <td style="width: 10%" class="table-center" data-order="3">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-advanced-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as advanced. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">7</td>
+          <td style="width: 50%"><a href="/best_practices/01-privacy_ml/">Use Privacy-Preserving Machine Learning Techniques</a></td>
+          <td style="width: 10%" class="table-center"> Data</td>
+          <td style="width: 10%" class="table-center" data-order="3">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-advanced-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as advanced. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">8</td>
+          <td style="width: 50%"><a href="/best_practices/01-data-share/">Make Data Sets Available on Shared Infrastructure (private or public)</a></td>
+          <td style="width: 10%" class="table-center"> Data</td>
+          <td style="width: 10%" class="table-center" data-order="0">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-basic-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as basic. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">9</td>
+          <td style="width: 50%"><a href="/best_practices/02-train_objective/">Share a Clearly Defined Training Objective within the Team</a></td>
+          <td style="width: 10%" class="table-center"> Training</td>
+          <td style="width: 10%" class="table-center" data-order="0">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-basic-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as basic. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">10</td>
+          <td style="width: 50%"><a href="/best_practices/02-train_metric/">Capture the Training Objective in a Metric that is Easy to Measure and Understand</a></td>
+          <td style="width: 10%" class="table-center"> Training</td>
+          <td style="width: 10%" class="table-center" data-order="0">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-basic-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as basic. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">11</td>
+          <td style="width: 50%"><a href="/best_practices/02-test_feature_extractor/">Test all Feature Extraction Code</a></td>
+          <td style="width: 10%" class="table-center"> Training</td>
+          <td style="width: 10%" class="table-center" data-order="2">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-medium-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as medium. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">12</td>
+          <td style="width: 50%"><a href="/best_practices/02-doc_features/">Assign an Owner to Each Feature and Document its Rationale</a></td>
+          <td style="width: 10%" class="table-center"> Training</td>
+          <td style="width: 10%" class="table-center" data-order="2">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-medium-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as medium. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">13</td>
+          <td style="width: 50%"><a href="/best_practices/02-archive_old_feature/">Actively Remove or Archive Features That are Not Used</a></td>
+          <td style="width: 10%" class="table-center"> Training</td>
+          <td style="width: 10%" class="table-center" data-order="2">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-medium-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as medium. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">14</td>
+          <td style="width: 50%"><a href="/best_practices/02-interpretable/">Employ Interpretable Models When Possible</a></td>
+          <td style="width: 10%" class="table-center"> Training</td>
+          <td style="width: 10%" class="table-center" data-order="3">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-advanced-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as advanced. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">15</td>
+          <td style="width: 50%"><a href="/best_practices/02-peer_review_mdl/">Peer Review Training Scripts</a></td>
+          <td style="width: 10%" class="table-center"> Training</td>
+          <td style="width: 10%" class="table-center" data-order="2">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-medium-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as medium. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">16</td>
+          <td style="width: 50%"><a href="/best_practices/02-parallel_training/">Enable Parallel Training Experiments</a></td>
+          <td style="width: 10%" class="table-center"> Training</td>
+          <td style="width: 10%" class="table-center" data-order="0">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-basic-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as basic. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">17</td>
+          <td style="width: 50%"><a href="/best_practices/02-auto_feat/">Automate Feature Generation and Selection</a></td>
+          <td style="width: 10%" class="table-center"> Training</td>
+          <td style="width: 10%" class="table-center" data-order="3">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-advanced-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as advanced. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">18</td>
+          <td style="width: 50%"><a href="/best_practices/02-auto_hyperparams/">Automate Hyper-Parameter Optimisation</a></td>
+          <td style="width: 10%" class="table-center"> Training</td>
+          <td style="width: 10%" class="table-center" data-order="2">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-medium-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as medium. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">19</td>
+          <td style="width: 50%"><a href="/best_practices/02-auto_nas/">Automate Configuration of Algorithms or Model Structure</a></td>
+          <td style="width: 10%" class="table-center"> Training</td>
+          <td style="width: 10%" class="table-center" data-order="3">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-advanced-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as advanced. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">20</td>
+          <td style="width: 50%"><a href="/best_practices/02-measure_mdl_quality/">Continuously Measure Model Quality and Performance</a></td>
+          <td style="width: 10%" class="table-center"> Training</td>
+          <td style="width: 10%" class="table-center" data-order="0">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-basic-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as basic. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">21</td>
+          <td style="width: 50%"><a href="/best_practices/02-subgroup_bias/">Assess and Manage Subgroup Bias</a></td>
+          <td style="width: 10%" class="table-center"> Training</td>
+          <td style="width: 10%" class="table-center" data-order="3">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-advanced-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as advanced. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">22</td>
+          <td style="width: 50%"><a href="/best_practices/02-data_version/">Use Versioning for Data, Model, Configurations and Training Scripts</a></td>
+          <td style="width: 10%" class="table-center"> Training</td>
+          <td style="width: 10%" class="table-center" data-order="0">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-basic-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as basic. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">23</td>
+          <td style="width: 50%"><a href="/best_practices/02-share_exp_status/">Share Status and Outcomes of Experiments Within the Team</a></td>
+          <td style="width: 10%" class="table-center"> Training</td>
+          <td style="width: 10%" class="table-center" data-order="0">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-basic-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as basic. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">24</td>
+          <td style="width: 50%"><a href="/best_practices/03-regr_test/">Run Automated Regression Tests</a></td>
+          <td style="width: 10%" class="table-center"> Coding</td>
+          <td style="width: 10%" class="table-center" data-order="2">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-medium-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as medium. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">24</td>
+          <td style="width: 50%"><a href="/best_practices/02-efficient-models/">Use The Most Efficient Models</a></td>
+          <td style="width: 10%" class="table-center"> Training</td>
+          <td style="width: 10%" class="table-center" data-order="4">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-not%20ranked-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was not ranked. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">25</td>
+          <td style="width: 50%"><a href="/best_practices/03-cont-int/">Use Continuous Integration</a></td>
+          <td style="width: 10%" class="table-center"> Coding</td>
+          <td style="width: 10%" class="table-center" data-order="3">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-advanced-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as advanced. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">26</td>
+          <td style="width: 50%"><a href="/best_practices/03-use_static_analysis/">Use Static Analysis to Check Code Quality</a></td>
+          <td style="width: 10%" class="table-center"> Coding</td>
+          <td style="width: 10%" class="table-center" data-order="2">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-medium-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as medium. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">27</td>
+          <td style="width: 50%"><a href="/best_practices/03-security/">Assure Application Security</a></td>
+          <td style="width: 10%" class="table-center"> Coding</td>
+          <td style="width: 10%" class="table-center" data-order="3">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-advanced-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as advanced. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">28</td>
+          <td style="width: 50%"><a href="/best_practices/04-auto_model_packaging/">Automate Model Deployment</a></td>
+          <td style="width: 10%" class="table-center"> Deployment</td>
+          <td style="width: 10%" class="table-center" data-order="2">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-medium-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as medium. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">29</td>
+          <td style="width: 50%"><a href="/best_practices/04-shadow_models_prod/">Enable Shadow Deployment</a></td>
+          <td style="width: 10%" class="table-center"> Deployment</td>
+          <td style="width: 10%" class="table-center" data-order="2">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-medium-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as medium. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">30</td>
+          <td style="width: 50%"><a href="/best_practices/04-monitor_models_prod/">Continuously Monitor the Behaviour of Deployed Models</a></td>
+          <td style="width: 10%" class="table-center"> Deployment</td>
+          <td style="width: 10%" class="table-center" data-order="2">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-medium-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as medium. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">31</td>
+          <td style="width: 50%"><a href="/best_practices/04-dist_skew/">Perform Checks to Detect Skew between Models</a></td>
+          <td style="width: 10%" class="table-center"> Deployment</td>
+          <td style="width: 10%" class="table-center" data-order="2">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-medium-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as medium. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">32</td>
+          <td style="width: 50%"><a href="/best_practices/04-rollback_models_prod/">Enable Automatic Roll Backs for Production Models</a></td>
+          <td style="width: 10%" class="table-center"> Deployment</td>
+          <td style="width: 10%" class="table-center" data-order="2">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-medium-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as medium. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">33</td>
+          <td style="width: 50%"><a href="/best_practices/04-log_production/">Log Production Predictions with the Model's Version and Input Data</a></td>
+          <td style="width: 10%" class="table-center"> Deployment</td>
+          <td style="width: 10%" class="table-center" data-order="2">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-medium-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as medium. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">34</td>
+          <td style="width: 50%"><a href="/best_practices/04-audit_trails/">Provide Audit Trails</a></td>
+          <td style="width: 10%" class="table-center"> Deployment</td>
+          <td style="width: 10%" class="table-center" data-order="3">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-advanced-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as advanced. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">35</td>
+          <td style="width: 50%"><a href="/best_practices/05-collaborative_platform/">Use A Collaborative Development Platform</a></td>
+          <td style="width: 10%" class="table-center"> Team</td>
+          <td style="width: 10%" class="table-center" data-order="0">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-basic-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as basic. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">36</td>
+          <td style="width: 50%"><a href="/best_practices/05-use_backlog/">Work Against a Shared Backlog</a></td>
+          <td style="width: 10%" class="table-center"> Team</td>
+          <td style="width: 10%" class="table-center" data-order="2">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-medium-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as medium. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">37</td>
+          <td style="width: 50%"><a href="/best_practices/05-communication_collab/">Communicate, Align, and Collaborate With Others</a></td>
+          <td style="width: 10%" class="table-center"> Team</td>
+          <td style="width: 10%" class="table-center" data-order="0">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-basic-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as basic. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">38</td>
+          <td style="width: 50%"><a href="/best_practices/05-tradeoff/">Decide Trade-Offs through Defined Team Process</a></td>
+          <td style="width: 10%" class="table-center"> Team</td>
+          <td style="width: 10%" class="table-center" data-order="2">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-medium-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as medium. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">39</td>
+          <td style="width: 50%"><a href="/best_practices/06-code_conduct/">Establish Responsible AI Values</a></td>
+          <td style="width: 10%" class="table-center"> Governance</td>
+          <td style="width: 10%" class="table-center" data-order="3">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-advanced-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as advanced. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">40</td>
+          <td style="width: 50%"><a href="/best_practices/06-risk/">Perform Risk Assessments</a></td>
+          <td style="width: 10%" class="table-center"> Governance</td>
+          <td style="width: 10%" class="table-center" data-order="3">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-advanced-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as advanced. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">41</td>
+          <td style="width: 50%"><a href="/best_practices/06-responsible_ml_ai/">Enforce Fairness and Privacy</a></td>
+          <td style="width: 10%" class="table-center"> Governance</td>
+          <td style="width: 10%" class="table-center" data-order="2">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-medium-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as medium. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">42</td>
+          <td style="width: 50%"><a href="/best_practices/06-alert/">Inform Users on Machine Learning Usage</a></td>
+          <td style="width: 10%" class="table-center"> Governance</td>
+          <td style="width: 10%" class="table-center" data-order="3">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-advanced-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as advanced. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">43</td>
+          <td style="width: 50%"><a href="/best_practices/06-explainable/">Explain Results and Decisions to Users</a></td>
+          <td style="width: 10%" class="table-center"> Governance</td>
+          <td style="width: 10%" class="table-center" data-order="3">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-advanced-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as advanced. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">44</td>
+          <td style="width: 50%"><a href="/best_practices/06-concerns/">Provide Safe Channels to Raise Concerns</a></td>
+          <td style="width: 10%" class="table-center"> Governance</td>
+          <td style="width: 10%" class="table-center" data-order="3">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-advanced-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as advanced. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
+        
+
+        
+
+        <tr>
+          <td style="width: 10%" class="table-center">45</td>
+          <td style="width: 50%"><a href="/best_practices/06-audits/">Have Your Application Audited</a></td>
+          <td style="width: 10%" class="table-center"> Governance</td>
+          <td style="width: 10%" class="table-center" data-order="3">
+
+
+            <a class=" badge parent" href="/ranking">
+              <img class="hover-me" src="https://img.shields.io/badge/-advanced-lightgrey"></img>
+              <span class="show-me">
+                <span class="show-me-body">This practice was ranked as advanced. Click to read more.</span>
+              </span>
+            </a>
+
+          </td>
+        </tr>
+        
+        
       </tbody>
     </table>
     <script>
@@ -256,3 +2324,44 @@ help to satisfy.
 
   </div>
 </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'G-05407HJNMT', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+</body>
+
+</html>
