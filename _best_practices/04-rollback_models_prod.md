@@ -5,7 +5,7 @@ name: Enable Automatic Roll Backs for Production Models
 title: Enable Automatic Roll Backs for Production Models
 category: Deployment
 unique_id: deployment_rollback
-index: 32
+index: 36
 difficulty: "medium"
 references: [MLLG, CD4ML]
 comments: True

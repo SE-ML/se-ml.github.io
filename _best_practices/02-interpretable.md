@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
 name: Employ Interpretable Models When Possible
 category: Training
-index: 14
+index: 15
 unique_id: interpretable
 difficulty: "advanced"
 references: [IMLG,TTAID,AIHLEG] #

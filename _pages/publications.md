@@ -7,7 +7,7 @@ permalink: /publications
 
 
 <ul>
-  {% assign sorted_pub = (site.pub | sort: 'date') | reverse  %}
+  {% assign sorted_pub = site.pub | sort: 'date' | reverse  %}
   {% for item in sorted_pub %}
     <li>
       <a href="{{item.webpage}}">{{item.title}}</a>

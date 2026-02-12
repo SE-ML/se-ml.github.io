@@ -5,7 +5,7 @@ name: Run Automated Regression Tests
 title: Run Automated Regression Tests
 category: Coding
 unique_id: coding_regr
-index: 24
+index: 27
 difficulty: "medium"
 references: [MLPROD]
 comments: True

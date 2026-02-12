@@ -5,7 +5,7 @@ name: Work Against a Shared Backlog
 title: Work Against a Shared Backlog
 category: Team
 unique_id: team_backlog
-index: 36
+index: 42
 difficulty: "medium"
 comments: True
 description:

@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
 name: Use The Most Efficient Models
 category: Training
-index: 24
+index: 25
 unique_id: efficient_compression
 difficulty: na
 references: [DISTSV, ] #

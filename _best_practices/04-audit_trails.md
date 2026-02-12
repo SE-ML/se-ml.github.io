@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
 name: Provide Audit Trails
 category: Deployment
-index: 34
+index: 38
 unique_id: audit_trails
 difficulty: "advanced"
 references: [CAIAG, AIHLEG, TTAID] #

@@ -5,7 +5,7 @@ name: Automate Hyper-Parameter Optimisation
 title: Automate Hyper-Parameter Optimisation
 category: Training
 unique_id: exp_hyperparam
-index: 18
+index: 19
 difficulty: "medium"
 comments: True
 description:

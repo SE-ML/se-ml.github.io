@@ -5,7 +5,7 @@ name: Use Versioning for Data, Model, Configurations and Training Scripts
 title: Use Versioning for Data, Model, Configurations and Training Scripts
 category: Training
 unique_id: exp_versioning
-index: 22
+index: 23
 difficulty: "basic"
 comments: True
 references: [VML, MLPROD, MMLP, BPDL, MDLOPS, PMLPP]

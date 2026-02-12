@@ -5,7 +5,7 @@ name: Peer Review Training Scripts
 title: Peer Review Training Scripts
 category: Training
 unique_id: exp_peer
-index: 15
+index: 16
 difficulty: "medium"
 comments: True
 references: [MLTS]

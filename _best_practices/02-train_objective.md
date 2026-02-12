@@ -5,7 +5,7 @@ name: Share a Clearly Defined Training Objective within the Team
 title: Share a Clearly Defined Training Objective within the Team
 category: Training
 unique_id: exp_trainingobjective
-index: 9
+index: 10
 difficulty: "basic"
 references: [Rs4ML, MMLP, MLTEAM]
 comments: True

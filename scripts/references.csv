@@ -23,9 +23,9 @@ MLFAIR,Fairness Indicators,Google,GL - Tier 1,+++,,11 December 2019,https://ai.g
 MLRES,Responsible AI practices,Google,GL - Tier 1,+++,,-,https://ai.google/responsibilities/responsible-ai-practices/
 DSTEAM,Team Data Science Process Documentation,Microsoft,GL - Tier 2,+,,-,https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/
 MLTEAM,How do teams work together on automated ML projects,Microsoft,GL - Tier 3,+,,9 April 2019,https://azure.microsoft.com/en-us/blog/how-do-teams-work-together-on-an-automated-machine-learning-project/
-MLPROD,Machine learning: Moving from experiments to production,Roman Seyffarth,GL - TIer 3,+,,19 Mar 2019,https://blog.codecentric.de/en/2019/03/machine-learning-experiments-production/
+MLPROD,Machine learning: Moving from experiments to production,Roman Seyffarth,GL - Tier 3,+,,19 Mar 2019,https://blog.codecentric.de/en/2019/03/machine-learning-experiments-production/
 BPMLI,Best Practices in Machine Learning Infrastructure,Algorithmia,GL - Tier 2,+,,5 July 2019,https://algorithmia.com/blog/best-practices-in-machine-learning-infrastructure
-MMLP,Managing Machine Learning Projects,V.M.Megler / Amazon,GL - TIer 2,+,,1 February 2019,https://d1.awsstatic.com/whitepapers/aws-managing-ml-projects.pdf
+MMLP,Managing Machine Learning Projects,V.M.Megler / Amazon,GL - Tier 2,+,,1 February 2019,https://d1.awsstatic.com/whitepapers/aws-managing-ml-projects.pdf
 BPDL,10 Best Practices for Deep Learning,James Le,GL - Tier 3,+,,December 2019,https://nanonets.com/blog/10-best-practices-deep-learning/#track-model-experiments
 TDBML,Testing and Debugging in Machine Learning,Google ,GL - Tier 2,++,,-, https://developers.google.com/machine-learning/testing-debugging/pipeline/production
 MDLOPS,ModelOps: Cloud-based lifecycle management for reliable and trusted AI,IBM Research,AL,+,,June 2019,

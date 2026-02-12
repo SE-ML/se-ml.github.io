@@ -5,7 +5,7 @@ name: Share Status and Outcomes of Experiments Within the Team
 title: Share Status and Outcomes of Experiments Within the Team
 category: Training
 unique_id: exp_status
-index: 23
+index: 24
 difficulty: "basic"
 references: [BPDL, PMLPP]
 comments: True
