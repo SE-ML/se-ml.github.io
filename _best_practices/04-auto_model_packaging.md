@@ -17,7 +17,7 @@ photocredit: #
 intent: Increase the ability to deploy models on demand, which increases availability and scalability. #
 motivation: Deploying and orchestrating different components of an application can be a tedious task. Instead of manually packaging and delivering models, and in order to avoid manual interventions or errors, one can automate this task. #
 applicability: Automatic model deployment should be implemented in any production-level ML application.
-related: #
+related: [deployment_observability, deployment_fallback, exp_versioning] #
 dependencies: #
 survey_question: Q56
 
@@ -35,3 +35,12 @@ This means one can spin off many instances of the model whenever many users need
 In order to facilitate continuous deployment:
 - use virtualization abstractions , e.g. Docker, Kubeflow,
 - use CD tools, e.g. Gitlab CD/Shipyard, Travis, etc.
+
+**Export models in portable, standard formats**
+Tying a deployed model to a specific framework version or runtime creates fragility: a library update can break serving, and migrating infrastructure becomes difficult.
+Export trained models to a framework-independent format as part of the deployment pipeline:
+- **ONNX** for interoperability across frameworks (PyTorch, TensorFlow, scikit-learn) and runtimes (ONNX Runtime, TensorRT, OpenVINO),
+- **TorchScript** for self-contained PyTorch models that do not require Python at inference time,
+- **TensorFlow SavedModel** for TensorFlow/Keras models targeting TF Serving or TFLite.
+
+Include format validation and an inference parity test (output of exported model equals output of original within numerical tolerance) as a gate in the packaging step.
