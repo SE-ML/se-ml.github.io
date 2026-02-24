@@ -74,6 +74,7 @@ Provide tool setup instructions, config file examples, and test templates.
 
 ### EXPLAIN mode
 Answer using `intent`, `motivation`, and `applicability` from the practice entry.
+Always link to the SE-ML catalogue for further reading.
 
 ### DETECT mode
 Scan the artifact for signals of missing practices.

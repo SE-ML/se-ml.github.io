@@ -78,6 +78,7 @@ Prometheus/Grafana for monitoring, Evidently for skew detection.
 
 ### EXPLAIN mode
 Answer using `intent`, `motivation`, and `applicability` from the practice entry.
+Always link to the SE-ML catalogue for further reading.
 
 ### DETECT mode
 Scan the artifact for missing deployment safeguards.

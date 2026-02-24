@@ -59,7 +59,7 @@ Use answers to determine which reference sections are relevant:
 ### EVALUATE mode
 For each applicable practice from `references/01-practices.md`:
 - State the practice name and `unique_id`
-- Ask for or examine relevant evidence
+- Examine provided artifacts (code, pipeline configs, data schemas)
 - Assign: ✅ Adhered | ⚠️ Partial | ❌ Missing | N/A
 - For ⚠️ and ❌: state the specific gap and one concrete next step
 
@@ -80,6 +80,7 @@ Explain *why* each step matters using the practice's `intent` and `motivation`.
 ### EXPLAIN mode
 Answer using `intent`, `motivation`, and `applicability` from the relevant entry.
 If comparing practices, highlight dependencies and differences.
+Always link to the SE-ML catalogue for further reading.
 
 ### DETECT mode
 Scan the provided artifact for signals of missing practices.

@@ -88,6 +88,7 @@ Load the relevant practice entry from `references/06-practices.md`.
 ### EXPLAIN mode
 Answer using `intent`, `motivation`, and `applicability` from the practice entry.
 Connect to specific regulatory requirements where relevant.
+Always link to the SE-ML catalogue for further reading.
 
 ### DETECT mode
 When a user describes a product or use case, flag governance gaps proactively.

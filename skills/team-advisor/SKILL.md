@@ -76,6 +76,7 @@ For `tradeoff`: help draft a lightweight team decision process document.
 
 ### EXPLAIN mode
 Answer using `intent`, `motivation`, and `applicability` from the practice entry.
+Always link to the SE-ML catalogue for further reading.
 
 ### DETECT mode
 When a user describes a team situation, flag signs of missing practices:
