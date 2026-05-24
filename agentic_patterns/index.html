@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Agentic Coding</title>
+  <meta name="description" content="A pattern language for disciplined human-AI software development">
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/agentic_patterns/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
+  </script>
+  <script src="/assets/js/absolute.js">
+  </script>
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <div class="wrapper">
+
+      <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242"
+                d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+              <path fill="#424242"
+                d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+              <path fill="#424242"
+                d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <!-- Practices -->
+          <a class="page-link" href="/practices/">engineering practices</a>
+
+          <!-- Agentic Patterns -->
+          <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+          <!-- Publications -->
+          <a class="page-link" href="/publications">publications</a>
+
+          <!-- Blog -->
+          <a class="page-link" href="/blog/">blog</a>
+
+          <!-- Members -->
+          <a class="page-link" href="/members">team</a>
+
+        </div>
+      </nav>
+
+    </div>
+
+  </header>
+
+  <div class="page-content">
+    <div class="wrapper">
+      <h1 class="black"> Agentic Coding: A Pattern Language </h1>
+
+      <br>
+
+      <p>
+        Agentic coding is a software development practice in which developers delegate substantial parts of discovery,
+        specification, implementation, and verification to AI agents. The relevant question is therefore not only what
+        these systems can generate, but how their use should be organised, supervised, and constrained in real
+        development settings.
+      </p>
+
+      <p>
+        This page presents nine patterns for structuring this work. The motivation for a pattern language is practical:
+        similar failure modes recur across non-trivial, long-lived codebases, especially when generation becomes cheap
+        but supervision, review, verification, and rollback remain costly. Under these conditions, the engineering
+        problem shifts from generation to control.
+      </p>
+
+      <p>
+        The patterns are intended as a compact vocabulary for recurring workflow decisions in supervised human-AI
+        development. They should be read neither as a fixed methodology nor as evidence-backed guarantees of
+        improvement, but as recurrent responses to recurrent problems.
+      </p>
+
+      <p>
+        The longer argument, including the underlying failure modes and the rationale for a pattern language, is set
+        out in the article <a href="/blog/2026/agentic-patterns/">Towards a Pattern Language for Agentic Coding</a>.
+      </p>
+
+      <br><br>
+
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home"
+            aria-selected="true">List View</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+            aria-selected="false">Table View</a>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+          <h3 class="black bold"> Pattern Catalog </h3>
+          <p>The current set includes the following nine patterns:</p>
+          <ol>
+            <li><a href="/agentic_patterns/01-agent-assisted-discovery/">Agent-Assisted Discovery</a>.<br>Use the agent first to map the relevant subsystem, constraints, dependencies, and terminology before requesting changes.</li>
+            <li><a href="/agentic_patterns/02-specification-driven-dev/">Specification-Driven Development</a>.<br>State the task in terms of goals, constraints, context, and acceptance criteria rather than relying on imperative prompting alone.</li>
+            <li><a href="/agentic_patterns/03-plan-driven-task-decomposition/">Plan-Driven Task Decomposition</a>.<br>Translate the specification into an ordered set of small tasks with explicit dependencies, scoped context, and verification points.</li>
+            <li><a href="/agentic_patterns/04-incremental-execution/">Incremental Execution</a>.<br>Carry out approved work in small, independently verifiable steps rather than large entangled change sets.</li>
+            <li><a href="/agentic_patterns/05-role-based-development/">Role-Based Development &amp; Subagents</a>.<br>Separate exploration, implementation, and review across roles or sessions with structured handoff.</li>
+            <li><a href="/agentic_patterns/06-memory-context-management/">Memory &amp; Context Management</a>.<br>Treat context as a controlled input and externalise durable project knowledge into reusable artefacts.</li>
+            <li><a href="/agentic_patterns/07-verification-first/">Verification-First Engineering</a>.<br>Design each step around independent checks that can falsify plausible but incorrect output.</li>
+            <li><a href="/agentic_patterns/08-rollback-reversibility/">Rollback &amp; Reversibility</a>.<br>Preserve recovery paths through checkpoints, isolated branches, or other mechanisms that keep undo cheap.</li>
+            <li><a href="/agentic_patterns/09-cleanup-hygiene/">Cleanup &amp; Hygiene</a>.<br>Make cleanup explicit so repositories remain reviewable, maintainable, and free of agent-produced residue.</li>
+          </ol>
+
+        </div>
+
+        <!-- Table View -->
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <br>
+          <table id="patternsTable" class="display" style="width:100%">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Pattern</th>
+                <th>Focus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><a href="/agentic_patterns/01-agent-assisted-discovery/">Agent-Assisted Discovery</a></td>
+                <td>Codebase and problem discovery before implementation</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><a href="/agentic_patterns/02-specification-driven-dev/">Specification-Driven Development</a></td>
+                <td>Declarative task framing and acceptance criteria</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><a href="/agentic_patterns/03-plan-driven-task-decomposition/">Plan-Driven Task Decomposition</a></td>
+                <td>Task sequencing, boundaries, and dependencies</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><a href="/agentic_patterns/04-incremental-execution/">Incremental Execution</a></td>
+                <td>Small-step implementation and local validation</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td><a href="/agentic_patterns/05-role-based-development/">Role-Based Development &amp; Subagents</a></td>
+                <td>Role separation, specialization, and handoff</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td><a href="/agentic_patterns/06-memory-context-management/">Memory &amp; Context Management</a></td>
+                <td>Context scoping and durable project memory</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td><a href="/agentic_patterns/07-verification-first/">Verification-First Engineering</a></td>
+                <td>Independent checks and falsification loops</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td><a href="/agentic_patterns/08-rollback-reversibility/">Rollback &amp; Reversibility</a></td>
+                <td>Recovery paths and cheap reversal of bad states</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td><a href="/agentic_patterns/09-cleanup-hygiene/">Cleanup &amp; Hygiene</a></td>
+                <td>Repository cleanliness and post-task maintainability</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <script>
+        $(document).ready(function () {
+          $('#patternsTable').DataTable({
+            "pageLength": 25,
+            "order": [[0, "asc"]]
+          });
+        });
+      </script>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vibe Coding vs. Vibe Engineering</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #ffffff;
+    color: #1f2328;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  .wrapper {
+    max-width: 960px;
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+    color: #1f2328;
+  }
+  h1 span.vibe { color: #6b7280; }
+  h1 span.vs { color: #9ca3af; font-weight: 400; }
+  h1 span.agentic { color: #2563eb; }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06);
+  }
+
+  thead th {
+    padding: 1rem 1.4rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+
+  thead th:first-child {
+    background: #f6f8fa;
+    color: #656d76;
+    width: 18%;
+  }
+  thead th.col-vibe {
+    background: #6b7280;
+    color: #fff;
+    width: 41%;
+  }
+  thead th.col-agentic {
+    background: #2563eb;
+    color: #fff;
+    width: 41%;
+  }
+
+  tbody tr {
+    transition: background 0.15s;
+  }
+  tbody tr:hover {
+    background: #f6f8fa;
+  }
+
+  tbody td {
+    padding: 0.85rem 1.4rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    border-top: 1px solid #e5e7eb;
+    vertical-align: top;
+  }
+
+  tbody td:first-child {
+    font-weight: 600;
+    color: #1f2328;
+    background: #fafbfc;
+    white-space: nowrap;
+  }
+
+  tbody td.vibe-cell {
+    color: #374151;
+    background: #f9fafb;
+  }
+
+  tbody td.agentic-cell {
+    color: #1d4ed8;
+    background: #eff6ff;
+  }
+
+  /* Subtle arrow styling for process flows */
+  .arrow { color: #9ca3af; font-weight: 400; }
+
+  /* Bottom rounded corners */
+  tbody tr:last-child td:first-child { border-bottom-left-radius: 12px; }
+  tbody tr:last-child td:last-child { border-bottom-right-radius: 12px; }
+
+  .caption {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.78rem;
+    color: #9ca3af;
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <h1><span class="vibe">Vibe Coding</span> <span class="vs">vs.</span> <span class="agentic">Vibe Engineering</span></h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th class="col-vibe">Vibe Coding</th>
+        <th class="col-agentic">Vibe Engineering</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mindset</td>
+        <td class="vibe-cell">"Just make it work"</td>
+        <td class="agentic-cell">"Make it work <em>reliably, repeatedly, reversibly</em>"</td>
+      </tr>
+      <tr>
+        <td>Oversight</td>
+        <td class="vibe-cell">Accept AI output as-is</td>
+        <td class="agentic-cell">Verify, checkpoint, constrain</td>
+      </tr>
+      <tr>
+        <td>Scope</td>
+        <td class="vibe-cell">Scripts, prototypes, throwaway code</td>
+        <td class="agentic-cell">Production systems, long-lived codebases</td>
+      </tr>
+      <tr>
+        <td>Risk tolerance</td>
+        <td class="vibe-cell">High — who cares if it breaks</td>
+        <td class="agentic-cell">Low — breakage has real cost</td>
+      </tr>
+      <tr>
+        <td>Process</td>
+        <td class="vibe-cell">Prompt <span class="arrow">→</span> accept <span class="arrow">→</span> ship</td>
+        <td class="agentic-cell">Spec <span class="arrow">→</span> execute incrementally <span class="arrow">→</span> verify <span class="arrow">→</span> commit</td>
+      </tr>
+      <tr>
+        <td>When it fails</td>
+        <td class="vibe-cell">Regenerate from scratch</td>
+        <td class="agentic-cell">Rollback to checkpoint, diagnose, retry</td>
+      </tr>
+      <tr>
+        <td>Knowledge</td>
+        <td class="vibe-cell">Don't need to understand the output</td>
+        <td class="agentic-cell">Must understand enough to validate</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="caption">Vibe engineering = vibe coding + the safety net (patterns)</div>
+</div>
+</body>
+</html>

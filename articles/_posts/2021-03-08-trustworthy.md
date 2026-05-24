@@ -4,7 +4,7 @@ title: Why do ML engineers struggle to build trustworthy ML applications?
 author: Alex Serban, Joost Visser
 date: 2021-03-08 15:32:00-0400
 comments: True
-description: Adoption of practices for trustworthy ML.  #
+description: Why trustworthy machine learning remains hard in practice, and which engineering practices can help address fairness, robustness, and security.
 image:  # /assets/img/SE4ML-practices-diagram.png"
 photocredit: #
 ---

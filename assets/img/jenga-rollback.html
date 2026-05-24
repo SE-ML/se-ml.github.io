@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rollback & Reversibility — Jenga Illustration</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #ffffff;
+    color: #1f2328;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  .scene {
+    display: flex;
+    gap: 5rem;
+    align-items: flex-end;
+  }
+
+  .tower-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .tower-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-align: center;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+  }
+
+  .tower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  /* ---- Blocks ---- */
+  .block {
+    width: 220px;
+    height: 38px;
+    margin: 2px 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    position: relative;
+    transition: all 0.3s;
+    border: 1.5px solid rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+  }
+
+  .block .step-num {
+    position: absolute;
+    left: 10px;
+    font-size: 0.65rem;
+    opacity: 0.6;
+    font-weight: 400;
+  }
+
+  /* Color coding */
+  .block.checkpoint { background: #2d6a4f; border-color: #1b4332; color: #d8f3dc; }
+  .block.normal     { background: #457b9d; border-color: #1d3557; color: #e0f0ff; }
+  .block.danger     { background: #e63946; border-color: #a4161a; color: #fff; }
+  .block.pulled     { background: #e63946; border-color: #a4161a; color: #fff; opacity: 0.35; }
+
+  /* ---- Stable tower ---- */
+  .stable .tower-label { background: #2d6a4f33; color: #95d5b2; border: 1px solid #2d6a4f; }
+  .stable .block { transform: rotate(0deg); }
+
+  /* ---- Collapsed tower ---- */
+  .collapsed .tower-label { background: #e6394633; color: #ffa4a4; border: 1px solid #e63946; }
+
+  .collapsed .block.above-pull-1 { transform: rotate(2.5deg) translateX(6px); }
+  .collapsed .block.above-pull-2 { transform: rotate(4deg) translateX(14px); }
+  .collapsed .block.above-pull-3 { transform: rotate(7deg) translateX(24px); }
+  .collapsed .block.above-pull-4 { transform: rotate(12deg) translateX(38px); opacity: 0.7; }
+
+  .collapsed .pulled-out {
+    position: absolute;
+    right: -160px;
+    transform: rotate(-8deg) translateY(10px);
+    opacity: 0.9;
+    box-shadow: 0 4px 16px rgba(230,57,70,0.4);
+  }
+
+  .collapsed .pulled-out::after {
+    content: '← undo this?';
+    position: absolute;
+    right: -110px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    color: #e63946;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+
+  /* ---- Crack lines ---- */
+  .crack {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+  .crack::before {
+    content: '';
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    height: 2px;
+    background: #e63946;
+    box-shadow: 0 0 8px #e63946;
+    border-radius: 1px;
+  }
+
+  /* ---- Platform / Base ---- */
+  .base {
+    width: 260px;
+    height: 12px;
+    background: linear-gradient(to bottom, #d0d7de, #bbc0c5);
+    border-radius: 3px;
+    margin-top: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  /* ---- Arrow between towers ---- */
+  .arrow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: center;
+    padding-bottom: 3rem;
+  }
+  .arrow-container .arrow {
+    font-size: 2rem;
+    color: #e63946;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  .arrow-container .arrow-label {
+    font-size: 0.75rem;
+    color: #e6394699;
+    text-align: center;
+    max-width: 100px;
+    line-height: 1.3;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.5; transform: translateX(0); }
+    50% { opacity: 1; transform: translateX(4px); }
+  }
+
+  /* ---- Legend ---- */
+  .legend {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.72rem;
+    opacity: 0.7;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .legend-color {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* ---- Caption ---- */
+  .caption {
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: 0.85rem;
+    color: #656d76;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+  .caption strong { color: #1f2328; }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="scene">
+
+    <!-- ===== STABLE TOWER ===== -->
+    <div class="tower-container stable">
+      <div class="tower-label">✅ With Checkpoints</div>
+      <div class="tower">
+        <div class="block normal"><span class="step-num">8</span>Update docs</div>
+        <div class="block normal"><span class="step-num">7</span>Adjust tests</div>
+        <div class="block checkpoint"><span class="step-num">⬥</span>📌 Checkpoint</div>
+        <div class="block normal"><span class="step-num">6</span>Update 12 callers</div>
+        <div class="block normal"><span class="step-num">5</span>Rename function</div>
+        <div class="block checkpoint"><span class="step-num">⬥</span>📌 Checkpoint</div>
+        <div class="block normal"><span class="step-num">4</span>Add new endpoint</div>
+        <div class="block normal"><span class="step-num">3</span>Add validation</div>
+        <div class="block checkpoint"><span class="step-num">⬥</span>📌 Checkpoint</div>
+        <div class="block normal"><span class="step-num">2</span>Create schema</div>
+        <div class="block normal"><span class="step-num">1</span>Initial scaffold</div>
+      </div>
+      <div class="base"></div>
+    </div>
+
+    <!-- ===== ARROW ===== -->
+    <div class="arrow-container">
+      <div class="arrow-label">rollback<br>one block?</div>
+      <div class="arrow">→</div>
+    </div>
+
+    <!-- ===== COLLAPSED TOWER ===== -->
+    <div class="tower-container collapsed">
+      <div class="tower-label">❌ Without Checkpoints</div>
+      <div class="tower" style="position:relative;">
+        <div class="block danger above-pull-4"><span class="step-num">8</span>Update docs</div>
+        <div class="block danger above-pull-3"><span class="step-num">7</span>Adjust tests</div>
+        <div class="block danger above-pull-2"><span class="step-num">6</span>Update 12 callers</div>
+        <div class="block danger above-pull-1"><span class="step-num">5</span>Rename function</div>
+        <!-- The pulled block -->
+        <div class="block pulled pulled-out" style="top: 180px;"><span class="step-num">4</span>Add new endpoint</div>
+        <!-- Gap where block was -->
+        <div class="block" style="background:transparent; border:2px dashed #e6394688; box-shadow:none;">
+          <span style="font-size:0.7rem; color:#e6394699;">gap</span>
+          <span class="crack" style="top:-2px;"></span>
+          <span class="crack" style="bottom:-2px;"></span>
+        </div>
+        <div class="block normal"><span class="step-num">3</span>Add validation</div>
+        <div class="block normal"><span class="step-num">2</span>Create schema</div>
+        <div class="block normal"><span class="step-num">1</span>Initial scaffold</div>
+      </div>
+      <div class="base"></div>
+    </div>
+
+  </div>
+
+  <div class="caption">
+    <strong>Agent changes compound like a Jenga tower.</strong><br>
+    Each block depends on the ones below it. Without checkpoints (right), removing a block from the middle
+    topples everything above — callers reference renamed symbols, tests expect deleted behavior.
+    <br>With checkpoints (left), you can safely restore to any stable layer.
+  </div>
+
+  <!-- Legend -->
+  <div style="display:flex; gap:1.5rem; margin-top:1.5rem; font-size:0.72rem; opacity:0.7;">
+    <div class="legend-item"><div class="legend-color" style="background:#457b9d;"></div> Agent step</div>
+    <div class="legend-item"><div class="legend-color" style="background:#2d6a4f;"></div> Checkpoint (consistent state)</div>
+    <div class="legend-item"><div class="legend-color" style="background:#e63946;"></div> Broken / cascading failure</div>
+  </div>
+</div>
+</body>
+</html>
