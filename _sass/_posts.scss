@@ -9,8 +9,8 @@
 
   >li {
     border-bottom: none;
-    padding-bottom: calc(#{$space-3} / 2);
-    padding-top: calc(#{$space-3} / 2);
+    // padding-bottom: calc(#{$space-3} / 2);
+    // padding-top: calc(#{$space-3} / 2);
   }
 }
 
@@ -55,7 +55,7 @@
 
 .compact-blog-link {
   color: black;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.35;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .post-title {
-  font-size: 42px;
+  font-size: 24px;
   letter-spacing: -1px;
   line-height: 1;
   margin-bottom: 10px;
