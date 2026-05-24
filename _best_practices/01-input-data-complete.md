@@ -14,7 +14,7 @@ image: #
 photocredit: #
 
 intent: Avoid invalid or incomplete data being processed. #
-motivation: The data generation processes are not static. Therefore, it is necessary to continuously check that data evolution does not introduce issues in distributions, completeness and balance. Beyond distributional checks, recurring data quality anti-patterns — structural issues with schema, labels, or feature ratios — can silently degrade model performance if not systematically detected. #
+motivation: The data generation processes are not static. Therefore, it is necessary to continuously check that data evolution does not introduce issues in distributions, completeness and balance. Beyond distributional checks, recurring data quality anti-patterns, such as structural issues with schema, labels, or feature ratios, can silently degrade model performance if not systematically detected. #
 applicability: Data quality control should be applied to any machine learning application.
 related: [data_sanity, data_lbl, deployment_distskew, social_bias] #
 dependencies: #
@@ -45,12 +45,12 @@ Building a strong data validation pipeline should also include:
 
 If your model performs close to real-time, or online learning, a strong alert system can help to detect errors early and correct them.
 
-**Watch for common data quality anti-patterns**
+#### Watch for Common Data Quality Anti-Patterns
 Beyond distribution drift, a number of recurring structural anti-patterns can silently degrade model quality and are frequently overlooked:
 - **Missing values**: check for unexpected nulls or placeholder values (e.g. -1, "unknown") that encode missingness implicitly rather than explicitly,
 - **Schema violations**: validate that column types, value ranges, and categorical vocabularies remain consistent across data batches and sources,
-- **Imbalanced class distributions**: check that the ratio of positive to negative labels (or across multi-class targets) is within acceptable bounds — severe imbalance can mislead standard metrics,
+- **Imbalanced class distributions**: check that the ratio of positive to negative labels (or across multi-class targets) is within acceptable bounds; severe imbalance can mislead standard metrics,
 - **Label overlaps or inconsistencies**: detect cases where the same or near-identical inputs carry conflicting labels, often introduced by different annotators or labeling policy changes,
-- **Poor feature-to-sample ratio**: for tabular data, verify that the number of rows is sufficiently large relative to the number of features — a low ratio increases the risk of overfitting and instability.
+- **Poor feature-to-sample ratio**: for tabular data, verify that the number of rows is sufficiently large relative to the number of features; a low ratio increases the risk of overfitting and instability.
 
 These checks should be automated and run as part of the data validation pipeline, with failures treated as blocking issues before data enters training.

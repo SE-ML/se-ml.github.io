@@ -37,15 +37,15 @@ In order to avoid versioning issues, make sure to:
 - add tests for data processing and merging,
 - include scripts for running or deploying the experiment, e.g. bash scripts, infrastructure scripts, etc.
 
-**Adopt consistent naming conventions for model artifacts**
+#### Adopt Consistent Naming Conventions for Model Artifacts
 As the number of trained models grows, ad-hoc naming quickly makes it impossible to trace which model is in production or how it was produced.
 Establish and enforce a naming convention that encodes key metadata directly into the model identifier, for example:
 `{project}-{task}-{architecture}-{dataset-version}-{date}-{run-id}`
 
 Every model artifact should carry a unique identifier, a timestamp, and a link to the exact training configuration and data version that produced it.
 
-**Track provenance and lineage explicitly**
-For models derived from pre-trained or externally sourced foundation models — such as fine-tuned LLMs — lineage tracking must capture the full chain of custody:
+#### Track Provenance and Lineage Explicitly
+For models derived from pre-trained or externally sourced foundation models, such as fine-tuned LLMs, lineage tracking must capture the full chain of custody:
 - the source model identifier and version (including external checkpoints),
 - the fine-tuning dataset and any data processing applied,
 - intermediate checkpoints if multi-stage training was used.
@@ -53,7 +53,7 @@ For models derived from pre-trained or externally sourced foundation models — 
 This is particularly important for compliance and debugging: when a fine-tuned model misbehaves, tracing the issue requires knowing exactly which base model, data, and training decisions produced it.
 Tools such as MGit and Git-Theta are specifically designed to version models at the parameter level and track this provenance across iterations.
 
-**Evaluate model reuse before retraining**
+#### Evaluate Model Reuse Before Retraining
 Before triggering a full retraining run, check whether an existing model trained on a similar data distribution can be reused or fine-tuned instead.
 This reduces compute cost and training time, and is only possible if models are versioned with sufficient metadata to assess their applicability to new tasks or distributions.
 

@@ -41,7 +41,7 @@ google_analytics: G-05407HJNMT # out your google-analytics code
 # Blog
 # -----------------------------------------------------------------------------
 blog_name: #
-blog_description: What are we up to?
+blog_description: Articles and updates
 
 # Pagination
 paginate: 50

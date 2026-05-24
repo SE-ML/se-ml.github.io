@@ -25,7 +25,7 @@ labels: agility
 
 ---
 
-Automated deployment involves automatically packing the model together with its dependencies and 'shipping' it to a production server -- instead of manually connecting to a server and perform the deployment.
+Automated deployment involves automatically packing the model together with its dependencies and 'shipping' it to a production server, instead of manually connecting to a server and performing the deployment.
 
 Automated model deployment brings several advantages. At first, it saves time and it increases reliability because the chances to introduce human errors are removed.
 Secondly, it improves availability and scalability because one can repeat the process on demand for as many instances as it is needed, without manual intervention.
@@ -36,7 +36,7 @@ In order to facilitate continuous deployment:
 - use virtualization abstractions , e.g. Docker, Kubeflow,
 - use CD tools, e.g. Gitlab CD/Shipyard, Travis, etc.
 
-**Export models in portable, standard formats**
+#### Export Models in Portable, Standard Formats
 Tying a deployed model to a specific framework version or runtime creates fragility: a library update can break serving, and migrating infrastructure becomes difficult.
 Export trained models to a framework-independent format as part of the deployment pipeline:
 - **ONNX** for interoperability across frameworks (PyTorch, TensorFlow, scikit-learn) and runtimes (ONNX Runtime, TensorRT, OpenVINO),

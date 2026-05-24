@@ -33,7 +33,7 @@ The monitoring pipeline should include:
 - model interpretability outputs (e.g. <a href="https://arxiv.org/pdf/1602.04938v1.pdf">LIME</a>),
 - metrics for the perceived effect of the model, e.g. user interactions, conversion rates, etc.
 
-**Monitor the input data pipeline**
+#### Monitor the Input Data Pipeline
 Model behaviour reflects the quality of the data it receives. Monitor the data pipeline itself, not just the model output:
 - track feature distributions at ingestion time and alert on drift relative to the training baseline,
 - detect missing, delayed, or malformed data feeds before they silently degrade model performance,

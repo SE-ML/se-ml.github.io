@@ -28,13 +28,13 @@ ML observability goes beyond logging: it is the capacity to understand what a mo
 
 A mature ML observability infrastructure includes three complementary pillars:
 
-**Metrics and dashboards**
+#### Metrics and Dashboards
 Aggregate model and data metrics into a centralised dashboard. Track performance KPIs such as accuracy, latency and throughput alongside business-level outcomes. Establish baselines at deployment time and make drift visible at a glance. Dashboards should cover at minimum: model quality metrics, data pipeline health, and infrastructure resource usage.
 
-**Structured and correlated logs**
-Ensure that prediction logs, data pipeline events, and system logs share common identifiers (request ID, model version, data batch ID) so that events can be correlated across the serving stack. This enables end-to-end tracing from an incoming request to the model version and training data that produced the response — a prerequisite for incident investigation and compliance audits.
+#### Structured and Correlated Logs
+Ensure that prediction logs, data pipeline events, and system logs share common identifiers (request ID, model version, data batch ID) so that events can be correlated across the serving stack. This enables end-to-end tracing from an incoming request to the model version and training data that produced the response, which is a prerequisite for incident investigation and compliance audits.
 
-**Alerting and on-call integration**
+#### Alerting and On-Call Integration
 Define alert thresholds for key metrics and integrate them with the team's incident management workflow. Alerts should distinguish between critical model degradation requiring immediate rollback and slower-moving trends such as gradual data drift. Avoid alert fatigue by ensuring each alert is actionable and routed to the responsible owner.
 
 Observability signals should be retained for a period sufficient for post-incident analysis and regulatory review, and tied to the versioned model and data artefacts that produced them.

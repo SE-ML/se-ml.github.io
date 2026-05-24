@@ -30,7 +30,7 @@ For this, you need to activate and configure a CI server in your development env
 
 To test not only possible **compilation errors** that may be introduced by code changes, but also possible **runtime defects** and **code quality problems**, the CI server must be configured to trigger one or more static analysis tools and your automated regression tests.
 
-**Gate on fairness and ethics metrics**
+#### Gate on Fairness and Ethics Metrics
 Beyond functional correctness, the CI pipeline should also enforce Responsible AI requirements automatically.
 Add automated checks that run on every commit or at minimum on every release candidate:
 - evaluate fairness metrics (e.g. demographic parity, equalised odds) on a representative held-out slice dataset and fail the build if a metric drops below a defined threshold,
