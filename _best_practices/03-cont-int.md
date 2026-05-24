@@ -5,7 +5,7 @@ name: Use Continuous Integration
 title: Use Continuous Integration
 category: Coding
 unique_id: coding_build
-index: 25
+index: 27
 difficulty: "advanced"
 references: [CD4ML, REMLRR]
 comments: True

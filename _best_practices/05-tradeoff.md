@@ -3,7 +3,7 @@ layout: practice
 author: Alex Serban, Koen van der Blom, Joost Visser
 name: Decide Trade-Offs through Defined Team Process
 category: Team
-index: 38
+index: 47
 unique_id: tradeoff
 difficulty: "medium"
 references: [SEDS, GDMMA, MOIEA] #

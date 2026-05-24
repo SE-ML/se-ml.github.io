@@ -1,7 +1,7 @@
 # -----------------------------------------------------------------------------
 # Site settings
 # -----------------------------------------------------------------------------
-name: SE-ML
+title: SE-ML
 email: j.m.w.visser@liacs.leidenuniv.nl
 description: > # this means to ignore newlines until "url:"
   Webpage for the Software Engineering for Machine Learning
@@ -44,7 +44,7 @@ blog_name: #
 blog_description: What are we up to?
 
 # Pagination
-paginate: 4
+paginate: 50
 permalink: /blog/:year/:title/
 paginate_path: /blog/page:num/
 
@@ -77,6 +77,9 @@ collections:
   references:
       people: true
   best_practices:
+    output: true
+    people: true
+  agentic_patterns:
     output: true
     people: true
 

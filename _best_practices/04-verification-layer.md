@@ -5,8 +5,8 @@ name: Use an Independent Verification Layer for ML Outputs
 title: Use an Independent Verification Layer for ML Outputs
 category: Deployment
 unique_id: deployment_verification
-index: 57
-difficulty: "medium"
+index: 43
+difficulty: #
 comments: True
 references: [RAIPCAT, ISO42001]
 description:
@@ -15,12 +15,12 @@ photocredit: #
 
 intent: Catch unsafe, incorrect, or policy-violating ML outputs before they are acted upon. #
 motivation: A model cannot reliably self-assess whether its output is correct, safe, or compliant. An independent verification component — separate from the primary model and its serving stack — provides a second line of defence that does not share failure modes with the model itself. #
-applicability: An independent verification layer should be used in any ML system where output errors have meaningful consequences: safety-critical systems, high-stakes decisions, or systems that take autonomous actions.
+applicability: "An independent verification layer should be used in any ML system where output errors have meaningful consequences: safety-critical systems, high-stakes decisions, or systems that take autonomous actions."
 related: [deployment_guardrails, deployment_log, deployment_observability, audit_trails, gov_rai_governance, coding_deterministic] #
 dependencies: #
 survey_question: #
 
-labels: [reliability, safety, traceability]
+labels: []
 
 ---
 

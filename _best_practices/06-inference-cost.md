@@ -5,8 +5,8 @@ name: Track and Govern AI Inference Costs
 title: Track and Govern AI Inference Costs
 category: Governance
 unique_id: gov_inference_cost
-index: 54
-difficulty: "medium"
+index: 57
+difficulty: #
 comments: True
 references: [MLOPMAP]
 description:
@@ -20,7 +20,7 @@ related: [efficient_compression, deployment_monitor, deployment_observability, g
 dependencies: #
 survey_question: #
 
-labels: [sustainability, traceability]
+labels: []
 
 ---
 

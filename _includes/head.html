@@ -3,13 +3,13 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>{{ site.name }}{% if page.title and page.url != "/" %} | {{ page.title }}{% endif %}</title>
+  <title>{{ site.title }}{% if page.title and page.url != "/" %} | {{ page.title }}{% endif %}</title>
   <meta name="description" content="{{ site.description }}">
 
   {% if site.serve_og_meta %}
   <meta property="og:site_name" content="{{ site.description }}" />
   <meta property="og:type" content="object" />
-  <meta property="og:title" content="{{ site.name }}" />
+  <meta property="og:title" content="{{ site.title }}" />
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
   <meta property="og:description" content="{{ page.title }}" />
   <meta property="og:image"

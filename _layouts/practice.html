@@ -206,7 +206,7 @@ layout: default
   </div>
   {% endif %}
 
-  {% if page.difficulty != 'na' %}
+  {% if page.difficulty != 'na' and page.survey_question %}
   <h3 class="black bold">Adoption</h3>
   {% include _plots/{{page.survey_question}}.html %}
   {% endif %}

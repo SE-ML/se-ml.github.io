@@ -61,6 +61,11 @@ body {
   height: auto;
 }
 
+.pattern-image {
+  max-height: 320px;
+  object-fit: contain;
+}
+
 .float-right {
   float: right;
 }

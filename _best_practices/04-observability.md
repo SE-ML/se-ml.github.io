@@ -5,8 +5,8 @@ name: Build an ML Observability Infrastructure
 title: Build an ML Observability Infrastructure
 category: Deployment
 unique_id: deployment_observability
-index: 53
-difficulty: "medium"
+index: 41
+difficulty: #
 comments: True
 references: [MLOPMAP, PRODUNKML]
 description:
@@ -20,7 +20,7 @@ related: [deployment_log, deployment_monitor, deployment_distskew, deployment_da
 dependencies: #
 survey_question: #
 
-labels: [traceability, reliability]
+labels: []
 
 ---
 

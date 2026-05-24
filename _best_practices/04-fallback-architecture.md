@@ -5,8 +5,8 @@ name: Design Hierarchical Fallback Architectures for Resilient ML Inference
 title: Design Hierarchical Fallback Architectures for Resilient ML Inference
 category: Deployment
 unique_id: deployment_fallback
-index: 49
-difficulty: "advanced"
+index: 40
+difficulty: #
 references: [HFAML]
 comments: True
 description:
@@ -20,7 +20,7 @@ related: [deployment_rollback, deployment_shadow, deployment_monitor, deployment
 dependencies: #
 survey_question: #
 
-labels: [robustness]
+labels: []
 
 ---
 

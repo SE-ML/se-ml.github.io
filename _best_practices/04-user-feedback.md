@@ -5,8 +5,8 @@ name: Collect and Incentivize User Feedback from Deployed Models
 title: Collect and Incentivize User Feedback from Deployed Models
 category: Deployment
 unique_id: deployment_user_feedback
-index: 47
-difficulty: "medium"
+index: 39
+difficulty: #
 references: [PRODUNKML]
 comments: True
 description:
@@ -20,7 +20,7 @@ related: [deployment_monitor, deployment_data_pipeline_feedback, data_lbl, deplo
 dependencies: #
 survey_question: #
 
-labels: [agility, traceability]
+labels: []
 
 ---
 

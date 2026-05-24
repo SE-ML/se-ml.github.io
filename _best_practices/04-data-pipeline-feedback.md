@@ -5,8 +5,8 @@ name: Automate Feedback Loops Between Production Monitoring and Training Pipelin
 title: Automate Feedback Loops Between Production Monitoring and Training Pipelines
 category: Deployment
 unique_id: deployment_data_pipeline_feedback
-index: 46
-difficulty: "advanced"
+index: 38
+difficulty: #
 references: [MLOPMAP, PRODUNKML]
 comments: True
 description:
@@ -20,7 +20,7 @@ related: [deployment_monitor, deployment_distskew, data_complete, data_sanity, d
 dependencies: #
 survey_question: #
 
-labels: [agility, traceability]
+labels: []
 
 ---
 

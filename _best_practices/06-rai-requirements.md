@@ -5,8 +5,8 @@ name: Specify Responsible AI Requirements Before Development Begins
 title: Specify Responsible AI Requirements Before Development Begins
 category: Governance
 unique_id: gov_rai_requirements
-index: 48
-difficulty: "medium"
+index: 55
+difficulty: #
 references: [REMLRR, AIHLEG]
 comments: True
 description:
@@ -20,7 +20,7 @@ related: [gov_responsible, risk, social_bias, discriminatory_attributes, privacy
 dependencies: #
 survey_question: #
 
-labels: [EU]
+labels: []
 
 ---
 

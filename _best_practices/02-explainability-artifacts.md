@@ -5,8 +5,8 @@ name: Produce Explainability Artifacts as First-Class Training Outputs
 title: Produce Explainability Artifacts as First-Class Training Outputs
 category: Training
 unique_id: exp_explainability_artifacts
-index: 50
-difficulty: "medium"
+index: 25
+difficulty: #
 references: [XAIDESIGN, AIHLEG]
 comments: True
 description:
@@ -20,7 +20,7 @@ related: [interpretable, explainable, exp_versioning, exp_quality, gov_responsib
 dependencies: #
 survey_question: #
 
-labels: [traceability, transparency]
+labels: []
 
 ---
 

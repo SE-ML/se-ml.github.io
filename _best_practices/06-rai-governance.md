@@ -5,8 +5,8 @@ name: Establish Organizational Structures for Responsible AI Governance
 title: Establish Organizational Structures for Responsible AI Governance
 category: Governance
 unique_id: gov_rai_governance
-index: 52
-difficulty: "advanced"
+index: 56
+difficulty: #
 references: [ISO42001, RAIPCAT, AIHLEG]
 comments: True
 description:
@@ -20,7 +20,7 @@ related: [gov_responsible, risk, audits, gov_rai_requirements, concerns, code_co
 dependencies: #
 survey_question: #
 
-labels: [EU]
+labels: []
 
 ---
 

@@ -5,8 +5,8 @@ name: Separate Deterministic and Probabilistic Concerns
 title: Separate Deterministic and Probabilistic Concerns
 category: Coding
 unique_id: coding_deterministic
-index: 56
-difficulty: "medium"
+index: 30
+difficulty: #
 comments: True
 references: [MLOPMAP]
 description:
@@ -20,7 +20,7 @@ related: [deployment_guardrails, deployment_verification, coding_build, efficien
 dependencies: #
 survey_question: #
 
-labels: [quality, reliability, sustainability]
+labels: []
 
 ---
 

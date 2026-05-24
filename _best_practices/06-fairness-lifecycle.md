@@ -5,7 +5,7 @@ name: Embed Fairness Considerations Across the Full ML Lifecycle
 title: Embed Fairness Considerations Across the Full ML Lifecycle
 category: Governance
 unique_id: gov_fairness_lifecycle
-index: 51
+index: 59
 published: false
 difficulty: "advanced"
 references: [MLFAIR, PFG]

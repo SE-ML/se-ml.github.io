@@ -5,8 +5,8 @@ name: Apply Layered Guardrails to ML System Behaviour
 title: Apply Layered Guardrails to ML System Behaviour
 category: Deployment
 unique_id: deployment_guardrails
-index: 55
-difficulty: "medium"
+index: 42
+difficulty: #
 comments: True
 references: [HFAML, ISO42001, RAIPCAT]
 description:
@@ -20,7 +20,7 @@ related: [deployment_fallback, deployment_rollback, deployment_monitor, deployme
 dependencies: #
 survey_question: #
 
-labels: [reliability, safety, traceability]
+labels: []
 
 ---
 
