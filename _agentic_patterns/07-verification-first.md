@@ -5,7 +5,7 @@ name: Verification-First Engineering
 title: Verification-First Engineering
 category: Verification
 unique_id: verification_first
-index: 10
+index: 7
 phase: Continuous
 comments: True
 description: Make verification the dominant control loop around each agent step.
