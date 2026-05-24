@@ -2,7 +2,7 @@
 layout: post
 title: "Towards a Pattern Language for Agentic Coding"
 author: Alex Serban
-date: 2026-02-24 00:00:00-0000
+date: 2026-05-23 00:00:00-0000
 comments: True
 description: "Agentic coding is now an engineering practice rather than a novelty. This article studies its recurrent failure modes and proposes nine foundational patterns for disciplined human-AI software development."
 image: https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2F18-months-of-agentic-coding-no-vibes-or-slop-allowed-v0-7aw1pfvnfoig1.jpg%3Fwidth%3D5504%26format%3Dpjpg%26auto%3Dwebp%26s%3D30e0a68b70416acc2e5fc929d5269f3d5c63a4d4
