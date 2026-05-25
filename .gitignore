@@ -4,4 +4,6 @@ _site
 .DS_store
 .ruby-version
 Gemfile.lock
+vendor/
+.bundle/
 
