@@ -35,7 +35,11 @@ blogger_url: # your blogger URL
 
 contact_note: #
 
-google_analytics: G-05407HJNMT # out your google-analytics code
+# google_analytics: G-05407HJNMT # managed by jekyll-analytics plugin
+
+jekyll_analytics:
+  GoogleAnalytics:
+    id: G-05407HJNMT
 
 # -----------------------------------------------------------------------------
 # Blog
@@ -100,6 +104,7 @@ exclude: [vendor]
 
 # Plug-ins
 plugins:
+    - jekyll-analytics
     - jekyll-email-protect
     - jekyll-paginate
     - jekyll/scholar
