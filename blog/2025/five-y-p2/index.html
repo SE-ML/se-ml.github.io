@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Insights into Recent Engineering Practices for Machine Learning</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/blog/2025/five-y-p2/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Insights into Recent Engineering Practices for Machine Learning</h1>
+    <p class="post-meta">June 29, 2025 •
+      Alex Serban</p>
+  </header>
+
+  
+
+  <article class="post-content">
+    <p>In our recent exploration of the <a href="https://se-ml.github.io/blog/2025/five-y/">latest trends in ML engineering best practices</a>, we identified five key areas of focus. 
+In this article, we zoom in on the first of these areas: engineering practices for ML and Responsible ML/AI (RAI).</p>
+
+<p>This article is the second in a series aimed at exploring recent advancements in ML engineering best practices, highlighting emerging challenges, and discussing under-represented topics. 
+The current analysis introduces new practices across five domains: requirements engineering, architecture design, AutoML, data engineering, and responsible ML/AI, and discusses them in relation to the current <a href="https://se-ml.github.io/practices/">catalogue of practices</a>.</p>
+
+<p>We find that while progress has been made in some areas — particularly around RAI — other domains like data engineering remain comparatively underdeveloped. 
+Furthermore, despite increased attention to the unique challenges of ML systems, many practices are still adaptations of traditional software engineering practices rather than novel solutions.</p>
+
+<h3 id="requirements-engineering">Requirements Engineering</h3>
+
+<p>Requirements engineering emerged as one of the most discussed topics within the recent <a href="https://se-ml.github.io/blog/2025/five-y/">engineering practices for ML</a>. 
+However, it is notably absent from the current <a href="https://se-ml.github.io/practices/">catalogue of practices</a>, which tends to focus more on the development and operation of ML-based systems.</p>
+
+<p>We observe that incorporating ML components has not fundamentally changed the core processes of requirements elicitation and modeling. 
+These processes still rely on established techniques such as interviews, card sorting, and focus groups for elicitation, as well as frameworks like STRIDE, data flow diagrams, and Goal-Oriented Requirements Engineering (GORE) for modeling [90, 93].</p>
+
+<p>Nevertheless, ML introduces a more dynamic process, incorporating broader constraints related to RAI and emerging topics like compliance to upcoming regulations. 
+The primary challenge here lies in specifying concrete requirements upfront, as it is difficult to predict algorithm performance based on available data, or estimate and measure RAI requirements such as degrees of explainability or interpretability upfront [90]. 
+This uncertainty mandates iterative and adaptive approaches to requirements engineering.</p>
+
+<p>Some emerging practices aim to address these challenges. 
+For example, developing user personas tailored to RAI helps align ML systems with ethical expectations [34]. Additionally, writing ethical user stories, eliciting uncertainty levels, and defining clear data requirements — such as data volume, sources, and handling protocols — are considered critical for RAI [90]. 
+A pyramidal model proposed in [78] emphasizes the need for requirements to drive ethical and technical considerations across the entire ML lifecycle, from data curation to deployment. Despite these advancements, the literature  highlights a lack of actionable, novel methods, with ethical user stories and RAI-focused personas being notable but still limited contributions [90].</p>
+
+<h3 id="architectural-design">Architectural Design</h3>
+
+<p>Architectural design is another area where the current catalogue is lacking (despite our previous exploration of <a href="https://se-ml.github.io/publications">architectural tactics for ML-based systems</a>), but which has received more interest recently.
+The literature reveals the development of new architectural pattern catalogues, which include novel patterns such as encapsulating ML components within traditional rule-based safeguards, together with more traditional architectural patterns that are adapted for ML [82]. 
+These designs often employ a layered structure to separate concerns related to ML-based components or integrate and deploy multi-model systems via vertical or horizontal services, facilitating sequential or parallel model processing [82].</p>
+
+<p>Additionally, novel architectures like hierarchical fallback mechanisms improve system resilience by allowing systems to switch to alternative models or strategies in the event of failures [21]. 
+Nevertheless, there remains significant room for improvement in this domain, particularly as ML systems have evolved from just integrating ML-based components to increasingly relying on ML-driven processes or agents [29].</p>
+
+<h3 id="automl">AutoML</h3>
+
+<p>As discussed in the <a href="https://se-ml.github.io/blog/2025/five-y/">introductory article</a>, AutoML practices remain under-studied despite their potential to automatically optimise various stages of the ML pipeline. 
+Recent literature provides guidelines on scheduling and executing AutoML jobs, complementing general <a href="https://se-ml.github.io/best_practices/02-auto_hyperparams/">AutoML practices</a> by providing structured processes for automation [63].
+For example, this involves explicitly modeling pipelines and loops for scheduling and evaluating multiple configurations, as well as acquiring and analyzing metadata [63].
+Furthermore, automatically adapting model parameters in training loops, such as adjusting the learning rate or dynamically chosen parameters, adds structure to the AutoML processes [63].</p>
+
+<p>Additionally, practices that leverage AutoML to improve fairness without compromising performance are presented. For example, by prioritising equitable outcomes for population groups and sub-groups through automated hyper-parameter tuning or model selection [70].</p>
+
+<p>Nevertheless, there is still significant potential for improvement in AutoML practices, particularly in expanding capabilities beyond hyperparameter tuning. 
+Future practices could focus on addressing automatic data quality evaluation and selection (especially for large datasets) or leveraging AutoML for MLOps, such as using AutoML for monitoring and model deployment or replacement. 
+Furthermore, employing AutoML for compliance purposes could further improve its utility and integration into broader workflows.</p>
+
+<h3 id="data-engineering">Data Engineering</h3>
+
+<p>Data engineering has also been identified as an under-studied topic, despite its importance to developing robust ML systems.
+Recent literature investigates data collection objectives, by introducing a data requirements goal model, which ensures data is collected systematically to meet overall system objectives [13].</p>
+
+<p>Conversely, data quality anti-patterns, such as missing values, schema violations, imbalanced class distributions, or label overlaps, highlight common pitfalls that impact model performance [36]. 
+Best practices in this area include checking the ratio of rows to columns in tabular data, verifying data distributions, and addressing label-related issues to ensure robust data pipelines [36].
+These practices complement the more general practice on <a href="https://se-ml.github.io/best_practices/01-input-data-complete/">input data validation</a> from the existing catalogue.</p>
+
+<p>A notable gap persists in data engineering practices, particularly concerning the engineering of scalable data pipelines.</p>
+
+<h3 id="responsible-mlai-rai">Responsible ML/AI (RAI)</h3>
+
+<p>Practices for RAI components were the most prevalent, which is encouraging given the recent emphasis on ethical considerations and compliance with upcoming legislation.</p>
+
+<p>Comprehensive catalogues of fairness-aware practices that span the ML lifecycle, from fair data balancing and multitask learning to maximize minority group representation, to fairness regularization, hyper-parameter tuning, and post-training calibration have been proposed [35]. 
+These practices highlight that fairness spans multiple concerns across the Data and Training practices, and can be integrated across many practices from the existing catalogue.</p>
+
+<p>Beyond fairness, a RAI pattern catalogue addresses broader concerns, including industrial-level governance, leadership commitment to RAI, and the establishment of ethics committees [95]. 
+Standardized reporting and advanced risk management, such as failure mode and effects analysis, are particularly promising for developing responsible-by-design systems. 
+These patterns extend to organizational and team-level practices, ensuring RAI principles are embedded throughout the development process.</p>
+
+<p>Embedding explainability into ML artifacts is critical for transparency, with techniques like summary plots, or dependence plots providing insights into feature importance and model behavior [69].</p>
+
+<p>Nevertheless, fairness practices prove to be context-dependent, as operational domains significantly impact their effectiveness, making it still challenging to abstract and recommend universal solutions [12].</p>
+
+<h3 id="conclusions">Conclusions</h3>
+
+<p>Our review of recent practices in ML engineering highlights both encouraging progress and persistent gaps. 
+While domains like RAI have seen the development of comprehensive practice catalogues, other critical areas — particularly requirements engineering, AutoML, or data engineering — remain less mature, with many practices still emerging or lacking actionable guidance.</p>
+
+<p>The inherently dynamic and uncertain nature of ML continues to challenge traditional engineering approaches, especially in specifying requirements, designing resilient architectures, and ensuring data quality at scale. 
+Moving forward, there is a clear need for more systematic, ML-specific engineering practices that go beyond adaptations of classical software development methods.</p>
+
+<p>Broader empirical validation across different domains is also necessary, in order to bring evidence regarding how well these practices generalize across different industries, scales, and ML application domains.</p>
+
+<h3 id="notes">Notes</h3>
+
+<p>The reference notation is based on the references available <a href="https://se-ml.github.io/blog/2025/five-y/">in this article</a>.</p>
+
+  </article>
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'se4ml';
+    var disqus_identifier = '/blog/2025/five-y-p2';
+    var disqus_title = {
+      {
+        page.title | jsonify
+      }
+    };
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  
+
+</div>
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Specification-Driven Development</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/agentic_patterns/02-specification-driven-dev/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Specification-Driven Development</h1>
+    <p class="post-meta">May 25, 2026 • Alex Serban</p>
+  </header>
+
+
+  
+  
+
+  
+  
+  
+
+  <div style="text-align:center;">
+    <a href="/agentic_patterns/01-agent-assisted-discovery/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 2 / 9 </span> •
+    <a href="/agentic_patterns/#specification"> <span>Specification</span> </a>
+    <a href="/agentic_patterns/03-plan-driven-task-decomposition/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+
+  <br><br>
+
+  
+  <div class="image-container">
+    <img src="/assets/img/specs.png" class="blog-image pattern-image"></img>
+    
+  </div>
+  
+
+
+  
+  <h3 class="black bold">Intent</h3>
+  <div>
+    State the task declaratively in terms of goals, constraints, context, and acceptance criteria rather than relying on imperative prompts.
+  </div>
+  
+
+  
+  <h3 class="black bold">Problem</h3>
+  <div>
+    Agents execute literal instructions well, but they do not reliably resolve ambiguity or infer unstated constraints. Imperative prompts therefore tend to produce brittle output.
+  </div>
+  
+
+  
+  <h3 class="black bold">Pattern</h3>
+  <div>
+    State the task declaratively in terms of goals, constraints, context, and acceptance criteria. Emphasize what must be true at completion, not a rigid script for how to get there.
+  </div>
+  
+
+  
+
+  
+  <h3 class="black bold">Correct Use</h3>
+  <div>
+    Specify the task boundaries explicitly, list prohibitions, and write acceptance criteria that are testable. Use the agent to refine the specification before using it to implement.
+  </div>
+  
+
+  
+  <h3 class="black bold">Failure Mode If Skipped</h3>
+  <div>
+    The agent solves the prompt it received rather than the problem the developer intended.
+  </div>
+  
+
+  
+  <div>
+    <h2 id="rationale">Rationale</h2>
+
+<p>Coding agents are strong at executing instructions but weaker at reconstructing missing intent. If requirements remain implicit, ambiguous, or mixed with low-level directions, the agent often follows the wording literally while missing the underlying objective.</p>
+
+<p>This makes the main problem different from ordinary programming. In conventional development, the same person usually writes both the instructions and the code. In agentic workflows, intent is delegated. This delegation creates a gap between what the developer means and what the agent implements. A specification helps narrow that gap.</p>
+
+<p>Common consequences of imperative prompting include:</p>
+
+<ul>
+  <li>Brittle, over-specified prompts</li>
+  <li>Literal execution of underspecified instructions</li>
+  <li>Missed intent when edge cases arise</li>
+  <li>Difficulty adapting when circumstances change</li>
+</ul>
+
+<h2 id="how-to-apply-the-pattern">How to Apply the Pattern</h2>
+
+<p>Write the specification before asking the agent to implement. A useful specification usually has five parts:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Purpose</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Goal</strong></td>
+      <td>States the desired end condition</td>
+      <td>“Users can authenticate with OAuth”</td>
+    </tr>
+    <tr>
+      <td><strong>Constraints</strong></td>
+      <td>Defines boundaries and prohibitions</td>
+      <td>“Do not modify the database schema”</td>
+    </tr>
+    <tr>
+      <td><strong>Context</strong></td>
+      <td>Supplies relevant technical or business background</td>
+      <td>“This is a legacy Python 2.7 system”</td>
+    </tr>
+    <tr>
+      <td><strong>Acceptance Criteria</strong></td>
+      <td>Defines verifiable completion conditions</td>
+      <td>“All existing tests pass”</td>
+    </tr>
+    <tr>
+      <td><strong>Out of Scope</strong></td>
+      <td>States what should not be attempted</td>
+      <td>“No redesign of the navigation flow”</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The practical aim is to specify what must be true, what must be avoided, and how completion will be checked.</p>
+
+<h2 id="specification-template">Specification Template</h2>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gu">## Task: [Brief Description]</span>
+
+<span class="gu">### Goal</span>
+[What should be true when this is complete]
+
+<span class="gu">### Constraints</span>
+<span class="p">-</span> MUST NOT: [Critical prohibitions]
+<span class="p">-</span> MUST: [Critical requirements]
+<span class="p">-</span> PREFER: [Soft preferences]
+
+<span class="gu">### Context</span>
+<span class="p">-</span> [Relevant technical context]
+<span class="p">-</span> [Business context if applicable]
+<span class="p">-</span> [Related previous work]
+
+<span class="gu">### Acceptance Criteria</span>
+<span class="p">-</span> [ ] [Verifiable criterion 1]
+<span class="p">-</span> [ ] [Verifiable criterion 2]
+<span class="p">-</span> [ ] [Verifiable criterion 3]
+
+<span class="gu">### Out of Scope</span>
+<span class="p">-</span> [Explicitly excluded items]
+</code></pre></div></div>
+
+<h2 id="supporting-practices">Supporting Practices</h2>
+
+<h3 id="refine-the-specification-before-implementation">Refine the Specification Before Implementation</h3>
+
+<p>Agents can help develop specifications, not only consume them.</p>
+
+<ol>
+  <li>Start from a rough task description.</li>
+  <li>Ask the agent to draft a specification.</li>
+  <li>Ask the agent to identify ambiguity, omissions, and edge cases.</li>
+  <li>Review and revise the specification.</li>
+  <li>Use the approved version to guide implementation.</li>
+</ol>
+
+<p>Useful critique prompts include:</p>
+
+<ul>
+  <li>“Review this specification. What is ambiguous or underspecified?”</li>
+  <li>“What edge cases are not covered?”</li>
+  <li>“What could go wrong if an agent implements this literally?”</li>
+  <li>“Which acceptance criteria are missing?”</li>
+</ul>
+
+<h3 id="use-llms-to-write-better-specifications">Use LLMs to Write Better Specifications</h3>
+
+<p>LLMs can be useful during specification writing, but their role should be bounded. They are effective at turning a rough idea into a more explicit task description, surfacing missing constraints, proposing edge cases, and reformatting the result into a stable template. They are less reliable as arbiters of product intent or project truth. The developer still needs to decide what the task is, what trade-offs are acceptable, and which constraints are real.</p>
+
+<p>A practical workflow is:</p>
+
+<ol>
+  <li>Start with a short statement of the task in plain language.</li>
+  <li>Ask the LLM to convert it into a structured specification with goals, constraints, context, acceptance criteria, and explicit task boundaries.</li>
+  <li>Ask the LLM to critique that draft for ambiguity, omissions, conflicting constraints, and missing edge cases.</li>
+  <li>Revise the specification manually.</li>
+  <li>Use the revised version as the implementation artefact.</li>
+</ol>
+
+<p>Useful prompts include:</p>
+
+<ul>
+  <li>“Turn this rough task description into a specification with goals, constraints, context, acceptance criteria, and out-of-scope items.”</li>
+  <li>“What in this specification is ambiguous or likely to be interpreted too literally?”</li>
+  <li>“Which constraints are missing if I want to keep the change narrowly scoped?”</li>
+  <li>“Which acceptance criteria would let me verify this task objectively?”</li>
+</ul>
+
+<p>The key discipline is that the LLM may help draft and critique the specification, but it should not silently define the task on the developer’s behalf.</p>
+
+<h3 id="prefer-declarative-framing">Prefer Declarative Framing</h3>
+
+<p>The relevant distinction is between describing <em>what</em> should hold at the end of the task and prescribing <em>how</em> the agent should proceed step by step. Declarative framing usually gives the agent enough flexibility to adapt while still constraining the result through goals and checks.</p>
+
+<p>This does not remove the need for oversight. It means that effective use of coding agents depends heavily on specifying intent precisely, stating exclusions explicitly, and verifying that the output matches the intended result.</p>
+
+<h3 id="treat-specifications-as-reusable-artefacts">Treat Specifications as Reusable Artefacts</h3>
+
+<p>Specifications are stronger than one-off prompts because they can be reviewed, revised, and reused across sessions.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Prompts</th>
+      <th>Specifications</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Persistence</strong></td>
+      <td>Ephemeral and session-bound</td>
+      <td>Persistent and reusable</td>
+    </tr>
+    <tr>
+      <td><strong>Reviewability</strong></td>
+      <td>Difficult to inspect collaboratively</td>
+      <td>Reviewable as project artefacts</td>
+    </tr>
+    <tr>
+      <td><strong>Rationale</strong></td>
+      <td>Often implicit</td>
+      <td>Can record why options were chosen or excluded</td>
+    </tr>
+    <tr>
+      <td><strong>Reusability</strong></td>
+      <td>Usually limited to one exchange</td>
+      <td>Reusable across sessions and contributors</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="use-the-double-spec-pattern-in-legacy-systems">Use the Double-Spec Pattern in Legacy Systems</h3>
+
+<p>When the current system behaviour is unclear, write two specifications before making changes:</p>
+
+<ol>
+  <li>A specification of what the system currently does</li>
+  <li>A specification of what it should do after the change</li>
+</ol>
+
+<p>The gap between these two specifications defines the change surface more clearly and reduces the risk of accidental regressions.</p>
+
+<h2 id="anti-patterns">Anti-patterns</h2>
+
+<ul>
+  <li>Step-by-step instructions that over-constrain the solution</li>
+  <li>Ambiguous goals such as “make it better”</li>
+  <li>Missing constraints that allow unrelated changes</li>
+  <li>Missing acceptance criteria</li>
+  <li>Specifications that describe how rather than what</li>
+  <li>One-off prompts instead of persistent specification files</li>
+</ul>
+
+<h2 id="indicators">Indicators</h2>
+
+<ul>
+  <li>Amount of rework caused by misunderstood requirements</li>
+  <li>Frequency of scope drift during implementation</li>
+  <li>Share of tasks with explicit acceptance criteria before implementation</li>
+</ul>
+
+<h2 id="example">Example</h2>
+
+<p><strong>Less effective:</strong></p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Add a login button to the header that calls the auth API when clicked
+and shows a loading spinner and handles errors with a toast message.
+</code></pre></div></div>
+
+<p><strong>More effective:</strong></p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gu">## Goal</span>
+Users can initiate authentication from any page in the application.
+
+<span class="gu">## Constraints</span>
+<span class="p">-</span> MUST NOT modify existing header layout
+<span class="p">-</span> MUST use existing Button component from design system
+<span class="p">-</span> MUST follow current error handling patterns
+
+<span class="gu">## Acceptance Criteria</span>
+<span class="p">-</span> [ ] Login button visible in header
+<span class="p">-</span> [ ] Clicking button initiates OAuth flow
+<span class="p">-</span> [ ] Loading state shown during authentication
+<span class="p">-</span> [ ] Errors displayed using existing toast system
+<span class="p">-</span> [ ] All existing tests pass
+</code></pre></div></div>
+
+  </div>
+  
+
+  <br><br>
+  <div style="text-align:center;">
+    <a href="/agentic_patterns/01-agent-assisted-discovery/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 2 / 9 </span> •
+    <a href="/agentic_patterns/#specification"> <span>Specification</span> </a>
+    <a href="/agentic_patterns/03-plan-driven-task-decomposition/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+  <br><br>
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'se4ml';
+    var disqus_identifier = '/agentic_patterns/02-specification-driven-dev';
+    var disqus_title = 'Specification-Driven Development';
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  
+
+</div>
+
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

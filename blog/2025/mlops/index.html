@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Insights into Recent MLOps practices</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/blog/2025/mlops/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Insights into Recent MLOps practices</h1>
+    <p class="post-meta">September 1, 2025 •
+      Alex Serban</p>
+  </header>
+
+  
+  <div class="image-container">
+    <img src="/assets/img/mlops_tools.png" class="blog-image"></img>
+    
+    <p>Image from Toward End-to-End MLOps Tools Map A Preliminary Study based on a Multivocal Literature Review</p>
+    
+  </div>
+  
+
+  <article class="post-content">
+    <p>Part of our ongoing exploration into the  <a href="https://se-ml.github.io/blog/2025/five-y/">latest trends in ML engineering best practices</a> we identified five key areas that define the current landscape. 
+This article delves into the second area: MLOps practices, and marks the third part in a <a href="https://se-ml.github.io/blog/2025/five-y/">series dedicated to examining recent advancements in ML engineering</a>, highlighting emerging challenges, and discussing under-represented topics.</p>
+
+<p>Our systematic analysis of approximately 23 articles reveals that while significant progress has been made in understanding MLOps challenges and adoption patterns, as well as in refining existing practices, there has been a relative scarcity of entirely novel practices. 
+We discuss these findings and assess how they extend, complement, or challenge the existing <a href="https://se-ml.github.io/practices/">catalogue of practices</a>.</p>
+
+<h3 id="challenges-and-potential-solutions">Challenges and potential solutions: </h3>
+
+<p>First, a substantial body of research investigates the challenges, perception, and adoption of MLOps, consistently highlighting gaps in automation, tooling, and quality assurance within ML pipelines [32, 37, 40, 48, 50, 52, 76, 79, 89, 91, 94, 104, 108]. 
+While many of these studies identify issues without developing practices, several promising developments can be translated into actionable practices. </p>
+
+<p>For example, [32, 79] emphasize the importance of defining and adopting a concrete model management strategy, including robust tracking and maintaining lineage and provenance for ML models, ensuring that models are properly identified, named, and labeled.</p>
+
+<p>Furthermore, [7, 32] advocate for establishing continuous data monitoring and validation practices. 
+This is an important, yet often overlooked, topic, as typical MLOps practices tend to prioritize monitoring models in production but frequently neglect data monitoring.</p>
+
+<p>Separately, [108] investigate the behavior of models in production, demonstrating that their performance often cannot be predicted from training data alone. 
+Consequently, they advocate the development of advanced debugging tools for operational environments. 
+These tools could potentially provide a high degree of observability across every part of the ML pipeline, incorporating elements such as telemetry, logs, traces, dashboards, and explainability &amp; trust metrics. 
+Such comprehensive insights can empower engineers to diagnose model issues effectively and facilitate better alignment between technical teams and non-technical stakeholders.</p>
+
+<p>Additionally, [76] address the challenges of scaling ML operations, particularly for smaller organizations. 
+They recommend developing a detailed scaling plan that encompasses not only financial considerations and resource allocation but also a thorough assessment of associated risks and their mitigation strategies.</p>
+
+<p>While their operationalization is not entirely clear, these challenges and their potential solutions represent promising extensions to the <a href="https://se-ml.github.io/practices/">existing catalogue of practices</a>, addressing gaps in model management, data monitoring, and the operationalization of debugging tools.</p>
+
+<h3 id="maintenance--artifact-versioning">Maintenance &amp; Artifact versioning</h3>
+
+<p>A second area identified concerns model maintenance and the versioning and tracing of ML artifacts. 
+This includes strategies for managing the lifecycle of data and models, and their associated components.</p>
+
+<p>For example, [26] propose a technique that enables the reuse of previously trained models for similar data distributions, thereby reducing the need for unnecessary retraining and saving computational resources.</p>
+
+<p>Furthermore, [16] explore how model management can be integrated with datasets and code within larger organizational environments. 
+They introduce the concept of Model lake, an approach analogous to data lakes, where all relevant model artifacts, including versions, metadata, associated data, and code, are centrally stored and managed. 
+This facilitates comprehensive tracking and accessibility.</p>
+
+<p>Separately, [104] investigate the impact of various model export formats on interoperability and deployment. 
+Their findings suggest that adopting ONNX (Open Neural Network Exchange) as a standard practice can improve the portability and deployment efficiency of machine learning models across different frameworks and hardware.</p>
+
+<p>Complementing these conceptual approaches, specific tools are being developed to further improve model management. 
+For example, [71] introduce git-theta, a Git-like version control system specifically designed for models. 
+This system tracks changes at the level of model parameters, enabling communication-efficient checkpointing and providing the ability to track the evolution of weight matrices over time.</p>
+
+<p>Similarly, [68] propose Mgit, a system focused on versioning models by recording provenance and lineage information across different iterations. 
+Mgit also incorporates optimizations for efficient model storage, and proves particularly valuable for tracing model provenance in complex scenarios, such as fine-tuning foundational models developed by external entities.</p>
+
+<p>Together with the model management strategies identified by [32, 79], these developments suggest the emergence of a novel practice for artifact management that can improve the <a href="https://se-ml.github.io/">existing catalogue of practices</a>.</p>
+
+<h3 id="responsible-ai">Responsible AI</h3>
+
+<p>Third, the growing emphasis on Responsible AI (RAI), <a href="https://se-ml.github.io//blog/2025/five-y-p2/">highlighted in the second article as well</a>, impacts MLOps practices, with researchers and practitioners proposing concrete methods for operationalizing RAI principles.</p>
+
+<p>Specifically, [72] explore various design patterns for responsible MLOps pipelines. These include developing an ethical monitoring system and an ethics patcher, integrating AI ethics auto-testing directly into the pipeline, while [94] advocate for advancing the technological stack towards using zero-trust AI architectures or implementing sophisticated data leakage prevention solutions.</p>
+
+<p>These developments represent an expansion of MLOps scope beyond more traditional performance and reliability concerns, introducing the RAI dimensions that the <a href="https://se-ml.github.io/practices">current practice catalogue</a> does not integrate systematically into operational practices.</p>
+
+<h3 id="tooling">Tooling</h3>
+
+<p>Last, comprehensive tooling ecosystems are a fundamental pillar for MLOps implementation.
+While recommending specific tools without organizational context can be challenging due to varying requirements and constraints, [79] provide a comprehensive mapping of end-to-end MLOps tools that can guide practitioners in making informed decisions about their technology stack (an illustration of this mapping is provided in the image above).</p>
+
+<h3 id="what-is-missing">What is missing?</h3>
+
+<p>While the current focus in MLOps research and practice remains predominantly on understanding fundamental challenges and adoption patterns, several areas continue to be underexplored, particularly as the field evolves toward more complex and large-scale systems.</p>
+
+<h4 id="scale-challenges-in-modern-ai-systems">Scale Challenges in Modern AI Systems</h4>
+
+<p>First, there is a notable gap in addressing the operational challenges posed by large-scale model inference, particularly for LLMs, Multimodal LLMs, and other foundation models. These systems present computational, memory, and latency requirements that more traditional practices were not designed to handle. Issues such as efficient model serving at scale, dynamic resource allocation for variable workloads, cost optimization for inference-heavy applications, and managing the complexity of distributed inference across multiple GPUs or cloud regions remain largely unaddressed in the analyzed literature.</p>
+
+<h4 id="intersection-of-scale-and-responsible-ai">Intersection of Scale and Responsible AI</h4>
+
+<p>Second, the intersection of scale and RAI presents complex challenges that are inadequately covered in existing research. Operationalizing AI systems that serve millions of users introduces unique ethical and fairness considerations that go beyond traditional bias detection and mitigation strategies (e.g., multi-linguistic contexts, cultural differences, etc.). 
+When models interact with diverse global user bases, biases can manifest in varied and context-dependent ways, requiring sophisticated monitoring and intervention mechanisms.
+ 
+ </p>
+<h4 id="cost-management">Cost management</h4>
+
+<p>Third, the financial implications of operating large-scale AI systems present a challenge that remains underexplored. 
+The cost structure of modern AI systems, particularly LLMs and foundation models, differs from other ML applications, with inference costs often exceeding training expenses.</p>
+
+<p>Organizations face challenges in predicting and controlling costs when deploying models that require thousands of GPU hours for inference, especially with variable user loads. 
+The complexity is amplified by the need to balance cost optimization with performance – where techniques like model quantization or pruning can reduce costs but may compromise performance for some user groups.</p>
+
+<p>Additionally, the lack of standardized cost monitoring frameworks designed for foundation model deployments leaves organizations without adequate tools to manage AI infrastructure expenses effectively.</p>
+
+<h3 id="conclusions">Conclusions</h3>
+
+<p>Our analysis of recent literature reveals a field in transition, characterized more by refinement and extension of existing practices than by fundamentally novel approaches. 
+This reflects the natural maturation of MLOps as a discipline.</p>
+
+<p>The identified developments – e.g., improved model management strategies and artifact versioning systems, or the integration of Responsible AI principles – represent meaningful extensions to the <a href="https://se-ml.github.io/practices/">existing catalogue</a> of practices.</p>
+
+<p>However, our analysis highlights significant blind spots that current research has yet to address. The operational challenges of large-scale AI systems – particularly LLMs and foundation models – expose interesting areas for future exploration. 
+Issues of scale, cost management, and the intersection of RAI with global deployment represent areas where both research and practice lag behind.
+ </p>
+<h3 id="notes">Notes</h3>
+
+<p>The reference notation is based on the references available <a href="https://se-ml.github.io/blog/2025/five-y/">in this article</a>.</p>
+
+  </article>
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'se4ml';
+    var disqus_identifier = '/blog/2025/mlops';
+    var disqus_title = {
+      {
+        page.title | jsonify
+      }
+    };
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  
+
+</div>
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

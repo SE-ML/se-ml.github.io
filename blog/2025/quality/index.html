@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Quality Attributes for ML-Enabled Systems: A Research Synthesis</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/blog/2025/quality/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Quality Attributes for ML-Enabled Systems: A Research Synthesis</h1>
+    <p class="post-meta">December 25, 2025 •
+      Alex Serban</p>
+  </header>
+
+  
+
+  <article class="post-content">
+    <p>Part of our ongoing exploration into the  <a href="https://se-ml.github.io/blog/2025/five-y/">latest trends in ML engineering best practices</a> we identified five key areas that define the current landscape. 
+This article discusses the fourth and last area: Quality attributes for machine learning systems.</p>
+
+<p>Our synthesis of 24 academic papers reveals how the community approaches ML system quality: fairness, safety, and explainability now rank above accuracy in engineering discussions. 
+From these articles, three cross-cutting themes emerge: reproducibility as a first-class concern, the inadequacy of single aggregate metrics, and a preference for explicit over implicit decisions. 
+Furthermore, seven interconnected research areas emerge: code quality (cataloguing 22 ML-specific anti-patterns), testing strategies across traditional ML and LLMs, technical debt (ML projects carry twice the debt density of conventional software), fairness as both a conceptual framework and operational challenge, architectural tactics with quantifiable trade-offs, explainability evaluation methods, and certification frameworks for safety-critical deployment.</p>
+
+<h3 id="cross-cutting-themes-across-the-literature">Cross-Cutting Themes Across the Literature</h3>
+
+<p>Before examining individual topics, we highlight three recurring themes across the studies:</p>
+
+<p><strong>Reproducibility as a main concern.</strong> Studies on code quality [102], technical debt [6], and certification [13] independently emphasize reproducibility. 
+Zhang et al. [102] identify “randomness uncontrolled” and “hyperparameters not explicitly set” as code smells. 
+Bhatia et al. [6] find that reproducibility-related debt persists longer than other types. 
+Andrade et al. [13] require deterministic inference as a precondition for certification. 
+This convergence suggests reproducibility should be treated as a quality attribute alongside accuracy and performance.</p>
+
+<p><strong>The Inadequacy of Single Metrics.</strong> Multiple papers critique reliance on aggregate quality metrics. 
+Dobslaw et al. [4] distinguish atomic from aggregated oracles in LLM testing. 
+Indykov et al. [9] find that fairness and safety rank above accuracy in quality attribute frequency. 
+Yang et al. [3] demonstrate that capability-based evaluation predicts generalization better than overall accuracy. 
+The consistent conclusion is single-number evaluations obscure critical failure modes.</p>
+
+<p><strong>Explicit Over Implicit.</strong> 
+Whether discussing hyperparameters [102], fairness definitions [7, 8], architectural trade-offs [9], or dataset provenance [13], the literature consistently favors explicit documentation and deliberate choice over implicit defaults.</p>
+
+<h3 id="code-quality-cataloguing-ml-specific-anti-patterns">Code Quality: Cataloguing ML-Specific Anti-Patterns</h3>
+
+<p>Zhang et al. [102] synthesized academic literature, grey literature, and practitioner forums to identify a set code smells specific to ML applications.
+The identified smells cluster into three categories by pipeline stage:</p>
+
+<p><strong>Data Processing Smells</strong> include unnecessary iteration, chain indexing in dataframe operations, and implicit data type handling. 
+These smells impact efficiency and error-proneness.</p>
+
+<p><strong>Training Smells</strong> include hyperparameters not explicitly set, uncontrolled randomness, memory not freed between training runs, and data leakage through improper cross-validation. These smells impact reproducibility, resource efficiency, and model validity.</p>
+
+<p><strong>Deployment Smells</strong> include gradient accumulation errors, tensor shape mismatches, and API deprecation issues. These impact reliability and maintainability.</p>
+
+<h3 id="testing-convergent-strategies-across-ml-paradigms">Testing: Convergent Strategies Across ML Paradigms</h3>
+
+<p>The testing literature reveals both LLM-specific approaches and more generalizable principles.</p>
+
+<p><strong>Traditional ML Testing.</strong> Riccio et al. [2] systematically mapped testing approaches, identifying metamorphic testing as the dominant strategy for addressing the oracle problem.
+Rather than specifying expected outputs, metamorphic testing specifies relationships: rotating an image should not change its classification; adding neutral words should not flip sentiment.</p>
+
+<p>Furthermore, mutation testing has also been proposed, with ML-specific adaptation. 
+Traditional mutation operators designed for code do not transfer effectively to neural networks. 
+Domain-specific operators such as label perturbation, weight manipulation, data augmentation failures, prove more effective in pracctice.</p>
+
+<p><strong>Industry Practice.</strong> Song et al. [14] conducted an interactive review bridging academic testing literature with industrial practice. 
+Their findings reveal a focus on testing data quality and preprocessing stages, areas under-represented in academic work. 
+Marijan [15] further examines test case prioritization for continuous integration in ML systems, finding that ML-specific prioritization techniques outperform traditional approaches when training data evolves frequently.</p>
+
+<p><strong>LLM and GenAI Testing.</strong> Dobslaw et al. [4] propose a taxonomy for LLM testing challenges, distinguishing atomic oracles (pass/fail on individual cases) from aggregated oracles (statistical properties across many cases). 
+Testing whether a chatbot “responds politely” requires aggregated assessment, not individual test cases.</p>
+
+<p>Aleti [16] extends this to generative AI systems more broadly, identifying the oracle problem as particularly acute: generated outputs have no single “correct” answer. 
+Their analysis suggests that reference-based evaluation (comparing to gold standards) must be complemented by reference-free approaches evaluating coherence, relevance, and safety independently.</p>
+
+<p><strong>Convergent Principles.</strong> Despite targeting different ML paradigms, the literature converges on several principles:</p>
+
+<ol>
+  <li>
+    <p><em>Capability-based organization</em>: Yang et al. [3] advocate organizing tests around abstract capabilities (negation handling, numerical reasoning) rather than individual examples.</p>
+  </li>
+  <li>
+    <p><em>Adequacy metrics beyond coverage</em>: Asgari et al. [5] propose a test suite including metrics that measure diversity, failure region coverage, and scenario completeness. 
+These approaches move ML testing beyond neuron coverage toward more meaningful adequacy criteria.</p>
+  </li>
+  <li>
+    <p><em>Data-centric testing</em>: Multiple papers emphasize that testing ML systems requires testing data quality, not just model behavior [1, 14, 15].</p>
+  </li>
+  <li>
+    <p><em>Configuration as test parameter</em>: Model configuration (hyperparameters, temperature, prompt format) must be part of test specification, not assumed constant.</p>
+  </li>
+</ol>
+
+<h3 id="technical-debt-quantification-for-ml">Technical Debt: Quantification for ML</h3>
+
+<p>Bhatia et al. [6] provide the first large-scale empirical comparison of self-admitted technical debt (SATD) between ML and non-ML projects. 
+They find that ML projects carry twice the debt density (1.87% vs. 0.92%), quantifying what practitioners have long suspected.</p>
+
+<p><strong>Novel Debt Types.</strong> Beyond confirming higher debt levels, the study identifies two debt types absent from prior SATD taxonomies:</p>
+
+<ul>
+  <li><em>Configuration debt</em>: Arising from the complex configurations wiring together data pipelines, model architectures, and training procedures</li>
+  <li><em>Inadequate tests debt</em>: Arising from the difficulty of testing ML systems and temptation to skip coverage</li>
+</ul>
+
+<p>These types account for a combined 15% of ML-specific SATD instances, suggesting they warrant dedicated detection and management strategies.</p>
+
+<p><strong>Connection to Code Smells.</strong> The debt study complements the code smell catalog [102]. 
+Where Zhang et al. identify <em>what</em> patterns to avoid, Bhatia et al. quantify <em>where</em> such patterns accumulate and <em>how long</em> they persist. 
+Together, they suggest a detection-prioritization pipeline: identify smells through static analysis, prioritize remediation in high-churn areas with debt history.</p>
+
+<h3 id="fairness-from-technical-debt-to-social-impact">Fairness: From Technical Debt to Social Impact</h3>
+
+<p>Santos et al. [7] propose <em>software fairness debt</em> as a category distinct from technical and social debt. Their contribution is conceptual: arguing that the societal impact of biased systems demands its own debt metaphor with distinct causes, effects, and remediation strategies.</p>
+
+<p><strong>Root Cause Taxonomy.</strong> Their systematic review identifies eight root causes of fairness deficiency, with training data bias and design bias receiving the most attention in the literature. 
+Model bias follows closely, while cognitive bias, historical bias, requirements bias, and testing bias receive moderate attention. 
+Societal bias remains the least explored. 
+Primary mitigations range from data augmentation and reweighting for training data issues, to inclusive design reviews, fairness-aware algorithms, and demographic test coverage. 
+The relative under-exploration of societal and requirements bias suggests research opportunities in upstream bias sources.</p>
+
+<p><strong>Operationalizing Fairness.</strong> d’Aloisio et al. [8] complement the conceptual framework with operational tooling. 
+Their approach provides a domain-specific language for specifying fairness definitions and automating assessment.</p>
+
+<p><strong>The Sustainability Crisis.</strong> Mim et al. [17] investigate what makes fairness tool projects sustainable in open source. 
+Their finding that 53% of open-source fairness projects become inactive within their first three years highlights a sobering obstacle: while the research community has developed sophisticated fairness concepts and tools, maintaining them in practice proves difficult. 
+The study identifies factors predicting sustainability such institutional backing, clear governance, and integration with widely-used ML frameworks.</p>
+
+<p><strong>Propensity-Based Fairness Testing.</strong> Peng et al. [18] propose FairMatch, applying propensity score matching to identify and fix fairness bugs. 
+Unlike traditional approaches that retrain models, FairMatch identifies similar individuals across demographic groups and tests whether they receive similar predictions. This approach enables fairness testing without requiring ground truth labels for protected attributes.</p>
+
+<p><strong>Connection to Architecture.</strong> Indykov et al. [9] find that fairness ranks as the most frequently mentioned quality attribute in ML architecture literature. 
+This architectural attention validates treating fairness as a system-level concern, not merely a model-level metric.</p>
+
+<h3 id="architectural-tactics-quality-trade-offs-made-explicit">Architectural Tactics: Quality Trade-offs Made Explicit</h3>
+
+<p>Indykov et al. [9] conducted the most comprehensive systematic review in our corpus, analyzing 206 papers to identify quality attributes, architectural tactics, and their trade-offs.</p>
+
+<p><strong>Quality Attribute Rankings.</strong> The frequency analysis reveals community priorities that challenge traditional assumptions about ML system quality. 
+Fairness and safety emerge as the most frequently discussed quality attributes, followed closely by security and explainability. 
+Privacy ranks fifth, while reliability appears next.
+ Notably, accuracy – traditionally considered the primary measure of ML success – ranks only seventh, followed by robustness, maintainability, performance, and transparency.</p>
+
+<p>That fairness and safety rank above accuracy reflects a shift from “does it work?” to “does it work responsibly?” 
+This aligns with the fairness debt literature [7] and suggests architectural decisions should explicitly address responsible AI concerns.</p>
+
+<p><strong>Toward Quantitative Evaluation.</strong> Emanuilov and Dimov [25] move beyond qualitative trade-off discussion to quantitative measurement. 
+Their framework for evaluating architectural patterns in ML systems provides metrics for scalability (e.g., Scalability Coefficient improvements from 1.62 to 6.97 in monolith-to-microservice transitions) and performance (e.g., 31% Performance Coefficient improvements via weight pruning). 
+This quantification enables evidence-based architectural decisions rather than intuition-driven choices.</p>
+
+<p><strong>Requirements and Specification.</strong> Villamizar et al. [26] address a gap upstream of architecture: how to specify ML-enabled systems in the first place. 
+They propose an approach that provides perspective-based guidance for identifying concerns across stakeholder viewpoints – from data scientists focused on model performance to operators concerned with deployment and monitoring. 
+This requirements engineering approach ensures architectural decisions address all relevant quality attributes.</p>
+
+<h3 id="explainability-nuancing-the-performance-trade-off">Explainability: Nuancing the Performance Trade-off</h3>
+
+<p>The literature on explainability challenges simplistic “interpretable vs. accurate” dichotomies, with multiple articles examining when the trade-off is real versus when it reflects insufficient engineering effort.</p>
+
+<p><strong>Revisiting the Trade-off.</strong> Crook et al. [19] systematically analyze claims about the performance-explainability trade-off. They find that for many application domains, the trade-off is overstated: explainable models exist within the set of near-optimal solutions. 
+The challenge is to efficiently search for them.</p>
+
+<p><strong>When Complex Models Are Necessary.</strong> Two conditions justify black-box models:</p>
+
+<ol>
+  <li>
+    <p><em>Hidden patterns</em>: Some domains contain patterns too complex, non-linear, or distributed for human engineering. The success of deep learning in vision and language provides evidence such patterns exist.</p>
+  </li>
+  <li>
+    <p><em>Unengineerable features</em>: Some concepts are intuitive to humans but resist formalization. “Natural sounding speech” is recognizable but difficult to express as computable rules.</p>
+  </li>
+</ol>
+
+<p><strong>Evaluating Explanations.</strong> Speith and Langer [20] provide a classification of XAI evaluation methods, distinguishing between:</p>
+
+<ul>
+  <li><em>Functionally-grounded evaluation</em>: Testing whether explanations reflect actual model behavior (e.g., if weights are randomized, explanations should change)</li>
+  <li><em>Human-grounded evaluation</em>: Testing whether explanations help users understand and trust appropriately</li>
+  <li><em>Application-grounded evaluation</em>: Testing whether explanations improve downstream task performance</li>
+</ul>
+
+<p>Their analysis reveals that most XAI research focuses on functionally-grounded evaluation, leaving human-grounded and application-grounded assessment under-explored. This gap matters because an explanation can be faithful to model behavior yet unhelpful – or even misleading – to users.</p>
+
+<h3 id="certification-and-verification-toward-production-readiness">Certification and Verification: Toward Production Readiness</h3>
+
+<p>Multiple papers address what evidence is needed to certify ML systems for safety-critical deployment, drawing from both formal methods and domain-specific standards.</p>
+
+<p><strong>Aviation-Derived Frameworks.</strong> Andrade et al. [13] propose a certification framework adapted from aviation standards for ML components. 
+Their framework requires identifying the five ingredients determining model behavior: training code, initial model weights, training data, inference code, and input data at inference time.</p>
+
+<p>Gariel et al. [23] extend this with a framework specifically for certifying AI-based systems in aerospace contexts. 
+Their approach emphasizes operational domain characterization – formally specifying what inputs the system will encounter in deployment – and continuous monitoring to detect out-of-distribution inputs at runtime.</p>
+
+<p><strong>Formal Verification Tooling.</strong> Wei et al. [24] introduce a comprehensive toolbox for formally verifying deep neural networks. 
+The tool supports verification of properties including robustness (small input perturbations don’t change outputs), safety (certain outputs are never produced), and reachability (characterizing possible outputs for input regions). 
+While formal verification remains computationally expensive for large networks, the authors demonstrate tractable verification for safety-critical components.</p>
+
+<p><strong>Runtime Verification.</strong> Beyond static certification, frameworks address runtime concerns: guardrails for unsafe outputs, out-of-distribution detection, and logging for post-hoc analysis. This connects to the architectural literature’s emphasis on monitoring and safety mechanisms [9].</p>
+
+<h3 id="synthesis-and-conclusions">Synthesis and Conclusions</h3>
+
+<p>Across 24 papers spanning code quality, testing, debt, fairness, architecture, explainability, and certification, several convergent themes emerge:</p>
+
+<p><strong>Consensus Areas:</strong></p>
+<ul>
+  <li>Reproducibility requires explicit control of randomness, hyperparameters, data versioning, and environment configuration [1, 6, 13, 22]</li>
+  <li>Single aggregate metrics obscure failure modes; capability-based and demographic-stratified evaluation provides better signal [3, 5, 18]</li>
+  <li>Fairness is a system-level quality attribute requiring dedicated tooling, testing, and long-term maintenance commitment [7, 8, 17, 18]</li>
+  <li>Architectural decisions involve explicit trade-offs between competing qualities; quantitative frameworks enable evidence-based choices [9, 25]</li>
+  <li>Data-centric testing and requirements engineering are essential complements to model-centric evaluation [14, 15, 26]</li>
+</ul>
+
+<p><strong>Active Research:</strong></p>
+<ul>
+  <li>Aggregated oracles for LLM testing remain underserved by current tooling [4, 16]</li>
+  <li>Configuration debt and test debt in ML systems need detection approaches [6]</li>
+  <li>Fairness-performance trade-offs in compressed models warrant further study [9, 18]</li>
+  <li>Supply chain security for LLM systems is newly recognized as critical [12]</li>
+  <li>Formal verification is becoming tractable for safety-critical ML components [24]</li>
+</ul>
+
+<p><strong>Gaps and Opportunities:</strong></p>
+<ul>
+  <li>Integration across research communities (testing and fairness, architecture and debt)</li>
+  <li>Longitudinal studies of ML system evolution in production [21]</li>
+  <li>Human-grounded and application-grounded XAI evaluation [20]</li>
+  <li>Standardized certification frameworks across domains [13, 23]</li>
+</ul>
+
+<p>The literature collectively suggests that ML engineering is maturing from ad-hoc practices toward systematic discipline. The convergence of independent research groups on similar principles – reproducibility, explicit trade-offs, capability-based evaluation, fairness-as-architecture – indicates genuine knowledge accumulation.</p>
+
+<p>For practitioners, the literature offers actionable guidance: catalog and avoid ML-specific code smells [102]; organize tests around capabilities and data quality [3, 14]; treat fairness as an architectural concern with long-term maintenance implications [7, 17]; make trade-offs explicit in design decisions [9, 25]; and invest in reproducibility infrastructure early [22].</p>
+
+  </article>
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'se4ml';
+    var disqus_identifier = '/blog/2025/quality';
+    var disqus_title = {
+      {
+        page.title | jsonify
+      }
+    };
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  
+
+</div>
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

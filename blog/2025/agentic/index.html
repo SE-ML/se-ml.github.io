@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Engineering LLM-Based Agentic Systems</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/blog/2025/agentic/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Engineering LLM-Based Agentic Systems</h1>
+    <p class="post-meta">October 28, 2025 •
+      Alex Serban</p>
+  </header>
+
+  
+  <div class="image-container">
+    <img src="/assets/img/agentic.png" class="blog-image"></img>
+    
+    <p>Image from Practical Considerations for Agentic LLM Systems</p>
+    
+  </div>
+  
+
+  <article class="post-content">
+    <p>Part of our ongoing exploration into the  <a href="https://se-ml.github.io/blog/2025/five-y/">latest trends in ML engineering best practices</a> we identified five key areas that define the current landscape. 
+This article delves into the third area: Agentic systems, and marks the third part in a <a href="https://se-ml.github.io/blog/2025/five-y/">series dedicated to examining recent advancements in ML engineering</a>, highlighting emerging challenges, and discussing under-represented topics.</p>
+
+<p>Our analysis shows that LLM-based agentic systems form a new class of autonomous systems, emulating traditional agent capabilities through language-based reasoning, planning, memory, and tool use. Unlike more traditional multi-agent architectures, their context-sensitive and stochastic behavior poses challenges for reliability, coordination, evaluation, and trustworthiness. We highlight key design patterns and engineering strategies that help address LLM limitations, alongside emerging approaches to semantic interoperability, such as the Model Context Protocol. These insights offer a  view of current practices and open challenges for engineering agentic LLM systems.</p>
+
+<h3 id="definition-and-taxonomy">Definition and Taxonomy</h3>
+
+<p>Developing clear definitions and taxonomies for the emerging class of agentic systems is a notable area of study [74, 1n].
+The academic definition of <em>agency</em>, developed through research in multi-agent systems, provides a conceptual foundation for analyzing LLM-based agents.
+Traditional agent theory characterizes autonomous systems through four capabilities – belief representation, reasoning, planning, and control – typically implemented as heterogeneous subsystems such as knowledge bases, probabilistic or symbolic planners, formal logic engines, etc.</p>
+
+<p>Contemporary LLM-based systems – built upon large pre-trained generative foundation models – seek to emulate this  architecture via the orchestration of four analogous modules: reasoning, planning, memory, and tool use.</p>
+
+<p>Yet, despite this structural resemblance, traditional agent architectures realize these capabilities through computationally specialized components, whereas LLM-based systems implement most functions within a single pre-trained model, modulated through prompt engineering and role-based conditioning. 
+This motivated a distinct taxonomy – referring to such configurations as LLM-based <em>agentic</em> systems rather than  agents.</p>
+
+<p>Furthermore, the underlying objectives and principles of traditional multi-agent and LLM-based agentic systems are distinct. In the more traditional research, agents are modeled as autonomous decision-makers situated within an environment with explicitly defined goals, utility functions, and interaction protocols. Their collective dynamics are analyzed in terms of coordination, cooperation, competition, and equilibrium-seeking behavior.</p>
+
+<p>In contrast, LLM-based agentic systems do not operate under explicit utility functions or equilibrium-driven objectives. They are language-conditioned, goal-directed generators that approximate agency through context-sensitive inference and generative modeling.</p>
+
+<p>Their behavior emerges from the statistical regularities encoded in large-scale pre-training, rather than from explicit optimization over well-defined reward landscapes. Coordination or “multi-agent” interaction in such systems is therefore emergent and representational, rather than formal and algorithmic – a byproduct of shared linguistic priors rather than equilibrium-seeking dynamics.</p>
+
+<p>This shift introduces new architectural and orchestration challenges, as coordination among multiple LLM-based agents lacks explicit objective functions, making it difficult to determine task completion or success. As a result, their collective behavior is less predictable, often heterogeneous across instances, and sensitive to variations in prompt design, context, and interaction history. Determining whether a coordinated outcome satisfies an intended objective becomes an interpretive rather than computational task, complicating both the design and assessment of agentic systems.</p>
+
+<h3 id="patterns-and-architectures">Patterns and architectures</h3>
+
+<p>Several architectural patterns and reference architectures emerge. For example, [44, 77] proposes a set of 18 architectural patterns that offer systematic guidance for designing and implementing LLM-based agentic systems. These patterns can be broardly organized into four functional architectural layers:</p>
+
+<ol>
+  <li>
+    <p>Goal Understanding &amp; Prompt Management – or <em>the input interpretation layer</em> – translates natural language intent into structured, actionable directives through prompt engineering, query reformulation, and contextual grounding techniques.</p>
+  </li>
+  <li>
+    <p>Planning &amp; Reasoning  – or <em>the strategic orchestration layer</em> – decomposes high-level objectives into executable action plans using reasoning paradigms such as one-shot inference, chain-of-thought prompting, and iterative model interrogation.</p>
+  </li>
+  <li>
+    <p>Reflection &amp; Improvement – or <em>the quality assurance layer</em> – enhances reliability and consistency through self-critique, cross-agent validation, and iterative refinement mechanisms.</p>
+  </li>
+  <li>
+    <p>Tools &amp; Governance – or <em>the operational infrastructure layer</em> – supports system-level integration via external tool invocation, resource coordination, compliance enforcement (e.g., safety guardrails), evaluation protocols, and API orchestration.</p>
+  </li>
+</ol>
+
+<p>This layered architecture aims to address the challenges discussed above, such as goal ambiguity and outcome indeterminacy. For example, the first layer mitigates the absence of explicit objective functions by translating open-ended language inputs into structured representations of intent. Similarly, the third layer partially compensates for the lack of formal success criteria through iterative reflection, evaluation, and self-correction.</p>
+
+<p>Complementary design patterns identified in related literature [2n, 3n] address similar architectural concerns, including:
+(i) Reflection – enabling self-assessment and iterative performance improvement; (ii) Planning – facilitating systematic task decomposition; (iii) Tool use – extending capabilities through external resource access; and (iv) Multi-agent collaboration – supporting role specialization and cooperative problem-solving.</p>
+
+<p>Fundamentally, these patterns seek to mitigate structural limitations of current LLM-based systems and use coordinated orchestration of agentic modules playing different roles to transform otherwise monolithic models into more modular, adaptive, and goal-directed systems.</p>
+
+<h3 id="responsible-development-of-agentic-systems">Responsible development of agentic systems</h3>
+
+<p>Outcome indeterminacy also extends to the assessment of trustworthiness in agentic systems. 
+To improve transparency and accountability, recent approaches propose the integration of dedicated verification agents and Responsible AI (RAI) plugins that can enforce ethical principles. Such mechanisms can include continuous risk assessors for real-time monitoring, black-box recorders for auditable traceability, and adaptive guardrails that mediate interactions between the agentic systems and the external environment [4n,8n,9n,10n].</p>
+
+<p>Guardrails emerge as the more scalable and modular approach for agentic RAI [56] – serving as control layers that regulate inputs, outputs, and intermediary processes to ensure compliance with ethical, legal, and user-defined requirements. These may be implemented through (i) RAI knowledge bases composed of curated rules and policies, (ii) narrow models trained for specific safety or compliance tasks, or (iii) RAI-augmented foundation models dynamically linked to RAI knowledge sources during inference.</p>
+
+<p>A comprehensive guardrail framework typically spans six complementary types across the agent’s operational lifecycle:</p>
+
+<ol>
+  <li>
+    <p>Input guardrails – sanitize user prompts (e.g., anonymization).</p>
+  </li>
+  <li>
+    <p>Output guardrails – filter generated content to prevent harm or non-compliance.</p>
+  </li>
+  <li>
+    <p>RAG guardrails validate – retrieved data for quality and relevance.</p>
+  </li>
+  <li>
+    <p>Execution guardrails – control tool or model invocation through permission lists.</p>
+  </li>
+  <li>
+    <p>Intermediate guardrails – validate workflow steps and manage fallback behavior.</p>
+  </li>
+  <li>
+    <p>Multimodal guardrails – extend oversight across text, image, and UI channels, ensuring accessibility and design compliance.</p>
+  </li>
+</ol>
+
+<p>Taken together, these mechanisms aim to build a layered assurance architecture that embeds continuous verification and adaptive oversight into agentic workflows.</p>
+
+<h3 id="reliability-and-deployment">Reliability and Deployment:</h3>
+
+<p>Further challenges in reliability and consistency in deploying agentic systems follow from the challenges discussed above. For example, minor changes to the underlying model – such as upgrading to a newer checkpoint or modifying sampling parameters – can yield significant variations in reasoning, planning, or output structure. These inconsistencies can propagate through downstream components, undermining the overall robustness and user trust of systems built around agentic LLMs [20, 54].</p>
+
+<p>To address these limitations, deployment environments that demand task consistency and predictable behavior may combine traditional engineering with adaptive LLM orchestration.
+Two broad mitigation strategies emerge as effective. The first involves manual plan definitions, in which humans define explicit task structures, role assignments, and prompt templates. This approach constrains model behavior within operational boundaries. The second relies on external planning augmentation, where the LLM is coupled with deterministic planners or reasoning modules [25]. In both cases, embedding traditional software components and plugins ensures reliability.</p>
+
+<p>Deterministic subsystems handle core logic, validation, and control flow, while stochastic LLM reasoning is confined to domains where flexibility and creative generalization are advantageous.
+This design principle was formulated as the <em>offloading of deterministic requirements to traditional software engineering</em> [4n]. Rather than depending on the stochasticity of LLMs, more critical functionality – such as context tracking, constraint enforcement, or output validation – can be implemented through conventional mechanisms. Automated context management systems can guarantee that correct information is supplied to the model, while post-processing pipelines can standardize and verify generated outputs.</p>
+
+<p>Nevertheless, stochasticity can also be leveraged as a resource. Because LLM outputs vary across samples, static retry mechanisms can exploit this variance: when an initial generation fails or is suboptimal, re-querying with the same or slightly modified prompt can produce superior results. To harness this effect safely, retry loops must be bounded, temperature variation can be introduced across attempts, and retry outcomes should be logged for empirical optimization. This transforms randomness into a more controlled form of diversity that improves average task performance.</p>
+
+<p>Complementing these measures, short-circuiting strategies improve both efficiency and reliability by constraining unnecessary computation. Agents can be designed to terminate reasoning as soon as a correct or sufficient answer is available, guided by explicit stopping criteria which can be checked with traditional software engineering components. For simple or well-structured tasks, single-turn optimization enables agents to produce final outputs without redundant intermediate steps. Early termination signals can further prevent over-reliance on external tools or excessive reasoning loops, reducing system latency and error propagation.</p>
+
+<p>Nevertheless, the effectiveness of these strategies remains application- and context-dependent. Their design often requires calibration, and broader practices or patterns have yet to crystallize as the field continues to evolve.</p>
+
+<h3 id="interoperability-and-model-context-protocol-mcp">Interoperability and Model Context Protocol (MCP)</h3>
+
+<p>As LLM-based agentic systems are text-based consumers and producers, enabling text-based interoperability between these systems and external tools has become a design challenge. To address this, the Model Context Protocol (MCP) was introduced as an open, evolving standard for structured communication among LLM-based components and external resources [5n, 6n]. 
+MCP defines common primitives for context sharing, tool invocation, and resource access, focusing on textual and semantic descriptions over more formal interface specifications, as developed in existing paradigms such as REST or RPC.</p>
+
+<p>From this perspective, MCP aims to be an abstraction layer above existing communication protocols and execution frameworks, aiming to decouple agentic logic from resource implementation. In practice, this allows an agent to retrieve data or invoke tools through MCP-compatible interfaces without depending on a specific API or infrastructure standard (which is abstracted in the MCP implementation), and focusing on the textual description of the resources. The broader objective is to foster a shared ecosystem of interoperable, MCP-compliant tools and data sources, aiming to reduce reliance on proprietary integrations.</p>
+
+<p>Nevertheless, MCP remains in its initial stages [7n]. While conceptually interesting, it currently lacks the maturity and consistency required for deployment in large-scale or enterprise settings. Core functionalities such as authentication, authorization, error handling, and state management still require task-specific implementations, as MCP focuses primarily on interaction semantics.</p>
+
+<p>From this perspective, MCP can be seen as an initial move toward semantic interoperability, facilitating language-driven interactions across heterogeneous tools and systems. However, it remains an open question whether such interoperability is essential, or primarily a strategy to mitigate certain limitations of LLMs – such as their limitation to consistently and reliably execute API calls or manage structured external resources.</p>
+
+<h3 id="conclusions">Conclusions</h3>
+
+<p>LLM-based agentic systems represent a novel class of autonomous systems, emulating more traditional agent capabilities through language-conditioned reasoning, planning, and tool use. 
+Unlike more traditional multi-agent architectures, their behavior is context-sensitive, and stochastic, creating challenges for reliability, coordination, and outcome evaluation.</p>
+
+<p>Consequently, the research in engineering LLM-based agentic systems focuses on addressing inherent limitations of LLMs, including goal ambiguity, inconsistent reasoning, outcome indeterminacy, incomplete task coverage, and unpredictable tool interactions. 
+Layered architectures, modular orchestration, and mechanisms such as reflection, guardrails, and verification agents help mitigate these issues, while frameworks like the Model Context Protocol aim to support semantic interoperability with external tools.</p>
+
+<p>Despite these advances, critical challenges remain – such as achieving consistent task performance, ensuring trustworthiness, and standardizing integration – underscoring the need for ongoing research into best practices, responsible design, and comprehensive evaluation frameworks for developing and deploying LLM-based agentic systems.</p>
+
+<p> </p>
+<h3 id="notes">Notes</h3>
+
+<p>The reference notation is based on the references available <a href="https://se-ml.github.io/blog/2025/five-y/">in this article</a>, complemented by new references that are marked with the <em>n</em> subscript.</p>
+
+<h3 id="new-references">New references</h3>
+
+<p>1n. AI agents vs. agentic ai: A conceptual taxonomy, applications and challenges <br />
+2n. Agentic Design Patterns <br />
+3n. The Agentic AI Mindset – A Practitioner’s Guide to Architectures, Patterns, and Future Directions for Autonomy and Automation <br />
+4n. Practical Considerations for Agentic LLM Systems <br />
+5n. https://modelcontextprotocol.io/docs/getting-started/intro <br />
+6n. A survey on model context protocol: Architecture, state-of-the-art, challenges and future directions <br />
+7n. Model context protocol (mcp): Landscape, security threats, and future research directions <br />
+8n. Trism for agentic ai: A review of trust, risk, and security management in llm-based agentic multi-agent systems <br />
+9n. Responsible Agentic Reasoning and AI Agents: A Critical Survey <br />
+10n. Inherent and emergent liability issues in llm-based agentic systems: a principal-agent perspective <br /></p>
+
+  </article>
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'se4ml';
+    var disqus_identifier = '/blog/2025/agentic';
+    var disqus_title = {
+      {
+        page.title | jsonify
+      }
+    };
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  
+
+</div>
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

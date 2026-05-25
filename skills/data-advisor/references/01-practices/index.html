@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Data Practices Reference</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/skills/data-advisor/references/01-practices/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Data Practices Reference</h1>
+    <h5 class="post-description"></h5>
+  </header>
+
+  <article class="post-content Data Practices Reference clearfix">
+    <h1 id="data-practices-reference">Data Practices Reference</h1>
+
+<p>All 8 practices from the SE-ML catalogue Data category (<code class="language-plaintext highlighter-rouge">01-*</code>).
+Practices marked <strong>[personal data]</strong> are only loaded when scoping confirms
+the application processes personal or individual data.
+The practice <code class="language-plaintext highlighter-rouge">data_lbl</code> is only loaded for supervised/semi-supervised learning.</p>
+
+<hr />
+
+<h2 id="data_sanity--use-sanity-checks-for-all-external-data-sources">data_sanity — Use Sanity Checks for All External Data Sources</h2>
+
+<p><strong>Difficulty:</strong> medium | <strong>Always applies</strong><br />
+<strong>Intent:</strong> Avoid invalid or incomplete data being processed.<br />
+<strong>Motivation:</strong> Data is at the heart of any ML model. Whenever external or
+potentially incomplete data is used, verifying quality upfront prevents
+production outages and inaccurate models.<br />
+<strong>Applicability:</strong> Any ML application using external data sources.</p>
+
+<p><strong>What to check (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Are there automated checks on data types, missing values, min/max ranges?</li>
+  <li>Are histograms or distributions checked for continuous features?</li>
+  <li>Are sanity check scripts reusable and integrated into the pipeline?</li>
+</ul>
+
+<p><strong>Assist — minimal sanity check template (Python/pandas):</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sanity_check</span><span class="p">(</span><span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="n">issues</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">col</span><span class="p">,</span> <span class="n">rules</span> <span class="ow">in</span> <span class="n">schema</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">col</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df</span><span class="p">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="n">issues</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s">"Missing column: </span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="n">rules</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"dtype"</span><span class="p">)</span> <span class="ow">and</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">].</span><span class="n">dtype</span> <span class="o">!=</span> <span class="n">rules</span><span class="p">[</span><span class="s">"dtype"</span><span class="p">]:</span>
+            <span class="n">issues</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s">: wrong dtype </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">].</span><span class="n">dtype</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s">"min"</span> <span class="ow">in</span> <span class="n">rules</span> <span class="ow">and</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">].</span><span class="nb">min</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">rules</span><span class="p">[</span><span class="s">"min"</span><span class="p">]:</span>
+            <span class="n">issues</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s">: value below min </span><span class="si">{</span><span class="n">rules</span><span class="p">[</span><span class="s">'min'</span><span class="p">]</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s">"max"</span> <span class="ow">in</span> <span class="n">rules</span> <span class="ow">and</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">].</span><span class="nb">max</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">rules</span><span class="p">[</span><span class="s">"max"</span><span class="p">]:</span>
+            <span class="n">issues</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s">: value above max </span><span class="si">{</span><span class="n">rules</span><span class="p">[</span><span class="s">'max'</span><span class="p">]</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+        <span class="n">null_pct</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">].</span><span class="n">isnull</span><span class="p">().</span><span class="n">mean</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">null_pct</span> <span class="o">&gt;</span> <span class="n">rules</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"max_null_pct"</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">):</span>
+            <span class="n">issues</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s">: </span><span class="si">{</span><span class="n">null_pct</span><span class="si">:</span><span class="p">.</span><span class="mi">0</span><span class="o">%</span><span class="si">}</span><span class="s"> nulls exceeds threshold"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">issues</span>
+</code></pre></div></div>
+
+<p><strong>Related:</strong> data_complete</p>
+
+<hr />
+
+<h2 id="data_complete--check-that-input-data-is-complete-balanced-and-well-distributed">data_complete — Check that Input Data is Complete, Balanced and Well Distributed</h2>
+
+<p><strong>Difficulty:</strong> basic | <strong>Always applies</strong><br />
+<strong>Intent:</strong> Avoid invalid or incomplete data being processed.<br />
+<strong>Motivation:</strong> Data generation processes are not static. Distributions drift,
+groups become over- or under-represented, and hidden feature dependencies emerge.
+Continuous checks prevent models from being trained or served on degraded data.<br />
+<strong>Applicability:</strong> Any ML application.</p>
+
+<p><strong>What to check (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Are features checked for sufficient presence (not too sparse)?</li>
+  <li>Is data distribution monitored over time (no silent drift)?</li>
+  <li>Are training and test/production distributions compared?</li>
+  <li>Are monitoring dashboards or alerts in place?</li>
+</ul>
+
+<p><strong>Related:</strong> data_sanity, deployment_distskew, social_bias</p>
+
+<hr />
+
+<h2 id="data_reusable--write-reusable-scripts-for-data-cleaning-and-merging">data_reusable — Write Reusable Scripts for Data Cleaning and Merging</h2>
+
+<p><strong>Difficulty:</strong> basic | <strong>Applies when data preprocessing is needed</strong><br />
+<strong>Intent:</strong> Avoid untidy data wrangling scripts; increase reproducibility.<br />
+<strong>Motivation:</strong> Exploratory preprocessing code in notebooks is non-reproducible,
+non-testable, and cannot be integrated into pipelines. Converting it to
+parameterised, callable functions enables reuse, testing, and automation.<br />
+<strong>Applicability:</strong> Any ML application that does not use raw or standard datasets.</p>
+
+<p><strong>What to check (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Is preprocessing code in reusable functions/modules (not notebook-only)?</li>
+  <li>Can preprocessing steps be called independently and tested?</li>
+  <li>Are preprocessing scripts integrated into a pipeline (not run manually)?</li>
+</ul>
+
+<p><strong>Typical gap:</strong> Ad-hoc Jupyter notebook cells that depend on in-memory variables;
+no way to reproduce the cleaning step from scratch.</p>
+
+<p><strong>Related:</strong> exp_tstfeature (Training)</p>
+
+<hr />
+
+<h2 id="data_share--make-datasets-available-on-shared-infrastructure">data_share — Make Datasets Available on Shared Infrastructure</h2>
+
+<p><strong>Difficulty:</strong> basic | <strong>Always applies</strong><br />
+<strong>Intent:</strong> Avoid data duplication, bottlenecks, or unnecessary large transfers.<br />
+<strong>Motivation:</strong> ML applications process large data volumes. Without shared,
+versioned storage, teams duplicate data, lose traceability, and create access
+control gaps. Shared infrastructure enables versioning, access logging, and
+consistent naming conventions.<br />
+<strong>Applicability:</strong> Any ML application.</p>
+
+<p><strong>What to check (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Are datasets stored in shared infrastructure (S3, GCS, Azure Blob, NFS, etc.)?</li>
+  <li>Is access controlled (not publicly writable, not on personal machines)?</li>
+  <li>Are naming conventions applied (version info in paths/names)?</li>
+  <li>Is a data access log maintained?</li>
+</ul>
+
+<hr />
+
+<h2 id="data_lbl--ensure-data-labelling-is-performed-in-a-strictly-controlled-process">data_lbl — Ensure Data Labelling is Performed in a Strictly Controlled Process</h2>
+
+<p><strong>Difficulty:</strong> basic | <strong>Applies for supervised / semi-supervised learning only</strong><br />
+<strong>Intent:</strong> Avoid invalid or incomplete labels.<br />
+<strong>Motivation:</strong> Labels are the ground truth signal for supervised learning.
+Noisy or inconsistent labels degrade model quality in ways that are hard to
+diagnose. A controlled process — including peer review of labels — is the
+most effective safeguard.<br />
+<strong>Applicability:</strong> Any application using labels.</p>
+
+<p><strong>What to check (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Is there a documented labelling process?</li>
+  <li>Are labels peer-reviewed by a second team member?</li>
+  <li>Is label quality monitored (inter-annotator agreement, spot checks)?</li>
+  <li>Are labelling issues documented and communicated when quality is sub-optimal?</li>
+</ul>
+
+<p><strong>Assist — mature labelling process checklist:</strong></p>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Labelling guidelines documented and version-controlled</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Labels stored with annotator ID and timestamp</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />At least 5–10% of labels peer-reviewed</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Inter-annotator agreement (Cohen’s kappa or Fleiss) computed and tracked</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Label quality issues logged and communicated to the model team</li>
+</ul>
+
+<hr />
+
+<h2 id="social_bias--test-for-social-bias-in-training-data">social_bias — Test for Social Bias in Training Data</h2>
+
+<p><strong>Difficulty:</strong> advanced | <strong>[personal data] — applies when data concerns individuals</strong><br />
+<strong>Intent:</strong> Identify instances of social bias in training data to counteract
+unfairness in trained and deployed models.<br />
+<strong>Motivation:</strong> Bias in data is a primary source of unfairness. Seemingly
+neutral attributes (location, name, hobbies) can encode sensitive social
+traits via proxy effects — <em>failure through unawareness</em>.<br />
+<strong>Applicability:</strong> Applications processing personal data or data about users.</p>
+
+<p><strong>What to check (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Are distributions of social factors (gender, age, geography, etc.) analysed?</li>
+  <li>Is over- or under-representation of groups detected and documented?</li>
+  <li>Are latent proxy attributes identified (e.g. zip code as proxy for race)?</li>
+  <li>Does the team include diverse perspectives in data review?</li>
+</ul>
+
+<p><strong>Related:</strong> discriminatory_attributes, subgroup_bias (Training), risk (Governance)</p>
+
+<hr />
+
+<h2 id="discriminatory_attributes--prevent-discriminatory-attributes-used-as-features">discriminatory_attributes — Prevent Discriminatory Attributes Used as Features</h2>
+
+<p><strong>Difficulty:</strong> advanced | <strong>[personal data] — applies in applications affecting individuals</strong><br />
+<strong>Intent:</strong> Avoid building discriminatory practices into ML applications.<br />
+<strong>Motivation:</strong> Using protected attributes (gender, ethnicity, religion) as
+features leads to discriminatory models. Simply removing them is insufficient —
+latent proxies can reconstruct them. A hybrid approach is required.<br />
+<strong>Applicability:</strong> Applications with direct or indirect impact on human lives.</p>
+
+<p><strong>What to check (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Is there a list of protected/sensitive attributes for this application?</li>
+  <li>Are those attributes removed from the feature set?</li>
+  <li>Are latent proxy tests conducted to detect reconstruction of sensitive attributes?</li>
+  <li>Is ongoing testing for subgroup bias (<code class="language-plaintext highlighter-rouge">subgroup_bias</code>) in place?</li>
+</ul>
+
+<p><strong>Important:</strong> Removing sensitive attributes alone can <em>worsen</em> fairness if
+done improperly. Always complement removal with active bias testing.</p>
+
+<p><strong>Related:</strong> social_bias, subgroup_bias (Training), risk (Governance)</p>
+
+<hr />
+
+<h2 id="privacy_preserving--use-privacy-preserving-machine-learning-techniques">privacy_preserving — Use Privacy-Preserving Machine Learning Techniques</h2>
+
+<p><strong>Difficulty:</strong> advanced | <strong>[personal data] — applies when processing PII</strong><br />
+<strong>Intent:</strong> Protect the privacy of individuals whose data is used in ML.<br />
+<strong>Motivation:</strong> ML models can leak information about training data (membership
+attacks). When processing personal data, privacy-preserving techniques reduce
+the risk of privacy violations and aid GDPR/regulatory compliance.<br />
+<strong>Applicability:</strong> Any application using personally identifiable information.</p>
+
+<p><strong>Techniques to consider:</strong>
+| Technique | Use case |
+|———–|———-|
+| Differential privacy | Add calibrated noise during training |
+| Federated learning | Train on device without centralising data |
+| Anonymisation / pseudonymisation | Remove or mask identifiers in datasets |
+| Homomorphic encryption | Compute on encrypted data |</p>
+
+<p><strong>Tools:</strong> Opacus (PyTorch differential privacy), PySyft (federated learning),
+CrypTen (secure multi-party computation).</p>
+
+<p><strong>Related:</strong> gov_responsible (Governance)</p>
+
+  </article>
+
+  
+
+  
+
+</div>
+
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

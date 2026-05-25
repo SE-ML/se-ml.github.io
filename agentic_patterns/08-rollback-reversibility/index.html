@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Rollback & Reversibility</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/agentic_patterns/08-rollback-reversibility/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Rollback & Reversibility</h1>
+    <p class="post-meta">May 25, 2026 • Alex Serban</p>
+  </header>
+
+
+  
+  
+
+  
+  
+  
+
+  <div style="text-align:center;">
+    <a href="/agentic_patterns/07-verification-first/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 8 / 9 </span> •
+    <a href="/agentic_patterns/#safety--recovery"> <span>Safety & Recovery</span> </a>
+    <a href="/agentic_patterns/09-cleanup-hygiene/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+
+  <br><br>
+
+  
+  <div class="image-container">
+    <img src="/assets/img/revrs.png" class="blog-image pattern-image"></img>
+    
+  </div>
+  
+
+
+  
+  <h3 class="black bold">Intent</h3>
+  <div>
+    Build recovery into the workflow through checkpoints, isolated branches, worktrees, and other rollback targets before failures occur.
+  </div>
+  
+
+  
+  <h3 class="black bold">Problem</h3>
+  <div>
+    Agentic sessions can create many dependent edits in a short time. Without checkpoints, recovery often means abandoning the whole session rather than undoing the faulty step.
+  </div>
+  
+
+  
+  <h3 class="black bold">Pattern</h3>
+  <div>
+    Build recovery into the workflow through checkpoint commits, isolated branches, or worktrees. Reversibility should be treated as a design property of the process, not as an emergency measure.
+  </div>
+  
+
+  
+
+  
+  <h3 class="black bold">Correct Use</h3>
+  <div>
+    Commit after each verified unit of work and keep rollback targets semantically meaningful, not merely chronological.
+  </div>
+  
+
+  
+  <h3 class="black bold">Failure Mode If Skipped</h3>
+  <div>
+    Recovery becomes so expensive that teams tolerate bad intermediate states or discard useful work wholesale.
+  </div>
+  
+
+  
+  <div>
+    <h2 id="rationale">Rationale</h2>
+
+<p>Agentic changes can compound rapidly. A single session may touch many files in quick succession, and later edits often assume that earlier ones succeeded. Once that happens, recovery is no longer a matter of undoing one line or one file. It becomes a question of how far back the codebase must move to regain internal consistency.</p>
+
+<p>In agentic development, changes can compound rapidly. A single agent session may touch dozens of files in quick succession, creating a tightly coupled chain of edits. Later edits often assume that earlier ones succeeded. Rolling back to an intermediate state may therefore leave the codebase inconsistent: imports reference moved symbols, tests assert removed behaviour, and configurations point to renamed paths.</p>
+
+<pre><code class="language-mermaid">graph LR
+    classDef good fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef danger fill:#e63946,stroke:#a4161a,color:#fff
+    classDef warn fill:#e9c46a,stroke:#e76f51,color:#000
+    classDef neutral fill:#457b9d,stroke:#1d3557,color:#fff
+
+    S["✅ Known Good State"]:::good
+    A["Step 1: Rename function"]:::neutral
+    B["Step 2: Update 12 callers"]:::neutral
+    C["Step 3: Adjust tests"]:::neutral
+    D["Step 4: Update docs"]:::neutral
+    E["❌ Bug detected here"]:::danger
+
+    S --&gt; A --&gt; B --&gt; C --&gt; D --&gt; E
+
+    R1["🔙 Rollback to Step 3?"]:::warn
+    R1 -. "Docs reference\nnew function name" .-&gt; D
+
+    R2["🔙 Rollback to Step 1?"]:::warn
+    R2 -. "12 callers still\nuse old name" .-&gt; B
+    R2 -. "Tests expect\nnew signature" .-&gt; C
+
+    E --&gt; R1
+    E --&gt; R2
+</code></pre>
+
+<p>Without fine-grained checkpoints, rollback often becomes possible only at the beginning of the session because intermediate states are internally inconsistent.</p>
+
+<h2 id="how-to-apply-the-pattern">How to Apply the Pattern</h2>
+
+<p>Reversibility should be prepared before execution rather than improvised after failure.</p>
+
+<ol>
+  <li>Start from a verified baseline.</li>
+  <li>Create a checkpoint or isolated working state before risky work begins.</li>
+  <li>Commit or checkpoint each verified unit of progress.</li>
+  <li>Use rollback targets that correspond to meaningful states, not just arbitrary timestamps.</li>
+  <li>Choose the smallest rollback action that restores consistency.</li>
+</ol>
+
+<p>The central objective is to make recovery cheap enough that teams actually use it when something goes wrong.</p>
+
+<h2 id="supporting-practices">Supporting Practices</h2>
+
+<h3 id="use-multiple-rollback-mechanisms">Use Multiple Rollback Mechanisms</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mechanism</th>
+      <th>Description</th>
+      <th>When to Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Git commits</strong></td>
+      <td>Commit before each agent interaction</td>
+      <td>Always</td>
+    </tr>
+    <tr>
+      <td><strong>Branches</strong></td>
+      <td>Isolate experimental work</td>
+      <td>Risky changes</td>
+    </tr>
+    <tr>
+      <td><strong>Checkpoints</strong></td>
+      <td>Named save points for complex work</td>
+      <td>Multi-step tasks</td>
+    </tr>
+    <tr>
+      <td><strong>Backups</strong></td>
+      <td>For non-git artefacts</td>
+      <td>Databases, configs</td>
+    </tr>
+    <tr>
+      <td><strong>Snapshots</strong></td>
+      <td>Full environment state</td>
+      <td>Major changes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="start-from-a-verified-baseline">Start from a Verified Baseline</h3>
+
+<p>Before engaging an agent on any task, confirm the codebase is in a known-good state:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Verify the baseline before any agent task</span>
+npm run lint    <span class="c"># or equivalent</span>
+npm <span class="nb">test</span>        <span class="c"># all tests should pass</span>
+git status      <span class="c"># no uncommitted changes</span>
+</code></pre></div></div>
+
+<p>Starting from a broken or dirty state means it is impossible to distinguish agent-introduced failures from pre-existing ones. The baseline check is the precondition for any rollback strategy being meaningful.</p>
+
+<h3 id="create-a-pre-task-checkpoint">Create a Pre-Task Checkpoint</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Before any agent task</span>
+git add <span class="nt">-A</span>
+git stash push <span class="nt">-m</span> <span class="s2">"checkpoint: before agent task </span><span class="si">$(</span><span class="nb">date</span> +%Y%m%d-%H%M%S<span class="si">)</span><span class="s2">"</span>
+<span class="c"># or</span>
+git commit <span class="nt">-m</span> <span class="s2">"checkpoint: before [task description]"</span>
+git checkout <span class="nt">-b</span> agent/task-name
+</code></pre></div></div>
+
+<h3 id="use-a-rollback-decision-path">Use a Rollback Decision Path</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Change failed verification?
+    │
+    ├── Single file affected ──▶ git checkout -- file
+    │
+    ├── Multiple files, clear scope ──▶ git reset --hard HEAD~1
+    │
+    └── Unknown scope ──▶ Full rollback ──▶ Manual investigation
+</code></pre></div></div>
+
+<h3 id="match-the-rollback-level-to-the-failure-scope">Match the Rollback Level to the Failure Scope</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Command</th>
+      <th>When</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Single file</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">git checkout -- path/to/file</code></td>
+      <td>One file has issues</td>
+    </tr>
+    <tr>
+      <td><strong>Last commit</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">git reset --hard HEAD~1</code></td>
+      <td>Recent commit was bad</td>
+    </tr>
+    <tr>
+      <td><strong>To checkpoint</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">git reset --hard &lt;commit&gt;</code></td>
+      <td>Need to go back further</td>
+    </tr>
+    <tr>
+      <td><strong>Branch abandon</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">git checkout main; git branch -D agent/task</code></td>
+      <td>Entire approach failed</td>
+    </tr>
+    <tr>
+      <td><strong>Stash restore</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">git stash pop</code></td>
+      <td>Restore pre-task state</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="practices">Practices</h2>
+
+<ul>
+  <li>Checkpoint after each coherent unit rather than after each individual file edit</li>
+  <li>Commit after every verified step</li>
+  <li>Use descriptive commit messages that capture <em>what is now consistent</em></li>
+  <li>Create branches for risky changes</li>
+  <li>Document known-good states</li>
+  <li>Test rollback procedures periodically</li>
+  <li>Automate checkpoint creation before agent tasks</li>
+  <li>Prefer small, self-contained agent tasks to limit the blast radius of compounding changes</li>
+  <li>Use git worktrees for parallel or experimental agent sessions</li>
+  <li>Consider branching strategies that make agent work explicit and reviewable before it reaches the main branch</li>
+  <li>Tag AI-generated branches to distinguish them from human-authored branches</li>
+</ul>
+
+<h2 id="anti-patterns">Anti-patterns</h2>
+
+<ul>
+  <li>Working on the main branch directly</li>
+  <li>Large uncommitted change sets</li>
+  <li>No checkpoint before risky operations</li>
+  <li>Assuming rollback will be easy</li>
+  <li>Not testing rollback procedures</li>
+</ul>
+
+<h2 id="indicators">Indicators</h2>
+
+<ul>
+  <li>Time required to return the repository to a known-good state after failure</li>
+  <li>Frequency with which teams can roll back one verified unit rather than abandoning the full session</li>
+  <li>Number of verified checkpoints created during multi-step tasks</li>
+  <li>Incidence of inconsistent intermediate states after attempted rollback</li>
+</ul>
+
+  </div>
+  
+
+  <br><br>
+  <div style="text-align:center;">
+    <a href="/agentic_patterns/07-verification-first/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 8 / 9 </span> •
+    <a href="/agentic_patterns/#safety--recovery"> <span>Safety & Recovery</span> </a>
+    <a href="/agentic_patterns/09-cleanup-hygiene/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+  <br><br>
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'se4ml';
+    var disqus_identifier = '/agentic_patterns/08-rollback-reversibility';
+    var disqus_title = 'Rollback &amp; Reversibility';
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  
+
+</div>
+
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

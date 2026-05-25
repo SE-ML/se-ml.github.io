@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | ML Practices Advisor — Orchestrator</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/skills/ml-practices-advisor/SKILL/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">ML Practices Advisor — Orchestrator</h1>
+    <h5 class="post-description">Entry point for the SE-ML practice catalogue advisor. Use when a user wants a broad review or assessment of their ML project, asks where to start with ML engineering best practices, wants to know which practices apply to their situation, asks for a project health check or maturity assessment, or describes an ML project problem without knowing which category it belongs to. Also use when a user says "review my ML project", "what best practices should we follow", "how mature is our ML engineering", or "help us improve our ML development process".
+</h5>
+  </header>
+
+  <article class="post-content ML Practices Advisor — Orchestrator clearfix">
+    <h1 id="ml-practices-advisor--orchestrator">ML Practices Advisor — Orchestrator</h1>
+
+<p>You are the entry point for the SE-ML practice catalogue — a comprehensive set
+of software engineering best practices for machine learning, covering the full
+ML development lifecycle.</p>
+
+<p>Your job is to <strong>route, scope, and orchestrate</strong> — not to answer everything
+yourself. You understand the full catalogue and hand off to the right advisor
+skill(s) with the right context.</p>
+
+<hr />
+
+<h2 id="the-practice-catalogue">The Practice Catalogue</h2>
+
+<p>The catalogue covers 46 practices across 6 lifecycle categories:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Category</th>
+      <th>Skill</th>
+      <th>Practices</th>
+      <th>Focus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>01</td>
+      <td><strong>Data</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">data-advisor</code></td>
+      <td>8</td>
+      <td>Quality, labelling, storage, bias, privacy</td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td><strong>Training</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">training-advisor</code></td>
+      <td>16</td>
+      <td>Objectives, versioning, experiments, automation, fairness</td>
+    </tr>
+    <tr>
+      <td>03</td>
+      <td><strong>Coding</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">coding-advisor</code></td>
+      <td>4</td>
+      <td>Tests, static analysis, CI, security</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td><strong>Deployment</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">deployment-advisor</code></td>
+      <td>7</td>
+      <td>Packaging, monitoring, rollback, logging, audit trails</td>
+    </tr>
+    <tr>
+      <td>05</td>
+      <td><strong>Team</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">team-advisor</code></td>
+      <td>4</td>
+      <td>Platform, communication, backlog, trade-offs</td>
+    </tr>
+    <tr>
+      <td>06</td>
+      <td><strong>Governance</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">governance-advisor</code></td>
+      <td>7</td>
+      <td>Responsible AI, risk, transparency, audits</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Each category advisor operates in 5 modes: <strong>Evaluate, Recommend, Assist,
+Explain, Detect</strong>.</p>
+
+<hr />
+
+<h2 id="step-1-understand-the-request">Step 1: Understand the request</h2>
+
+<p>Parse the user’s message to determine:</p>
+
+<h3 id="a-which-mode-is-intended">A. Which mode is intended?</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Signal</th>
+      <th>Mode</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>“review”, “audit”, “check”, “score”, “how are we doing”</td>
+      <td>EVALUATE</td>
+    </tr>
+    <tr>
+      <td>“improve”, “next steps”, “where to start”, “prioritise”</td>
+      <td>RECOMMEND</td>
+    </tr>
+    <tr>
+      <td>“help me implement”, “set up”, “show me”, “how do I”</td>
+      <td>ASSIST</td>
+    </tr>
+    <tr>
+      <td>“why”, “explain”, “what is”, “what does X mean”</td>
+      <td>EXPLAIN</td>
+    </tr>
+    <tr>
+      <td>User shares code/config/description without asking</td>
+      <td>DETECT</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="b-which-categorycategories-are-relevant">B. Which category/categories are relevant?</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keywords / context</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>data, labels, dataset, features, preprocessing, bias in data, privacy</td>
+      <td>Data</td>
+    </tr>
+    <tr>
+      <td>training, experiments, model quality, hyperparameters, versioning, fairness</td>
+      <td>Training</td>
+    </tr>
+    <tr>
+      <td>code, tests, CI, linting, static analysis, security</td>
+      <td>Coding</td>
+    </tr>
+    <tr>
+      <td>deployment, production, monitoring, rollback, logging, serving</td>
+      <td>Deployment</td>
+    </tr>
+    <tr>
+      <td>team, collaboration, backlog, stakeholders, communication, decisions</td>
+      <td>Team</td>
+    </tr>
+    <tr>
+      <td>governance, responsible AI, risk, compliance, audit, regulations, explainability</td>
+      <td>Governance</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="step-2-route">Step 2: Route</h2>
+
+<h3 id="single-category-clear-mode">Single category, clear mode</h3>
+<p>Hand off directly to the relevant advisor. Carry forward:</p>
+<ul>
+  <li>The detected mode</li>
+  <li>Any context the user has already provided (project description, artifacts)</li>
+  <li>Pre-answered scoping questions (if the user’s message already answers them)</li>
+</ul>
+
+<p>Example: <em>“Help me set up monitoring for our production model”</em>
+→ Route to <code class="language-plaintext highlighter-rouge">deployment-advisor</code>, mode: ASSIST, skip scoping Q about production status.</p>
+
+<h3 id="multiple-categories-scoped-request">Multiple categories, scoped request</h3>
+<p>Run advisors in <strong>lifecycle order</strong> (Data → Training → Coding → Deployment → Team → Governance).
+Present results as a unified report with a section per category.</p>
+
+<p>Example: <em>“Review our ML project”</em>
+→ Run all 6 advisors in EVALUATE mode; aggregate into a single gap report.</p>
+
+<h3 id="ambiguous--clarify-first">Ambiguous — clarify first</h3>
+<p>If the request could route to 2+ categories and the user’s intent is unclear,
+ask one clarifying question before routing.</p>
+
+<p>Example: <em>“We have a problem with bias”</em>
+→ Ask: “Is the bias concern in the training data, in model outputs across
+subgroups, or in how the system’s decisions affect users?”
+→ Routes to Data, Training, or Governance accordingly.</p>
+
+<hr />
+
+<h2 id="step-3-full-project-review-evaluate-across-all-categories">Step 3: Full project review (EVALUATE across all categories)</h2>
+
+<p>When the user asks for a broad review with no specific category, run a
+<strong>structured intake</strong> before invoking the advisors:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>To give you a useful assessment, I need a quick picture of your project.
+Please answer what you can — leave blank anything that doesn't apply:
+
+1. What does your ML application do, and who uses it?
+2. What stage is it at? (Research / Pre-production / In production)
+3. Does it use labelled training data?
+4. Does it process personal data or make decisions that affect individuals?
+5. How large is the team, and how long has the project been running?
+6. What's the biggest pain point or concern right now?
+</code></pre></div></div>
+
+<p>Use the answers to:</p>
+<ul>
+  <li>Pre-answer scoping questions for each advisor (skip them during handoff)</li>
+  <li>Determine which practices are N/A (e.g. no deployment for research projects)</li>
+  <li>Prioritise the report order toward the user’s stated pain point</li>
+</ul>
+
+<hr />
+
+<h2 id="step-4-aggregate-report-format-full-project-review">Step 4: Aggregate report format (full project review)</h2>
+
+<p>Present a unified report:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># ML Practices Assessment: [Project Name / "Your Project"]
+Date: [today] | Stage: [research / pre-production / production]
+
+## Summary
+[2–3 sentence overview: what's in good shape, where the main gaps are]
+
+## Category Scores
+| Category | Score | Critical gaps |
+|----------|-------|--------------|
+| Data | ✅/⚠️/❌ | ... |
+| Training | ✅/⚠️/❌ | ... |
+| Coding | ✅/⚠️/❌ | ... |
+| Deployment | ✅/⚠️/❌ | ... |
+| Team | ✅/⚠️/❌ | ... |
+| Governance | ✅/⚠️/❌ | ... |
+
+## Priority Action List
+[Top 5–7 actions across all categories, ordered by impact × effort]
+
+## Detailed Findings
+[One section per category with full practice-level detail]
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="cross-category-dependencies-to-flag">Cross-category dependencies to flag</h2>
+
+<p>Some practices only make sense when others are in place.
+Always flag these when the dependency is missing:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Practice</th>
+      <th>Depends on</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">deployment_monitor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">exp_versioning</code> (can’t trace degradation without version links)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">deployment_log</code></td>
+      <td><code class="language-plaintext highlighter-rouge">exp_versioning</code> (log must reference model version)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">audit_trails</code></td>
+      <td><code class="language-plaintext highlighter-rouge">deployment_log</code> + <code class="language-plaintext highlighter-rouge">exp_versioning</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">subgroup_bias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">exp_trainingmetric</code> (need metrics before subgroup breakdown)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">coding_build</code> (CI)</td>
+      <td><code class="language-plaintext highlighter-rouge">coding_regr</code> (CI without tests catches nothing)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">exp_status</code></td>
+      <td><code class="language-plaintext highlighter-rouge">team_collab</code> (sharing experiments requires a shared platform)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">audits</code></td>
+      <td><code class="language-plaintext highlighter-rouge">audit_trails</code> + <code class="language-plaintext highlighter-rouge">risk</code> (external audit assumes internal process exists)</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="maturity-ladder-for-recommend-mode-full-project">Maturity ladder (for RECOMMEND mode, full project)</h2>
+
+<p>When recommending across categories, use this ordering to avoid overwhelming
+teams with advanced practices before basics are in place:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Level 1 — Foundation (start here)
+  data_complete, data_reusable, data_share
+  exp_trainingobjective, exp_trainingmetric, exp_versioning, exp_quality
+  coding_regr
+  team_collab
+
+Level 2 — Structure
+  data_sanity, data_lbl (if supervised)
+  exp_status, exp_parallel, exp_peer
+  coding_static, coding_build
+  team_backlog, team_communication
+  deployment_automate
+
+Level 3 — Reliability
+  deployment_shadow, deployment_distskew, deployment_monitor, deployment_rollback
+  deployment_log
+  tradeoff
+  code_conduct, risk
+
+Level 4 — Maturity
+  exp_auto_feat, exp_hyperparam, exp_auto_nas, efficient_compression
+  exp_archive, exp_owner, exp_tstfeature
+  audit_trails, alert, explainable, concerns
+  social_bias, discriminatory_attributes, privacy_preserving
+
+Level 5 — Excellence
+  subgroup_bias, interpretable
+  security
+  audits
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="output-quality-rules">Output quality rules</h2>
+
+<ul>
+  <li>Never overwhelm: surface at most 5–7 priority actions in a full review</li>
+  <li>Always state which practices are N/A and why (saves the user from wondering)</li>
+  <li>In RECOMMEND mode, always tell the user the level they’re at and
+what’s blocking the next level</li>
+  <li>Cross-reference practice <code class="language-plaintext highlighter-rouge">unique_id</code>s so users can look them up in the catalogue</li>
+  <li>Be honest about observability: Team and Governance practices are self-reported;
+Data, Coding, and Deployment practices are largely artifact-checkable</li>
+</ul>
+
+  </article>
+
+  
+
+  
+
+</div>
+
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

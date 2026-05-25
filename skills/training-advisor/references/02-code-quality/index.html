@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Cluster B: Training Code Quality</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/skills/training-advisor/references/02-code-quality/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Cluster B: Training Code Quality</h1>
+    <h5 class="post-description"></h5>
+  </header>
+
+  <article class="post-content Cluster B: Training Code Quality clearfix">
+    <h1 id="cluster-b-training-code-quality">Cluster B: Training Code Quality</h1>
+
+<p>These four practices focus on the quality and maintainability of the code
+used in the training pipeline. <strong>All four are always relevant</strong>, but three
+(<code class="language-plaintext highlighter-rouge">exp_tstfeature</code>, <code class="language-plaintext highlighter-rouge">exp_archive</code>, <code class="language-plaintext highlighter-rouge">exp_owner</code>) are <strong>conditional on manual
+feature engineering</strong> — skip them when features are learned end-to-end (e.g.
+raw-input deep learning). <code class="language-plaintext highlighter-rouge">exp_peer</code> applies universally.</p>
+
+<p>All are rated <strong>basic–medium</strong> difficulty.</p>
+
+<hr />
+
+<h2 id="exp_peer--peer-review-training-scripts">exp_peer — Peer Review Training Scripts</h2>
+
+<p><strong>Difficulty:</strong> medium<br />
+<strong>Applicability:</strong> Always — training scripts should always be peer reviewed.<br />
+<strong>Intent:</strong> Avoid development errors and bugs.<br />
+<strong>Motivation:</strong> Training scripts contain logic errors that are easy to miss in
+isolation: data leakage, incorrect loss functions, silent NaN propagation,
+wrong train/test splits. A second pair of eyes catches these before they
+invalidate experiments or produce a flawed deployed model. Unlike production
+software, ML bugs often produce plausible-looking outputs that mask the problem.</p>
+
+<p><strong>What to look for (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Is there a pull request / code review process for training scripts?</li>
+  <li>Are training scripts treated with the same rigour as production code?</li>
+  <li>Is there a checklist used during review (data leakage, metric correctness,
+reproducibility)?</li>
+</ul>
+
+<p><strong>Assist — checklist to use during review:</strong></p>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Is the train/validation/test split done <em>before</em> any preprocessing?</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Is there any possibility of data leakage (future data, label leakage)?</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Are random seeds set and documented?</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Does the loss function match the stated objective?</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Are metrics computed correctly (correct class weights, correct aggregation)?</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Are edge cases handled (empty batches, NaNs, class imbalance)?</li>
+</ul>
+
+<p><strong>Typical gaps:</strong> Training scripts treated as throwaway exploration code with no review;
+review done informally in chat with no record.</p>
+
+<hr />
+
+<h2 id="exp_tstfeature--test-all-feature-extraction-code">exp_tstfeature — Test All Feature Extraction Code</h2>
+
+<p><strong>Difficulty:</strong> medium<br />
+<strong>Applicability:</strong> When features are <strong>manually engineered</strong> (not auto-extracted).<br />
+<strong>Intent:</strong> Avoid bugs in the feature extraction code.<br />
+<strong>Motivation:</strong> Feature extraction code is often complex, data-dependent, and
+changes frequently. Bugs here silently corrupt the training data: wrong
+aggregations, off-by-one errors, incorrect joins. Because the model still
+trains and produces outputs, these bugs can go undetected for a long time.
+Unit tests on feature logic are the most cost-effective safety net available.</p>
+
+<p><strong>What to look for (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Does feature extraction code have unit tests?</li>
+  <li>Are edge cases tested (nulls, empty groups, boundary dates)?</li>
+  <li>Are tests run automatically in CI?</li>
+</ul>
+
+<p><strong>Assist — test structure template:</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_feature_age_bucket</span><span class="p">():</span>
+    <span class="n">input_df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">"age"</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="bp">None</span><span class="p">]})</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">compute_age_bucket</span><span class="p">(</span><span class="n">input_df</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="p">[</span><span class="s">"age_bucket"</span><span class="p">].</span><span class="n">tolist</span><span class="p">()</span> <span class="o">==</span> <span class="p">[</span><span class="s">"minor"</span><span class="p">,</span> <span class="s">"minor"</span><span class="p">,</span> <span class="s">"adult"</span><span class="p">,</span> <span class="s">"adult"</span><span class="p">,</span> <span class="s">"senior"</span><span class="p">,</span> <span class="s">"unknown"</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">test_feature_no_data_leakage</span><span class="p">():</span>
+    <span class="c1"># future_date should not be accessible at prediction time
+</span>    <span class="p">...</span>
+</code></pre></div></div>
+
+<p><strong>Typical gaps:</strong> Feature code tested manually once when written, then never again;
+no tests for null handling or boundary values.</p>
+
+<hr />
+
+<h2 id="exp_archive--actively-remove-or-archive-features-that-are-not-used">exp_archive — Actively Remove or Archive Features That Are Not Used</h2>
+
+<p><strong>Difficulty:</strong> medium<br />
+<strong>Applicability:</strong> When features are <strong>manually engineered</strong>.<br />
+<strong>Intent:</strong> Avoid technical debt caused by unused features.<br />
+<strong>Motivation:</strong> Feature sets accumulate over time. Unused features increase
+training time and memory, add noise, complicate the codebase, and create
+maintenance burden. They also confuse new team members. Actively archiving
+features that do not contribute keeps the pipeline lean and interpretable.</p>
+
+<p><strong>What to look for (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Is there a feature registry or documentation of active vs. archived features?</li>
+  <li>Are features periodically reviewed for contribution (feature importance, ablation)?</li>
+  <li>Is there a process for removing a feature (not just commenting out code)?</li>
+</ul>
+
+<p><strong>Assist — archiving process:</strong></p>
+<ol>
+  <li>Run feature importance analysis (SHAP, permutation importance, ablation).</li>
+  <li>For features with near-zero importance over N consecutive runs, flag for review.</li>
+  <li>Move removed feature code to an <code class="language-plaintext highlighter-rouge">archived_features/</code> module (not deleted — for audit trail).</li>
+  <li>Update the feature registry and document the reason for archiving.</li>
+  <li>Bump a version number to signal the feature set changed.</li>
+</ol>
+
+<p><strong>Related:</strong> exp_owner, exp_versioning</p>
+
+<hr />
+
+<h2 id="exp_owner--assign-an-owner-to-each-feature-and-document-its-rationale">exp_owner — Assign an Owner to Each Feature and Document Its Rationale</h2>
+
+<p><strong>Difficulty:</strong> medium<br />
+<strong>Applicability:</strong> When features are <strong>manually engineered</strong>.<br />
+<strong>Intent:</strong> Enhance feature development, understanding and maintenance.<br />
+<strong>Motivation:</strong> Features without an owner decay silently. The original reasoning
+is forgotten, nobody knows if a feature is still valid, and nobody is
+accountable when it breaks. Documenting the rationale also enables newcomers
+to understand <em>why</em> a feature exists — preventing the “cargo cult feature”
+problem where features are kept because removing them feels risky.</p>
+
+<p><strong>What to look for (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Is there a feature registry or feature documentation file?</li>
+  <li>Does each feature have a named owner (person or team)?</li>
+  <li>Is the business/domain rationale documented (not just the formula)?</li>
+</ul>
+
+<p><strong>Assist — minimal feature registry entry:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">customer_days_since_last_purchase</span>
+  <span class="na">owner</span><span class="pi">:</span> <span class="s">alice@team.com</span>
+  <span class="na">created</span><span class="pi">:</span> <span class="s">2024-03-01</span>
+  <span class="na">rationale</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Strong</span><span class="nv"> </span><span class="s">predictor</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">churn</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">prior</span><span class="nv"> </span><span class="s">cohort</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">(Q4</span><span class="nv"> </span><span class="s">2023</span><span class="nv"> </span><span class="s">study)"</span>
+  <span class="na">importance</span><span class="pi">:</span> <span class="s">high</span>  <span class="c1"># updated periodically</span>
+  <span class="na">status</span><span class="pi">:</span> <span class="s">active</span>   <span class="c1"># active | under-review | archived</span>
+  <span class="na">notes</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Sensitive</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">campaign</span><span class="nv"> </span><span class="s">timing</span><span class="nv"> </span><span class="s">—</span><span class="nv"> </span><span class="s">review</span><span class="nv"> </span><span class="s">before</span><span class="nv"> </span><span class="s">seasonal</span><span class="nv"> </span><span class="s">campaigns"</span>
+</code></pre></div></div>
+
+<p><strong>Related:</strong> exp_archive</p>
+
+  </article>
+
+  
+
+  
+
+</div>
+
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

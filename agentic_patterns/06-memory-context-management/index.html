@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Memory & Context Management</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/agentic_patterns/06-memory-context-management/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Memory & Context Management</h1>
+    <p class="post-meta">May 25, 2026 • Alex Serban</p>
+  </header>
+
+
+  
+  
+
+  
+  
+  
+
+  <div style="text-align:center;">
+    <a href="/agentic_patterns/05-role-based-development/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 6 / 9 </span> •
+    <a href="/agentic_patterns/#context--state"> <span>Context & State</span> </a>
+    <a href="/agentic_patterns/07-verification-first/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+
+  <br><br>
+
+  
+  <div class="image-container">
+    <img src="/assets/img/mem.png" class="blog-image pattern-image"></img>
+    
+  </div>
+  
+
+
+  
+  <h3 class="black bold">Intent</h3>
+  <div>
+    Treat context as a controlled input by curating only the relevant code, constraints, examples, and decisions for the current task, while preserving durable knowledge in reusable artefacts.
+  </div>
+  
+
+  
+  <h3 class="black bold">Problem</h3>
+  <div>
+    Agents do not retain stable project memory across sessions, and large contexts degrade rather than simply accumulate. Without explicit memory artefacts, teams either reload context repeatedly or let the model guess.
+  </div>
+  
+
+  
+  <h3 class="black bold">Pattern</h3>
+  <div>
+    Treat context as a controlled input. Package only the relevant code, constraints, examples, and decisions for the current task. Externalize durable state into files such as decision logs, plan documents, or reusable skills.
+  </div>
+  
+
+  
+
+  
+  <h3 class="black bold">Correct Use</h3>
+  <div>
+    Start new sessions often, summarize completed work, and curate both inclusions and exclusions.
+  </div>
+  
+
+  
+  <h3 class="black bold">Failure Mode If Skipped</h3>
+  <div>
+    The agent operates on partial, stale, or polluted context and compensates through hallucinated continuity.
+  </div>
+  
+
+  
+  <div>
+    <h2 id="rationale">Rationale</h2>
+
+<p>Effective agent performance depends heavily on context quality. If a task requires understanding four modules, the agent should receive those four modules rather than an incomplete or generic summary.</p>
+
+<p>Context also has a cost. Long conversations accumulate previous messages and tool outputs, which increases both token usage and the risk of degraded focus. In many cases, a fresh, well-scoped session is more reliable than a long, accumulated one.</p>
+
+<p>Three recurrent failure modes motivate this pattern:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Failure Mode</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Cost and latency spiral</strong></td>
+      <td>Model cost and time-to-first-token grow quickly with context size; verbose history and tool output make sessions slow and expensive</td>
+    </tr>
+    <tr>
+      <td><strong>Signal degradation</strong></td>
+      <td>Irrelevant logs, stale outputs, and deprecated state distract the model from the current task</td>
+    </tr>
+    <tr>
+      <td><strong>Physical limits</strong></td>
+      <td>Full retrieval results, intermediate artefacts, and long conversation traces eventually exceed practical context limits</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The main point is simple: more context is not always better context.</p>
+
+<h2 id="how-to-apply-the-pattern">How to Apply the Pattern</h2>
+
+<p>Treat context management as a deliberate design choice rather than as an afterthought.</p>
+
+<ol>
+  <li>Identify the minimum code, constraints, and artefacts needed for the current task.</li>
+  <li>Include only those materials in the working context.</li>
+  <li>Summarize or externalize information that should persist beyond the current session.</li>
+  <li>Start a fresh session when accumulated context begins to dilute the task.</li>
+  <li>Re-load authoritative artefacts rather than relying on conversational memory.</li>
+</ol>
+
+<p>In practice, this means controlling both what enters the context window and what is preserved outside it.</p>
+
+<h2 id="supporting-practices">Supporting Practices</h2>
+
+<h3 id="curate-context-deliberately">Curate Context Deliberately</h3>
+
+<p>Before engaging an agent, deliberately load what it needs and exclude what it does not.</p>
+
+<p><strong>What to include:</strong></p>
+
+<ul>
+  <li>Code the agent should modify or reference</li>
+  <li>Technical constraints such as language versions or framework requirements</li>
+  <li>High-level goals and invariants</li>
+  <li>Examples of good solutions or existing patterns</li>
+  <li>Warnings about approaches to avoid</li>
+  <li>API documentation for niche or unfamiliar libraries</li>
+</ul>
+
+<p><strong>What to exclude:</strong></p>
+
+<ul>
+  <li>Unrelated modules</li>
+  <li>Generated files and build outputs</li>
+  <li>Boilerplate that follows standard patterns and adds little signal</li>
+</ul>
+
+<p>Useful context strategies include chunking, summarization, retrieval on demand, and active pruning.</p>
+
+<h3 id="use-reusable-context-packages">Use Reusable Context Packages</h3>
+
+<p>Package domain expertise, constraints, and recurring procedures into reusable artefacts that agents can load repeatedly.</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">commit-messages</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Generate commit messages following our team's conventions.</span>
+<span class="nn">---</span>
+
+<span class="gh"># Commit Message Format</span>
+
+All commits follow conventional commits:
+<span class="p">-</span> feat: new feature
+<span class="p">-</span> fix: bug fix  
+<span class="p">-</span> refactor: code change that neither fixes nor adds
+<span class="p">-</span> docs: documentation only
+<span class="p">-</span> test: adding or updating tests
+
+Format: <span class="sb">`type(scope): description`</span>
+</code></pre></div></div>
+
+<p>Not all context contributes equally. Higher-quality context should be preferred and lower-quality context should be pruned aggressively.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Quality</th>
+      <th>Context Type</th>
+      <th>Effect</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>High</strong></td>
+      <td>Code + tests + error messages</td>
+      <td>Precise, verifiable, model reasons well</td>
+    </tr>
+    <tr>
+      <td><strong>Medium</strong></td>
+      <td>Architecture docs, design notes</td>
+      <td>Helpful but requires interpretation</td>
+    </tr>
+    <tr>
+      <td><strong>Low</strong></td>
+      <td>Vague natural language descriptions</td>
+      <td>Easily misinterpreted, leads to assumption propagation</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="use-artefacts-as-handles">Use Artefacts as Handles</h3>
+
+<p>For large data (retrieval results, documents, generated artefacts), do not embed the full content in the prompt. Instead, store the data externally and provide only a lightweight reference (a name and summary). The agent loads the raw content explicitly when it needs it. This pattern:</p>
+
+<ul>
+  <li>Keeps the working context lean</li>
+  <li>Prevents stale data from occupying context space after it is no longer needed</li>
+  <li>Allows the same artefact to be referenced across multiple sessions</li>
+</ul>
+
+<h3 id="reinject-key-constraints-in-long-sessions">Reinject Key Constraints in Long Sessions</h3>
+
+<p>In long sessions (50+ turns), key constraints established early in the conversation lose influence as they are displaced by newer context. Use <strong>periodic context reinjection</strong> (reminders): re-inject key constraints, the current spec, or the session goal every N turns to counteract context degradation. Some agentic tools support this natively; in others, manual reinjection is required.</p>
+
+<h3 id="prefer-modular-over-monolithic-prompting">Prefer Modular Over Monolithic Prompting</h3>
+
+<p>Avoid loading all requirements, all code context, and all constraints into a single prompt. This causes context overload and produces confused, inconsistent output. Instead, structure each agent interaction around a focused, scoped task with only the context that task requires.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Monolithic: all requirements + all code + all constraints -&gt; context overload -&gt; lower-quality output
+
+Modular:    Task 1 (focused context) -&gt; clearer output
+            Task 2 (relevant context only) -&gt; clearer output
+            Task 3 (scoped context) -&gt; clearer output
+</code></pre></div></div>
+
+<p>In tools that support it, use explicit file selectors (e.g., <code class="language-plaintext highlighter-rouge">#file:SKILL.md #file:plan.md</code>) to load precisely what is needed. For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#file:SKILL.md #file:2026-01-28-feature-plan.md
+Please implement phase two of the project using the skill and plan attached.
+</code></pre></div></div>
+
+<p>This is more reliable than describing what the agent should know and hoping it infers correctly.</p>
+
+<h3 id="maintain-reusable-skills-carefully">Maintain Reusable Skills Carefully</h3>
+
+<p>Store reusable context packages (Skills) in <code class="language-plaintext highlighter-rouge">.github/skills/</code> in the repository. This makes them discoverable across sessions and team members without requiring re-prompting.</p>
+
+<p><strong>Skills development process:</strong> Skills are most useful when they are derived from repeated practice rather than created speculatively.</p>
+
+<ol>
+  <li>Do a task with your agent using normal prompting — notice what context you repeatedly provide</li>
+  <li>Ask the agent to package that repeated context into a Skill</li>
+  <li>Test with a <strong>fresh agent instance</strong> (zero prior context) on a real task</li>
+  <li>Observe where the fresh agent struggles → bring those gaps back to the original session → refine the Skill</li>
+  <li>Repeat until the Skill is self-sufficient</li>
+</ol>
+
+<p>Testing with a fresh agent instance is the main quality gate. If a skill works only when additional verbal explanation is provided, it is not yet self-sufficient.</p>
+
+<p><strong>Example Skills from a mature codebase</strong> (stored in <code class="language-plaintext highlighter-rouge">.github/skills/</code>):</p>
+
+<p>Many of the examples below are drawn from or adapted from <a href="https://github.com/obra/superpowers">Superpowers</a>, an open repository of agent-oriented development skills and workflows.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Skill</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">writing-plans</code></td>
+      <td>Create bite-sized implementation plans with exact file paths, TDD steps, and commit commands</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">executing-plans</code></td>
+      <td>Step through a plan task-by-task, dispatching fresh subagents, with two-stage review</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">brainstorming</code></td>
+      <td>Turn rough ideas into validated design documents through one-question-at-a-time dialogue</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">subagent-driven-development</code></td>
+      <td>Orchestrate fresh subagents per task with spec and quality review</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">systematic-debugging</code></td>
+      <td>Structured approach to diagnosing and fixing bugs without guessing</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">test-driven-development</code></td>
+      <td>TDD step cadence with verification at each stage</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">using-git-worktrees</code></td>
+      <td>Create and manage isolated working directories per feature or agent session</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">verification-before-completion</code></td>
+      <td>Checklist for confirming a task meets spec before marking it done</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">writing-skills</code></td>
+      <td>Meta-skill for packaging expertise into new Skills</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Common skills to define early: commit message conventions, testing patterns, code style examples, deployment procedures.</p>
+
+<h3 id="distinguish-context-memory-from-persistent-memory">Distinguish Context Memory from Persistent Memory</h3>
+
+<p>Agent memory operates on two fundamentally different tiers. Confusing them — or relying exclusively on one — is a common source of lost context and repeated mistakes.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tier</th>
+      <th>Location</th>
+      <th>Lifetime</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Context memory</strong></td>
+      <td>In the context window</td>
+      <td>Current session only</td>
+      <td>Per-token, charged on every turn</td>
+    </tr>
+    <tr>
+      <td><strong>Persistent memory</strong></td>
+      <td>Files on disk</td>
+      <td>Survives across sessions</td>
+      <td>Written once, loaded on demand</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Context memory is ephemeral and expensive. Everything in the window is re-processed on every turn. Constraints stated only in conversation disappear when a new session begins.</p>
+
+<p>Persistent memory is durable and comparatively inexpensive. A constraint written into a file can be reused in future sessions simply by loading that file into context.</p>
+
+<h3 id="persistent-memory-artefacts">Persistent Memory Artefacts</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artefact</th>
+      <th>Purpose</th>
+      <th>When to Update</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Agent config</strong> (<code class="language-plaintext highlighter-rouge">CLAUDE.md</code>, <code class="language-plaintext highlighter-rouge">agent.md</code>, <code class="language-plaintext highlighter-rouge">.cursorrules</code>)</td>
+      <td>Constraints, anti-patterns, and conventions the agent must follow</td>
+      <td>Every time a new issue or pitfall is encountered</td>
+    </tr>
+    <tr>
+      <td><strong>Specification</strong> (<code class="language-plaintext highlighter-rouge">spec.md</code>, <code class="language-plaintext highlighter-rouge">requirements.md</code>)</td>
+      <td>What to build and acceptance criteria</td>
+      <td>Before tasks; after any scope change</td>
+    </tr>
+    <tr>
+      <td><strong>Plan</strong> (<code class="language-plaintext highlighter-rouge">plan.md</code>, <code class="language-plaintext highlighter-rouge">task-list.md</code>)</td>
+      <td>Sequence of steps and current progress</td>
+      <td>At session start and after each completed step</td>
+    </tr>
+    <tr>
+      <td><strong>Architecture decisions</strong> (<code class="language-plaintext highlighter-rouge">DECISIONS.md</code>, <code class="language-plaintext highlighter-rouge">ADR/</code>)</td>
+      <td>Why things are structured the way they are</td>
+      <td>When design decisions are made</td>
+    </tr>
+    <tr>
+      <td><strong>Skills</strong> (<code class="language-plaintext highlighter-rouge">.github/skills/</code>)</td>
+      <td>Reusable expertise packages (style, conventions, procedures)</td>
+      <td>When repeatable patterns emerge</td>
+    </tr>
+    <tr>
+      <td><strong>Session state</strong> (<code class="language-plaintext highlighter-rouge">CONTEXT.md</code>, <code class="language-plaintext highlighter-rouge">TODO.md</code>)</td>
+      <td>Current position in a long task</td>
+      <td>At session start and end</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Using explicit file selectors ties these tiers together at the point of use:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#file:CLAUDE.md #file:specs/auth-spec.md #file:plan.md
+Implement the next step in the plan, following all constraints in CLAUDE.md.
+</code></pre></div></div>
+
+<p>This is more reliable than re-describing constraints conversationally: you load authoritative, version-controlled files instead of paraphrasing from memory.</p>
+
+<h3 id="use-agent-configuration-as-living-memory">Use Agent Configuration as Living Memory</h3>
+
+<p>The agent configuration file is not a one-off setup artefact. It is a feedback mechanism through which knowledge about the codebase persists beyond a single session.</p>
+
+<p>The agent config (<code class="language-plaintext highlighter-rouge">.github/copilot-instructions.md</code>, <code class="language-plaintext highlighter-rouge">CLAUDE.md</code>, <code class="language-plaintext highlighter-rouge">.cursorrules</code>, or equivalent) should usually be structured around five areas:</p>
+
+<ul>
+  <li><strong>Commands</strong> — exact commands with flags: <code class="language-plaintext highlighter-rouge">pytest -v</code>, <code class="language-plaintext highlighter-rouge">npm run build</code>. Not just tool names.</li>
+  <li><strong>Code style</strong> — one real code snippet showing the preferred pattern. Examples outperform prose descriptions.</li>
+  <li><strong>Project structure</strong> — specific stack details with versions.</li>
+  <li><strong>Testing</strong> — the test framework, the run command, and firm boundaries (e.g., <em>never remove a failing test</em>).</li>
+  <li><strong>Git workflow</strong> — commit convention, branch strategy, what to do before pushing.</li>
+</ul>
+
+<p>Apply the three-tier model to define the agent’s operational boundaries:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tier</th>
+      <th>Description</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Always do</strong></td>
+      <td>Default behaviour, no permission needed</td>
+      <td>Follow style examples, run linter, write tests</td>
+    </tr>
+    <tr>
+      <td><strong>Ask first</strong></td>
+      <td>Requires human confirmation before proceeding</td>
+      <td>Database schema changes, adding dependencies, modifying CI/CD</td>
+    </tr>
+    <tr>
+      <td><strong>Never do</strong></td>
+      <td>Prohibited regardless of instruction</td>
+      <td>Commit secrets, modify production configs, delete tests</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Start minimal and grow it through use:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Start a task
+2. Notice a mistake or violated constraint
+3. After the task: add it to the config as a named constraint or anti-pattern
+4. This knowledge is now permanent — every future session begins with it loaded
+</code></pre></div></div>
+
+<p>The contrast with context memory is straightforward: a constraint added to the configuration file can be reused in future sessions, whereas a constraint established only in conversation disappears when the session ends.</p>
+
+<p>Incremental refinement is usually more effective than attempting to design a complete agent configuration in advance.</p>
+
+<p><strong>Example growth trajectory:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stage</th>
+      <th>Config Contents</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Day 1</td>
+      <td>Project name, language, framework</td>
+    </tr>
+    <tr>
+      <td>Week 1</td>
+      <td>Preferred patterns, banned libraries, style rules</td>
+    </tr>
+    <tr>
+      <td>Month 1</td>
+      <td>All anti-patterns discovered during development (the “don’t do this” list)</td>
+    </tr>
+    <tr>
+      <td>Month 3+</td>
+      <td>Full constraint library representing accumulated team knowledge</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In mature use, the configuration file becomes a form of team memory: constraints and lessons captured by prior work become available to later sessions and contributors.</p>
+
+<p><strong>What belongs in the config (vs in a spec or skill):</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content Type</th>
+      <th>Where It Lives</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Constraints the agent repeatedly violates</td>
+      <td>Agent config</td>
+    </tr>
+    <tr>
+      <td>Dangerous patterns for this specific codebase</td>
+      <td>Agent config</td>
+    </tr>
+    <tr>
+      <td>Preferences about style or process</td>
+      <td>Agent config</td>
+    </tr>
+    <tr>
+      <td>What to build</td>
+      <td>Specification file</td>
+    </tr>
+    <tr>
+      <td>How to build (step-by-step)</td>
+      <td>Plan file</td>
+    </tr>
+    <tr>
+      <td>Repeatable procedural expertise</td>
+      <td>Skills file</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="practices">Practices</h2>
+
+<ul>
+  <li>Curate context upfront rather than relying on implicit conversational carryover</li>
+  <li>Use markdown or similar project artefacts as durable memory between sessions</li>
+  <li>Summarize completed work before moving to the next task</li>
+  <li>Keep specification files updated as sources of truth</li>
+  <li>Prune old or irrelevant context actively</li>
+  <li>Provide documentation for niche libraries rather than assuming model familiarity</li>
+  <li>Include reference implementations where codebase conventions matter</li>
+  <li>Start fresh agents or sessions often when scope changes or context degrades</li>
+  <li>Use selective inclusion with explicit exclusion</li>
+  <li>Capture recurrent mistakes or constraints in the agent configuration promptly</li>
+</ul>
+
+<h2 id="anti-patterns">Anti-patterns</h2>
+
+<ul>
+  <li>Dumping entire codebases into context</li>
+  <li>Not summarizing before context overflow</li>
+  <li>Relying on agents to remember across sessions</li>
+  <li>Including irrelevant files in context</li>
+  <li>Assuming the agent knows niche or new APIs without documentation</li>
+  <li>Making agents guess at constraints they cannot observe</li>
+  <li>One-off prompts for repeatable tasks instead of reusable artefacts</li>
+</ul>
+
+<h2 id="indicators">Indicators</h2>
+
+<ul>
+  <li>Frequency of context-related mistakes or hallucinated continuity across sessions</li>
+  <li>Time spent re-establishing project context in new sessions</li>
+  <li>Size of task-scoped context relative to the full repository</li>
+  <li>Number of durable artefacts reused across sessions</li>
+</ul>
+
+  </div>
+  
+
+  <br><br>
+  <div style="text-align:center;">
+    <a href="/agentic_patterns/05-role-based-development/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 6 / 9 </span> •
+    <a href="/agentic_patterns/#context--state"> <span>Context & State</span> </a>
+    <a href="/agentic_patterns/07-verification-first/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+  <br><br>
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'se4ml';
+    var disqus_identifier = '/agentic_patterns/06-memory-context-management';
+    var disqus_title = 'Memory &amp; Context Management';
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  
+
+</div>
+
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Cluster A: Training Foundations</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/skills/training-advisor/references/02-foundations/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Cluster A: Training Foundations</h1>
+    <h5 class="post-description"></h5>
+  </header>
+
+  <article class="post-content Cluster A: Training Foundations clearfix">
+    <h1 id="cluster-a-training-foundations">Cluster A: Training Foundations</h1>
+
+<p>These six practices are <strong>always applicable</strong> regardless of feature engineering
+approach, domain, or team maturity. They are the baseline from which everything
+else builds. All are rated <strong>basic</strong> difficulty — if any are missing, recommend
+them before anything else.</p>
+
+<hr />
+
+<h2 id="exp_trainingobjective--share-a-clearly-defined-training-objective">exp_trainingobjective — Share a Clearly Defined Training Objective</h2>
+
+<p><strong>Difficulty:</strong> basic<br />
+<strong>Intent:</strong> Avoid misunderstandings between multi-disciplinary team members.<br />
+<strong>Motivation:</strong> A shared, explicit training objective ensures that data scientists,
+engineers, and domain experts are optimising for the same thing. Without it,
+team members may pursue conflicting directions without realising it.<br />
+<strong>Applicability:</strong> Any machine learning team should share a clear training objective.</p>
+
+<p><strong>What to look for (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Is the training objective documented in a README, model card, or project doc?</li>
+  <li>Is it accessible to all team members, not just the person who ran the first experiment?</li>
+  <li>Is it stated in terms understandable to non-ML stakeholders?</li>
+</ul>
+
+<p><strong>Typical gaps:</strong> Objective exists in someone’s head or a notebook comment but
+is never formally written down; objective changes mid-project without team alignment.</p>
+
+<hr />
+
+<h2 id="exp_trainingmetric--capture-the-training-objective-in-a-metric">exp_trainingmetric — Capture the Training Objective in a Metric</h2>
+
+<p><strong>Difficulty:</strong> basic<br />
+<strong>Intent:</strong> Ensure the machine learning objective is easy to measure and is a
+good proxy for the <em>true</em> objective.<br />
+<strong>Motivation:</strong> If the metric is hard to compute, poorly understood, or a poor
+proxy for what you actually care about (e.g. optimising accuracy on imbalanced
+data when you care about recall), the whole experimentation loop is optimising
+for the wrong thing.<br />
+<strong>Applicability:</strong> All training objectives should be captured in an easy-to-comprehend metric.</p>
+
+<p><strong>What to look for (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Is there an agreed primary metric logged in every experiment?</li>
+  <li>Is the metric aligned with the business or product objective?</li>
+  <li>Are secondary metrics tracked (e.g. fairness, latency, calibration)?</li>
+</ul>
+
+<p><strong>Typical gaps:</strong> Multiple competing metrics with no agreed primary; metric
+tracked in code but not communicated to stakeholders.</p>
+
+<hr />
+
+<h2 id="exp_versioning--use-versioning-for-data-model-configurations-and-training-scripts">exp_versioning — Use Versioning for Data, Model, Configurations and Training Scripts</h2>
+
+<p><strong>Difficulty:</strong> basic<br />
+<strong>Intent:</strong> Improve reproducibility, traceability and compliance.<br />
+<strong>Motivation:</strong> Without versioning, it is impossible to reproduce a past result,
+trace a deployed model back to its training data, or understand what changed
+between two experiments. This is a prerequisite for debugging, auditing, and
+certification in regulated domains.<br />
+<strong>Applicability:</strong> Versioning should be used in any machine learning application or experiment.</p>
+
+<p><strong>What to look for (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Are training scripts in version control (git)?</li>
+  <li>Are datasets versioned (DVC, Delta Lake, MLflow, or equivalent)?</li>
+  <li>Are model artefacts versioned and linked to the training run that produced them?</li>
+  <li>Are hyperparameter configs stored alongside model artefacts?</li>
+</ul>
+
+<p><strong>Typical gaps:</strong> Code versioned but data is not; model files stored with
+non-descriptive names like <code class="language-plaintext highlighter-rouge">model_final_v3b.pkl</code>.</p>
+
+<hr />
+
+<h2 id="exp_quality--continuously-measure-model-quality-and-performance">exp_quality — Continuously Measure Model Quality and Performance</h2>
+
+<p><strong>Difficulty:</strong> basic<br />
+<strong>Intent:</strong> Detect errors early and improve experimentation agility.<br />
+<strong>Motivation:</strong> Measuring quality only at the end of training wastes compute and
+delays feedback. Continuous measurement (per epoch, per fold, per data slice)
+catches bugs and degradation early and enables fast iteration.<br />
+<strong>Applicability:</strong> Quality monitoring should be used in any training experiment.</p>
+
+<p><strong>What to look for (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Are training and validation metrics logged at regular intervals (not just final)?</li>
+  <li>Is there a tool in use (MLflow, W&amp;B, TensorBoard, Neptune, etc.)?</li>
+  <li>Are quality regressions surfaced automatically (threshold alerts)?</li>
+</ul>
+
+<p><strong>Related:</strong> exp_trainingmetric, exp_status</p>
+
+<p><strong>Typical gaps:</strong> Metrics only logged at the end of training; no tooling —
+quality tracked via print statements and manual notes.</p>
+
+<hr />
+
+<h2 id="exp_parallel--enable-parallel-training-experiments">exp_parallel — Enable Parallel Training Experiments</h2>
+
+<p><strong>Difficulty:</strong> basic<br />
+<strong>Intent:</strong> Avoid deadlocks during experimentation.<br />
+<strong>Motivation:</strong> When experiments are run sequentially on shared infrastructure
+or with shared configs, one failing or slow run blocks the whole team.
+Parallelisation decouples experiments, speeds up iteration, and forces
+proper isolation of configs and artefacts.<br />
+<strong>Applicability:</strong> Parallelisation should be considered in any machine learning application.</p>
+
+<p><strong>What to look for (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Can multiple experiments run simultaneously without interfering?</li>
+  <li>Are run configs and output directories isolated per experiment?</li>
+  <li>Is there a job scheduler or experiment tracking tool managing runs?</li>
+</ul>
+
+<p><strong>Typical gaps:</strong> Experiments share a config file that gets overwritten; output
+directories are not namespaced per run.</p>
+
+<hr />
+
+<h2 id="exp_status--share-status-and-outcomes-of-experiments-within-the-team">exp_status — Share Status and Outcomes of Experiments Within the Team</h2>
+
+<p><strong>Difficulty:</strong> basic<br />
+<strong>Intent:</strong> Facilitate knowledge transfer, peer review and model assessment.<br />
+<strong>Motivation:</strong> Experiments whose results are not shared generate duplicated
+effort (others repeat the same failed approach) and stall peer review. A shared
+experiment log is also the foundation for model governance and audit trails.<br />
+<strong>Applicability:</strong> Experiment tracking and sharing should be used for any training experiment.</p>
+
+<p><strong>Related:</strong> exp_versioning, exp_quality, exp_peer</p>
+
+<p><strong>What to look for (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Are experiment results accessible to the whole team (not just in one person’s notebook)?</li>
+  <li>Is there a shared tracking tool or at minimum a shared log/wiki page?</li>
+  <li>When an experiment is concluded (pass or fail), is the outcome communicated?</li>
+</ul>
+
+<p><strong>Typical gaps:</strong> Results live in personal notebooks; only successes are shared,
+failures are silently forgotten.</p>
+
+  </article>
+
+  
+
+  
+
+</div>
+
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

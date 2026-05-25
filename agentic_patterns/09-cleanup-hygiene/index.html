@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Cleanup & Hygiene</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/agentic_patterns/09-cleanup-hygiene/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Cleanup & Hygiene</h1>
+    <p class="post-meta">May 25, 2026 • Alex Serban</p>
+  </header>
+
+
+  
+  
+
+  
+  
+  
+
+  <div style="text-align:center;">
+    <a href="/agentic_patterns/08-rollback-reversibility/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 9 / 9 </span> •
+    <a href="/agentic_patterns/#maintenance"> <span>Maintenance</span> </a>
+    <a href="/agentic_patterns/01-agent-assisted-discovery/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+
+  <br><br>
+
+  
+  <div class="image-container">
+    <img src="/assets/img/clean.png" class="blog-image pattern-image"></img>
+    
+  </div>
+  
+
+
+  
+  <h3 class="black bold">Intent</h3>
+  <div>
+    Make cleanup an explicit part of the workflow so repositories are left in a clean, reviewable, and maintainable state after agent work.
+  </div>
+  
+
+  
+  <h3 class="black bold">Problem</h3>
+  <div>
+    Agents optimise for apparent task completion, not for leaving the repository in a clean long-term state. Residue accumulates easily: temporary files, unused imports, commented-out code, outdated text, and debugging artefacts.
+  </div>
+  
+
+  
+  <h3 class="black bold">Pattern</h3>
+  <div>
+    Make cleanup an explicit phase of the workflow at three levels: after each step, after each task, and periodically across the codebase. Hygiene is part of the definition of done.
+  </div>
+  
+
+  
+
+  
+  <h3 class="black bold">Correct Use</h3>
+  <div>
+    Remove scaffolding and leftovers immediately, update affected documentation, and use automation where possible to detect common residue.
+  </div>
+  
+
+  
+  <h3 class="black bold">Failure Mode If Skipped</h3>
+  <div>
+    The apparent gains of agentic speed are repaid as maintenance debt.
+  </div>
+  
+
+  
+  <div>
+    <h2 id="rationale">Rationale</h2>
+
+<p>Agents are usually optimised to satisfy the explicit task, not to leave the repository in the cleanest possible long-term state. When no cleanup phase is defined, temporary fixes and leftover artefacts remain in place and gradually accumulate into maintenance burden.</p>
+
+<p>Common cleanup targets include:</p>
+
+<ul>
+  <li>Temporary files</li>
+  <li>Debug code and print statements</li>
+  <li>Commented-out code</li>
+  <li>Incomplete implementations</li>
+  <li>Outdated documentation</li>
+  <li>Unused imports</li>
+</ul>
+
+<p>The key issue is not only visible mess. Residue also makes future review, modification, and debugging harder by obscuring which parts of the repository are still active and intentional.</p>
+
+<h2 id="how-to-apply-the-pattern">How to Apply the Pattern</h2>
+
+<p>Cleanup should be treated as a normal part of task completion rather than as optional polish.</p>
+
+<ol>
+  <li>Remove local residue after each coherent implementation step.</li>
+  <li>Perform a broader cleanup pass after the task is complete.</li>
+  <li>Periodically remove accumulated repository-wide cruft.</li>
+  <li>Use automated checks where they are reliable.</li>
+  <li>Confirm that cleanup has not hidden real failures or removed important signals.</li>
+</ol>
+
+<p>In practice, cleanup is strongest when it is anticipated in the plan rather than postponed until the end.</p>
+
+<h2 id="supporting-practices">Supporting Practices</h2>
+
+<h3 id="use-multiple-cleanup-levels">Use Multiple Cleanup Levels</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>When</th>
+      <th>What to Clean</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Immediate</strong></td>
+      <td>After each step</td>
+      <td>Temp files, debug output</td>
+    </tr>
+    <tr>
+      <td><strong>Post-task</strong></td>
+      <td>After task completion</td>
+      <td>Debug code, comments, unused code</td>
+    </tr>
+    <tr>
+      <td><strong>Periodic</strong></td>
+      <td>After multiple tasks, on PR merge, or on a regular schedule</td>
+      <td>Accumulated cruft, outdated docs</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="keep-a-cleanup-checklist">Keep a Cleanup Checklist</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gu">## Post-Task Cleanup</span>
+
+<span class="gu">### Code Hygiene</span>
+<span class="p">-</span> [ ] Remove temporary files
+<span class="p">-</span> [ ] Remove debug/print statements
+<span class="p">-</span> [ ] Remove commented-out code
+<span class="p">-</span> [ ] Remove unused imports
+<span class="p">-</span> [ ] Format code (prettier, black, etc.)
+
+<span class="gu">### Documentation</span>
+<span class="p">-</span> [ ] Update README if needed
+<span class="p">-</span> [ ] Update API docs if changed
+<span class="p">-</span> [ ] Update CHANGELOG
+<span class="p">-</span> [ ] Remove outdated comments
+
+<span class="gu">### Tests</span>
+<span class="p">-</span> [ ] Remove test debugging code
+<span class="p">-</span> [ ] Ensure all tests pass
+<span class="p">-</span> [ ] Remove skipped tests or document why skipped
+
+<span class="gu">### Git</span>
+<span class="p">-</span> [ ] Squash WIP commits if appropriate
+<span class="p">-</span> [ ] Write clear commit message
+<span class="p">-</span> [ ] Remove merged branches
+</code></pre></div></div>
+
+<h3 id="automate-what-can-be-automated">Automate What Can Be Automated</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Post-agent cleanup script</span>
+npm run lint:fix          <span class="c"># Auto-fix linting issues</span>
+npm run format            <span class="c"># Format code</span>
+npm run <span class="nb">test</span>              <span class="c"># Verify tests pass</span>
+git diff <span class="nt">--stat</span>           <span class="c"># Review changes</span>
+</code></pre></div></div>
+
+<h3 id="review-common-cleanup-targets">Review Common Cleanup Targets</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Target</th>
+      <th>Detection</th>
+      <th>Removal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Debug statements</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">console.log</code>, <code class="language-plaintext highlighter-rouge">print(</code>, <code class="language-plaintext highlighter-rouge">debugger</code></td>
+      <td>Linter rules</td>
+    </tr>
+    <tr>
+      <td><strong>Commented code</strong></td>
+      <td>Large comment blocks</td>
+      <td>Manual review</td>
+    </tr>
+    <tr>
+      <td><strong>Unused imports</strong></td>
+      <td>IDE/linter warnings</td>
+      <td>Auto-fix</td>
+    </tr>
+    <tr>
+      <td><strong>Temp files</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">.tmp</code>, <code class="language-plaintext highlighter-rouge">.bak</code>, <code class="language-plaintext highlighter-rouge">~</code> suffix</td>
+      <td>Gitignore + delete</td>
+    </tr>
+    <tr>
+      <td><strong>Dead code</strong></td>
+      <td>Unreachable code analysis</td>
+      <td>Linter rules</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="practices">Practices</h2>
+
+<ul>
+  <li>Include cleanup as explicit step in plans</li>
+  <li>Use linters to catch common hygiene issues</li>
+  <li>Review agent output for cleanliness</li>
+  <li>Automate what can be automated</li>
+  <li>Make cleanup part of the definition of done</li>
+  <li>Do not remove failing tests without explicit authorization; failing tests are diagnostic signals, not noise</li>
+</ul>
+
+<h2 id="anti-patterns">Anti-patterns</h2>
+
+<ul>
+  <li>Skipping cleanup for later</li>
+  <li>Accumulating unresolved TODO comments</li>
+  <li>Leaving dead code paths in place</li>
+  <li>Merging with debug code</li>
+  <li>Relying on manual cleanup for tasks that can be automated</li>
+</ul>
+
+<h2 id="indicators">Indicators</h2>
+
+<ul>
+  <li>Number of cleanup-related issues found during review after a task is marked complete</li>
+  <li>Frequency of residual debug code, temporary files, or dead code in merged changes</li>
+  <li>Share of tasks that include an explicit cleanup step</li>
+  <li>Amount of repository maintenance caused by leftover artefacts from prior agent work</li>
+</ul>
+
+  </div>
+  
+
+  <br><br>
+  <div style="text-align:center;">
+    <a href="/agentic_patterns/08-rollback-reversibility/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 9 / 9 </span> •
+    <a href="/agentic_patterns/#maintenance"> <span>Maintenance</span> </a>
+    <a href="/agentic_patterns/01-agent-assisted-discovery/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+  <br><br>
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'se4ml';
+    var disqus_identifier = '/agentic_patterns/09-cleanup-hygiene';
+    var disqus_title = 'Cleanup &amp; Hygiene';
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  
+
+</div>
+
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

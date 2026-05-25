@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Coding Practices Reference</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/skills/coding-advisor/references/03-practices/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Coding Practices Reference</h1>
+    <h5 class="post-description"></h5>
+  </header>
+
+  <article class="post-content Coding Practices Reference clearfix">
+    <h1 id="coding-practices-reference">Coding Practices Reference</h1>
+
+<p>All 4 practices from the SE-ML catalogue Coding category (<code class="language-plaintext highlighter-rouge">03-*</code>).
+All apply broadly; <code class="language-plaintext highlighter-rouge">security</code> is conditional on external interfaces or
+sensitive data. <code class="language-plaintext highlighter-rouge">coding_build</code> (CI) is recommended for production projects.</p>
+
+<p>Recommended adoption order: <strong>coding_regr → coding_static → coding_build → security</strong></p>
+
+<hr />
+
+<h2 id="coding_regr--run-automated-regression-tests">coding_regr — Run Automated Regression Tests</h2>
+
+<p><strong>Difficulty:</strong> medium | <strong>Always applies</strong><br />
+<strong>Intent:</strong> Avoid the introduction of bugs in code.<br />
+<strong>Motivation:</strong> Changes to ML code introduce defects not just in new code but in
+existing functionality. Automated regression tests catch these regressions early,
+freeing the team to experiment without fear of silently breaking the pipeline.<br />
+<strong>Applicability:</strong> Any type of code in the ML project.</p>
+
+<p><strong>What to check (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Is there a test suite (pytest, unittest, or equivalent)?</li>
+  <li>Are tests run automatically on each commit or PR?</li>
+  <li>Is test coverage measured (codecov, pytest-cov)?</li>
+  <li>Are ML-specific concerns tested: data leakage, metric correctness,
+preprocessing correctness (see <code class="language-plaintext highlighter-rouge">exp_tstfeature</code> in Training)?</li>
+</ul>
+
+<p><strong>Assist — minimal pytest setup for ML code:</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># tests/test_preprocessing.py
+</span><span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">from</span> <span class="nn">src.preprocessing</span> <span class="kn">import</span> <span class="n">normalize_features</span>
+
+<span class="k">def</span> <span class="nf">test_normalize_output_range</span><span class="p">():</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">"a"</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]})</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">normalize_features</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="p">[</span><span class="s">"a"</span><span class="p">].</span><span class="nb">min</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="mf">0.0</span> <span class="ow">and</span> <span class="n">result</span><span class="p">[</span><span class="s">"a"</span><span class="p">].</span><span class="nb">max</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="mf">1.0</span>
+
+<span class="k">def</span> <span class="nf">test_normalize_handles_nulls</span><span class="p">():</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">"a"</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]})</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">normalize_features</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="p">[</span><span class="s">"a"</span><span class="p">].</span><span class="n">isnull</span><span class="p">().</span><span class="nb">sum</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span>
+</code></pre></div></div>
+
+<p><strong>Related:</strong> coding_build, exp_tstfeature (Training)</p>
+
+<hr />
+
+<h2 id="coding_static--use-static-analysis-to-check-code-quality">coding_static — Use Static Analysis to Check Code Quality</h2>
+
+<p><strong>Difficulty:</strong> medium | <strong>Always applies</strong><br />
+<strong>Intent:</strong> Avoid the introduction of code that is difficult to test, maintain,
+or extend.<br />
+<strong>Motivation:</strong> High-quality code reduces defects, accelerates onboarding,
+and makes correctness easier to reason about. Static analysis is the most
+cost-effective way to enforce quality — it runs in seconds and requires no
+test data.<br />
+<strong>Applicability:</strong> Any type of code.</p>
+
+<p><strong>What to check (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Is a linter configured and in use (ruff, flake8, pylint)?</li>
+  <li>Is a type checker in use (mypy, pyright)?</li>
+  <li>Are quality issues surfaced at commit time (pre-commit hooks) or in CI?</li>
+  <li>Is there an agreed quality threshold the team acts on?</li>
+</ul>
+
+<p><strong>Assist — minimal pre-commit config:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># .pre-commit-config.yaml</span>
+<span class="na">repos</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">repo</span><span class="pi">:</span> <span class="s">https://github.com/astral-sh/ruff-pre-commit</span>
+    <span class="na">rev</span><span class="pi">:</span> <span class="s">v0.3.0</span>
+    <span class="na">hooks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">ruff</span>
+        <span class="na">args</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">--fix</span><span class="pi">]</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">ruff-format</span>
+  <span class="pi">-</span> <span class="na">repo</span><span class="pi">:</span> <span class="s">https://github.com/pre-commit/mirrors-mypy</span>
+    <span class="na">rev</span><span class="pi">:</span> <span class="s">v1.8.0</span>
+    <span class="na">hooks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">mypy</span>
+</code></pre></div></div>
+
+<p><strong>Related:</strong> coding_build</p>
+
+<hr />
+
+<h2 id="coding_build--use-continuous-integration">coding_build — Use Continuous Integration</h2>
+
+<p><strong>Difficulty:</strong> advanced | <strong>Recommended for production projects</strong><br />
+<strong>Intent:</strong> Catch code integration problems as early as possible.<br />
+<strong>Motivation:</strong> CI runs the test suite and static analysis on every commit,
+making integration failures immediately visible to the whole team —
+not discovered days later in a broken shared branch.<br />
+<strong>Applicability:</strong> Any ML project integrating code changes from multiple contributors.</p>
+
+<p><strong>What to check (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Is a CI server configured (GitHub Actions, GitLab CI, CircleCI, etc.)?</li>
+  <li>Does CI run both static analysis and regression tests?</li>
+  <li>Are failed builds blocking merge to main?</li>
+  <li>Does CI run on PRs, not just after merge?</li>
+</ul>
+
+<p><strong>Assist — minimal GitHub Actions workflow:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># .github/workflows/ci.yml</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">CI</span>
+<span class="na">on</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">push</span><span class="pi">,</span> <span class="nv">pull_request</span><span class="pi">]</span>
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">test</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/setup-python@v5</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">python-version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3.11"</span>
+      <span class="pi">-</span> <span class="na">run</span><span class="pi">:</span> <span class="s">pip install -e ".[dev]"</span>
+      <span class="pi">-</span> <span class="na">run</span><span class="pi">:</span> <span class="s">ruff check .</span>
+      <span class="pi">-</span> <span class="na">run</span><span class="pi">:</span> <span class="s">mypy src/</span>
+      <span class="pi">-</span> <span class="na">run</span><span class="pi">:</span> <span class="s">pytest --cov=src tests/</span>
+</code></pre></div></div>
+
+<p><strong>Related:</strong> coding_static, coding_regr</p>
+
+<hr />
+
+<h2 id="security--assure-application-security">security — Assure Application Security</h2>
+
+<p><strong>Difficulty:</strong> advanced | <strong>Applies when: external interface or sensitive data</strong><br />
+<strong>Intent:</strong> Prevent attackers from stealing/corrupting data or disrupting the application.<br />
+<strong>Motivation:</strong> ML adds unique attack surfaces beyond classical software:
+<em>data poisoning</em> (manipulating training data), <em>adversarial attacks</em>
+(perturbing inputs at inference), and <em>membership attacks</em> (inferring
+training data from the model). Proactive security is an ongoing requirement,
+not a one-time fix.<br />
+<strong>Applicability:</strong> Any application with an external interface or that processes
+personal or sensitive data.</p>
+
+<p><strong>ML-specific threats to address:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Threat</th>
+      <th>Description</th>
+      <th>Mitigation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Data poisoning</td>
+      <td>Attacker alters training data</td>
+      <td>Input validation, data provenance tracking</td>
+    </tr>
+    <tr>
+      <td>Adversarial examples</td>
+      <td>Perturbed inputs cause misclassification</td>
+      <td>Adversarial training, input sanitisation</td>
+    </tr>
+    <tr>
+      <td>Membership attacks</td>
+      <td>Infer if a record was in training data</td>
+      <td>Differential privacy, model output restrictions</td>
+    </tr>
+    <tr>
+      <td>Model extraction</td>
+      <td>Reconstruct model via queries</td>
+      <td>Rate limiting, output perturbation</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Security mechanisms to implement:</strong></p>
+<ul>
+  <li>Security-focused code review (OWASP ML Security Top 10)</li>
+  <li>Static security analysis (bandit for Python, semgrep)</li>
+  <li>Penetration testing of API endpoints</li>
+  <li>Red teaming exercises for high-stakes applications</li>
+</ul>
+
+<p><strong>Assist — minimal bandit setup:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>bandit
+bandit <span class="nt">-r</span> src/ <span class="nt">-ll</span>  <span class="c"># report medium and high severity issues only</span>
+</code></pre></div></div>
+
+<p><strong>Related:</strong> risk (Governance), gov_responsible (Governance)</p>
+
+  </article>
+
+  
+
+  
+
+</div>
+
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

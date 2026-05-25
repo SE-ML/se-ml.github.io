@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Incremental Execution</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/agentic_patterns/04-incremental-execution/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Incremental Execution</h1>
+    <p class="post-meta">May 25, 2026 • Alex Serban</p>
+  </header>
+
+
+  
+  
+
+  
+  
+  
+
+  <div style="text-align:center;">
+    <a href="/agentic_patterns/03-plan-driven-task-decomposition/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 4 / 9 </span> •
+    <a href="/agentic_patterns/#execution"> <span>Execution</span> </a>
+    <a href="/agentic_patterns/05-role-based-development/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+
+  <br><br>
+
+  
+
+
+  
+  <h3 class="black bold">Intent</h3>
+  <div>
+    Carry out one approved task at a time with immediate verification and checkpointing rather than in large agent-issued batches.
+  </div>
+  
+
+  
+  <h3 class="black bold">Problem</h3>
+  <div>
+    Large agent-issued changes are hard to inspect, validate, and unwind. Errors introduced early are often discovered only after later steps depend on them.
+  </div>
+  
+
+  
+  <h3 class="black bold">Pattern</h3>
+  <div>
+    Execute in small, independently verifiable units. Each step should have a narrow scope, an explicit validation action, and a clear stopping point. Reliability tends to decay as edit breadth increases.
+  </div>
+  
+
+  
+
+  
+  <h3 class="black bold">Correct Use</h3>
+  <div>
+    Prefer one coherent slice at a time, validate immediately, and move forward only from a known-good state.
+  </div>
+  
+
+  
+  <h3 class="black bold">Failure Mode If Skipped</h3>
+  <div>
+    A single session creates an entangled change set whose internal assumptions cannot be isolated or tested cheaply.
+  </div>
+  
+
+  
+  <div>
+    <h2 id="rationale">Rationale</h2>
+
+<p>Agents can produce many plausible edits quickly, but the ease of generation does not reduce the cost of inspection, validation, or recovery. When changes are issued in large batches, several problems tend to appear at once:</p>
+
+<ul>
+  <li>Verification becomes slower and less discriminating</li>
+  <li>Errors compound across multiple files and steps</li>
+  <li>Rollback becomes more expensive</li>
+  <li>The source of failure becomes harder to localize</li>
+</ul>
+
+<p>The practical issue is not only that large changes contain more code. It is that later edits often depend on earlier ones. By the time a defect is noticed, the session may already have built additional assumptions on top of it.</p>
+
+<p>This pattern assumes that task decomposition has already happened. Its concern is not how the work is partitioned into tasks, but how each approved task is carried out safely.</p>
+
+<h2 id="how-to-apply-the-pattern">How to Apply the Pattern</h2>
+
+<p>Execute the approved plan one logical step at a time. Each step should identify what is being changed, how success will be checked, and where execution should pause before continuing.</p>
+
+<p>In practice, this usually means:</p>
+
+<ol>
+  <li>Select the next approved task from the plan.</li>
+  <li>Limit execution to that single slice of work.</li>
+  <li>Run the defined verification action immediately.</li>
+  <li>Commit or checkpoint the known-good state.</li>
+  <li>Continue only after the current step is verified.</li>
+</ol>
+
+<p>The goal is not to maximize the number of steps. It is to make each step small enough that failure can be detected, explained, and reversed cheaply.</p>
+
+<p>Pattern 4 governs execution cadence. Pattern 5 governs role separation and handoff. They often compose, but they answer different questions.</p>
+
+<h2 id="step-template">Step Template</h2>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>STEP 1: [Action]
+  Files: [affected files]
+  Verify: [how to confirm success]
+  Rollback: [how to undo if needed]
+
+STEP 2: [Action]
+  Files: [affected files]
+  Verify: [how to confirm success]
+  Rollback: [how to undo if needed]
+</code></pre></div></div>
+
+<h2 id="supporting-practices">Supporting Practices</h2>
+
+<h3 id="keep-verification-between-steps">Keep Verification Between Steps</h3>
+
+<h4 id="verification-cadence">Verification Cadence</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐
+│ Step 1   ───▶ Verify    ───▶ Commit   ───▶ Step 2   ───▶ ...
+└─────────┘    └─────────┘    └─────────┘    └─────────┘
+                   │
+                   ▼ (if fail)
+              ┌─────────┐
+              │Rollback │
+              └─────────┘
+</code></pre></div></div>
+
+<p>This cadence is the operational core of the pattern: execute, verify, and only then continue.</p>
+
+<h3 id="pair-the-pattern-with-tdd-when-appropriate">Pair the Pattern with TDD When Appropriate</h3>
+
+<h4 id="tdd-step-cadence">TDD Step Cadence</h4>
+
+<p>Incremental execution pairs naturally with test-driven development. Each implementation step follows this sequence:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Write the failing test
+2. Run it to verify it fails (confirm the test is meaningful)
+3. Implement the minimal code to make the test pass
+4. Run the tests to verify they pass
+5. Commit
+</code></pre></div></div>
+
+<p>As a rule of thumb, each step should be small enough to complete and verify quickly. If a step becomes large, split it further.</p>
+
+<p>Where task decomposition, dependency order, or task-scoped context remain unclear, return to the planning step rather than improvising a broader execution step.</p>
+
+<h2 id="practices">Practices</h2>
+
+<ul>
+  <li>Ask for one coherent change at a time</li>
+  <li>Verify after each change before proceeding</li>
+  <li>Commit frequently at working states</li>
+  <li>Keep each step small enough to review quickly</li>
+  <li>Return to the plan when execution reveals that a task is too large or poorly bounded</li>
+  <li>State clearly that execution should pause when the approved task boundary becomes unclear</li>
+</ul>
+
+<h2 id="anti-patterns">Anti-patterns</h2>
+
+<ul>
+  <li>Requests to implement an entire feature in one step</li>
+  <li>Multiple unrelated changes in one request</li>
+  <li>Skipping verification between steps</li>
+  <li>Steps that modify many files at once</li>
+  <li>Steps without a defined verification action</li>
+  <li>Skipping the failing-test step</li>
+</ul>
+
+<h2 id="indicators">Indicators</h2>
+
+<ul>
+  <li>Average size of each implementation step or diff</li>
+  <li>Time between selecting a task and running its first verification step</li>
+  <li>Time needed to identify the source of a regression</li>
+  <li>Frequency of successful rollback to the previous known-good state</li>
+</ul>
+
+  </div>
+  
+
+  <br><br>
+  <div style="text-align:center;">
+    <a href="/agentic_patterns/03-plan-driven-task-decomposition/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 4 / 9 </span> •
+    <a href="/agentic_patterns/#execution"> <span>Execution</span> </a>
+    <a href="/agentic_patterns/05-role-based-development/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+  <br><br>
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'se4ml';
+    var disqus_identifier = '/agentic_patterns/04-incremental-execution';
+    var disqus_title = 'Incremental Execution';
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  
+
+</div>
+
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

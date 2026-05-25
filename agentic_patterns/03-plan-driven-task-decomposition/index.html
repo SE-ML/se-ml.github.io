@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Plan-Driven Task Decomposition</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/agentic_patterns/03-plan-driven-task-decomposition/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Plan-Driven Task Decomposition</h1>
+    <p class="post-meta">May 25, 2026 • Alex Serban</p>
+  </header>
+
+
+  
+  
+
+  
+  
+  
+
+  <div style="text-align:center;">
+    <a href="/agentic_patterns/02-specification-driven-dev/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 3 / 9 </span> •
+    <a href="/agentic_patterns/#planning"> <span>Planning</span> </a>
+    <a href="/agentic_patterns/04-incremental-execution/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+
+  <br><br>
+
+  
+  <div class="image-container">
+    <img src="/assets/img/plan.png" class="blog-image pattern-image"></img>
+    
+  </div>
+  
+
+
+  
+  <h3 class="black bold">Intent</h3>
+  <div>
+    Translate a validated specification into an ordered plan of atomic tasks, dependencies, scoped context, and verification points before implementation begins.
+  </div>
+  
+
+  
+  <h3 class="black bold">Problem</h3>
+  <div>
+    A specification can state what should be achieved without yet defining how the work should be decomposed. Without an intermediate planning step, agents are more likely to drift, over-build, or work from an overloaded context.
+  </div>
+  
+
+  
+  <h3 class="black bold">Pattern</h3>
+  <div>
+    Translate the specification into an ordered plan of atomic tasks. Each task should have a narrow objective, explicit dependencies, scoped context, and a clear verification point.
+  </div>
+  
+
+  
+
+  
+  <h3 class="black bold">Correct Use</h3>
+  <div>
+    Ask the agent to draft the plan, but review and refine it before implementation begins. Compress intent into what each task actually needs rather than passing the whole codebase or full specification into every step.
+  </div>
+  
+
+  
+  <h3 class="black bold">Failure Mode If Skipped</h3>
+  <div>
+    Execution begins directly from the specification, so decomposition happens implicitly and inconsistently during implementation. The result is usually drift, scope inflation, or poorly bounded tasks.
+  </div>
+  
+
+  
+  <div>
+    <h2 id="rationale">Rationale</h2>
+
+<p>Specification and execution are distinct activities. A specification defines the intended outcome, constraints, and acceptance criteria. It does not automatically determine the right execution order, the correct task boundaries, or the smallest coherent units of work.</p>
+
+<p>Coding agents are sensitive to how work is partitioned. If the next action is too large, the agent tends to improvise hidden substeps. If the context is too broad, irrelevant details compete with the actual task. If dependencies are implicit, the execution order becomes fragile.</p>
+
+<p>Three recurrent failure modes motivate this pattern:</p>
+
+<ul>
+  <li><strong>Drift.</strong> The agent starts solving a slightly different problem than intended, and the deviation compounds over time.</li>
+  <li><strong>Gold-plating.</strong> The agent adds unnecessary structure because scope was never defined at task granularity.</li>
+  <li><strong>Context pollution.</strong> Long-running sessions accumulate stale or irrelevant context that influences later work.</li>
+</ul>
+
+<h2 id="how-to-apply-the-pattern">How to Apply the Pattern</h2>
+
+<p>The planning step should transform a validated specification into an executable sequence.</p>
+
+<ol>
+  <li>Start from an approved specification rather than a rough idea.</li>
+  <li>Decompose the work into the smallest coherent tasks that can be reviewed and verified.</li>
+  <li>State task dependencies explicitly.</li>
+  <li>For each task, identify the files, interfaces, or artefacts likely to be involved.</li>
+  <li>Define the verification action for each task or stage.</li>
+  <li>Review the resulting plan before any implementation begins.</li>
+</ol>
+
+<p>The main objective is not simply to make a list of steps. It is to produce a plan that reduces ambiguity during execution.</p>
+
+<h2 id="plan-template">Plan Template</h2>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Implementation Plan: [Feature or Change]</span>
+
+Generated from: [specification file]
+Status: Draft
+
+<span class="gu">## Stage 1: [Stage Name]</span>
+Goal: [What this stage achieves]
+Verification: [How to confirm this stage is complete]
+<span class="p">
+-</span> [ ] Task 1: [Atomic task]
+<span class="p">  -</span> Depends on: [None or prior task]
+<span class="p">  -</span> Scope: [Files, modules, interfaces]
+<span class="p">  -</span> Context needed: [What the agent must know for this task]
+<span class="p">  -</span> Verification: [Command, test, or review action]
+<span class="p">
+-</span> [ ] Task 2: [Atomic task]
+<span class="p">  -</span> Depends on: Task 1
+<span class="p">  -</span> Scope: [Files, modules, interfaces]
+<span class="p">   -</span> Context needed: [Relevant constraints or artefacts]
+<span class="p">  -</span> Verification: [Command, test, or review action]
+</code></pre></div></div>
+
+<h2 id="supporting-practices">Supporting Practices</h2>
+
+<h3 id="use-the-agent-to-draft-the-plan">Use the Agent to Draft the Plan</h3>
+
+<p>LLMs can be useful in turning a specification into a first-pass plan. They are effective at proposing stages, identifying likely dependencies, and suggesting missing verification steps. They are less reliable at deciding whether the task boundaries are appropriate for the actual repository or team workflow.</p>
+
+<p>A practical workflow is:</p>
+
+<ol>
+  <li>Provide the validated specification.</li>
+  <li>Ask the agent to propose stages and atomic tasks.</li>
+  <li>Ask the agent to justify the dependency order and identify missing checks.</li>
+  <li>Review the plan manually.</li>
+  <li>Use the reviewed plan as the execution artefact.</li>
+</ol>
+
+<p>Useful prompts include:</p>
+
+<ul>
+  <li>“Turn this specification into a staged implementation plan with atomic tasks.”</li>
+  <li>“Which tasks in this plan are too large and should be split further?”</li>
+  <li>“What dependencies are implicit here and should be stated explicitly?”</li>
+  <li>“What context does each task actually need?”</li>
+</ul>
+
+<h3 id="compress-context-per-task">Compress Context Per Task</h3>
+
+<p>Planning is also a context-management activity. Each task should carry only the code, constraints, and artefacts needed for that step. This is more reliable than giving every agent step the entire specification, full transcript, and broad repository context.</p>
+
+<p>The question to ask is: what is the minimum context required for this task to be executed correctly?</p>
+
+<h3 id="review-the-plan-before-execution">Review the Plan Before Execution</h3>
+
+<p>The plan should be treated as a reviewable artefact, not as a disposable prompt. Review should check at least four things:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Area</th>
+      <th>Questions to ask</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Task Size</strong></td>
+      <td>Is each task small enough to execute and verify cheaply?</td>
+    </tr>
+    <tr>
+      <td><strong>Dependencies</strong></td>
+      <td>Is the order explicit and technically justified?</td>
+    </tr>
+    <tr>
+      <td><strong>Scope</strong></td>
+      <td>Does each task stay within a narrow surface area?</td>
+    </tr>
+    <tr>
+      <td><strong>Verification</strong></td>
+      <td>Is there a defined way to check each stage or task?</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="practices">Practices</h2>
+
+<ul>
+  <li>Write the plan after the specification is validated and before implementation begins</li>
+  <li>Decompose work into atomic, reviewable tasks</li>
+  <li>State dependencies explicitly rather than assuming execution order</li>
+  <li>Attach a verification action to each stage or task</li>
+  <li>Limit the context passed to each task to what is actually needed</li>
+  <li>Revise the plan when implementation reveals a genuine mismatch</li>
+</ul>
+
+<h2 id="anti-patterns">Anti-patterns</h2>
+
+<ul>
+  <li>Beginning implementation directly from the specification without a planning step</li>
+  <li>Treating one large feature as a single task</li>
+  <li>Passing the entire codebase or full transcript into every step</li>
+  <li>Leaving dependencies implicit</li>
+  <li>Starting execution from an unreviewed plan</li>
+  <li>Using a plan that has no verification points</li>
+</ul>
+
+<h2 id="indicators">Indicators</h2>
+
+<ul>
+  <li>Average number of files or interfaces touched per task</li>
+  <li>Frequency with which tasks need to be split during execution</li>
+  <li>Frequency of execution drift relative to the approved plan</li>
+  <li>Share of tasks with explicit verification actions</li>
+</ul>
+
+<h2 id="example-workflow">Example Workflow</h2>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Validated specification
+   -&gt; Goals, constraints, context, and acceptance criteria are approved
+
+2. Plan drafting
+   -&gt; Agent proposes stages and atomic tasks
+
+3. Plan review
+   -&gt; Human refines task boundaries, dependencies, and checks
+
+4. Verified plan
+   -&gt; The plan becomes the artefact that guides execution
+</code></pre></div></div>
+
+  </div>
+  
+
+  <br><br>
+  <div style="text-align:center;">
+    <a href="/agentic_patterns/02-specification-driven-dev/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 3 / 9 </span> •
+    <a href="/agentic_patterns/#planning"> <span>Planning</span> </a>
+    <a href="/agentic_patterns/04-incremental-execution/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+  <br><br>
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'se4ml';
+    var disqus_identifier = '/agentic_patterns/03-plan-driven-task-decomposition';
+    var disqus_title = 'Plan-Driven Task Decomposition';
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  
+
+</div>
+
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

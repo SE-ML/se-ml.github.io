@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Towards a Pattern Language for Agentic Coding</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/blog/2026/agentic-patterns/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Towards a Pattern Language for Agentic Coding</h1>
+    <p class="post-meta">May 23, 2026 •
+      Alex Serban</p>
+  </header>
+
+  
+  <div class="image-container">
+    <img src="/assets/img/18-months.webp" class="blog-image"></img>
+    
+    <p>Image from 18 Months of Agentic Coding: No Vibes or Slop Allowed </p>
+    
+  </div>
+  
+
+  <article class="post-content">
+    <p>Agentic coding is no longer a tooling novelty. It has become an engineering practice in which developers delegate substantial parts of specification, implementation, and verification to AI agents. Agents can draft and revise code, inspect documentation and repositories, run commands and tests, and update their outputs in response to tool and human feedback. The relevant issue is therefore not only what these systems can produce, but how teams should organise, supervise, and constrain their use in real development settings.</p>
+
+<p>This article examines this issue. It focuses on recurrent difficulties that arise when coding agents are used on non-trivial, long-lived codebases, and argues that these difficulties create demand for more explicit process structure. The argument is not that such structure eliminates the risks introduced by agentic coding. Rather that it provides a way to make delegation more deliberate, reviewable, and reversible. 
+This need follows from a broader shift in the bottleneck of software development: code generation is becoming cheaper, while supervision, verification, review, and recovery remain costly. When software can be produced faster than it can be understood or rolled back, the engineering problem shifts from generation to control.</p>
+
+<p>Against this background, the article introduces an initial set of nine patterns for agentic coding. The patterns are organised around the lifecycle of human-AI collaborative development, and are intended as a compact vocabulary for describing how teams can structure work around coding agents, not as a fixed method or a validated guarantee of improvement.</p>
+
+<p>A more compact version of the argument is also available in the presentation <a href="/assets/pdf/agentic_coding.pdf">Agentic Coding</a>.</p>
+
+<h3 id="from-vibe-coding-to-agentic-coding">From Vibe Coding to Agentic Coding</h3>
+
+<p>The earliest widely discussed form of AI-assisted programming was what Karpathy described as <em>vibe coding</em>: a style in which the developer states an outcome, accepts generated code with little inspection, and uses execution feedback rather than code reading to steer the next step <a href="#ref1">[1]</a>. For prototypes, disposable scripts, and exploratory work, this can be effective.</p>
+
+<p>The same compression becomes a liability once the artefact must be maintained, reviewed, or trusted. Vibe coding treats code as disposable output. Engineering cannot. Long-lived systems require traceability, comprehensibility, and controlled change. The question is not only whether the model can produce plausible code, but whether a team can verify, explain, and maintain it over time.</p>
+
+<p>We use the term <em>agentic coding</em> here for the more disciplined form of this practice. The developer still scopes the task, curates context, sets constraints, validates outputs, and preserves reversibility. The agent is productive, but not authoritative. Its outputs remain drafts under engineering control.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspect</th>
+      <th>Vibe Coding</th>
+      <th>Agentic Coding</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Primary goal</td>
+      <td>Speed of generation</td>
+      <td>Reliability of supervised generation</td>
+    </tr>
+    <tr>
+      <td>Role of developer</td>
+      <td>Prompt and inspect outcomes</td>
+      <td>Specify, constrain, verify, and maintain</td>
+    </tr>
+    <tr>
+      <td>Suitable scope</td>
+      <td>Disposable or bounded work</td>
+      <td>Long-lived, shared codebases</td>
+    </tr>
+    <tr>
+      <td>Failure handling</td>
+      <td>Regenerate</td>
+      <td>Diagnose, verify, rollback, retry</td>
+    </tr>
+    <tr>
+      <td>Knowledge requirement</td>
+      <td>Low</td>
+      <td>Sufficient to review and explain</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The distinction is not stylistic. It is organisational. Agentic coding, in this more disciplined sense, adds explicit controls because the cost of silent error is higher than the cost of slower generation.</p>
+
+<h3 id="why-existing-practice-breaks-down">Why Existing Practice Breaks Down</h3>
+
+<p>The need for patterns becomes clearer once we look at how current agentic practice fails. The evidence is heterogeneous, but the failure signals are recurrent. They do not simply reflect immature models. Many also reflect weak workflow controls, oversized task scopes, and insufficient verification.</p>
+
+<ul>
+  <li>
+    <p><strong>Process distortion.</strong> AI assistance can increase the rate of code generation without increasing the rate of review or integration. Faros AI and Google’s DORA reporting, for example, associates high AI adoption with more merged pull requests, but also with larger change sets and longer review times <a href="#ref3">[3]</a>. The likely effect is not a uniformly faster process, but a shifted bottleneck. Review absorbs the saved effort.</p>
+  </li>
+  <li>
+    <p><strong>Quality and security deficits.</strong> Generated code often fails in a specifically dangerous way: it is plausible before it is correct. Veracode reports that about 45% of AI-generated code contains security flaws <a href="#ref4">[4]</a>. Comparative evidence also suggests higher rates of logic errors and cross-site scripting vulnerabilities than in human-written code <a href="#ref5">[5]</a>. These issues are hard to detect through superficial reading because the output is usually syntactically valid and coherent.</p>
+  </li>
+  <li>
+    <p><strong>Agent-specific failure modes.</strong> Practitioners also report failure modes that are distinctive to agentic workflows:</p>
+    <ul>
+      <li><strong>Assumption propagation.</strong> An early misunderstanding is carried forward through many locally consistent steps.</li>
+      <li><strong>Abstraction bloat.</strong> The agent overproduces structure, dependencies, or indirection relative to the problem.</li>
+      <li><strong>Dead code accumulation.</strong> Discarded approaches, debug traces, and stale documentation remain in place.</li>
+      <li><strong>Sycophantic execution.</strong> The agent proceeds confidently through ambiguity instead of surfacing it.</li>
+      <li><strong>Context drift.</strong> Long sessions accumulate stale facts and lose the operative constraints.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Taken together, these issues suggest that the main engineering challenge is not code generation itself, but the design of more reliable supervisory workflows around it. This does not mean that better process design removes these issues. It means process design is one of the few levers teams can actively control.</p>
+
+<h3 id="why-a-pattern-language">Why a Pattern Language?</h3>
+
+<p>Patterns are useful when a field is neither fully ad hoc nor fully formalised. In the sense introduced by Alexander <a href="#ref6">[6]</a> and adapted to software design by Gamma et al. <a href="#ref7">[7]</a>, a pattern names a recurring problem in context together with a proven direction of solution. Patterns do not replace judgment. They structure it.</p>
+
+<p>Agentic coding is now at that stage. Tooling changes quickly. Model behaviour remains unstable. No single workflow generalises cleanly across domains. Yet the same pressures recur often enough to justify named responses, even if the effects of those responses are not yet well established.</p>
+
+<p>Framing these responses as patterns has three advantages. It shifts attention from tool-specific features to workflow-level invariants. It supports comparison and refinement across teams. And it provides a vocabulary that is concise enough for practice while abstract enough to survive changes in models, editors, and orchestration frameworks.</p>
+
+<p>The nine patterns below should therefore be read as a first organising layer for the engineering of agent-based software development, not as a complete method and not as evidence-backed guarantees of improvement.</p>
+
+<h3 id="the-pattern-set">The Pattern Set</h3>
+
+<p>The patterns presented here align with a simple iterative workflow:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SPECIFY -&gt; VALIDATE -&gt; PLAN -&gt; VALIDATE -&gt; IMPLEMENT -&gt; VALIDATE
+</code></pre></div></div>
+
+<p>This loop is intentionally narrow. Each stage produces an artefact that should be checked before the next stage begins. Not all patterns belong to a single linear phase, however. Some are tied to a particular point in the workflow, while others operate across the whole process. The table below therefore indicates typical placement rather than a strict phase taxonomy.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Pattern</th>
+      <th>Typical Placement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Agent-Assisted Discovery</td>
+      <td>Before implementation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Specification-Driven Development</td>
+      <td>Before implementation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Plan-Driven Task Decomposition</td>
+      <td>Before implementation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Incremental Execution</td>
+      <td>During implementation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Role-Based Development &amp; Subagents</td>
+      <td>During implementation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Memory &amp; Context Management</td>
+      <td>Throughout the workflow</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Verification-First Engineering</td>
+      <td>Throughout the workflow</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Rollback &amp; Reversibility</td>
+      <td>Throughout the workflow</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Cleanup &amp; Hygiene</td>
+      <td>After each step and after task completion</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<h4 id="pattern-1---agent-assisted-discovery">Pattern 1 - Agent-Assisted Discovery</h4>
+
+<p><em>Problem.</em> Developers often start with only partial understanding of the codebase, architecture, or domain constraints. In agentic workflows, skipping this step is costly because the agent will fill gaps with inference.</p>
+
+<p><em>Pattern.</em> Use the agent first as an exploratory instrument, not as an implementer. Map the local decision surface before changing code: which component owns the behaviour, which dependencies may be affected, and which assumptions matter.</p>
+
+<p><em>Correct use.</em> Ask for explanations, dependency traces, and alternatives before requesting implementation. Validate the findings against code and documents. Record durable discoveries for reuse.</p>
+
+<p><em>Failure mode if skipped.</em> The task starts from a false local model of the system. The resulting errors appear later as implementation defects rather than comprehension defects.</p>
+
+<p><em>Full pattern specification:</em> <a href="/agentic_patterns/01-agent-assisted-discovery/">Agent-Assisted Discovery</a></p>
+
+<hr />
+<h4 id="pattern-2---specification-driven-development">Pattern 2 - Specification-Driven Development</h4>
+
+<p><em>Problem.</em> Agents execute literal instructions well, but they do not reliably resolve ambiguity or infer unstated constraints. Imperative prompts therefore tend to produce brittle output.</p>
+
+<p><em>Pattern.</em> State the task declaratively in terms of goals, constraints, context, and acceptance criteria. Emphasize what must be true at completion, not a rigid script for how to get there <a href="#ref8">[8]</a>.</p>
+
+<p><em>Correct use.</em> Specify the task boundaries explicitly, list prohibitions, and write acceptance criteria that are testable. Use the agent to refine the specification before using it to implement.</p>
+
+<p><em>Failure mode if skipped.</em> The agent solves the prompt it received rather than the problem the developer intended.</p>
+
+<p><em>Full pattern specification:</em> <a href="/agentic_patterns/02-specification-driven-dev/">Specification-Driven Development</a></p>
+
+<hr />
+<h4 id="pattern-3---plan-driven-task-decomposition">Pattern 3 - Plan-Driven Task Decomposition</h4>
+
+<p><em>Problem.</em> A specification can state what should be achieved without yet defining how the work should be decomposed. Without an intermediate planning step, execution tends to drift or absorb too much scope at once.</p>
+
+<p><em>Pattern.</em> Translate the specification into an ordered plan of atomic tasks. Each task should have a narrow objective, explicit dependencies, scoped context, and a clear verification point.</p>
+
+<p><em>Correct use.</em> Ask the agent to draft the plan, but review and refine it before implementation begins. The plan should define the execution order and task boundaries rather than leaving those choices implicit.</p>
+
+<p><em>Failure mode if skipped.</em> Execution begins directly from the specification, so decomposition happens implicitly during implementation. The result is usually drift, scope inflation, or poorly bounded tasks.</p>
+
+<p><em>Full pattern specification:</em> <a href="/agentic_patterns/03-plan-driven-task-decomposition/">Plan-Driven Task Decomposition</a></p>
+
+<hr />
+<h4 id="pattern-4---incremental-execution">Pattern 4 - Incremental Execution</h4>
+
+<p><em>Problem.</em> Large agent-issued changes are hard to inspect, validate, and unwind. Errors introduced early are often discovered only after later steps depend on them.</p>
+
+<p><em>Pattern.</em> Execute in small, independently verifiable units. Each step should have a narrow scope, an explicit validation action, and a clear stopping point. Reliability tends to decay as edit breadth increases.</p>
+
+<p><em>Correct use.</em> Prefer one coherent slice at a time, validate immediately, and move forward only from a known-good state.</p>
+
+<p><em>Failure mode if skipped.</em> A single session creates an entangled change set whose internal assumptions cannot be isolated or tested cheaply.</p>
+
+<p><em>Full pattern specification:</em> <a href="/agentic_patterns/04-incremental-execution/">Incremental Execution</a></p>
+
+<hr />
+<h4 id="pattern-5---role-based-development--subagents">Pattern 5 - Role-Based Development &amp; Subagents</h4>
+
+<p><em>Problem.</em> Single long-running sessions mix exploration, design, implementation, and review into one context stream. This creates context pollution and weakens specialization.</p>
+
+<p><em>Pattern.</em> Separate roles across fresh agents or subagents with scoped context. Typical roles include explorer, implementer, spec reviewer, and code reviewer. The key principle is isolation with structured handoff.</p>
+
+<p><em>Correct use.</em> Delegate non-overlapping tasks, pass concise summaries rather than whole transcripts, and sequence review roles explicitly.</p>
+
+<p><em>Failure mode if skipped.</em> The same agent both creates and legitimizes a solution while operating under stale or overloaded context.</p>
+
+<p><em>Full pattern specification:</em> <a href="/agentic_patterns/05-role-based-development/">Role-Based Development &amp; Subagents</a></p>
+
+<hr />
+<h4 id="pattern-6---memory--context-management">Pattern 6 - Memory &amp; Context Management</h4>
+
+<p><em>Problem.</em> Agents do not retain stable project memory across sessions, and large contexts degrade rather than simply accumulate. Without explicit memory artefacts, teams either reload context repeatedly or let the model guess.</p>
+
+<p><em>Pattern.</em> Treat context as a controlled input. Package only the relevant code, constraints, examples, and decisions for the current task. Externalize durable state into files such as decision logs, plan documents, or reusable skills <a href="#ref9">[9]</a>.</p>
+
+<p><em>Correct use.</em> Start new sessions often, summarize completed work, and curate both inclusions and exclusions.</p>
+
+<p><em>Failure mode if skipped.</em> The agent operates on partial, stale, or polluted context and compensates through hallucinated continuity.</p>
+
+<p><em>Full pattern specification:</em> <a href="/agentic_patterns/06-memory-context-management/">Memory &amp; Context Management</a></p>
+
+<hr />
+<h4 id="pattern-7---verification-first-engineering">Pattern 7 - Verification-First Engineering</h4>
+
+<p><em>Problem.</em> Agent output is often convincing before it is correct. Human intuition alone is not a sufficient filter, especially when defects are semantic rather than syntactic.</p>
+
+<p><em>Pattern.</em> Make verification the dominant control loop around every agent step. This includes executable checks, review of the actual diff, and scrutiny of unnecessary complexity. The key question is not whether the agent claims the task is complete, but whether independent checks support that claim.</p>
+
+<p><em>Correct use.</em> Run the cheapest discriminating validation immediately after each edit, review the resulting changes, and reject outputs that cannot be explained clearly <a href="#ref10">[10]</a>.</p>
+
+<p><em>Failure mode if skipped.</em> Plausible but wrong code enters the codebase because no stage in the workflow was designed to falsify it.</p>
+
+<p><em>Full pattern specification:</em> <a href="/agentic_patterns/07-verification-first/">Verification-First Engineering</a></p>
+
+<hr />
+<h4 id="pattern-8---rollback--reversibility">Pattern 8 - Rollback &amp; Reversibility</h4>
+
+<p><em>Problem.</em> Agentic sessions can create many dependent edits in a short time. Without checkpoints, recovery often means abandoning the whole session rather than undoing the faulty step.</p>
+
+<p><em>Pattern.</em> Build recovery into the workflow through checkpoint commits, isolated branches, or worktrees. Reversibility should be treated as a design property of the process, not as an emergency measure.</p>
+
+<p><em>Correct use.</em> Commit after each verified unit of work and keep rollback targets semantically meaningful, not merely chronological.</p>
+
+<p><em>Failure mode if skipped.</em> Recovery becomes so expensive that teams tolerate bad intermediate states or discard useful work wholesale.</p>
+
+<p><em>Full pattern specification:</em> <a href="/agentic_patterns/08-rollback-reversibility/">Rollback &amp; Reversibility</a></p>
+
+<hr />
+<h4 id="pattern-9---cleanup--hygiene">Pattern 9 - Cleanup &amp; Hygiene</h4>
+
+<p><em>Problem.</em> Agents optimise for apparent task completion, not for leaving the repository in a clean long-term state. Residue accumulates easily: temporary files, unused imports, commented-out code, outdated text, and debugging artefacts.</p>
+
+<p><em>Pattern.</em> Make cleanup an explicit phase of the workflow at three levels: after each step, after each task, and periodically across the codebase. Hygiene is part of the definition of done.</p>
+
+<p><em>Correct use.</em> Remove scaffolding and leftovers immediately, update affected documentation, and use automation where possible to detect common residue.</p>
+
+<p><em>Failure mode if skipped.</em> The apparent gains of agentic speed are repaid as maintenance debt.</p>
+
+<p><em>Full pattern specification:</em> <a href="/agentic_patterns/09-cleanup-hygiene/">Cleanup &amp; Hygiene</a></p>
+
+<hr />
+<h3 id="discussion">Discussion</h3>
+
+<p>These patterns are meant to compose. Discovery improves specification quality. Specification supports planning. Planning makes incremental execution more reliable. Role separation determines how execution and review are distributed across agents or sessions. Verification is stronger when rollback points exist. Memory practices determine whether each role receives the right context. Cleanup prevents each task from leaving hidden liabilities for the next one.</p>
+
+<p>The patterns are also intentionally conservative. They do not assume that better models will remove the need for engineering discipline. More capable agents may increase that need because they increase the speed at which wrong assumptions can spread.</p>
+
+<p>One limitation should be stated directly: patterns do not substitute for technical judgment, and we do not claim that they independently resolve the failure modes discussed earlier. Their value depends on the developer’s ability to review diffs, decompose tasks, write specifications, design useful checks, and decide when an agent should stop. Agentic workflows amplify engineering competence; they do not replace it.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>Agentic coding should now be studied as an engineering practice, not only as a model capability demonstration. The central question is not whether agents can generate code, but how developers can use them in ways that remain understandable, verifiable, and maintainable over time.</p>
+
+<p>The case for a pattern language follows from this need. When teams repeatedly encounter the same failures and converge on similar countermeasures, naming those countermeasures becomes useful. It enables comparison, reuse, critique, and refinement. It does not by itself show that the countermeasures solve the underlying problems.</p>
+
+<p>The nine patterns presented here offer a compact vocabulary for that purpose. They do not form a complete method. They provide an initial structure for supervised generation: discovery before action, specification before planning, planning before execution, verification before trust, rollback before regret, and cleanup before closure. Their strongest claim is practical and organisational, not causal.</p>
+
+<p>The evidence behind this argument is still uneven. Some claims rest on empirical studies, others on industry reports or practitioner accounts. This is a limitation of the present moment, but also part of the point: practice is moving faster than formalisation. A pattern language is useful precisely in that interval.</p>
+
+<p>If vibe coding asks only whether something appears to work, agentic coding, in this more disciplined sense, asks a stricter question: can the result be justified, checked, and maintained over time?</p>
+
+<hr />
+
+<h2 id="references">References</h2>
+
+<p>The sources below mix empirical studies, industry reports, and practitioner accounts. They are used differently in the article: empirical studies support claims about quality and process effects; industry reports illustrate current adoption and workflow impact; practitioner sources mainly help define emerging terms and practices.</p>
+
+<p><a name="ref1"></a>[1] Karpathy, A. (2025). Twitter/X post introducing “vibe coding”. Practitioner source. February 2, 2025. <a href="https://x.com/karpathy/status/1886192184808149238">https://x.com/karpathy/status/1886192184808149238</a></p>
+
+<p><a name="ref2"></a>[2] Ronacher, A. [@mitsuhiko]. (2026). Poll: “How much code do you still write yourself?” Twitter/X poll. Practitioner signal. January 11, 2026.</p>
+
+<p><a name="ref3"></a>[3] Faros AI / Google DORA Report. (2025). AI Adoption in Software Engineering: Impact on Development Workflows. Industry report.</p>
+
+<p><a name="ref4"></a>[4] Veracode. (2024). AI-Generated Code Security Risks. Industry study. <a href="https://www.veracode.com/blog/ai-generated-code-security-risks/">https://www.veracode.com/blog/ai-generated-code-security-risks/</a></p>
+
+<p><a name="ref5"></a>[5] Hamer, J., et al. (2024). An empirical study of code quality in AI-generated vs. human-written code. Empirical study. <em>ACM Digital Library</em>. <a href="https://dl.acm.org/doi/10.1145/3716848">https://dl.acm.org/doi/10.1145/3716848</a></p>
+
+<p><a name="ref6"></a>[6] Alexander, C., Ishikawa, S., &amp; Silverstein, M. (1977). <em>A Pattern Language: Towns, Buildings, Construction</em>. Foundational theory.</p>
+
+<p><a name="ref7"></a>[7] Gamma, E., Helm, R., Johnson, R., &amp; Vlissides, J. (1994). <em>Design Patterns: Elements of Reusable Object-Oriented Software</em>. Foundational theory.</p>
+
+<p><a name="ref8"></a>[8] Addyo. (2025). How to write a good spec for AI agents. Practitioner essay. <a href="https://addyo.substack.com/p/how-to-write-a-good-spec-for-ai-agents">https://addyo.substack.com/p/how-to-write-a-good-spec-for-ai-agents</a></p>
+
+<p><a name="ref9"></a>[9] Anthropic. (2025). <em>The Complete Guide to Building Skills for Claude</em>. Vendor documentation.</p>
+
+<p><a name="ref10"></a>[10] Addyo. (2025). My LLM coding workflow. Practitioner essay. <a href="https://addyo.substack.com/p/my-llm-coding-workflow-going-into">https://addyo.substack.com/p/my-llm-coding-workflow-going-into</a></p>
+
+  </article>
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'se4ml';
+    var disqus_identifier = '/blog/2026/agentic-patterns';
+    var disqus_title = {
+      {
+        page.title | jsonify
+      }
+    };
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  
+
+</div>
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

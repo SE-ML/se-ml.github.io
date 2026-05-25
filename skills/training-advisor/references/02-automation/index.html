@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Cluster C: Training Automation</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/skills/training-advisor/references/02-automation/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Cluster C: Training Automation</h1>
+    <h5 class="post-description"></h5>
+  </header>
+
+  <article class="post-content Cluster C: Training Automation clearfix">
+    <h1 id="cluster-c-training-automation">Cluster C: Training Automation</h1>
+
+<p>These four practices reduce manual effort and systematic bias in the
+experimentation loop through automation. They are rated <strong>medium–advanced</strong>
+and should be recommended <strong>after</strong> the foundations cluster is in place.</p>
+
+<p><code class="language-plaintext highlighter-rouge">exp_auto_feat</code> is conditional on <strong>manual feature engineering</strong>. The others
+apply broadly, but teams starting out should begin with <code class="language-plaintext highlighter-rouge">exp_hyperparam</code>
+before tackling NAS or full AutoML.</p>
+
+<hr />
+
+<h2 id="exp_hyperparam--automate-hyper-parameter-optimisation">exp_hyperparam — Automate Hyper-Parameter Optimisation</h2>
+
+<p><strong>Difficulty:</strong> medium<br />
+<strong>Applicability:</strong> Any machine learning application.<br />
+<strong>Intent:</strong> Enhance experimentation, performance and fair comparisons between
+algorithms, by automating hyper-parameter search and model selection.<br />
+<strong>Motivation:</strong> Manual hyperparameter tuning is slow, inconsistent, and unfair
+when comparing algorithms (one may be better-tuned than another by coincidence
+of the experimenter’s time). Automated HPO also explores the search space more
+systematically than human intuition and is reproducible.</p>
+
+<p><strong>What to look for (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Is hyperparameter search done manually (try a few values by hand)?</li>
+  <li>Is there a search tool in use (Optuna, Ray Tune, Hyperopt, W&amp;B Sweeps, etc.)?</li>
+  <li>Are search results logged and reproducible (seed, search space documented)?</li>
+  <li>Are comparisons between models made at their respective optima?</li>
+</ul>
+
+<p><strong>Assist — minimal Optuna example:</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">optuna</span>
+
+<span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+    <span class="n">lr</span> <span class="o">=</span> <span class="n">trial</span><span class="p">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s">"lr"</span><span class="p">,</span> <span class="mf">1e-5</span><span class="p">,</span> <span class="mf">1e-1</span><span class="p">,</span> <span class="n">log</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">depth</span> <span class="o">=</span> <span class="n">trial</span><span class="p">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s">"max_depth"</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">train_model</span><span class="p">(</span><span class="n">lr</span><span class="o">=</span><span class="n">lr</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="n">depth</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">evaluate</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+
+<span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="p">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="s">"maximize"</span><span class="p">)</span>
+<span class="n">study</span><span class="p">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">study</span><span class="p">.</span><span class="n">best_params</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Recommended progression:</strong> Start with random search or Optuna TPE before
+moving to more expensive Bayesian or evolutionary methods.</p>
+
+<p><strong>Related:</strong> exp_auto_nas, exp_quality</p>
+
+<hr />
+
+<h2 id="exp_auto_feat--automate-feature-generation-and-selection">exp_auto_feat — Automate Feature Generation and Selection</h2>
+
+<p><strong>Difficulty:</strong> advanced<br />
+<strong>Applicability:</strong> When features are <strong>manually engineered</strong> and expertise to
+assess generated features is available.<br />
+<strong>Intent:</strong> Reduce human effort required to develop and select features
+through automation.<br />
+<strong>Motivation:</strong> Manual feature engineering is time-consuming and biased by domain
+assumptions. Automated feature generation (via tools like Featuretools, TSFRESH,
+autofeat) can discover features a human would not think of, while automated
+selection (via RFECV, SHAP-based selection, Boruta) objectively identifies
+which features contribute.</p>
+
+<p><strong>What to look for (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Is feature generation entirely manual?</li>
+  <li>Is feature selection done systematically (importance-based, wrapper, filter)?</li>
+  <li>Are generated features validated against domain knowledge before use?</li>
+</ul>
+
+<p><strong>Caution:</strong> Auto-generated features can be hard to interpret and may capture
+spurious correlations. Always validate against <code class="language-plaintext highlighter-rouge">exp_owner</code> (rationale
+documentation) and the fairness cluster if applicable.</p>
+
+<p><strong>Related:</strong> exp_archive, exp_owner, subgroup_bias</p>
+
+<hr />
+
+<h2 id="exp_auto_nas--automate-configuration-of-algorithms-or-model-structure">exp_auto_nas — Automate Configuration of Algorithms or Model Structure</h2>
+
+<p><strong>Difficulty:</strong> advanced<br />
+<strong>Applicability:</strong> Any machine learning application.<br />
+<strong>Intent:</strong> Improve algorithm and model performance by automatically optimising
+their structures.<br />
+<strong>Motivation:</strong> Neural Architecture Search (NAS) and AutoML model selection
+remove the need to manually design architecture choices (layer types, depth,
+width, connectivity). This is particularly valuable when moving to a new
+domain or data modality where human intuition about architecture is weak.</p>
+
+<p><strong>What to look for (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Is model architecture chosen purely by convention or literature defaults?</li>
+  <li>Has any automated search over architectures been attempted?</li>
+  <li>Are search costs (compute, time) tracked and justified?</li>
+</ul>
+
+<p><strong>Tools to consider:</strong> AutoKeras, NNI, Ray Tune with architecture search,
+SMAC, Ludwig.</p>
+
+<p><strong>Note:</strong> NAS is expensive. Recommend only when <code class="language-plaintext highlighter-rouge">exp_hyperparam</code> is already in
+place and the team has budget for extended search. Start with hyperparameter
+optimisation over architecture topology before full NAS.</p>
+
+<p><strong>Related:</strong> exp_hyperparam, efficient_compression</p>
+
+<hr />
+
+<h2 id="efficient_compression--use-the-most-efficient-models">efficient_compression — Use the Most Efficient Models</h2>
+
+<p><strong>Difficulty:</strong> n/a (context-dependent)<br />
+<strong>Applicability:</strong> Efficient models should be the first choice for any ML application.<br />
+<strong>Intent:</strong> Avoid overparametrised or energy-inefficient models.<br />
+<strong>Motivation:</strong> Larger models are not always better. Overparametrised models
+consume more compute, cost more to serve, have larger carbon footprints, and
+can be harder to interpret and audit. Starting with the simplest model that
+achieves the objective is good engineering practice and often produces more
+robust results.</p>
+
+<p><strong>What to look for (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Is the model size justified relative to the task complexity?</li>
+  <li>Have simpler baselines been tried and documented?</li>
+  <li>Are model compression techniques considered for deployment (quantisation,
+pruning, distillation)?</li>
+  <li>Is compute/energy cost tracked alongside model quality?</li>
+</ul>
+
+<p><strong>Assist — efficiency checklist:</strong></p>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Establish a simple baseline first (linear model, shallow tree, rule-based)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Only increase complexity if the baseline falls short on the defined metric</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />For deployment: evaluate quantisation (INT8) before accepting full-precision serving</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Document the efficiency tradeoff decision explicitly</li>
+</ul>
+
+<p><strong>Related:</strong> exp_auto_nas, interpretable</p>
+
+  </article>
+
+  
+
+  
+
+</div>
+
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

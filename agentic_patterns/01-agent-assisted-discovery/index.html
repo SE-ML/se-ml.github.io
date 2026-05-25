@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Agent-Assisted Discovery</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/agentic_patterns/01-agent-assisted-discovery/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Agent-Assisted Discovery</h1>
+    <p class="post-meta">May 25, 2026 • Alex Serban</p>
+  </header>
+
+
+  
+  
+
+  
+  
+  
+
+  <div style="text-align:center;">
+    <a href="/agentic_patterns/09-cleanup-hygiene/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 1 / 9 </span> •
+    <a href="/agentic_patterns/#discovery"> <span>Discovery</span> </a>
+    <a href="/agentic_patterns/02-specification-driven-dev/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+
+  <br><br>
+
+  
+
+
+  
+  <h3 class="black bold">Intent</h3>
+  <div>
+    Use agents as exploratory instruments before implementation to build a reliable local model of the codebase, domain, and task constraints.
+  </div>
+  
+
+  
+  <h3 class="black bold">Problem</h3>
+  <div>
+    Both the developer and the agent often begin with an incomplete local model of the codebase, architecture, and domain constraints. In agentic workflows, that missing understanding is costly because the agent will often fill gaps with plausible inference unless the relevant context is surfaced and checked.
+  </div>
+  
+
+  
+  <h3 class="black bold">Pattern</h3>
+  <div>
+    Use an agent first as an exploratory instrument rather than as an implementer. Map the local decision surface before changing code: which component owns the behaviour, which dependencies may be affected, and which assumptions matter.
+  </div>
+  
+
+  
+
+  
+  <h3 class="black bold">Correct Use</h3>
+  <div>
+    Ask for explanations, dependency traces, and alternatives before requesting implementation. Validate the findings against code and documents. Record durable discoveries for reuse.
+  </div>
+  
+
+  
+  <h3 class="black bold">Failure Mode If Skipped</h3>
+  <div>
+    The task begins from a false local model of the system. Resulting errors then appear later as implementation defects rather than comprehension defects.
+  </div>
+  
+
+  
+  <div>
+    <h2 id="rationale">Rationale</h2>
+
+<p>Discovery is not only a navigation activity. It is also a learning activity. The immediate problem is not simply that the developer lacks information. It is that both the developer and the agent begin with only partial context, but the agent will often continue by inferring what is missing. The developer therefore needs enough understanding to validate, debug, and extend the result. Discovery reduces this avoidable uncertainty before specification and implementation begin.</p>
+
+<p>This is especially important in unfamiliar or poorly documented environments. Common discovery tasks include:</p>
+
+<ul>
+  <li>Navigating undocumented legacy systems</li>
+  <li>Understanding domain-specific terminology</li>
+  <li>Mapping architecture and dependencies</li>
+  <li>Finding relevant code locations</li>
+  <li>Learning new frameworks or libraries</li>
+</ul>
+
+<h2 id="how-to-apply-the-pattern">How to Apply the Pattern</h2>
+
+<p>Discovery should proceed from broad orientation to narrow verification.</p>
+
+<ol>
+  <li>Start by locating the relevant subsystem, files, and ownership boundaries.</li>
+  <li>Ask the agent to explain behaviour, dependencies, terminology, and likely side effects.</li>
+  <li>Request alternatives and trade-offs before accepting any proposed direction.</li>
+  <li>Verify the explanation against the codebase and available documentation.</li>
+  <li>Record the resulting understanding in a durable form when it is likely to be needed again in later sessions.</li>
+</ol>
+
+<p>The guiding principle is simple: code or reasoning that cannot be explained clearly is difficult to validate, debug, or extend.</p>
+
+<h2 id="useful-question-types">Useful Question Types</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Discovery Type</th>
+      <th>Purpose</th>
+      <th>Example Prompts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Codebase exploration</strong></td>
+      <td>Identify structure and ownership</td>
+      <td>“Explain the architecture of this subsystem”</td>
+    </tr>
+    <tr>
+      <td><strong>Domain translation</strong></td>
+      <td>Clarify local terminology and concepts</td>
+      <td>“What does this term mean in this project?”</td>
+    </tr>
+    <tr>
+      <td><strong>Dependency mapping</strong></td>
+      <td>Surface side effects and affected components</td>
+      <td>“What would break if I change this function?”</td>
+    </tr>
+    <tr>
+      <td><strong>Alternative analysis</strong></td>
+      <td>Compare plausible approaches</td>
+      <td>“Show me 2-3 ways to solve this and their trade-offs”</td>
+    </tr>
+    <tr>
+      <td><strong>Assumption checking</strong></td>
+      <td>Expose uncertainty that needs verification</td>
+      <td>“What assumptions did you make that I should verify?”</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Useful follow-up prompts include:</p>
+
+<ul>
+  <li>“Why was this approach used here rather than a simpler alternative?”</li>
+  <li>“Can you explain this control flow step by step?”</li>
+  <li>“Which parts of this answer come from the codebase, and which are inferences?”</li>
+  <li>“What should I inspect directly before trusting this explanation?”</li>
+</ul>
+
+<h2 id="supporting-practices">Supporting Practices</h2>
+
+<h3 id="review-discovery-outputs">Review Discovery Outputs</h3>
+
+<p>Discovery often produces explanations, summaries, and early code suggestions. These should still be reviewed critically.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Area</th>
+      <th>Questions to ask</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Code Quality</strong></td>
+      <td>Is the explanation consistent with the actual code structure and behaviour?</td>
+    </tr>
+    <tr>
+      <td><strong>Architecture</strong></td>
+      <td>Does the agent identify the correct component boundaries and dependencies?</td>
+    </tr>
+    <tr>
+      <td><strong>Testing</strong></td>
+      <td>Are relevant tests or verification points identified?</td>
+    </tr>
+    <tr>
+      <td><strong>Requirements</strong></td>
+      <td>Does the explanation remain aligned with the task rather than drifting into unrelated areas?</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Useful review principles are:</p>
+
+<ul>
+  <li>Classify issues by actual severity</li>
+  <li>Refer to specific locations and behaviours</li>
+  <li>Explain why an issue matters</li>
+  <li>State a clear review outcome</li>
+</ul>
+
+<h3 id="use-discovery-to-support-brainstorming">Use Discovery to Support Brainstorming</h3>
+
+<p>When discovery is used to turn an idea into a design or specification, keep the conversation structured.</p>
+
+<ol>
+  <li>Check the current project state first.</li>
+  <li>Refine the idea one question at a time.</li>
+  <li>Prefer focused or multiple-choice questions where possible.</li>
+  <li>Summarize the resulting design in short sections and validate each section.</li>
+  <li>Write the validated design to a reusable project artefact.</li>
+</ol>
+
+<p>The one-question-per-message discipline is useful because models often answer multiple questions superficially rather than addressing any of them in depth.</p>
+
+<h3 id="maintain-a-project-brief">Maintain a Project Brief</h3>
+
+<p>For existing codebases, a short project brief can provide targeted context without loading the full repository. A useful brief typically includes:</p>
+
+<ul>
+  <li>Goals and a short architecture overview</li>
+  <li>Key technical constraints, stack, and versions in use</li>
+  <li>Recently completed work</li>
+  <li>Explicit task boundaries or areas that should not be touched</li>
+  <li>Pointers to key files, modules, or directories</li>
+</ul>
+
+<p>Update the brief at the end of each session so it can serve as a handover artefact for later work. This is a supporting practice rather than the core of the pattern: Pattern 1 is about surfacing the missing understanding, while Memory and Context Management is about preserving it effectively.</p>
+
+<h2 id="anti-patterns">Anti-patterns</h2>
+
+<ul>
+  <li>Trusting agent explanations without verification</li>
+  <li>Skipping discovery and moving directly to implementation</li>
+  <li>Accepting vague explanations without follow-up questions</li>
+  <li>Assuming the agent knows facts it cannot observe</li>
+  <li>Accepting code or explanations that cannot be stated clearly</li>
+</ul>
+
+<h2 id="indicators">Indicators</h2>
+
+<ul>
+  <li>Time to first meaningful contribution during onboarding or handoff</li>
+  <li>Accuracy of agent-provided explanations under spot-checking</li>
+  <li>Number of false assumptions identified before implementation</li>
+</ul>
+
+<h2 id="example-workflow">Example Workflow</h2>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Initial exploration
+   -&gt; "Give me a high-level overview of this codebase structure"
+
+2. Focused investigation
+   -&gt; "How does authentication work in this system?"
+
+3. Verification
+   -&gt; Read the relevant authentication code to confirm the explanation
+
+4. Documentation
+   -&gt; Record findings in a reusable context or project brief
+</code></pre></div></div>
+
+  </div>
+  
+
+  <br><br>
+  <div style="text-align:center;">
+    <a href="/agentic_patterns/09-cleanup-hygiene/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 1 / 9 </span> •
+    <a href="/agentic_patterns/#discovery"> <span>Discovery</span> </a>
+    <a href="/agentic_patterns/02-specification-driven-dev/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+  <br><br>
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'se4ml';
+    var disqus_identifier = '/agentic_patterns/01-agent-assisted-discovery';
+    var disqus_title = 'Agent-Assisted Discovery';
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  
+
+</div>
+
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

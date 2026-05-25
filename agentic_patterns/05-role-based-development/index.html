@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Role-Based Development & Subagents</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/agentic_patterns/05-role-based-development/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Role-Based Development & Subagents</h1>
+    <p class="post-meta">May 25, 2026 • Alex Serban</p>
+  </header>
+
+
+  
+  
+
+  
+  
+  
+
+  <div style="text-align:center;">
+    <a href="/agentic_patterns/04-incremental-execution/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 5 / 9 </span> •
+    <a href="/agentic_patterns/#execution"> <span>Execution</span> </a>
+    <a href="/agentic_patterns/06-memory-context-management/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+
+  <br><br>
+
+  
+  <div class="image-container">
+    <img src="/assets/img/role.png" class="blog-image pattern-image"></img>
+    
+  </div>
+  
+
+
+  
+  <h3 class="black bold">Intent</h3>
+  <div>
+    Distribute work across agents or sessions with distinct roles, scoped context, and structured handoff rather than relying on one overloaded conversation.
+  </div>
+  
+
+  
+  <h3 class="black bold">Problem</h3>
+  <div>
+    Single long-running sessions mix exploration, design, implementation, and review into one context stream. This creates context pollution and weakens specialization.
+  </div>
+  
+
+  
+  <h3 class="black bold">Pattern</h3>
+  <div>
+    Separate roles across fresh agents or subagents with scoped context. Typical roles include explorer, implementer, spec reviewer, and code reviewer. The key principle is isolation with structured handoff.
+  </div>
+  
+
+  
+
+  
+  <h3 class="black bold">Correct Use</h3>
+  <div>
+    Delegate non-overlapping tasks, pass concise summaries rather than whole transcripts, and sequence review roles explicitly.
+  </div>
+  
+
+  
+  <h3 class="black bold">Failure Mode If Skipped</h3>
+  <div>
+    The same agent both creates and legitimizes a solution while operating under stale or overloaded context.
+  </div>
+  
+
+  
+  <div>
+    <h2 id="rationale">Rationale</h2>
+
+<p>Agent performance depends strongly on context quality. When one session is asked to explore the codebase, interpret the specification, implement changes, justify its own choices, and review the result, these activities compete with one another in a single context stream. The result is often a mixture of stale assumptions, weak specialization, and shallow self-review.</p>
+
+<p>Subagents or separate sessions help because they introduce context isolation. Each role can operate with a narrower objective, a smaller relevant context, and a clearer output format. This does not guarantee correctness, but it reduces the tendency for one overloaded session to accumulate too many responsibilities at once.</p>
+
+<p>This pattern is not primarily about task decomposition or execution cadence. It is about who does the work, who reviews it, and how information moves between those roles.</p>
+
+<p>Common pressures that motivate this pattern include:</p>
+
+<ul>
+  <li>Mixed concerns within one long session</li>
+  <li>Declining context quality over time</li>
+  <li>Difficulty parallelizing non-overlapping work</li>
+  <li>Weak separation between production and review</li>
+  <li>Tasks that exceed what one session can handle cleanly</li>
+</ul>
+
+<h2 id="how-to-apply-the-pattern">How to Apply the Pattern</h2>
+
+<p>Role-based development starts by separating activities that should not share the same working context.</p>
+
+<ol>
+  <li>Identify which roles are needed for the task.</li>
+  <li>Give each role a narrow objective and only the context it needs.</li>
+  <li>Define what each role should return, usually as a summary or decision artefact.</li>
+  <li>Sequence roles explicitly when one depends on the output of another.</li>
+  <li>Keep review roles independent from implementation roles wherever possible.</li>
+</ol>
+
+<p>The main objective is not to maximize the number of agents. It is to prevent context overload and role confusion.</p>
+
+<p>Pattern 4 governs how an approved task is executed step by step. Pattern 5 governs how responsibility for that task is distributed across agents or sessions.</p>
+
+<h2 id="typical-roles">Typical Roles</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Responsibility</th>
+      <th>Context Needs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Architect</strong></td>
+      <td>High-level design, component boundaries</td>
+      <td>System overview, requirements</td>
+    </tr>
+    <tr>
+      <td><strong>Implementer</strong></td>
+      <td>Write code for specific components</td>
+      <td>Component specs, interfaces</td>
+    </tr>
+    <tr>
+      <td><strong>Reviewer</strong></td>
+      <td>Critique and improve code quality</td>
+      <td>Code, style guides, patterns</td>
+    </tr>
+    <tr>
+      <td><strong>Tester</strong></td>
+      <td>Write and run tests</td>
+      <td>Code, requirements, test frameworks</td>
+    </tr>
+    <tr>
+      <td><strong>Documenter</strong></td>
+      <td>Write documentation</td>
+      <td>Code, user stories, API specs</td>
+    </tr>
+    <tr>
+      <td><strong>Researcher</strong></td>
+      <td>Gather information, explore options</td>
+      <td>Problem description, constraints</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="typical-subagent-types">Typical Subagent Types</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subagent</th>
+      <th>Purpose</th>
+      <th>Typical Tools</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Explore</strong></td>
+      <td>Fast, read-only codebase analysis</td>
+      <td>Read, Grep, Glob</td>
+    </tr>
+    <tr>
+      <td><strong>Plan</strong></td>
+      <td>Research and context gathering before planning</td>
+      <td>Read, Search</td>
+    </tr>
+    <tr>
+      <td><strong>General-purpose</strong></td>
+      <td>Complex multi-step tasks requiring action</td>
+      <td>Read, Write, Edit, Execute</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="supporting-practices">Supporting Practices</h2>
+
+<h3 id="define-the-handoff-explicitly">Define the Handoff Explicitly</h3>
+
+<p>Role separation works only if the interface between roles is clear. A good handoff states what was done, what remains unresolved, which artefacts matter, and what the next role should evaluate or produce.</p>
+
+<p>Subagents are useful because they provide isolated context for complex tasks. Each subagent receives a fresh context window and communicates through delegation and summary rather than shared conversational state.</p>
+
+<h4 id="subagent-communication-pattern">Subagent Communication Pattern</h4>
+
+<ol>
+  <li>Main agent identifies delegatable task.</li>
+  <li>Main agent invokes a subagent with a specific scope and expected output.</li>
+  <li>Subagent executes in isolated context.</li>
+  <li>Subagent returns a concise summary rather than its full internal context.</li>
+  <li>Main agent incorporates the summary and decides the next step.</li>
+</ol>
+
+<p>The summary is important. A well-designed subagent returns distilled findings rather than its entire internal context.</p>
+
+<h3 id="use-simple-orchestration-patterns">Use Simple Orchestration Patterns</h3>
+
+<p>Different tasks justify different orchestration structures.</p>
+
+<h4 id="orchestration-patterns">Orchestration Patterns</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sequential:     Role A ──▶ Role B ──▶ Role C
+
+Parallel:       Role A ──┐
+                Role B ──┼──▶ Aggregator
+                Role C ──┘
+
+Iterative:      Implementer ◀──▶ Reviewer (cycle until accepted)
+
+Hierarchical:   Supervisor ──┬──▶ Team A Supervisor ──┬──▶ Worker
+                             │                        └──▶ Worker
+</code></pre></div></div>
+
+<h3 id="use-paired-sessions-for-architecture-and-implementation">Use Paired Sessions for Architecture and Implementation</h3>
+
+<h4 id="two-session-architect-and-implementer-pattern">Two-Session Architect and Implementer Pattern</h4>
+
+<p>A practical realization of role-based development with two separate agent sessions:</p>
+
+<ol>
+  <li><strong>Architect session</strong> (Session A): Reviews the specification and approved plan, asks clarifying questions, and remains available to review the implementer’s output.</li>
+  <li><strong>Implementer session</strong> (Session B): Receives the approved task scope (for example, “execute tasks 1–3”). When done, the human copies the implementer’s summary to the architect for review.</li>
+  <li><strong>Context reset between chunks</strong>: After the architect signs off on a chunk, reset the implementer’s context before starting the next chunk. This prevents context pollution across task boundaries.</li>
+  <li><strong>Architect checkpoint</strong>: Before reviewing the next chunk, reset the architect to a previous checkpoint state to reduce accumulated context bloat.</li>
+</ol>
+
+<p>This separation ensures that the implementer never accumulates context from previous tasks and that the architect always reviews from a position of architectural intent, not implementation detail.</p>
+
+<h3 id="separate-compliance-review-from-quality-review">Separate Compliance Review from Quality Review</h3>
+
+<h4 id="two-stage-review-pattern">Two-Stage Review Pattern</h4>
+
+<p>For each implementation task, apply reviews in strict order:</p>
+
+<ol>
+  <li><strong>Spec compliance review</strong> — does the implementation match the specification? Acceptance criteria met? Scope respected? No unintended changes?</li>
+  <li><strong>Code quality review</strong> — does it meet quality and pattern standards? Clean structure? No abstraction bloat? Follows codebase conventions?</li>
+</ol>
+
+<p>The order matters. Code quality review should not begin until spec compliance is confirmed. An implementation that is well-written but does not satisfy the specification is incomplete.</p>
+
+<p>Issues found in either review → implementer fixes → the review stage with issues is repeated. Never proceed to the next task while either review has open issues.</p>
+
+<h3 id="define-specialized-subagents-only-when-reuse-justifies-it">Define Specialized Subagents Only When Reuse Justifies It</h3>
+
+<p>For recurrent tasks, a specialized subagent definition can make delegation more consistent.</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">security-reviewer</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Reviews code for security vulnerabilities.</span>
+  <span class="s">Invoke when checking for auth issues, injection risks,</span>
+  <span class="s">or data exposure.</span>
+<span class="na">tools</span><span class="pi">:</span> <span class="s">Read, Grep, Glob</span>
+<span class="nn">---</span>
+
+You are a security-focused code reviewer. When analyzing code:
+<span class="p">1.</span> Check for authentication and authorization gaps
+<span class="p">2.</span> Look for injection vulnerabilities (SQL, command, XSS)
+<span class="p">3.</span> Identify sensitive data exposure risks
+<span class="p">4.</span> Flag insecure dependencies
+</code></pre></div></div>
+
+<h2 id="practices">Practices</h2>
+
+<ul>
+  <li>Explicitly state the role when starting a task</li>
+  <li>Handoff context between roles cleanly</li>
+  <li>Use different context windows for different roles</li>
+  <li>Define done criteria for each role</li>
+  <li>Log role transitions for traceability</li>
+  <li>Delegate already-bounded tasks rather than asking roles to infer their own scope</li>
+  <li>Specify the expected output format; subagents should return summaries, not dumps</li>
+  <li>Limit tool access where possible</li>
+  <li>Avoid unnecessary nesting of subagents</li>
+  <li>Apply the two-stage review order consistently</li>
+</ul>
+
+<h2 id="anti-patterns">Anti-patterns</h2>
+
+<ul>
+  <li>Skipping either review stage</li>
+  <li>Proceeding with unfixed issues from a review</li>
+  <li>Dispatching multiple implementation subagents in parallel on overlapping files</li>
+  <li>Making a subagent read the full plan file instead of providing only the relevant section</li>
+  <li>Omitting scene-setting context</li>
+  <li>Ignoring subagent questions</li>
+  <li>Treating spec compliance as approximate</li>
+  <li>Allowing implementer self-review to substitute for actual review</li>
+  <li>Starting code quality review before spec compliance is confirmed</li>
+  <li>Moving to the next task while review issues remain open</li>
+  <li>Overloading one agent with all roles</li>
+  <li>Unclear handoff between roles</li>
+  <li>No defined interfaces between subagents</li>
+  <li>Roles with overlapping responsibilities</li>
+  <li>Subagents returning full context instead of summaries</li>
+  <li>Not specifying tool permissions for subagents</li>
+  <li>Tasks too large for a single subagent to complete</li>
+  <li>Expecting subagents to share context directly</li>
+  <li>Reversing the review order</li>
+</ul>
+
+<h2 id="indicators">Indicators</h2>
+
+<ul>
+  <li>Frequency of handoff failures or rework caused by unclear delegation</li>
+  <li>Number of roles combined into one session for complex tasks</li>
+  <li>Rate at which review catches issues missed by the implementer</li>
+  <li>Amount of overlapping file ownership across parallel agent tasks</li>
+</ul>
+
+  </div>
+  
+
+  <br><br>
+  <div style="text-align:center;">
+    <a href="/agentic_patterns/04-incremental-execution/" class="float-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <span> 5 / 9 </span> •
+    <a href="/agentic_patterns/#execution"> <span>Execution</span> </a>
+    <a href="/agentic_patterns/06-memory-context-management/" class="float-right"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+  <br><br>
+
+  
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'se4ml';
+    var disqus_identifier = '/agentic_patterns/05-role-based-development';
+    var disqus_title = 'Role-Based Development &amp; Subagents';
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  
+
+</div>
+
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>

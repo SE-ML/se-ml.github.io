@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>SE-ML | Governance Practices Reference</title>
+  <meta name="description" content="Webpage for the Software Engineering for Machine Learning
+">
+
+  
+
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/skills/governance-advisor/references/06-practices/">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+
+  <!-- Defer non-critical JS to avoid render blocking -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer>
+  </script>
+
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer>
+  </script>
+  <script src="/assets/js/absolute.js" defer>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@2.35.3/dist/plotly.min.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <a href="/"><img id="logo" src="/assets/img/logo_black.svg"></img></a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- Survey -->
+        <!-- <a class="page-link blue" href="/survey">take our
+          survey!</a> -->
+
+        <!-- Practices -->
+        <a class="page-link" href="/practices/">engineering practices</a>
+
+        <!-- Agentic Patterns -->
+        <a class="page-link" href="/agentic_patterns/">agentic coding</a>
+
+        <!-- Publications -->
+        <a class="page-link" href="/publications">publications</a>
+
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- About -->
+        
+
+        <!-- Members -->
+        <a class="page-link" href="/members">team</a>
+
+
+        <!-- Pages -->
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Governance Practices Reference</h1>
+    <h5 class="post-description"></h5>
+  </header>
+
+  <article class="post-content Governance Practices Reference clearfix">
+    <h1 id="governance-practices-reference">Governance Practices Reference</h1>
+
+<p>All 7 practices from the SE-ML catalogue Governance category (<code class="language-plaintext highlighter-rouge">06-*</code>).
+All apply to any ML application; urgency and depth scale with stakes level.
+All practices are <strong>process and policy-based</strong> — assessment relies on
+self-report and documentation review.</p>
+
+<p><strong>Priority order by stakes level:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stakes</th>
+      <th>Priority order</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Low (internal tooling)</td>
+      <td>code_conduct → risk → audit_trails</td>
+    </tr>
+    <tr>
+      <td>Medium (affects users)</td>
+      <td>+ alert → explainable → concerns</td>
+    </tr>
+    <tr>
+      <td>High (regulated / automated decisions)</td>
+      <td>all as critical, + audits</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="code_conduct--establish-responsible-ai-values">code_conduct — Establish Responsible AI Values</h2>
+
+<p><strong>Difficulty:</strong> advanced<br />
+<strong>Intent:</strong> Explicitly align all stakeholders on the ethical values and
+constraints of the ML application.<br />
+<strong>Motivation:</strong> ML applications can severely impact human lives even without
+malicious intent. Shared, explicit values give all team members a framework
+for making consistent decisions — especially in ambiguous situations not
+covered by specific rules.<br />
+<strong>Applicability:</strong> Any ML application.</p>
+
+<p><strong>What to check (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Has the team subscribed to or formulated a Responsible AI code of conduct?</li>
+  <li>Is it documented and accessible to all team members?</li>
+  <li>Are values operationalised (linked to concrete practices, not just aspirational)?</li>
+  <li>Are values reviewed when the application’s scope or risk profile changes?</li>
+</ul>
+
+<p><strong>Assist — starting points:</strong></p>
+<ul>
+  <li>EU High-Level Expert Group: <a href="https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai">Ethics Guidelines for Trustworthy AI</a></li>
+  <li>Google Responsible AI Practices</li>
+  <li>Microsoft AI Principles</li>
+  <li>IEEE Ethically Aligned Design</li>
+</ul>
+
+<p><strong>Related:</strong> tradeoff (Team), audits, interpretable (Training)</p>
+
+<hr />
+
+<h2 id="risk--perform-risk-assessments">risk — Perform Risk Assessments</h2>
+
+<p><strong>Difficulty:</strong> advanced<br />
+<strong>Intent:</strong> Identify and mitigate possible unintended negative impact of the
+ML application.<br />
+<strong>Motivation:</strong> Negative impacts should not wait to be discovered in production or
+in a third-party audit. Internal risk assessments leverage team expertise to
+surface risks early, when mitigation is cheapest.<br />
+<strong>Applicability:</strong> At least one assessment before go-live; more frequent and
+thorough for high-stakes applications.</p>
+
+<p><strong>Risk assessment phases:</strong></p>
+<ol>
+  <li><strong>Scoping</strong> — define which artefacts, use cases, and criteria are assessed</li>
+  <li><strong>Discovery</strong> — probe artefacts, documentation, and conduct interviews</li>
+  <li><strong>Analysis</strong> — surface risks, estimate severity × likelihood, propose mitigations</li>
+  <li><strong>Reporting</strong> — document findings, share with stakeholders, track remediation</li>
+</ol>
+
+<p><strong>What to check (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Has a risk assessment been conducted before deployment?</li>
+  <li>Was the assessment team diverse (not just the core dev team)?</li>
+  <li>Are risks tracked with severity, likelihood, and mitigation owner?</li>
+  <li>Is there a schedule for re-assessment (e.g. quarterly, after major changes)?</li>
+</ul>
+
+<p><strong>Assist — minimal risk register entry:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Risk: [Short description]
+Category: [Fairness / Privacy / Safety / Security / Reliability / Legal]
+Likelihood: [High / Medium / Low]
+Severity: [Critical / High / Medium / Low]
+Affected parties: [Users / Organisation / Society]
+Current mitigation: [What is already in place]
+Proposed mitigation: [What needs to be done]
+Owner: [Name / Team]
+Review date: YYYY-MM-DD
+</code></pre></div></div>
+
+<p><strong>Related:</strong> audits, security (Coding)</p>
+
+<hr />
+
+<h2 id="alert--inform-users-on-machine-learning-usage">alert — Inform Users on Machine Learning Usage</h2>
+
+<p><strong>Difficulty:</strong> advanced<br />
+<strong>Intent:</strong> Make users aware that ML is used, what it is used for, and what
+its limitations are.<br />
+<strong>Motivation:</strong> Users have the right to know they are interacting with an ML
+system. Failure to disclose can violate human rights and regulations (EU AI Act,
+GDPR). Informed users can make better decisions, provide better feedback, and
+raise concerns more effectively.<br />
+<strong>Applicability:</strong> Any ML application with user-facing outputs or decisions.</p>
+
+<p><strong>What to check (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Is there in-product disclosure that ML is used?</li>
+  <li>Is the intended use and scope of the ML system described to users?</li>
+  <li>Are limitations and known failure modes communicated?</li>
+  <li>Is a model card or equivalent public documentation published?</li>
+</ul>
+
+<p><strong>Assist — model card essentials:</strong></p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gu">## Model Card: [Model Name]</span>
+
+<span class="gs">**Intended use:**</span> [What the model is designed to do]
+<span class="gs">**Out-of-scope uses:**</span> [What it should NOT be used for]
+<span class="gs">**Training data:**</span> [Source, size, date range — no PII details]
+<span class="gs">**Performance:**</span> [Key metrics, on which evaluation sets]
+<span class="gs">**Known limitations:**</span> [Edge cases, failure modes, biases identified]
+<span class="gs">**Fairness considerations:**</span> [Subgroup analysis results if applicable]
+<span class="gs">**Contact / feedback:**</span> [How users can raise concerns]
+</code></pre></div></div>
+
+<p><strong>Related:</strong> explainable, concerns</p>
+
+<hr />
+
+<h2 id="explainable--explain-results-and-decisions-to-users">explainable — Explain Results and Decisions to Users</h2>
+
+<p><strong>Difficulty:</strong> advanced<br />
+<strong>Intent:</strong> Allow users to critically assess ML results so they can accept
+them on an informed basis — or catch errors.<br />
+<strong>Motivation:</strong> GDPR and US credit scoring law require the <em>right to explanation</em>
+for automated decisions. Beyond legal compliance, explained decisions build
+user trust, enable error correction, and improve the system over time.<br />
+<strong>Applicability:</strong> Any ML application making decisions that affect users.</p>
+
+<p><strong>What to check (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Does each decision or result come with a human-readable explanation?</li>
+  <li>Is the explanation meaningful to the target user (not just ML jargon)?</li>
+  <li>Can users challenge or query an explanation?</li>
+  <li>Are explanation methods validated (not just presented)?</li>
+</ul>
+
+<p><strong>Explanation approaches by model type:</strong>
+| Model | Approach |
+|——-|———-|
+| Logistic regression, linear | Coefficient-based explanation |
+| Decision tree | Rule-based path explanation |
+| Gradient boosted trees | SHAP values |
+| Neural networks | LIME, Integrated Gradients, attention (with caveats) |
+| Any | Counterfactual explanations (“if X had been Y, the decision would have been Z”) |</p>
+
+<p><strong>Related:</strong> alert, audit_trails (Deployment), interpretable (Training)</p>
+
+<hr />
+
+<h2 id="concerns--provide-safe-channels-to-raise-concerns">concerns — Provide Safe Channels to Raise Concerns</h2>
+
+<p><strong>Difficulty:</strong> advanced<br />
+<strong>Intent:</strong> Obtain honest feedback enabling timely remediation.<br />
+<strong>Motivation:</strong> Users can identify bias, errors, and ethical issues that the
+development team cannot see from the inside. Without a safe, accessible channel,
+concerns go unvoiced — until they escalate into public incidents or legal action.<br />
+<strong>Applicability:</strong> Any ML application with users or affected individuals.</p>
+
+<p><strong>What to check (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Is there a documented channel for users to raise concerns (email, form, chat)?</li>
+  <li>Is anonymous reporting possible to protect user privacy?</li>
+  <li>Is there a defined response process (who reviews, in what timeframe)?</li>
+  <li>Are concerns logged and used to improve the application?</li>
+</ul>
+
+<p><strong>Assist — concerns channel checklist:</strong></p>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Contact method published in product UI and documentation</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Anonymous submission option available</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Acknowledgement sent within 48h</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Concerns categorised (bias / privacy / safety / other)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Triaged to responsible team member</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Resolution communicated back where appropriate</li>
+</ul>
+
+<p><strong>Related:</strong> alert, explainable</p>
+
+<hr />
+
+<h2 id="audits--have-your-application-audited">audits — Have Your Application Audited</h2>
+
+<p><strong>Difficulty:</strong> advanced<br />
+<strong>Intent:</strong> Obtain an independent assessment of the application’s strengths
+and weaknesses.<br />
+<strong>Motivation:</strong> Internal risk assessments are limited by organisational familiarity
+and potential bias toward favourable findings. External audits provide
+independent, credible assessment — building trust with regulators, partners,
+and users.<br />
+<strong>Applicability:</strong> Any ML application; mandatory for high-risk applications
+under the EU AI Act and similar regulations.</p>
+
+<p><strong>What to check (EVALUATE/DETECT):</strong></p>
+<ul>
+  <li>Has a third-party audit been conducted or scheduled?</li>
+  <li>Are audit outcomes documented and shared appropriately?</li>
+  <li>Is a remediation plan in place for findings?</li>
+  <li>Is there a regular audit cadence (not just once before launch)?</li>
+</ul>
+
+<p><strong>Assist — preparing for an audit:</strong></p>
+<ol>
+  <li>Ensure <code class="language-plaintext highlighter-rouge">audit_trails</code> (Deployment) are complete and accessible</li>
+  <li>Prepare documentation: model card, risk assessment, training data lineage</li>
+  <li>Identify audit scope: which systems, use cases, and criteria</li>
+  <li>Select an auditor with relevant domain expertise and independence</li>
+  <li>Define what “sharing the outcome” means for your stakeholders</li>
+</ol>
+
+<p><strong>Regulatory context:</strong></p>
+<ul>
+  <li><strong>EU AI Act</strong> requires conformity assessments for high-risk AI systems</li>
+  <li><strong>GDPR</strong> requires Data Protection Impact Assessments (DPIA) for high-risk processing</li>
+  <li><strong>Financial services</strong>: Model Risk Management (SR 11-7) requires model validation</li>
+</ul>
+
+<p><strong>Related:</strong> audit_trails (Deployment), risk, code_conduct</p>
+
+  </article>
+
+  
+
+  
+
+</div>
+
+    </div>
+  </div>
+
+  
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Analytics managed by jekyll-analytics plugin -->
+
+</body>
+
+</html>
